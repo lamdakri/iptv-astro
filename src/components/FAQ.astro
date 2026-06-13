@@ -27,7 +27,9 @@ const { title, subtitle, items } = Astro.props;
             <span>{item.question}</span>
             <span class="faq-toggle">+</span>
           </summary>
-          <p class="mt-5 text-surface-400 leading-relaxed pt-4 border-t border-surface-800/50">{item.answer}</p>
+          <div class="faq-answer">
+            <p class="mt-5 text-surface-400 leading-relaxed pt-4 border-t border-surface-800/50">{item.answer}</p>
+          </div>
         </details>
       ))}
     </div>

@@ -69,12 +69,45 @@ const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}\/?/, '/');
 </header>
 
 <script>
-  const btn = document.getElementById('mobile-menu-btn');
-  const menu = document.getElementById('mobile-menu');
-  if (btn && menu) {
-    btn.addEventListener('click', () => {
-      btn.classList.toggle('open');
-      menu.classList.toggle('open');
-    });
-  }
+  (function() {
+    // Mobile menu toggle
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('open');
+        menu.classList.toggle('open');
+      });
+
+      // Close mobile menu on link click
+      menu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          btn.classList.remove('open');
+          menu.classList.remove('open');
+        });
+      });
+    }
+
+    // Header scroll effect — add .scrolled class when scrolled past threshold
+    const header = document.querySelector('.sticky-header');
+    if (header) {
+      var ticking = false;
+      function updateHeader() {
+        if (window.scrollY > 20) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+        ticking = false;
+      }
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(updateHeader);
+          ticking = true;
+        }
+      }, { passive: true });
+      // Check initial state
+      updateHeader();
+    }
+  })();
 </script>

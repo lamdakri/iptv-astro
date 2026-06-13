@@ -43,7 +43,7 @@ const { title, subtitle, headerPlan, headerMonthly, headerOurPrice, headerSaving
           <div>{headerSavings}</div>
         </div>
         {rows.map((row) => (
-          <div class={`grid grid-cols-4 items-center px-6 py-5 border-b border-surface-800/30 last:border-0 transition-colors hover:bg-surface-900/20 ${row.featured ? 'bg-brand-900/10 border-l-2 border-l-brand-500' : ''}`}>
+          <div class={`grid grid-cols-4 items-center px-6 py-5 border-b border-surface-800/30 last:border-0 transition-colors hover:bg-surface-900/20 ${row.featured ? 'savings-row-featured bg-brand-900/10 border-l-2 border-l-brand-500' : ''}`}>
             <div class="font-semibold text-white text-lg">{row.duration}</div>
             <div class="text-surface-400 line-through">{row.monthlyCost}</div>
             <div class="font-extrabold gradient-text-static text-lg">{row.ourPrice}</div>

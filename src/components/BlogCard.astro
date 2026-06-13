@@ -21,7 +21,9 @@ const formattedDate = new Date(date).toLocaleDateString(
 
 <article class="blog-card">
   {image && (
-    <img src={image} alt={title} width="400" height="208" class="w-full h-48 object-cover" loading="lazy" />
+    <div class="blog-image-wrapper">
+      <img src={image} alt={title} width="400" height="208" class="w-full h-48 object-cover" loading="lazy" />
+    </div>
   )}
   <div class="p-6">
     {category && (

@@ -21,8 +21,7 @@ const { lang, currentPath } = Astro.props;
           aria-current={isActive ? 'page' : undefined}
           title={config.label}
         >
-          <span class="text-sm">{config.flag}</span>
-          <span class="text-[11px] font-semibold">{code.toUpperCase()}</span>
+          <span class="text-base leading-none">{config.flag}</span>
         </a>
       );
     })

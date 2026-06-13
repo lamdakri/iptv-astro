@@ -9,31 +9,31 @@ const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}\/?/, '/');
 ---
 
 <header class="sticky-header">
-  <nav class="container-custom flex items-center justify-between h-16 md:h-20">
+  <nav class="container-custom flex items-center justify-between h-14 md:h-16">
     <!-- Logo -->
-    <a href={`/${lang}/`} class="flex items-center gap-2.5 group">
-      <span class="text-2xl transition-transform duration-300 group-hover:scale-110">📡</span>
-      <span class="hidden sm:inline text-xl font-extrabold gradient-text">{t('site.name')}</span>
+    <a href={`/${lang}/`} class="flex items-center gap-2 group">
+      <span class="text-xl md:text-2xl transition-transform duration-300 group-hover:scale-110">📡</span>
+      <span class="text-sm md:text-base font-bold text-white/80 hidden sm:inline">{t('site.name')}</span>
     </a>
 
     <!-- Desktop Nav -->
-    <div class="hidden md:flex items-center gap-1">
-      <a href={`/${lang}/`} class="nav-link px-3 py-2 text-sm" data-track="nav_click" data-track-label="Home">{t('nav.home')}</a>
-      <a href={`/${lang}/pricing/`} class="nav-link px-3 py-2 text-sm" data-track="nav_click" data-track-label="Pricing">{t('nav.pricing')}</a>
-      <a href={`/${lang}/blog/`} class="nav-link px-3 py-2 text-sm" data-track="nav_click" data-track-label="Blog">{t('nav.blog')}</a>
-      <div class="ml-3">
+    <div class="hidden md:flex items-center gap-0.5">
+      <a href={`/${lang}/`} class="nav-link px-2.5 py-1.5 text-xs font-medium" data-track="nav_click" data-track-label="Home">{t('nav.home')}</a>
+      <a href={`/${lang}/pricing/`} class="nav-link px-2.5 py-1.5 text-xs font-medium" data-track="nav_click" data-track-label="Pricing">{t('nav.pricing')}</a>
+      <a href={`/${lang}/blog/`} class="nav-link px-2.5 py-1.5 text-xs font-medium" data-track="nav_click" data-track-label="Blog">{t('nav.blog')}</a>
+      <div class="ml-2">
         <LanguageSwitcher lang={lang} currentPath={currentPath} />
       </div>
       <a
         href={`https://wa.me/${WA}?text=${encodeURIComponent('Hello! I want a free IPTV trial.')}`}
-        class="btn-whatsapp text-sm px-5 py-2.5 ml-3"
+        class="btn-whatsapp text-xs px-3.5 py-2 ml-2"
         target="_blank"
         rel="noopener noreferrer"
         data-track="whatsapp_click"
         data-track-label="Header Desktop"
         data-track-category="conversion"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 448 512">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 448 512">
           <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157z"/>
         </svg>
         <span>{t('cta.trial.short')}</span>
@@ -50,21 +50,25 @@ const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}\/?/, '/');
 
   <!-- Mobile Menu Overlay -->
   <div id="mobile-menu" class="mobile-menu">
-    <a href={`/${lang}/`} data-track="nav_click" data-track-label="Mobile Home">{t('nav.home')}</a>
-    <a href={`/${lang}/pricing/`} data-track="nav_click" data-track-label="Mobile Pricing">{t('nav.pricing')}</a>
-    <a href={`/${lang}/blog/`} data-track="nav_click" data-track-label="Mobile Blog">{t('nav.blog')}</a>
-    <LanguageSwitcher lang={lang} currentPath={currentPath} />
-    <a
-      href={`https://wa.me/${WA}?text=${encodeURIComponent('Hello! I want a free IPTV trial.')}`}
-      class="btn-whatsapp mt-4"
-      target="_blank"
-      rel="noopener noreferrer"
-      data-track="whatsapp_click"
-      data-track-label="Header Mobile"
-      data-track-category="conversion"
-    >
-      {t('cta.trial.short')}
-    </a>
+    <div class="mobile-menu-inner">
+      <a href={`/${lang}/`} data-track="nav_click" data-track-label="Mobile Home" class="mobile-menu-link">{t('nav.home')}</a>
+      <a href={`/${lang}/pricing/`} data-track="nav_click" data-track-label="Mobile Pricing" class="mobile-menu-link">{t('nav.pricing')}</a>
+      <a href={`/${lang}/blog/`} data-track="nav_click" data-track-label="Mobile Blog" class="mobile-menu-link">{t('nav.blog')}</a>
+      <div class="mt-4">
+        <LanguageSwitcher lang={lang} currentPath={currentPath} />
+      </div>
+      <a
+        href={`https://wa.me/${WA}?text=${encodeURIComponent('Hello! I want a free IPTV trial.')}`}
+        class="btn-whatsapp text-sm px-6 py-3 mt-6"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-track="whatsapp_click"
+        data-track-label="Header Mobile"
+        data-track-category="conversion"
+      >
+        {t('cta.trial.short')}
+      </a>
+    </div>
   </div>
 </header>
 

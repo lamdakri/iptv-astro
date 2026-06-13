@@ -1,0 +1,22 @@
+{
+  "keyword": "iptv firestick",
+  "slug": "iptv-firestick",
+  "languages": {
+    "en": {
+      "title": "IPTV on Firestick — How to Get IPTV on Amazon Fire TV Stick 2025",
+      "description": "Learn how to get IPTV on Firestick. Install IPTV 4K World on Amazon Fire TV Stick. 20,000+ channels in 4K, 50,000+ VOD. Free 12-hour trial. Step-by-step setup guide.",
+      "h1": "How to Get IPTV on Firestick — Complete Setup Guide 2025",
+      "h2s": ["Why Firestick is the Best Device for IPTV", "How to Install IPTV on Firestick", "Best IPTV App for Firestick"],
+      "content": "<p>Transform your Amazon Fire TV Stick into a powerful streaming device with IPTV 4K World. Our service is fully compatible with Firestick and offers the smoothest IPTV experience with 20,000+ live channels, 50,000+ VOD titles, and stunning 4K quality.</p><p>Setting up IPTV on your Firestick takes just minutes. Get your free 12-hour trial today.</p>",
+      "faqs": [{"question": "Can I install IPTV on Firestick?", "answer": "Yes! IPTV 4K World works perfectly on Amazon Fire TV Stick. Install our compatible app and start watching in minutes."}, {"question": "Is IPTV safe to use on Firestick?", "answer": "Yes, IPTV 4K World is safe and secure. We recommend using a VPN for privacy."}],
+      "internalLinks": [{"text": "View Pricing Plans", "url": "/en/pricing/"}, {"text": "Getting Started Guide", "url": "/en/blog/getting-started-iptv/"}]
+    },
+    "fr": {"title": "IPTV sur Firestick — Installer IPTV sur Amazon Fire TV Stick 2025", "description": "Apprenez a installer IPTV sur Firestick. 20 000+ chaines en 4K.", "h1": "Comment Installer IPTV sur Firestick", "h2s": ["Pourquoi Firestick est Ideal pour IPTV"], "content": "<p>Transformez votre Fire Stick en lecteur IPTV avec IPTV 4K World. 20 000+ chaines en 4K.</p>", "faqs": [{"question": "Puis-je installer IPTV sur Firestick ?", "answer": "Oui ! Compatible avec tous les modeles Firestick."}], "internalLinks": [{"text": "Voir les Tarifs", "url": "/fr/pricing/"}]},
+    "ar": {"title": "IPTV على Firestick — كيفية تثبيت IPTV على أمازون فاير ستيك 2025", "description": "تعلم كيفية الحصول على IPTV على Firestick. أكثر من 20,000 قناة بدقة 4K.", "h1": "كيفية تشغيل IPTV على Firestick", "h2s": ["لماذا Firestick هو الأفضل لـ IPTV"], "content": "<p>حول أمازون فاير ستيك إلى جهاز بث قوي مع IPTV 4K World.</p>", "faqs": [{"question": "هل يمكنني تثبيت IPTV على Firestick؟", "answer": "نعم! متوافق مع جميع موديلات Firestick."}], "internalLinks": [{"text": "خطط الأسعار", "url": "/ar/pricing/"}]},
+    "es": {"title": "IPTV en Firestick — Como Instalar IPTV en Amazon Fire TV Stick 2025", "description": "Aprende a instalar IPTV en Firestick. 20,000+ canales en 4K.", "h1": "Como Instalar IPTV en Firestick", "h2s": [], "content": "<p>Transforma tu Fire TV Stick en un potente reproductor IPTV con IPTV 4K World.</p>", "faqs": [{"question": "Puedo instalar IPTV en Firestick?", "answer": "Si! Compatible con todos los modelos."}], "internalLinks": [{"text": "Ver Planes", "url": "/es/pricing/"}]},
+    "de": {"title": "IPTV auf Firestick - Installation 2025", "description": "IPTV auf Amazon Fire TV Stick installieren.", "h1": "IPTV auf Firestick einrichten", "h2s": [], "content": "<p>Verwandeln Sie Ihren Firestick in einen IPTV-Player.</p>", "faqs": [{"question": "Kompatibel?", "answer": "Ja."}], "internalLinks": []},
+    "it": {"title": "IPTV su Firestick - Guida 2025", "description": "Installa IPTV su Amazon Fire TV Stick.", "h1": "IPTV su Firestick", "h2s": [], "content": "<p>Trasforma il tuo Firestick in un lettore IPTV.</p>", "faqs": [{"question": "Compatibile?", "answer": "Si."}], "internalLinks": []},
+    "pt": {"title": "IPTV no Firestick - Guia 2025", "description": "Instale IPTV no Amazon Fire TV Stick.", "h1": "IPTV no Firestick", "h2s": [], "content": "<p>Transforme seu Firestick em um player IPTV.</p>", "faqs": [{"question": "Compativel?", "answer": "Sim."}], "internalLinks": []}
+  },
+  "targetCountries": []
+}

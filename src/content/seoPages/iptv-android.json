@@ -1,0 +1,22 @@
+{
+  "keyword": "iptv android",
+  "slug": "iptv-android",
+  "languages": {
+    "en": {
+      "title": "IPTV on Android — Best IPTV App for Android Devices 2025",
+      "description": "Watch IPTV on Android phones, tablets, and TV boxes. Get 20,000+ channels in 4K on any Android device. Free 12-hour trial. Compatible with all Android versions.",
+      "h1": "IPTV on Android — Watch 20,000+ Channels on Any Android Device",
+      "h2s": ["Best IPTV Player for Android", "How to Set Up IPTV on Android", "Android TV Box Compatibility"],
+      "content": "<p>IPTV 4K World is fully compatible with all Android devices including smartphones, tablets, TV boxes, and Android TV. Enjoy 20,000+ live channels and 50,000+ VOD titles in stunning 4K quality on your Android device.</p><p>Setup takes just minutes. Download the compatible app, enter your credentials, and start watching.</p>",
+      "faqs": [{"question": "Can I watch IPTV on my Android phone?", "answer": "Yes! IPTV 4K World works on all Android phones, tablets, TV boxes, and Android TV devices."}, {"question": "What is the best IPTV app for Android?", "answer": "IPTV 4K World is compatible with IPTV Smarters, TiviMate, and other popular Android IPTV players."}],
+      "internalLinks": [{"text": "View Pricing Plans", "url": "/en/pricing/"}, {"text": "Getting Started Guide", "url": "/en/blog/getting-started-iptv/"}]
+    },
+    "fr": {"title": "IPTV sur Android — Meilleure App IPTV pour Android 2025", "description": "Regardez IPTV sur Android. 20 000+ chaines en 4K.", "h1": "IPTV sur Android", "h2s": [], "content": "<p>IPTV 4K World compatible avec tous les appareils Android.</p>", "faqs": [{"question": "Compatible avec Android ?", "answer": "Oui."}], "internalLinks": [{"text": "Voir les Tarifs", "url": "/fr/pricing/"}]},
+    "ar": {"title": "IPTV على أندرويد — أفضل تطبيق IPTV لأجهزة أندرويد 2025", "description": "شاهد IPTV على أندرويد. أكثر من 20,000 قناة.", "h1": "IPTV على أندرويد", "h2s": [], "content": "<p>IPTV 4K World متوافق مع جميع أجهزة أندرويد.</p>", "faqs": [{"question": "متوافق مع أندرويد؟", "answer": "نعم."}], "internalLinks": [{"text": "خطط الأسعار", "url": "/ar/pricing/"}]},
+    "es": {"title": "IPTV en Android — Mejor App IPTV para Android 2025", "description": "Mira IPTV en Android. 20,000+ canales en 4K.", "h1": "IPTV en Android", "h2s": [], "content": "<p>IPTV 4K World compatible con todos los dispositivos Android.</p>", "faqs": [{"question": "Compatible con Android?", "answer": "Si."}], "internalLinks": [{"text": "Ver Planes", "url": "/es/pricing/"}]},
+    "de": {"title": "IPTV auf Android - Beste App 2025", "description": "IPTV auf Android-Geraten.", "h1": "IPTV auf Android", "h2s": [], "content": "<p>IPTV 4K World kompatibel mit allen Android-Geraten.</p>", "faqs": [{"question": "Kompatibel?", "answer": "Ja."}], "internalLinks": []},
+    "it": {"title": "IPTV su Android - Miglior App 2025", "description": "IPTV su dispositivi Android.", "h1": "IPTV su Android", "h2s": [], "content": "<p>IPTV 4K World compatibile con tutti i dispositivi Android.</p>", "faqs": [{"question": "Compatibile?", "answer": "Si."}], "internalLinks": []},
+    "pt": {"title": "IPTV no Android - Melhor App 2025", "description": "IPTV em dispositivos Android.", "h1": "IPTV no Android", "h2s": [], "content": "<p>IPTV 4K World compativel com todos os dispositivos Android.</p>", "faqs": [{"question": "Compativel?", "answer": "Sim."}], "internalLinks": []}
+  },
+  "targetCountries": []
+}

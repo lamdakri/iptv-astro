@@ -1,0 +1,22 @@
+{
+  "keyword": "iptv ios",
+  "slug": "iptv-ios",
+  "languages": {
+    "en": {
+      "title": "IPTV on iPhone & iPad — Best IPTV App for iOS 2025",
+      "description": "Watch IPTV on iPhone and iPad. Best IPTV app for iOS devices. 20,000+ channels in 4K. Free 12-hour trial. Compatible with iPhone, iPad, and Apple TV.",
+      "h1": "IPTV on iPhone & iPad — Watch 20,000+ Channels on iOS",
+      "h2s": ["Best IPTV Player for iOS", "How to Set Up IPTV on iPhone", "IPTV on Apple TV"],
+      "content": "<p>Enjoy IPTV 4K World on your iPhone, iPad, or Apple TV. Our service is fully compatible with all iOS devices, giving you access to 20,000+ live channels and 50,000+ VOD titles in stunning 4K quality wherever you go.</p>",
+      "faqs": [{"question": "Can I watch IPTV on my iPhone?", "answer": "Yes! IPTV 4K World works perfectly on iPhone, iPad, and Apple TV."}, {"question": "What IPTV app works on iOS?", "answer": "IPTX 4K World is compatible with IPTV Smarters, GSE Smart IPTV, and other popular iOS IPTV players."}],
+      "internalLinks": [{"text": "View Pricing Plans", "url": "/en/pricing/"}, {"text": "Getting Started Guide", "url": "/en/blog/getting-started-iptv/"}]
+    },
+    "fr": {"title": "IPTV sur iPhone et iPad — Meilleure App IPTV iOS 2025", "description": "Regardez IPTV sur iPhone/iPad. 20 000+ chaines en 4K.", "h1": "IPTV sur iPhone et iPad", "h2s": [], "content": "<p>IPTV 4K World sur votre iPhone, iPad ou Apple TV.</p>", "faqs": [{"question": "Compatible iOS ?", "answer": "Oui."}], "internalLinks": [{"text": "Voir les Tarifs", "url": "/fr/pricing/"}]},
+    "ar": {"title": "IPTV على iPhone و iPad — أفضل تطبيق IPTV لأجهزة iOS 2025", "description": "شاهد IPTV على iPhone و iPad.", "h1": "IPTV على iPhone و iPad", "h2s": [], "content": "<p>IPTV 4K World على iPhone و iPad و Apple TV.</p>", "faqs": [{"question": "متوافق مع iOS؟", "answer": "نعم."}], "internalLinks": [{"text": "خطط الأسعار", "url": "/ar/pricing/"}]},
+    "es": {"title": "IPTV en iPhone y iPad — Mejor App IPTV iOS 2025", "description": "Mira IPTV en iPhone/iPad.", "h1": "IPTV en iPhone y iPad", "h2s": [], "content": "<p>IPTV 4K World en tu iPhone, iPad o Apple TV.</p>", "faqs": [{"question": "Compatible iOS?", "answer": "Si."}], "internalLinks": [{"text": "Ver Planes", "url": "/es/pricing/"}]},
+    "de": {"title": "IPTV auf iPhone & iPad - Beste App 2025", "description": "IPTV auf iOS-Geraten.", "h1": "IPTV auf iPhone & iPad", "h2s": [], "content": "<p>IPTV 4K World auf iPhone, iPad, Apple TV.</p>", "faqs": [{"question": "Kompatibel?", "answer": "Ja."}], "internalLinks": []},
+    "it": {"title": "IPTV su iPhone e iPad - Miglior App 2025", "description": "IPTV su dispositivi iOS.", "h1": "IPTV su iPhone e iPad", "h2s": [], "content": "<p>IPTV 4K World su iPhone, iPad, Apple TV.</p>", "faqs": [{"question": "Compatibile?", "answer": "Si."}], "internalLinks": []},
+    "pt": {"title": "IPTV no iPhone e iPad - Melhor App 2025", "description": "IPTV em dispositivos iOS.", "h1": "IPTV no iPhone e iPad", "h2s": [], "content": "<p>IPTV 4K World no iPhone, iPad, Apple TV.</p>", "faqs": [{"question": "Compative?", "answer": "Sim."}], "internalLinks": []}
+  },
+  "targetCountries": []
+}

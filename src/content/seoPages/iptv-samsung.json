@@ -1,0 +1,22 @@
+{
+  "keyword": "iptv samsung",
+  "slug": "iptv-samsung",
+  "languages": {
+    "en": {
+      "title": "IPTV on Samsung Smart TV — How to Watch IPTV on Samsung TV 2025",
+      "description": "Learn how to watch IPTV on Samsung Smart TV. Compatible with all Samsung TV models. 20,000+ channels in 4K. Free 12-hour trial.",
+      "h1": "How to Watch IPTV on Samsung Smart TV — Setup Guide 2025",
+      "h2s": ["Why Samsung TV is Great for IPTV", "How to Install IPTV on Samsung TV", "Best Settings for IPTV on Samsung"],
+      "content": "<p>Enjoy IPTV 4K World on your Samsung Smart TV. Whether you have a QLED, Neo QLED, Crystal UHD, or any Samsung TV, our service delivers 20,000+ live channels and 50,000+ VOD titles in stunning 4K quality.</p>",
+      "faqs": [{"question": "Can I watch IPTV on my Samsung Smart TV?", "answer": "Yes! IPTV 4K World is compatible with all Samsung Smart TV models from 2016 onwards."}, {"question": "Do I need a separate device for Samsung TV?", "answer": "You can use the built-in Tizen browser or connect a Firestick/Android box."}],
+      "internalLinks": [{"text": "View Pricing Plans", "url": "/en/pricing/"}, {"text": "IPTV on Smart TV", "url": "/en/iptv-smart-tv/"}]
+    },
+    "fr": {"title": "IPTV sur Samsung Smart TV — Guide 2025", "description": "Regardez IPTV sur Samsung TV. 20 000+ chaines en 4K.", "h1": "IPTV sur Samsung TV", "h2s": [], "content": "<p>IPTV 4K World sur votre Samsung Smart TV.</p>", "faqs": [{"question": "Compatible Samsung ?", "answer": "Oui."}], "internalLinks": [{"text": "Voir les Tarifs", "url": "/fr/pricing/"}]},
+    "ar": {"title": "IPTV على تلفزيون سامسونج — دليل 2025", "description": "شاهد IPTV على تلفزيون سامسونج.", "h1": "IPTV على سامسونج", "h2s": [], "content": "<p>IPTV 4K World على تلفزيون سامسونج الذكي.</p>", "faqs": [{"question": "متوافق مع سامسونج؟", "answer": "نعم."}], "internalLinks": [{"text": "خطط الأسعار", "url": "/ar/pricing/"}]},
+    "es": {"title": "IPTV en Samsung Smart TV — Guia 2025", "description": "Mira IPTV en Samsung TV.", "h1": "IPTV en Samsung", "h2s": [], "content": "<p>IPTV 4K World en tu Samsung Smart TV.</p>", "faqs": [{"question": "Compatible Samsung?", "answer": "Si."}], "internalLinks": [{"text": "Ver Planes", "url": "/es/pricing/"}]},
+    "de": {"title": "IPTV auf Samsung TV - Anleitung", "description": "IPTV auf Samsung Smart TV.", "h1": "IPTV auf Samsung", "h2s": [], "content": "<p>IPTV 4K World auf Ihrem Samsung TV.</p>", "faqs": [{"question": "Kompatibel?", "answer": "Ja."}], "internalLinks": []},
+    "it": {"title": "IPTV su Samsung TV - Guida", "description": "IPTV su Samsung Smart TV.", "h1": "IPTV su Samsung", "h2s": [], "content": "<p>IPTV 4K World sulla tua Samsung TV.</p>", "faqs": [{"question": "Compatibile?", "answer": "Si."}], "internalLinks": []},
+    "pt": {"title": "IPTV na Samsung TV - Guia", "description": "IPTV em Samsung Smart TV.", "h1": "IPTV na Samsung", "h2s": [], "content": "<p>IPTV 4K World na sua Samsung TV.</p>", "faqs": [{"question": "Compative?", "answer": "Sim."}], "internalLinks": []}
+  },
+  "targetCountries": []
+}

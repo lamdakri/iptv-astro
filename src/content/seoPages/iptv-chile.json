@@ -1,0 +1,28 @@
+{
+  "keyword": "iptv chile",
+  "slug": "iptv-chile",
+  "languages": {
+    "en": {
+      "title": "IPTV Chile — Best IPTV Subscription for Chilean Channels 2025",
+      "description": "Watch Chilean TV channels with the best IPTV subscription. Get Canal 13, Mega, Chilevision, TVN and 20,000+ international channels in 4K. Free trial.",
+      "h1": "Best IPTV for Chile — Chilean TV & Global Entertainment in 4K",
+      "h2s": ["Why IPTV is Growing in Chile", "Chilean Channels Available"],
+      "content": "<p>Experience the best of Chilean television with IPTV 4K World. Whether in Santiago, Valparaiso, Concepcion, or abroad, enjoy Canal 13, Mega, Chilevision, TVN, and 20,000+ channels in 4K.</p>",
+      "faqs": [{"question": "Can I watch Chilean channels with IPTV?", "answer": "Yes! IPTV 4K World includes Canal 13, Mega, Chilevision, TVN, La Red, and all major Chilean channels."}],
+      "internalLinks": [{"text": "View Pricing Plans", "url": "/en/pricing/"}, {"text": "Best IPTV Service", "url": "/en/best-iptv/"}]
+    },
+    "es": {"title": "IPTV Chile — Mejor Suscripcion IPTV para Canales Chilenos 2025",
+      "description": "Mira canales chilenos con la mejor suscripcion IPTV. Canal 13, Mega, Chilevision, TVN y 20,000+ canales en 4K.",
+      "h1": "Mejor IPTV para Chile — TV Chilena y Global en 4K",
+      "h2s": ["Canales Chilenos Disponibles"],
+      "content": "<p>Disfruta de la mejor television chilena con IPTV 4K World. Canal 13, Mega, Chilevision, TVN y 20,000+ canales en calidad 4K.</p>",
+      "faqs": [{"question": "Puedo ver canales chilenos con IPTV 4K World?", "answer": "Si! IPTV 4K World incluye Canal 13, Mega, Chilevision, TVN, La Red y todos los canales chilenos."}],
+      "internalLinks": [{"text": "Ver Planes", "url": "/es/pricing/"}]},
+    "fr": {"title": "IPTV Chili — Meilleur Abonnement IPTV 2025", "description": "Regardez les chaines chiliennes avec IPTV 4K World.", "h1": "Meilleur IPTV pour le Chili", "h2s": [], "content": "<p>Profitez de la television chilienne avec IPTV 4K World.</p>", "faqs": [{"question": "Disponible au Chili ?", "answer": "Oui."}], "internalLinks": [{"text": "Voir les Tarifs", "url": "/fr/pricing/"}]},
+    "ar": {"title": "IPTV تشيلي — أفضل اشتراك IPTV 2025", "description": "شاهد القنوات التشيلية مع IPTV 4K World.", "h1": "أفضل IPTV في تشيلي", "h2s": [], "content": "<p>استمتع بالتلفزيون التشيلي مع IPTV 4K World.</p>", "faqs": [{"question": "هل IPTV متوفر في تشيلي؟", "answer": "نعم."}], "internalLinks": [{"text": "خطط الأسعار", "url": "/ar/pricing/"}]},
+    "de": {"title": "IPTV Chile - Premium IPTV", "description": "Premium IPTV fur Chile.", "h1": "Bestes IPTV fur Chile", "h2s": [], "content": "<p>Geniesen Sie 20.000+ Sender mit IPTV 4K World.</p>", "faqs": [{"question": "Verfugbar?", "answer": "Ja."}], "internalLinks": []},
+    "it": {"title": "IPTV Cile - Abbonamento IPTV", "description": "IPTV premium per Cile.", "h1": "Miglior IPTV per Cile", "h2s": [], "content": "<p>Godetevi 20.000+ canali con IPTV 4K World.</p>", "faqs": [{"question": "Disponibile?", "answer": "Si."}], "internalLinks": []},
+    "pt": {"title": "IPTV Chile - Assinatura IPTV Premium", "description": "IPTV premium para Chile.", "h1": "Melhor IPTV para Chile", "h2s": [], "content": "<p>Desfrute de 20.000+ canais com IPTV 4K World.</p>", "faqs": [{"question": "Disponivel?", "answer": "Sim."}], "internalLinks": []}
+  },
+  "targetCountries": ["CL"]
+}

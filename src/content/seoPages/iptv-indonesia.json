@@ -1,0 +1,22 @@
+{
+  "keyword": "iptv indonesia",
+  "slug": "iptv-indonesia",
+  "languages": {
+    "en": {
+      "title": "IPTV Indonesia — Best IPTV Subscription for Indonesian Channels 2025",
+      "description": "Watch Indonesian TV channels with the best IPTV subscription. Get RCTI, SCTV, TransTV, and 20,000+ international channels in 4K. Free 12-hour trial.",
+      "h1": "Best IPTV for Indonesia — Sinetron, Sports & Global TV",
+      "h2s": ["Why IPTV is Popular in Indonesia", "Indonesian Channels Available", "How to Watch Indonesian TV Abroad"],
+      "content": "<p>Access the best of Indonesian television with IPTV 4K World. Whether in Jakarta, Surabaya, Bandung, or abroad, enjoy RCTI, SCTV, TransTV, MNCTV, and 20,000+ channels in stunning 4K quality.</p><p>From sinetron to Premier League football, IPTV 4K World delivers unlimited entertainment at an affordable price.</p>",
+      "faqs": [{"question": "Can I watch Indonesian channels with IPTV?", "answer": "Yes! IPTV 4K World includes RCTI, SCTV, TransTV, MNCTV, Global TV, and all major Indonesian channels."}, {"question": "Does IPTV work well in Indonesia?", "answer": "Yes, optimized for Indonesian connections with adaptive streaming for smooth buffer-free playback."}],
+      "internalLinks": [{"text": "View Pricing Plans", "url": "/en/pricing/"}, {"text": "Getting Started Guide", "url": "/en/blog/getting-started-iptv/"}]
+    },
+    "fr": {"title": "IPTV Indonesia — Meilleur Abonnement IPTV 2025", "description": "Regardez les chaines indonesiennes avec IPTV 4K World. RCTI, SCTV, TransTV et 20 000+ chaines.", "h1": "Meilleur IPTV pour l Indonesie", "h2s": ["Pourquoi Choisir IPTV"], "content": "<p>Profitez de la television indonesienne avec IPTV 4K World. 20 000+ chaines en 4K.</p>", "faqs": [{"question": "IPTV 4K World est-il disponible en Indonesie ?", "answer": "Oui, disponible dans tout le pays."}], "internalLinks": [{"text": "Voir les Tarifs", "url": "/fr/pricing/"}]},
+    "ar": {"title": "IPTV إندونيسيا — أفضل اشتراك IPTV 2025", "description": "شاهد القنوات الإندونيسية مع IPTV 4K World. RCTI، SCTV، TransTV وأكثر من 20,000 قناة.", "h1": "أفضل IPTV في إندونيسيا", "h2s": ["لماذا تختار IPTV 4K World"], "content": "<p>استمتع بالتلفزيون الإندونيسي مع IPTV 4K World. جودة 4K.</p>", "faqs": [{"question": "هل IPTV 4K World متوفر في إندونيسيا؟", "answer": "نعم، متوفر."}], "internalLinks": [{"text": "خطط الأسعار", "url": "/ar/pricing/"}]},
+    "es": {"title": "IPTV Indonesia — Mejor Suscripcion IPTV 2025", "description": "Mira canales indonesios con IPTV 4K World. RCTI, SCTV, TransTV y 20,000+ canales.", "h1": "Mejor IPTV para Indonesia", "h2s": ["Por Que Elegir IPTV 4K World"], "content": "<p>Disfruta de la television indonesia con IPTV 4K World.</p>", "faqs": [{"question": "IPTV 4K World esta disponible en Indonesia?", "answer": "Si."}], "internalLinks": [{"text": "Ver Planes", "url": "/es/pricing/"}]},
+    "de": {"title": "IPTV Indonesien - Premium IPTV Abonnement 2025", "description": "Premium IPTV fur Indonesien. 20.000+ Sender.", "h1": "Bestes IPTV fur Indonesien", "h2s": ["Warum IPTV wahlen?"], "content": "<p>Geniesen Sie 20.000+ Sender mit IPTV 4K World.</p>", "faqs": [{"question": "Verfugbar in Indonesien?", "answer": "Ja."}], "internalLinks": []},
+    "it": {"title": "IPTV Indonesia - Abbonamento IPTV Premium 2025", "description": "IPTV premium per Indonesia. 20.000+ canali.", "h1": "Miglior IPTV per Indonesia", "h2s": ["Perche scegliere IPTV?"], "content": "<p>Godetevi 20.000+ canali con IPTV 4K World.</p>", "faqs": [{"question": "Disponibile in Indonesia?", "answer": "Si."}], "internalLinks": []},
+    "pt": {"title": "IPTV Indonesia - Assinatura IPTV Premium 2025", "description": "IPTV premium para Indonesia. 20.000+ canais.", "h1": "Melhor IPTV para Indonesia", "h2s": ["Porque escolher IPTV?"], "content": "<p>Desfrute de 20.000+ canais com IPTV 4K World.</p>", "faqs": [{"question": "Disponivel na Indonesia?", "answer": "Sim."}], "internalLinks": []}
+  },
+  "targetCountries": ["ID"]
+}

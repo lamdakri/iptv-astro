@@ -1,0 +1,22 @@
+{
+  "keyword": "iptv lebanon",
+  "slug": "iptv-lebanon",
+  "languages": {
+    "en": {
+      "title": "IPTV Lebanon — Best IPTV Subscription for Lebanese Channels 2025",
+      "description": "Watch Lebanese TV channels with the best IPTV subscription. Get LBCI, MTV Lebanon, Al Jadeed, and 20,000+ international channels in 4K. Free trial.",
+      "h1": "Best IPTV for Lebanon — Lebanese TV, Arabic & Global Channels",
+      "h2s": ["Why IPTV is Popular in Lebanon", "Lebanese Channels Available"],
+      "content": "<p>Stay connected to Lebanese entertainment with IPTV 4K World. Whether in Beirut, Tripoli, or abroad, enjoy LBCI, MTV Lebanon, Al Jadeed, and 20,000+ channels in stunning 4K quality.</p>",
+      "faqs": [{"question": "Can I watch Lebanese channels with IPTV?", "answer": "Yes! IPTV 4K World includes LBCI, MTV Lebanon, Al Jadeed, OTV, and all major Lebanese channels."}, {"question": "Does IPTV work in Lebanon?", "answer": "Yes, IPTV 4K World works worldwide with adaptive streaming."}],
+      "internalLinks": [{"text": "View Pricing Plans", "url": "/en/pricing/"}, {"text": "Best IPTV Service", "url": "/en/best-iptv/"}]
+    },
+    "fr": {"title": "IPTV Liban — Meilleur Abonnement IPTV 2025", "description": "Regardez les chaines libanaises avec IPTV 4K World. LBCI, MTV Liban, Al Jadeed.", "h1": "Meilleur IPTV pour le Liban", "h2s": ["Chaines Libanaises Disponibles"], "content": "<p>Restez connecte a vos racines libanaises avec IPTV 4K World. Que vous soyez a Beyrouth ou a l etranger, profitez de LBCI, MTV Liban, Al Jadeed en qualite 4K.</p>", "faqs": [{"question": "Puis-je regarder les chaines libanaises avec IPTV ?", "answer": "Oui ! IPTV 4K World inclut LBCI, MTV Liban, Al Jadeed, OTV et toutes les chaines libanaises."}], "internalLinks": [{"text": "Voir les Tarifs", "url": "/fr/pricing/"}]},
+    "ar": {"title": "IPTV لبنان — أفضل اشتراك IPTV 2025", "description": "شاهد القنوات اللبنانية مع أفضل IPTV. LBCI، MTV لبنان، الجديد وأكثر من 20,000 قناة.", "h1": "أفضل IPTV في لبنان — القنوات اللبنانية والعالمية بدقة 4K", "h2s": ["لماذا تختار IPTV في لبنان", "القنوات اللبنانية المتاحة"], "content": "<p>ابق على اتصال بالترفيه اللبناني مع IPTV 4K World. سواء كنت في بيروت أو طرابلس أو في الخارج، استمتع LBCI وMTV لبنان والجديد وأكثر من 20,000 قناة بجودة 4K.</p>", "faqs": [{"question": "هل يمكنني مشاهدة القنوات اللبنانية مع IPTV 4K World؟", "answer": "نعم! يشمل IPTV 4K World LBCI و MTV لبنان والجديد وOTV وجميع القنوات اللبنانية الرئيسية."}], "internalLinks": [{"text": "عرض خطط الأسعار", "url": "/ar/pricing/"}]},
+    "es": {"title": "IPTV Libano — Mejor Suscripcion IPTV 2025", "description": "Mira canales libaneses con IPTV 4K World.", "h1": "Mejor IPTV para Libano", "h2s": [], "content": "<p>Disfruta de la television libanesa con IPTV 4K World.</p>", "faqs": [{"question": "Disponible en Libano?", "answer": "Si."}], "internalLinks": [{"text": "Ver Planes", "url": "/es/pricing/"}]},
+    "de": {"title": "IPTV Libanon - Premium IPTV", "description": "Premium IPTV fur Libanon.", "h1": "Bestes IPTV fur Libanon", "h2s": [], "content": "<p>Geniesen Sie 20.000+ Sender mit IPTV 4K World.</p>", "faqs": [{"question": "Verfugbar?", "answer": "Ja."}], "internalLinks": []},
+    "it": {"title": "IPTV Libano - Abbonamento IPTV", "description": "IPTV premium per Libano.", "h1": "Miglior IPTV per Libano", "h2s": [], "content": "<p>Godetevi 20.000+ canali con IPTV 4K World.</p>", "faqs": [{"question": "Disponibile?", "answer": "Si."}], "internalLinks": []},
+    "pt": {"title": "IPTV Libano - Assinatura IPTV Premium", "description": "IPTV premium para Libano.", "h1": "Melhor IPTV para Libano", "h2s": [], "content": "<p>Desfrute de 20.000+ canais com IPTV 4K World.</p>", "faqs": [{"question": "Disponivel?", "answer": "Sim."}], "internalLinks": []}
+  },
+  "targetCountries": ["LB"]
+}

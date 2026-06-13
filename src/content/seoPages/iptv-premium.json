@@ -1,0 +1,22 @@
+{
+  "keyword": "iptv premium",
+  "slug": "iptv-premium",
+  "languages": {
+    "en": {
+      "title": "Premium IPTV — Best Premium IPTV Subscription 2025",
+      "description": "Get the best premium IPTV subscription. 20,000+ live channels in 4K, 50,000+ VOD, anti-freeze technology, 24/7 support. Free 12-hour trial.",
+      "h1": "Premium IPTV — The Ultimate TV Experience in 4K",
+      "h2s": ["What Makes a Premium IPTV Service", "Premium Features Included", "Premium IPTV vs Free IPTV"],
+      "content": "<p>Experience the best of television with IPTV 4K World premium IPTV service. Unlike free IPTV services that buffer constantly and go offline, our premium service delivers 20,000+ live channels in crystal-clear 4K quality, 50,000+ VOD titles, anti-freeze streaming technology, and 24/7 WhatsApp support.</p>",
+      "faqs": [{"question": "What is premium IPTV?", "answer": "Premium IPTV is a paid subscription service that offers reliable, high-quality streaming with 4K channels, VOD content, and 24/7 customer support, unlike free alternatives."}, {"question": "Is premium IPTV worth it?", "answer": "Absolutely. For just 9.99 EUR/month, you get 20,000+ channels, 4K quality, no buffering, and 24/7 support. Far better value than cable."}],
+      "internalLinks": [{"text": "View Premium Plans", "url": "/en/pricing/"}, {"text": "Best IPTV Service", "url": "/en/best-iptv/"}]
+    },
+    "fr": {"title": "IPTV Premium — Meilleur Abonnement IPTV Premium 2025", "description": "Abonnement IPTV premium. 20 000+ chaines en 4K.", "h1": "IPTV Premium", "h2s": [], "content": "<p>Le meilleur service IPTV premium avec 20 000+ chaines en 4K.</p>", "faqs": [{"question": "Qu est-ce que l IPTV premium ?", "answer": "Un service payant avec chaines 4K et support 24/7."}], "internalLinks": [{"text": "Voir les Plans", "url": "/fr/pricing/"}]},
+    "ar": {"title": "IPTV بريميوم — أفضل اشتراك IPTV بريميوم 2025", "description": "اشتراك IPTV بريميوم. أكثر من 20,000 قناة بدقة 4K.", "h1": "IPTV بريميوم", "h2s": [], "content": "<p>أفضل خدمة IPTV بريميوم مع أكثر من 20,000 قناة بدقة 4K.</p>", "faqs": [{"question": "ما هو IPTV بريميوم؟", "answer": "خدمة مدفوعة مع قنوات 4K ودعم 24/7."}], "internalLinks": [{"text": "خطط الأسعار", "url": "/ar/pricing/"}]},
+    "es": {"title": "IPTV Premium — Mejor Suscripcion IPTV Premium 2025", "description": "Suscripcion IPTV premium. 20,000+ canales en 4K.", "h1": "IPTV Premium", "h2s": [], "content": "<p>El mejor servicio IPTV premium.</p>", "faqs": [{"question": "Que es IPTV premium?", "answer": "Servicio de pago con canales 4K."}], "internalLinks": [{"text": "Ver Planes", "url": "/es/pricing/"}]},
+    "de": {"title": "Premium IPTV Abonnement 2025", "description": "Premium IPTV mit 20.000+ Sendern.", "h1": "Premium IPTV", "h2s": [], "content": "<p>Bestes Premium IPTV mit 20.000+ Sendern in 4K.</p>", "faqs": [{"question": "Was ist Premium IPTV?", "answer": "Premium-Dienst mit 4K und Support."}], "internalLinks": []},
+    "it": {"title": "IPTV Premium - Abbonamento 2025", "description": "IPTV premium con 20.000+ canali.", "h1": "IPTV Premium", "h2s": [], "content": "<p>Miglior IPTV premium.</p>", "faqs": [{"question": "Cos e IPTV premium?", "answer": "Servizio a pagamento con canali 4K."}], "internalLinks": []},
+    "pt": {"title": "IPTV Premium - Assinatura 2025", "description": "IPTV premium com 20.000+ canais.", "h1": "IPTV Premium", "h2s": [], "content": "<p>Melhor IPTV premium.</p>", "faqs": [{"question": "O que e IPTV premium?", "answer": "Servico premium com canais 4K."}], "internalLinks": []}
+  },
+  "targetCountries": []
+}

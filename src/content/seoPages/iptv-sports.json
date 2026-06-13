@@ -1,0 +1,22 @@
+{
+  "keyword": "iptv sports",
+  "slug": "iptv-sports",
+  "languages": {
+    "en": {
+      "title": "IPTV for Sports — Best IPTV Subscription for Live Sports 2025",
+      "description": "Watch live sports with IPTV 4K World. Premier League, LaLiga, Serie A, NFL, NBA, UFC, F1, and more in 4K. 20,000+ channels. Free 12-hour trial.",
+      "h1": "Best IPTV for Sports — Watch Live Sports in 4K 2025",
+      "h2s": ["Why IPTV is Perfect for Sports Fans", "Sports Channels Available", "Watch Multiple Games at Once"],
+      "content": "<p>Never miss a game with IPTV 4K World. Watch Premier League, LaLiga, Serie A, Bundesliga, Ligue 1, NFL, NBA, NHL, MLB, UFC, F1, WWE, and more in stunning 4K quality. With 20,000+ live channels, you can watch every major sports event live.</p><p>Our anti-freeze technology ensures buffer-free streaming during the most exciting moments.</p>",
+      "faqs": [{"question": "Can I watch Premier League with IPTV?", "answer": "Yes! IPTV 4K World includes all Premier League matches in 4K quality live and on-demand."}, {"question": "What sports channels are included?", "answer": "All major sports channels: Sky Sports, BT Sport, beIN Sports, ESPN, DAZN, SuperSport, and many more."}],
+      "internalLinks": [{"text": "View Pricing Plans", "url": "/en/pricing/"}, {"text": "IPTV for Sports Guide", "url": "/en/blog/best-iptv-for-sports/"}]
+    },
+    "fr": {"title": "IPTV Sport — Meilleur Abonnement IPTV pour le Sport 2025", "description": "Regardez le sport en direct avec IPTV 4K World. Premier League, Ligue 1, UEFA, NFL.", "h1": "Meilleur IPTV pour le Sport", "h2s": ["Chaines Sport Disponibles"], "content": "<p>Ne ratez jamais un match avec IPTV 4K World. Tous les grands evenements sportifs en 4K.</p>", "faqs": [{"question": "Puis-je regarder la Premier League avec IPTV ?", "answer": "Oui ! Tous les matchs en direct en 4K."}], "internalLinks": [{"text": "Voir les Tarifs", "url": "/fr/pricing/"}]},
+    "ar": {"title": "IPTV الرياضة — أفضل اشتراك IPTV للرياضة 2025", "description": "شاهد الرياضة مباشرة مع IPTV 4K World. الدوري الإنجليزي، UEFA، NFL.", "h1": "أفضل IPTV للرياضة", "h2s": ["القنوات الرياضية المتاحة"], "content": "<p>لا تفوت أي مباراة مع IPTV 4K World. جميع الأحداث الرياضية الكبرى بجودة 4K.</p>", "faqs": [{"question": "هل يمكنني مشاهدة الدوري الإنجليزي مع IPTV؟", "answer": "نعم! جميع المباريات مباشرة بجودة 4K."}], "internalLinks": [{"text": "خطط الأسعار", "url": "/ar/pricing/"}]},
+    "es": {"title": "IPTV Deportes — Mejor Suscripcion IPTV para Deportes 2025", "description": "Mira deportes en vivo con IPTV 4K World. Premier League, LaLiga, NFL.", "h1": "Mejor IPTV para Deportes", "h2s": ["Canales Deportivos Disponibles"], "content": "<p>No te pierdas ningun partido con IPTV 4K World.</p>", "faqs": [{"question": "Puedo ver LaLiga con IPTV?", "answer": "Si! Todos los partidos en 4K."}], "internalLinks": [{"text": "Ver Planes", "url": "/es/pricing/"}]},
+    "de": {"title": "IPTV Sport - Bestes IPTV fur Sport 2025", "description": "Live-Sport mit IPTV 4K World.", "h1": "Bestes IPTV fur Sport", "h2s": [], "content": "<p>Alle Sport-Events live in 4K.</p>", "faqs": [{"question": "Bundesliga verfugbar?", "answer": "Ja."}], "internalLinks": []},
+    "it": {"title": "IPTV Sport - Miglior IPTV per Sport 2025", "description": "Sport in diretta con IPTV 4K World.", "h1": "Miglior IPTV per Sport", "h2s": [], "content": "<p>Tutti gli eventi sportivi in diretta 4K.</p>", "faqs": [{"question": "Serie A disponibile?", "answer": "Si."}], "internalLinks": []},
+    "pt": {"title": "IPTV Esportes - Melhor IPTV para Esportes 2025", "description": "Esportes ao vivo com IPTV 4K World.", "h1": "Melhor IPTV para Esportes", "h2s": [], "content": "<p>Todos os eventos esportivos ao vivo em 4K.</p>", "faqs": [{"question": "Liga Portugal disponivel?", "answer": "Sim."}], "internalLinks": []}
+  },
+  "targetCountries": []
+}

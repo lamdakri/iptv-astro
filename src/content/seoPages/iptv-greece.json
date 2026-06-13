@@ -1,0 +1,22 @@
+{
+  "keyword": "iptv greece",
+  "slug": "iptv-greece",
+  "languages": {
+    "en": {
+      "title": "IPTV Greece — Best IPTV Subscription for Greek Channels 2025",
+      "description": "Watch Greek TV channels with the best IPTV subscription. Get ANT1, Mega, Alpha, ERT, Nova Sports and 20,000+ international channels in 4K. Free trial.",
+      "h1": "Best IPTV for Greece — Greek TV, Sports & Global Entertainment",
+      "h2s": ["Why IPTV is Growing in Greece", "Greek Channels Available", "Watch Greek TV from Abroad"],
+      "content": "<p>Stay connected to Greek entertainment with IPTV 4K World. Whether in Athens, Thessaloniki, or abroad, enjoy ANT1, Mega, Alpha, ERT, Nova Sports, and 20,000+ channels in stunning 4K quality.</p><p>From Greek news and dramas to international sports and movies, IPTV 4K World has it all.</p>",
+      "faqs": [{"question": "Can I watch Greek channels with IPTV?", "answer": "Yes! IPTV 4K World includes ANT1, Mega TV, Alpha TV, ERT, Nova Sports, Skai TV, and all major Greek channels."}, {"question": "Does IPTV work well in Greece?", "answer": "Yes, optimized for Greek internet connections with adaptive streaming."}],
+      "internalLinks": [{"text": "View Pricing Plans", "url": "/en/pricing/"}, {"text": "Best IPTV Service", "url": "/en/best-iptv/"}]
+    },
+    "fr": {"title": "IPTV Grece — Meilleur Abonnement IPTV 2025", "description": "Regardez les chaines grecques avec IPTV 4K World.", "h1": "Meilleur IPTV pour la Grece", "h2s": ["Pourquoi Choisir IPTV"], "content": "<p>Profitez de la television grecque avec IPTV 4K World.</p>", "faqs": [{"question": "Disponible en Grece ?", "answer": "Oui."}], "internalLinks": [{"text": "Voir les Tarifs", "url": "/fr/pricing/"}]},
+    "ar": {"title": "IPTV اليونان — أفضل اشتراك IPTV 2025", "description": "شاهد القنوات اليونانية مع IPTV 4K World.", "h1": "أفضل IPTV في اليونان", "h2s": ["لماذا تختار IPTV 4K World"], "content": "<p>استمتع بالتلفزيون اليوناني مع IPTV 4K World.</p>", "faqs": [{"question": "هل IPTV متوفر في اليونان؟", "answer": "نعم."}], "internalLinks": [{"text": "خطط الأسعار", "url": "/ar/pricing/"}]},
+    "es": {"title": "IPTV Grecia — Mejor Suscripcion IPTV 2025", "description": "Mira canales griegos con IPTV 4K World.", "h1": "Mejor IPTV para Grecia", "h2s": ["Por Que Elegir IPTV 4K World"], "content": "<p>Disfruta de la television griega con IPTV 4K World.</p>", "faqs": [{"question": "Disponible en Grecia?", "answer": "Si."}], "internalLinks": [{"text": "Ver Planes", "url": "/es/pricing/"}]},
+    "de": {"title": "IPTV Griechenland - Premium IPTV", "description": "Premium IPTV fur Griechenland.", "h1": "Bestes IPTV fur Griechenland", "h2s": ["Warum IPTV wahlen?"], "content": "<p>Geniesen Sie 20.000+ Sender mit IPTV 4K World.</p>", "faqs": [{"question": "Verfugbar?", "answer": "Ja."}], "internalLinks": []},
+    "it": {"title": "IPTV Grecia - Abbonamento IPTV", "description": "IPTV premium per Grecia.", "h1": "Miglior IPTV per Grecia", "h2s": ["Perche scegliere IPTV?"], "content": "<p>Godetevi 20.000+ canali con IPTV 4K World.</p>", "faqs": [{"question": "Disponibile?", "answer": "Si."}], "internalLinks": []},
+    "pt": {"title": "IPTV Grecia - Assinatura IPTV Premium", "description": "IPTV premium para Grecia.", "h1": "Melhor IPTV para Grecia", "h2s": ["Porque escolher IPTV?"], "content": "<p>Desfrute de 20.000+ canais com IPTV 4K World.</p>", "faqs": [{"question": "Disponivel?", "answer": "Sim."}], "internalLinks": []}
+  },
+  "targetCountries": ["GR"]
+}

@@ -1,0 +1,22 @@
+{
+  "keyword": "iptv pakistan",
+  "slug": "iptv-pakistan",
+  "languages": {
+    "en": {
+      "title": "IPTV Pakistan — Best IPTV Subscription for Pakistani Channels 2025",
+      "description": "Watch Pakistani TV channels with the best IPTV subscription. Get PTV, Geo, ARY, Hum TV, and 20,000+ international channels in 4K. Free 12-hour trial.",
+      "h1": "Best IPTV for Pakistan — Pakistani Dramas, Sports & Global TV",
+      "h2s": ["Why IPTV is Growing in Pakistan", "Pakistani Channels Available", "Watch Pakistani TV Abroad"],
+      "content": "<p>Stay connected to Pakistani entertainment with IPTV 4K World. Whether in Karachi, Lahore, Islamabad, or abroad, enjoy PTV, Geo TV, ARY Digital, Hum TV, and 20,000+ channels in stunning 4K quality.</p><p>From Pakistani dramas to cricket and international content, IPTV 4K World delivers premium entertainment at affordable prices.</p>",
+      "faqs": [{"question": "Can I watch Pakistani channels with IPTV?", "answer": "Yes! IPTV 4K World includes PTV, Geo TV, ARY Digital, Hum TV, Express News, and all major Pakistani channels."}, {"question": "Does IPTV work well in Pakistan?", "answer": "Yes, IPTV 4K World is optimized for Pakistani internet connections with adaptive streaming."}],
+      "internalLinks": [{"text": "View Pricing Plans", "url": "/en/pricing/"}, {"text": "IPTV 4K Service", "url": "/en/iptv-4k/"}]
+    },
+    "fr": {"title": "IPTV Pakistan — Meilleur Abonnement IPTV 2025", "description": "Regardez les chaines pakistanaises avec IPTV 4K World. PTV, Geo, ARY, Hum TV et 20 000+ chaines.", "h1": "Meilleur IPTV pour le Pakistan", "h2s": ["Pourquoi Choisir IPTV"], "content": "<p>Profitez de la television pakistanaise avec IPTV 4K World.</p>", "faqs": [{"question": "Disponible au Pakistan ?", "answer": "Oui."}], "internalLinks": [{"text": "Voir les Tarifs", "url": "/fr/pricing/"}]},
+    "ar": {"title": "IPTV باكستان — أفضل اشتراك IPTV 2025", "description": "شاهد القنوات الباكستانية مع IPTV 4K World. PTV، Geo، ARY، Hum TV.", "h1": "أفضل IPTV في باكستان", "h2s": ["لماذا تختار IPTV 4K World"], "content": "<p>استمتع بالتلفزيون الباكستاني مع IPTV 4K World.</p>", "faqs": [{"question": "هل IPTV متوفر في باكستان؟", "answer": "نعم."}], "internalLinks": [{"text": "خطط الأسعار", "url": "/ar/pricing/"}]},
+    "es": {"title": "IPTV Pakistan — Mejor Suscripcion IPTV 2025", "description": "Mira canales paquistanies con IPTV 4K World.", "h1": "Mejor IPTV para Pakistan", "h2s": ["Por Que Elegir IPTV 4K World"], "content": "<p>Disfruta de la television paquistani con IPTV 4K World.</p>", "faqs": [{"question": "Disponible en Pakistan?", "answer": "Si."}], "internalLinks": [{"text": "Ver Planes", "url": "/es/pricing/"}]},
+    "de": {"title": "IPTV Pakistan - Premium IPTV Abonnement 2025", "description": "Premium IPTV fur Pakistan. 20.000+ Sender.", "h1": "Bestes IPTV fur Pakistan", "h2s": ["Warum IPTV wahlen?"], "content": "<p>Geniesen Sie 20.000+ Sender mit IPTV 4K World.</p>", "faqs": [{"question": "Verfugbar?", "answer": "Ja."}], "internalLinks": []},
+    "it": {"title": "IPTV Pakistan - Abbonamento IPTV Premium 2025", "description": "IPTV premium per Pakistan. 20.000+ canali.", "h1": "Miglior IPTV per Pakistan", "h2s": ["Perche scegliere IPTV?"], "content": "<p>Godetevi 20.000+ canali con IPTV 4K World.</p>", "faqs": [{"question": "Disponibile?", "answer": "Si."}], "internalLinks": []},
+    "pt": {"title": "IPTV Paquistao - Assinatura IPTV Premium 2025", "description": "IPTV premium para Paquistao. 20.000+ canais.", "h1": "Melhor IPTV para Paquistao", "h2s": ["Porque escolher IPTV?"], "content": "<p>Desfrute de 20.000+ canais com IPTV 4K World.</p>", "faqs": [{"question": "Disponivel?", "answer": "Sim."}], "internalLinks": []}
+  },
+  "targetCountries": ["PK"]
+}

@@ -1,0 +1,38 @@
+---
+interface Crumb {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  items: Crumb[];
+}
+
+const { items } = Astro.props;
+const siteUrl = Astro.site?.href || 'https://iptv4kworld.com';
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map((item, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: item.label,
+    ...(item.href && { item: new URL(item.href, siteUrl).href }),
+  })),
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  {items.map((item, i) => (
+    <>
+      {i > 0 && <span class="separator">/</span>}
+      {item.href ? (
+        <a href={item.href}>{item.label}</a>
+      ) : (
+        <span class="text-surface-200">{item.label}</span>
+      )}
+    </>
+  ))}
+</nav>

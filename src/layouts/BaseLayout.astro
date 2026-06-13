@@ -1,0 +1,104 @@
+---
+import { getLangFromUrl, useTranslations, LANGUAGES } from '../i18n/ui';
+import SEOHead from '../components/SEOHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
+import LanguageBanner from '../components/LanguageBanner.astro';
+import '../styles/globals.css';
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  ogType?: string;
+  schema?: any;
+  robots?: string;
+  articlePublishedTime?: string;
+  articleAuthor?: string;
+  articleTags?: string[];
+  articleSection?: string;
+  keywords?: string;
+}
+
+const { title, description, ogImage, ogType, schema, robots = 'index, follow', articlePublishedTime, articleAuthor, articleTags, articleSection, keywords } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const dir = LANGUAGES[lang]?.dir || 'ltr';
+const t = useTranslations(lang);
+const canonicalURL = Astro.url.href;
+
+const siteBase = (Astro.site?.href || 'https://iptv4kworld.com').replace(/\/$/, '');
+const alternateLangs = Object.keys(LANGUAGES).map((code) => {
+  const pathSegments = Astro.url.pathname.split('/').filter(Boolean);
+  if (pathSegments.length > 0 && pathSegments[0] in LANGUAGES) {
+    pathSegments[0] = code;
+  }
+  return {
+    lang: LANGUAGES[code]?.locale || code,
+    url: `${siteBase}/${pathSegments.length ? pathSegments.join('/') + '/' : ''}`,
+  };
+});
+
+// x-default hreflang must always point to the English (default) version
+const xDefaultUrl = alternateLangs.find((a) => a.lang === 'en-US')?.url || canonicalURL;
+
+const gaScript = `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GV3H6SQGFT');
+`;
+---
+
+<!doctype html>
+<html lang={LANGUAGES[lang]?.locale || 'en'} dir={dir}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="color-scheme" content="dark" />
+    <SEOHead
+      title={title}
+      description={description}
+      canonicalURL={canonicalURL}
+      xDefaultUrl={xDefaultUrl}
+      ogImage={ogImage}
+      ogType={ogType}
+      lang={lang}
+      alternateLangs={alternateLangs}
+      schema={schema}
+      robots={robots}
+      articlePublishedTime={articlePublishedTime}
+      articleAuthor={articleAuthor}
+      articleTags={articleTags}
+      articleSection={articleSection}
+      keywords={keywords}
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- DNS prefetch for WhatsApp (used on every page for CTAs) -->
+    <link rel="dns-prefetch" href="https://wa.me" />
+    <link rel="preconnect" href="https://wa.me" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GV3H6SQGFT"></script>
+    <script set:html={gaScript}></script>
+    <noscript>
+      <style>
+        .reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      </style>
+    </noscript>
+  </head>
+  <body class="font-sans">
+    <LanguageBanner />
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <FloatingWhatsApp />
+    <script src="/scripts/reveal.js" defer></script>
+    <script src="/scripts/analytics.js" defer></script>
+  </body>
+</html>

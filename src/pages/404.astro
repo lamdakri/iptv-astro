@@ -1,0 +1,82 @@
+---
+import { useTranslations, LANGUAGES } from '../i18n/ui';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const WA = import.meta.env.WHATSAPP_NUMBER;
+
+// Detect language from URL pathname, fall back to 'en'
+const lang = Object.keys(LANGUAGES).find(
+  (l) => Astro.url.pathname.startsWith('/' + l + '/')
+) || 'en';
+const t = useTranslations(lang);
+
+const notFoundSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: t('notFound.title') + ' | ' + t('site.name'),
+  description: t('notFound.subtitle'),
+  url: Astro.site?.href || 'https://iptv4kworld.com/',
+  inLanguage: lang,
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'IPTV 4K World',
+    url: Astro.site?.href || 'https://iptv4kworld.com/',
+  },
+};
+---
+
+<BaseLayout
+  title={t('notFound.title') + ' | ' + t('site.name')}
+  description={t('notFound.subtitle')}
+  robots="noindex, follow"
+  schema={notFoundSchema}
+>
+  <section class="min-h-[70vh] flex items-center justify-center relative overflow-hidden">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="dot-pattern"></div>
+
+    <div class="container-custom relative z-10 text-center py-20">
+      <div class="text-[10rem] md:text-[14rem] font-extrabold leading-none gradient-text opacity-20 select-none">
+        404
+      </div>
+
+      <div class="-mt-16 md:-mt-24">
+        <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-4">
+          {t('notFound.title')}
+        </h1>
+        <p class="text-surface-400 text-lg max-w-lg mx-auto mb-10 leading-relaxed">
+          {t('notFound.subtitle')}
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href={`/${lang}/`} class="btn-primary text-base px-8 py-3.5" data-track="nav_click" data-track-label="404 Home">
+            {t('notFound.cta')}
+          </a>
+          <a
+            href={`https://wa.me/${WA}?text=${encodeURIComponent('Hello! I need help finding something on your site.')}`}
+            class="btn-whatsapp text-base px-8 py-3.5"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-track="whatsapp_click"
+            data-track-label="404 Help"
+            data-track-category="conversion"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 448 512">
+              <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157z"/>
+            </svg>
+            {t('cta.support')}
+          </a>
+        </div>
+
+        <div class="mt-14 flex flex-wrap items-center justify-center gap-4 text-sm">
+          <span class="text-surface-500">Quick links:</span>
+          <a href={`/${lang}/pricing/`} class="text-brand-400 hover:text-brand-300 transition-colors">{t('pricing.title')}</a>
+          <span class="text-surface-700">·</span>
+          <a href={`/${lang}/blog/`} class="text-brand-400 hover:text-brand-300 transition-colors">{t('blog.title')}</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-surface-950 to-transparent pointer-events-none"></div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,102 @@
+---
+const WA = import.meta.env.WHATSAPP_NUMBER;
+interface Props {
+  title: string;
+  subtitle: string;
+  headerPlan: string;
+  headerMonthly: string;
+  headerOurPrice: string;
+  headerSavings: string;
+  monthlyRate: string;
+  eyebrow: string;
+  bestDeal: string;
+  ctaText: string;
+  ctaButton: string;
+  rows: {
+    duration: string;
+    monthlyCost: string;
+    ourPrice: string;
+    savings: string;
+    savingsPct: string;
+    featured?: boolean;
+  }[];
+}
+
+const { title, subtitle, headerPlan, headerMonthly, headerOurPrice, headerSavings, monthlyRate, eyebrow, bestDeal, ctaText, ctaButton, rows } = Astro.props;
+---
+
+<section class="section section-alt">
+  <div class="container-custom">
+    <div class="text-center mb-14">
+      <span class="section-eyebrow">{eyebrow}</span>
+      <h2 class="section-title">{title}</h2>
+      <p class="section-subtitle mx-auto">{subtitle}</p>
+    </div>
+
+    <!-- Desktop table -->
+    <div class="hidden md:block max-w-4xl mx-auto reveal">
+      <div class="glass-card overflow-hidden">
+        <div class="grid grid-cols-4 text-sm font-semibold text-surface-300 border-b border-surface-800/50 bg-surface-900/30 px-6 py-4">
+          <div>{headerPlan}</div>
+          <div>{headerMonthly} <span class="text-surface-500 font-normal text-xs">({monthlyRate})</span></div>
+          <div>{headerOurPrice}</div>
+          <div>{headerSavings}</div>
+        </div>
+        {rows.map((row) => (
+          <div class={`grid grid-cols-4 items-center px-6 py-5 border-b border-surface-800/30 last:border-0 transition-colors hover:bg-surface-900/20 ${row.featured ? 'bg-brand-900/10 border-l-2 border-l-brand-500' : ''}`}>
+            <div class="font-semibold text-white text-lg">{row.duration}</div>
+            <div class="text-surface-400 line-through">{row.monthlyCost}</div>
+            <div class="font-extrabold gradient-text-static text-lg">{row.ourPrice}</div>
+            <div class="flex flex-col gap-0.5">
+              <span class="font-bold text-green-400">{row.savings}</span>
+              <span class="text-xs text-green-500/70">{row.savingsPct}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Mobile cards -->
+    <div class="md:hidden space-y-4 reveal">
+      {rows.map((row, i) => (
+        <div class={`glass-card p-5 ${row.featured ? 'border-brand-500/40 bg-brand-900/10' : ''}`}>
+          <div class="flex items-center justify-between mb-3">
+            <span class="font-bold text-white text-lg">{row.duration}</span>
+            {row.featured && (
+              <span class="pricing-badge pricing-badge--sale text-xs">{bestDeal}</span>
+            )}
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="flex justify-between">
+              <span class="text-surface-400">{headerMonthly} ({monthlyRate})</span>
+              <span class="text-surface-400 line-through">{row.monthlyCost}</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-surface-400">{headerOurPrice}</span>
+              <span class="font-extrabold gradient-text-static text-lg">{row.ourPrice}</span>
+            </div>
+            <div class="flex justify-between pt-2 border-t border-surface-800/30">
+              <span class="text-surface-400">{headerSavings}</span>
+              <span class="font-bold text-green-400">{row.savings} <span class="text-xs text-green-500/70">({row.savingsPct})</span></span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="text-center mt-12 reveal">
+      <p class="text-surface-400 text-sm mb-4">{ctaText}</p>
+      <a
+        href={`https://wa.me/${WA}?text=${encodeURIComponent('Hi! I want the best value 1 Year plan.')}`}
+        class="btn-whatsapp text-lg px-10 py-4"
+        target="_blank" rel="noopener noreferrer"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 448 512">
+          <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157z"/>
+        </svg>
+        {ctaButton}
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,72 @@
+---
+import PayPalBadge from './PayPalBadge.astro';
+
+interface Sport {
+  icon: string;
+  name: string;
+  tagline: string;
+  color: string;
+}
+
+interface Props {
+  title: string;
+  subtitle: string;
+  eyebrow: string;
+  sports: Sport[];
+  ctaText: string;
+  ctaButton: string;
+}
+
+const { title, subtitle, eyebrow, sports, ctaText, ctaButton } = Astro.props;
+---
+
+<section class="section section-alt">
+  <div class="section-divider"></div>
+  <div class="container-custom">
+    <div class="text-center mb-14">
+      <span class="section-eyebrow justify-center">{eyebrow}</span>
+      <h2 class="section-title">{title}</h2>
+      <p class="section-subtitle mx-auto">{subtitle}</p>
+    </div>
+
+    <!-- Sport cards grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
+      {
+        sports.map((s, i) => (
+          <div
+            class="glass-card p-5 flex flex-col items-center text-center gap-3 group cursor-default reveal reveal-scale"
+            data-reveal-delay={String(i * 100)}
+          >
+            <span class="text-4xl transition-transform duration-300 group-hover:scale-125">
+              {s.icon}
+            </span>
+            <h3 class={`text-white font-bold text-sm ${s.color}`}>{s.name}</h3>
+            <p class="text-surface-500 text-xs leading-relaxed">{s.tagline}</p>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="text-center mt-12 reveal">
+      <p class="text-surface-400 text-sm mb-4">{ctaText}</p>
+      <a
+        href={`https://wa.me/${import.meta.env.WHATSAPP_NUMBER}?text=${encodeURIComponent("I want to watch live sports in 4K! Give me the free trial.")}`}
+        class="btn-whatsapp text-lg px-10 py-4"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-track="whatsapp_click"
+        data-track-label="Sports CTA"
+        data-track-category="conversion"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 448 512">
+          <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157z"/>
+        </svg>
+        {ctaButton}
+      </a>
+      <div class="mt-3">
+        <PayPalBadge />
+      </div>
+    </div>
+  </div>
+</section>

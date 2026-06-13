@@ -1,0 +1,35 @@
+---
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  items: FAQItem[];
+}
+
+const { title, subtitle, items } = Astro.props;
+---
+
+<section class="section section-alt">
+  <div class="container-custom">
+    <div class="text-center mb-14">
+      <span class="section-eyebrow">FAQ</span>
+      <h2 class="section-title">{title}</h2>
+      {subtitle && <p class="section-subtitle mx-auto">{subtitle}</p>}
+    </div>
+    <div class="max-w-3xl mx-auto space-y-3">
+      {items.map((item, i) => (
+        <details class="faq-item group reveal" data-reveal-delay={String(i * 80)}>
+          <summary>
+            <span>{item.question}</span>
+            <span class="faq-toggle">+</span>
+          </summary>
+          <p class="mt-5 text-surface-400 leading-relaxed pt-4 border-t border-surface-800/50">{item.answer}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

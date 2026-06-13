@@ -1,0 +1,30 @@
+---
+import { LANGUAGES } from '../i18n/ui';
+
+interface Props {
+  lang: string;
+  currentPath: string;
+}
+
+const { lang, currentPath } = Astro.props;
+---
+
+<div class="lang-switcher">
+  {
+    Object.entries(LANGUAGES).map(([code, config]) => {
+      const isActive = code === lang;
+      const targetPath = `/${code}${currentPath}`;
+      return (
+        <a
+          href={targetPath}
+          class={`lang-option ${isActive ? 'active' : ''}`}
+          aria-current={isActive ? 'page' : undefined}
+          title={config.label}
+        >
+          <span class="text-sm">{config.flag}</span>
+          <span class="text-[11px] font-semibold">{code.toUpperCase()}</span>
+        </a>
+      );
+    })
+  }
+</div>

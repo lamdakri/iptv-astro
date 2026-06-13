@@ -1,0 +1,43 @@
+---
+import { useTranslations } from '../i18n/ui';
+
+interface Props {
+  title: string;
+  description: string;
+  slug: string;
+  lang: string;
+  date: Date;
+  category?: string;
+  image?: string;
+}
+
+const { title, description, slug, lang, date, category, image } = Astro.props;
+const t = useTranslations(lang);
+const formattedDate = new Date(date).toLocaleDateString(
+  { en: 'en-US', fr: 'fr-FR', ar: 'ar-SA', es: 'es-ES' }[lang] || 'en-US',
+  { year: 'numeric', month: 'long', day: 'numeric' }
+);
+---
+
+<article class="blog-card">
+  {image && (
+    <img src={image} alt={title} width="400" height="208" class="w-full h-48 object-cover" loading="lazy" />
+  )}
+  <div class="p-6">
+    {category && (
+      <span class="text-xs font-semibold text-brand-400 uppercase tracking-wider">{category}</span>
+    )}
+    <h3 class="text-xl font-bold text-white mt-2 mb-3">
+      <a href={`/${lang}/blog/${slug}/`} class="hover:text-brand-400 transition-colors">
+        {title}
+      </a>
+    </h3>
+    <p class="text-surface-400 text-sm line-clamp-3">{description}</p>
+    <div class="mt-4 flex items-center justify-between">
+      <span class="text-xs text-surface-500">{t('blog.publishedOn')} {formattedDate}</span>
+      <a href={`/${lang}/blog/${slug}/`} class="text-sm text-brand-400 hover:text-brand-300 font-medium transition-colors">
+        {t('blog.readMore')} →
+      </a>
+    </div>
+  </div>
+</article>

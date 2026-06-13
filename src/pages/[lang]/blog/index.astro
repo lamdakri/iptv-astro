@@ -1,0 +1,71 @@
+---
+import { getCollection } from 'astro:content';
+import { getLangFromUrl, useTranslations, LANGUAGES } from '../../../i18n/ui';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import BlogCard from '../../../components/BlogCard.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+
+export function getStaticPaths() {
+  return Object.keys(LANGUAGES).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = useTranslations(lang);
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft && data.lang === lang);
+const posts = allPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const pageTitle = t('blog.title') + ' | ' + t('site.name');
+const siteUrl = Astro.site?.href || 'https://iptv4kworld.com';
+const blogUrl = siteUrl.replace(/\/$/, '') + '/' + lang + '/blog/';
+
+const blogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: t('blog.title'),
+  description: t('blog.subtitle'),
+  url: blogUrl,
+  inLanguage: lang,
+  blogPost: posts.map((post) => ({
+    '@type': 'BlogPosting',
+    headline: post.data.title,
+    url: siteUrl.replace(/\/$/, '') + '/' + lang + '/blog/' + post.slug + '/',
+    datePublished: post.data.date.toISOString(),
+    author: { '@type': 'Person', name: post.data.author },
+  })),
+};
+---
+
+<BaseLayout title={pageTitle} description={t('blog.subtitle')} schema={blogSchema}>
+  <section class="pt-32 pb-20">
+    <div class="container-custom">
+      <Breadcrumb items={[
+        { label: t('breadcrumb.home'), href: '/' + lang + '/' },
+        { label: t('blog.title') },
+      ]} />
+
+      <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 reveal">{t('blog.title')}</h1>
+      <p class="text-surface-400 text-lg mb-12 reveal" data-reveal-delay="100">{t('blog.subtitle')}</p>
+
+      {posts.length === 0 ? (
+        <p class="text-surface-500 text-center py-20">{t('blog.noPosts')}</p>
+      ) : (
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {posts.map((post, i) => (
+            <div class="reveal reveal-scale" data-reveal-delay={String(i * 120)}>
+            <BlogCard
+              title={post.data.title}
+              description={post.data.description}
+              slug={post.slug}
+              lang={lang}
+              date={post.data.date}
+              category={post.data.category}
+              image={post.data.image}
+            />
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>

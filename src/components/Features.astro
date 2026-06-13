@@ -1,0 +1,35 @@
+---
+interface Feature {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  features: Feature[];
+}
+
+const { title, subtitle, features } = Astro.props;
+---
+
+<section class="section">
+  <div class="section-divider"></div>
+  <div class="container-custom">
+    <div class="text-center mb-14">
+      <span class="section-eyebrow">Features</span>
+      <h2 class="section-title">{title}</h2>
+      {subtitle && <p class="section-subtitle mx-auto">{subtitle}</p>}
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {features.map((f, i) => (
+        <div class={`feature-card reveal reveal-${i % 2 === 0 ? 'left' : 'right'}`} data-reveal-delay={String(i * 100)}>
+          <span class="feature-icon">{f.icon}</span>
+          <h3 class="text-lg font-semibold text-white">{f.title}</h3>
+          <p class="text-surface-400 text-sm leading-relaxed">{f.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

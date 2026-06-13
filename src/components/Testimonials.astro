@@ -1,0 +1,43 @@
+---
+interface Testimonial {
+  name: string;
+  role: string;
+  text: string;
+  rating?: number;
+}
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  testimonials: Testimonial[];
+}
+
+const { title, subtitle, testimonials } = Astro.props;
+---
+
+<section class="section">
+  <div class="section-divider"></div>
+  <div class="container-custom">
+    <div class="text-center mb-14">
+      <span class="section-eyebrow">Testimonials</span>
+      <h2 class="section-title">{title}</h2>
+      {subtitle && <p class="section-subtitle mx-auto">{subtitle}</p>}
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {testimonials.map((t, i) => (
+        <div class="testimonial-card reveal reveal-scale" data-reveal-delay={String(i * 150)}>
+          {t.rating && (
+            <div class="stars">
+              {Array.from({ length: t.rating }).map(() => <span>★</span>)}
+            </div>
+          )}
+          <p class="text-surface-300 italic leading-relaxed text-sm">"{t.text}"</p>
+          <div class="mt-auto pt-3 border-t border-surface-800/30">
+            <p class="text-white font-semibold text-sm">{t.name}</p>
+            <p class="text-surface-500 text-xs">{t.role}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

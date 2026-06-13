@@ -1,0 +1,346 @@
+---
+import { getLangFromUrl, useTranslations, LANGUAGES } from '../../i18n/ui';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Features from '../../components/Features.astro';
+import FAQ from '../../components/FAQ.astro';
+import Testimonials from '../../components/Testimonials.astro';
+import PricingCard from '../../components/PricingCard.astro';
+import SavingsComparison from '../../components/SavingsComparison.astro';
+import SchemaMarkup from '../../components/SchemaMarkup.astro';
+import PaymentIcons from '../../components/PaymentIcons.astro';
+import PayPalBadge from '../../components/PayPalBadge.astro';
+import SportsHighlight from '../../components/SportsHighlight.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+const WA = import.meta.env.WHATSAPP_NUMBER;
+
+export function getStaticPaths() {
+  return Object.keys(LANGUAGES).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = useTranslations(lang);
+
+const localeMap: Record<string, string> = { en: 'en_US', fr: 'fr_FR', ar: 'ar_SA', es: 'es_ES', de: 'de_DE', it: 'it_IT', pt: 'pt_PT' };
+const ogLocale = localeMap[lang] || 'en_US';
+
+const features = [
+  { icon: '📺', title: t('features.channels'), description: t('features.channels.desc') },
+  { icon: '✨', title: t('features.quality'), description: t('features.quality.desc') },
+  { icon: '📱', title: t('features.devices'), description: t('features.devices.desc') },
+  { icon: '💬', title: t('features.support'), description: t('features.support.desc') },
+  { icon: '🎁', title: t('features.trial'), description: t('features.trial.desc') },
+  { icon: '🎬', title: t('features.vod'), description: t('features.vod.desc') },
+];
+
+const faqItems = [
+  { question: t('faq.q1'), answer: t('faq.a1') },
+  { question: t('faq.q2'), answer: t('faq.a2') },
+  { question: t('faq.q3'), answer: t('faq.a3') },
+  { question: t('faq.q4'), answer: t('faq.a4') },
+  { question: t('faq.q5'), answer: t('faq.a5') },
+  { question: t('faq.q6'), answer: t('faq.a6') },
+];
+
+const testimonials = [
+  { name: t('testimonials.1.name'), role: t('testimonials.1.role'), text: t('testimonials.1.text'), rating: 5 },
+  { name: t('testimonials.2.name'), role: t('testimonials.2.role'), text: t('testimonials.2.text'), rating: 5 },
+  { name: t('testimonials.3.name'), role: t('testimonials.3.role'), text: t('testimonials.3.text'), rating: 5 },
+];
+
+const avgRating = (testimonials.reduce((sum, t) => sum + t.rating, 0) / testimonials.length).toFixed(1);
+
+const pageTitle = t('hero.title') + ' | ' + t('site.name');
+const whatsappUrl = `https://wa.me/${WA}?text=${encodeURIComponent('Hello! I want a free 12-hour IPTV trial.')}`;
+
+const pricingFeatures = [
+  t('pricing.feature.channels'),
+  t('pricing.feature.quality'),
+  t('pricing.feature.vod'),
+  t('pricing.feature.devices'),
+  t('pricing.feature.antifreeze'),
+  t('pricing.feature.support'),
+  t('pricing.feature.instant'),
+];
+
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'IPTV 4K World',
+  description: 'Premium IPTV streaming service with 20,000+ live channels, 4K quality, and 24/7 support.',
+  offers: { '@type': 'AggregateOffer', lowPrice: '19.99', highPrice: '39.99', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
+  aggregateRating: { '@type': 'AggregateRating', ratingValue: avgRating, bestRating: '5', reviewCount: String(testimonials.length) },
+};
+---
+
+<BaseLayout title={pageTitle} description={t('hero.subtitle')} keywords={'IPTV, IPTV subscription, 4K streaming, live TV channels, sports streaming, IPTV 4K World, buy IPTV, IPTV free trial'} schema={productSchema}>
+  <Breadcrumb items={[
+    { label: t('breadcrumb.home') },
+  ]} />
+  <SchemaMarkup type="product" data={{ name: 'IPTV 4K World', lowPrice: '19.99', highPrice: '39.99', currency: 'EUR' }} />
+  <SchemaMarkup type="faq" data={{ questions: faqItems }} />
+  <SchemaMarkup type="organization" />
+
+  <!-- WebSite schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: t('site.name'),
+    url: Astro.site?.href || 'https://iptv4kworld.com',
+    inLanguage: ogLocale,
+    description: t('hero.subtitle'),
+  })}></script>
+
+  <!-- Review schemas for testimonials -->
+  {testimonials.map((t, i) => (
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Review',
+      author: { '@type': 'Person', name: t.name },
+      reviewRating: { '@type': 'Rating', ratingValue: t.rating, bestRating: 5 },
+      reviewBody: t.text,
+      itemReviewed: { '@type': 'Product', name: 'IPTV 4K World' },
+    })}></script>
+  ))}
+
+
+
+  <!-- ===== HERO ===== -->
+  <section class="relative min-h-[95vh] flex items-center justify-center overflow-hidden">
+    <!-- Animated orbs -->
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+
+    <!-- Dot pattern overlay -->
+    <div class="dot-pattern"></div>
+
+    <!-- Hero content -->
+    <div class="container-custom relative z-10 text-center py-20">
+      <div class="max-w-5xl mx-auto">
+        <!-- Badge -->
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-8 border animate-fade-in"
+          style="background: rgba(37,211,102,0.08); border-color: rgba(37,211,102,0.2); color: #25D366;">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-whatsapp opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-whatsapp"></span>
+          </span>
+          {t('cta.instant')}
+          <span class="text-surface-500">•</span>
+          {t('cta.support')}
+        </span>
+
+        <!-- Main heading -->
+        <h1 class="heading-xl text-white mb-6 animate-fade-in-up delay-100">
+          <span class="gradient-text">{t('hero.title')}</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-surface-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up delay-200">
+          {t('hero.subtitle')}
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up delay-300">
+          <a href={whatsappUrl} class="btn-whatsapp text-lg px-10 py-4" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-track-label="Hero CTA" data-track-category="conversion">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 448 512">
+              <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157z"/>
+            </svg>
+            {t('hero.cta')}
+          </a>
+          <a href={`/${lang}/pricing/`} class="btn-outline text-lg px-10 py-4" data-track="nav_click" data-track-label="Hero Pricing">
+            {t('hero.secondary')}
+          </a>
+        </div>
+
+        <!-- PayPal trust -->
+        <div class="mt-3 animate-fade-in delay-400">
+          <PayPalBadge />
+        </div>
+
+        <!-- Trust badges -->
+        <div class="flex flex-wrap items-center justify-center gap-5 mt-12 text-sm text-surface-500 animate-fade-in delay-500">
+          <span class="flex items-center gap-1.5">
+            <span class="text-brand-400 text-base">⚡</span> {t('cta.instant')}
+          </span>
+          <span class="w-1 h-1 rounded-full bg-surface-700"></span>
+          <span class="flex items-center gap-1.5">
+            <span class="text-cyan-400 text-base">🎁</span> {t('cta.trial.short')}
+          </span>
+          <span class="w-1 h-1 rounded-full bg-surface-700"></span>
+          <span class="flex items-center gap-1.5">
+            <span class="text-accent text-base">💬</span> {t('cta.support')}
+          </span>
+          <span class="w-1 h-1 rounded-full bg-surface-700"></span>
+          <span class="flex items-center gap-1.5">
+            <span class="text-accent-rose text-base">⭐</span> 4.8/5 Rating
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom gradient fade -->
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-surface-950 to-transparent pointer-events-none"></div>
+  </section>
+
+
+  <!-- ===== STATS ===== -->
+  <section class="relative -mt-16 pb-16">
+    <div class="container-custom">
+      <div class="glass-card max-w-4xl mx-auto reveal reveal-scale" data-reveal-delay="200">
+        <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-surface-800/50">
+          <div class="text-center py-8 px-4">
+            <div class="stat-number">20K+</div>
+            <div class="stat-label">Live Channels</div>
+          </div>
+          <div class="text-center py-8 px-4">
+            <div class="stat-number">4K</div>
+            <div class="stat-label">Ultra HD Quality</div>
+          </div>
+          <div class="text-center py-8 px-4">
+            <div class="stat-number">99.9%</div>
+            <div class="stat-label">Uptime Guaranteed</div>
+          </div>
+          <div class="text-center py-8 px-4">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Premium Support</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== FEATURES ===== -->
+  <Features title={t('features.title')} subtitle={t('features.subtitle')} features={features} />
+
+
+  <!-- ===== LIVE SPORTS ===== -->
+  <SportsHighlight
+    title={t('sports.title')}
+    subtitle={t('sports.subtitle')}
+    eyebrow={t('sports.eyebrow')}
+    ctaText={t('sports.cta.text')}
+    ctaButton={t('sports.cta.button')}
+    sports={[
+      { icon: '⚽', name: t('sports.football'), tagline: t('sports.football.tag'), color: 'text-green-400' },
+      { icon: '🏎️', name: t('sports.f1'), tagline: t('sports.f1.tag'), color: 'text-red-400' },
+      { icon: '🥊', name: t('sports.boxing'), tagline: t('sports.boxing.tag'), color: 'text-orange-400' },
+      { icon: '🎾', name: t('sports.tennis'), tagline: t('sports.tennis.tag'), color: 'text-yellow-400' },
+      { icon: '🥋', name: t('sports.ufc'), tagline: t('sports.ufc.tag'), color: 'text-cyan-400' },
+    ]}
+  />
+
+
+  <!-- ===== PRICING ===== -->
+  <section class="section section-alt">
+    <div class="container-custom">
+      <div class="text-center mb-14">
+        <span class="section-eyebrow">Pricing</span>
+        <h2 class="section-title">{t('pricing.title')}</h2>
+        <p class="section-subtitle mx-auto">{t('pricing.subtitle')}</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
+        <PricingCard
+          name={t('pricing.3months')}
+          price={t('pricing.3months.price')}
+          period={t('pricing.period.3months')}
+          features={pricingFeatures}
+          ctaLabel={t('pricing.cta')}
+          trialLabel={t('pricing.trial')}
+        />
+        <PricingCard
+          name={t('pricing.6months')}
+          price={t('pricing.6months.price')}
+          period={t('pricing.period.6months')}
+          features={pricingFeatures}
+          ctaLabel={t('pricing.cta')}
+          trialLabel={t('pricing.trial')}
+          popularLabel={t('pricing.popular')}
+        />
+        <PricingCard
+          name={t('pricing.1year')}
+          price={t('pricing.1year.price')}
+          period={t('pricing.period.1year')}
+          originalPrice={t('pricing.originalPrice')}
+          savings={t('pricing.savings')}
+          features={pricingFeatures}
+          ctaLabel={t('pricing.cta')}
+          trialLabel={t('pricing.trial')}
+          featured={true}
+          popularLabel={t('pricing.bestValue')}
+        />
+      </div>
+
+      <!-- Payment methods -->
+      <div class="text-center mt-8 reveal">
+        <div class="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-surface-900/50 border border-surface-800/30">
+          <PaymentIcons />
+          <span class="text-surface-300 text-sm font-medium">{t('payment.methods')}</span>
+          <span class="w-1 h-1 rounded-full bg-green-500"></span>
+          <span class="text-surface-500 text-xs">{t('payment.trust')}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== SAVINGS COMPARISON ===== -->
+  <SavingsComparison
+    title={t('savings.title')}
+    subtitle={t('savings.subtitle')}
+    headerPlan={t('savings.headerPlan')}
+    headerMonthly={t('savings.headerMonthly')}
+    headerOurPrice={t('savings.headerOurPrice')}
+    headerSavings={t('savings.headerSavings')}
+    monthlyRate={t('savings.monthlyRate')}
+    eyebrow={t('savings.eyebrow')}
+    bestDeal={t('savings.bestDeal')}
+    ctaText={t('savings.ctaText')}
+    ctaButton={t('savings.ctaButton')}
+    rows={[
+      { duration: t('pricing.3months'), monthlyCost: t('savings.3months.monthlyCost'), ourPrice: '€' + t('pricing.3months.price'), savings: t('savings.3months.savings'), savingsPct: t('savings.3months.pct') },
+      { duration: t('pricing.6months'), monthlyCost: t('savings.6months.monthlyCost'), ourPrice: '€' + t('pricing.6months.price'), savings: t('savings.6months.savings'), savingsPct: t('savings.6months.pct') },
+      { duration: t('pricing.1year'), monthlyCost: t('savings.1year.monthlyCost'), ourPrice: '€' + t('pricing.1year.price'), savings: t('savings.1year.savings'), savingsPct: t('savings.1year.pct'), featured: true },
+    ]}
+  />
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <Testimonials title={t('testimonials.title')} subtitle={t('testimonials.subtitle')} testimonials={testimonials} />
+
+
+  <!-- ===== FAQ ===== -->
+  <FAQ title={t('faq.title')} subtitle={t('faq.subtitle')} items={faqItems} />
+
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="relative py-24 md:py-32 overflow-hidden reveal">
+    <!-- Background orbs for final CTA -->
+    <div class="hero-orb hero-orb-1" style="top:auto; bottom:-200px;"></div>
+    <div class="hero-orb hero-orb-2" style="bottom:auto; top:-150px;"></div>
+    <div class="dot-pattern" style="opacity:0.5;"></div>
+
+    <div class="container-custom relative z-10 text-center">
+      <div class="max-w-2xl mx-auto">
+        <span class="section-eyebrow mx-auto justify-center">Get Started</span>
+        <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-4 leading-tight">
+          {t('cta.final.title')}
+        </h2>
+        <p class="text-surface-400 text-lg mb-10 leading-relaxed">
+          {t('cta.final.subtitle')}
+        </p>
+        <a href={whatsappUrl} class="btn-whatsapp text-xl px-12 py-5" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-track-label="Final CTA" data-track-category="conversion">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 448 512">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157z"/>
+          </svg>
+          {t('cta.final.button')}
+        </a>
+        <div class="mt-4">
+          <PayPalBadge />
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom fade -->
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-surface-950 to-transparent pointer-events-none"></div>
+  </section>
+</BaseLayout>

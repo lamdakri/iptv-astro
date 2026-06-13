@@ -1,0 +1,94 @@
+---
+import { useTranslations, LANGUAGES } from '../../i18n/ui';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+const WA = import.meta.env.WHATSAPP_NUMBER;
+
+export function getStaticPaths() {
+  return Object.keys(LANGUAGES).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = useTranslations(lang);
+const pageTitle = t('privacy.title') + ' | ' + t('site.name');
+const pageUrl = Astro.url.href;
+
+const pageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: pageTitle,
+  description: t('privacy.subtitle'),
+  url: pageUrl,
+  inLanguage: lang,
+  isPartOf: {
+    '@type': 'WebSite',
+    name: t('site.name'),
+    url: Astro.site?.href || 'https://iptv4kworld.com',
+  },
+  about: {
+    '@type': 'Thing',
+    name: 'Privacy Policy',
+  },
+  lastReviewed: '2026-06-12',
+};
+---
+
+<BaseLayout title={pageTitle} description={t('privacy.subtitle')} schema={pageSchema}>
+  <section class="pt-32 pb-20">
+    <div class="container-custom max-w-3xl">
+      <Breadcrumb items={[
+        { label: t('breadcrumb.home'), href: '/' + lang + '/' },
+        { label: t('privacy.title') },
+      ]} />
+
+      <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 reveal">{t('privacy.title')}</h1>
+      <p class="text-surface-400 text-lg mb-2 reveal" data-reveal-delay="100">{t('privacy.subtitle')}</p>
+      <p class="text-surface-500 text-sm mb-12 reveal" data-reveal-delay="150">{t('privacy.lastUpdated')}: June 12, 2026</p>
+
+      <div class="space-y-10 reveal" data-reveal-delay="200">
+        <p class="text-surface-300 leading-relaxed">{t('privacy.intro')}</p>
+
+        <section>
+          <h2 class="text-2xl font-bold text-white mb-4">{t('privacy.info')}</h2>
+          <p class="text-surface-400 leading-relaxed">{t('privacy.info.text')}</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-white mb-4">{t('privacy.usage')}</h2>
+          <p class="text-surface-400 leading-relaxed">{t('privacy.usage.text')}</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-white mb-4">{t('privacy.cookies')}</h2>
+          <p class="text-surface-400 leading-relaxed">{t('privacy.cookies.text')}</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-white mb-4">{t('privacy.sharing')}</h2>
+          <p class="text-surface-400 leading-relaxed">{t('privacy.sharing.text')}</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-white mb-4">{t('privacy.rights')}</h2>
+          <p class="text-surface-400 leading-relaxed">{t('privacy.rights.text')}</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-white mb-4">{t('privacy.contact')}</h2>
+          <p class="text-surface-400 leading-relaxed">{t('privacy.contact.text')}</p>
+          <a
+            href={`https://wa.me/${WA}?text=Hello! I have a question about the Privacy Policy.`}
+            class="btn-whatsapp mt-5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 448 512">
+              <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157z"/>
+            </svg>
+            Contact Support via WhatsApp
+          </a>
+        </section>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

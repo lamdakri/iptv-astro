@@ -30,6 +30,10 @@
         {
           "text": "IPTV vs Cable Comparison",
           "url": "/en/blog/iptv-vs-cable-comparison/"
+        },
+        {
+          "text": "Best IPTV for Canada",
+          "url": "/en/iptv-canada/"
         }
       ]
     },
@@ -52,6 +56,10 @@
         {
           "text": "Voir les Offres",
           "url": "/fr/pricing/"
+        },
+        {
+          "text": "Meilleur IPTV pour Canada",
+          "url": "/fr/iptv-canada/"
         }
       ]
     },
@@ -73,6 +81,10 @@
         {
           "text": "عرض الخطط",
           "url": "/ar/pricing/"
+        },
+        {
+          "text": "افضل IPTV — Canada",
+          "url": "/ar/iptv-canada/"
         }
       ]
     },
@@ -94,6 +106,10 @@
         {
           "text": "Ver Planes",
           "url": "/es/pricing/"
+        },
+        {
+          "text": "Mejor IPTV para Canada",
+          "url": "/es/iptv-canada/"
         }
       ]
     },
@@ -117,7 +133,16 @@
           "answer": "Kontaktieren Sie uns per WhatsApp für 12 Stunden kostenlos."
         }
       ],
-      "internalLinks": []
+      "internalLinks": [
+        {
+          "text": "Preise ansehen",
+          "url": "/de/pricing/"
+        },
+        {
+          "text": "Bestes IPTV für Kanada",
+          "url": "/de/iptv-canada/"
+        }
+      ]
     },
     "it": {
       "title": "IPTV USA - Abbonamento IPTV Premium 2025",
@@ -139,7 +164,16 @@
           "answer": "Contattaci su WhatsApp per 12 ore gratuite."
         }
       ],
-      "internalLinks": []
+      "internalLinks": [
+        {
+          "text": "Piani Prezzi",
+          "url": "/it/pricing/"
+        },
+        {
+          "text": "Miglior IPTV per Canada",
+          "url": "/it/iptv-canada/"
+        }
+      ]
     },
     "pt": {
       "title": "IPTV EUA - Assinatura IPTV Premium 2025",
@@ -161,7 +195,16 @@
           "answer": "Contacte-nos no WhatsApp para 12 horas grátis."
         }
       ],
-      "internalLinks": []
+      "internalLinks": [
+        {
+          "text": "Ver Precos",
+          "url": "/pt/pricing/"
+        },
+        {
+          "text": "Melhor IPTV para Canadá",
+          "url": "/pt/iptv-canada/"
+        }
+      ]
     }
   },
   "targetCountries": [

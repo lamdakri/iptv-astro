@@ -6,17 +6,221 @@
       "title": "IPTV on Android — Best IPTV App for Android Devices 2025",
       "description": "Watch IPTV on Android phones, tablets, and TV boxes. Get 20,000+ channels in 4K on any Android device. Free 12-hour trial. Compatible with all Android versions.",
       "h1": "IPTV on Android — Watch 20,000+ Channels on Any Android Device",
-      "h2s": ["Best IPTV Player for Android", "How to Set Up IPTV on Android", "Android TV Box Compatibility"],
+      "h2s": [
+        "Best IPTV Player for Android",
+        "How to Set Up IPTV on Android",
+        "Android TV Box Compatibility"
+      ],
       "content": "<p>IPTV 4K World is fully compatible with all Android devices including smartphones, tablets, TV boxes, and Android TV. Enjoy 20,000+ live channels and 50,000+ VOD titles in stunning 4K quality on your Android device.</p><p>Setup takes just minutes. Download the compatible app, enter your credentials, and start watching.</p>",
-      "faqs": [{"question": "Can I watch IPTV on my Android phone?", "answer": "Yes! IPTV 4K World works on all Android phones, tablets, TV boxes, and Android TV devices."}, {"question": "What is the best IPTV app for Android?", "answer": "IPTV 4K World is compatible with IPTV Smarters, TiviMate, and other popular Android IPTV players."}],
-      "internalLinks": [{"text": "View Pricing Plans", "url": "/en/pricing/"}, {"text": "Getting Started Guide", "url": "/en/blog/getting-started-iptv/"}]
+      "faqs": [
+        {
+          "question": "Can I watch IPTV on my Android phone?",
+          "answer": "Yes! IPTV 4K World works on all Android phones, tablets, TV boxes, and Android TV devices."
+        },
+        {
+          "question": "What is the best IPTV app for Android?",
+          "answer": "IPTV 4K World is compatible with IPTV Smarters, TiviMate, and other popular Android IPTV players."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "View Pricing Plans",
+          "url": "/en/pricing/"
+        },
+        {
+          "text": "Getting Started Guide",
+          "url": "/en/blog/getting-started-iptv/"
+        },
+        {
+          "text": "How to Get IPTV on Firestick — Complete Setup Guide 2025",
+          "url": "/en/iptv-firestick/"
+        },
+        {
+          "text": "How to Watch IPTV on Smart TV — Complete Guide 2025",
+          "url": "/en/iptv-smart-tv/"
+        }
+      ]
     },
-    "fr": {"title": "IPTV sur Android — Meilleure App IPTV pour Android 2025", "description": "Regardez IPTV sur Android. 20 000+ chaines en 4K.", "h1": "IPTV sur Android", "h2s": [], "content": "<p>IPTV 4K World compatible avec tous les appareils Android.</p>", "faqs": [{"question": "Compatible avec Android ?", "answer": "Oui."}], "internalLinks": [{"text": "Voir les Tarifs", "url": "/fr/pricing/"}]},
-    "ar": {"title": "IPTV على أندرويد — أفضل تطبيق IPTV لأجهزة أندرويد 2025", "description": "شاهد IPTV على أندرويد. أكثر من 20,000 قناة.", "h1": "IPTV على أندرويد", "h2s": [], "content": "<p>IPTV 4K World متوافق مع جميع أجهزة أندرويد.</p>", "faqs": [{"question": "متوافق مع أندرويد؟", "answer": "نعم."}], "internalLinks": [{"text": "خطط الأسعار", "url": "/ar/pricing/"}]},
-    "es": {"title": "IPTV en Android — Mejor App IPTV para Android 2025", "description": "Mira IPTV en Android. 20,000+ canales en 4K.", "h1": "IPTV en Android", "h2s": [], "content": "<p>IPTV 4K World compatible con todos los dispositivos Android.</p>", "faqs": [{"question": "Compatible con Android?", "answer": "Si."}], "internalLinks": [{"text": "Ver Planes", "url": "/es/pricing/"}]},
-    "de": {"title": "IPTV auf Android - Beste App 2025", "description": "IPTV auf Android-Geraten.", "h1": "IPTV auf Android", "h2s": [], "content": "<p>IPTV 4K World kompatibel mit allen Android-Geraten.</p>", "faqs": [{"question": "Kompatibel?", "answer": "Ja."}], "internalLinks": []},
-    "it": {"title": "IPTV su Android - Miglior App 2025", "description": "IPTV su dispositivi Android.", "h1": "IPTV su Android", "h2s": [], "content": "<p>IPTV 4K World compatibile con tutti i dispositivi Android.</p>", "faqs": [{"question": "Compatibile?", "answer": "Si."}], "internalLinks": []},
-    "pt": {"title": "IPTV no Android - Melhor App 2025", "description": "IPTV em dispositivos Android.", "h1": "IPTV no Android", "h2s": [], "content": "<p>IPTV 4K World compativel com todos os dispositivos Android.</p>", "faqs": [{"question": "Compativel?", "answer": "Sim."}], "internalLinks": []}
+    "fr": {
+      "title": "IPTV sur Android — Meilleure App IPTV pour Android 2025",
+      "description": "Regardez 20,000+ chaines en direct en 4K avec IPTV 4K World. Essai gratuit 12h. Support 24/7.",
+      "h1": "Meilleur IPTV - 20,000+ Chaines en 4K",
+      "h2s": [
+        "Pourquoi IPTV 4K World",
+        "Comment Commencer"
+      ],
+      "content": "<p>IPTV 4K World offre 20,000+ chaines en direct en 4K et 50,000+ titres VOD. Streaming fluide avec anti-freeze. Support 24/7 WhatsApp.</p>",
+      "faqs": [
+        {
+          "question": "Compatible avec Android ?",
+          "answer": "Contact WhatsApp for a free trial."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "Voir les Tarifs",
+          "url": "/fr/pricing/"
+        },
+        {
+          "text": "Comment Installer IPTV sur Firestick",
+          "url": "/fr/iptv-firestick/"
+        },
+        {
+          "text": "IPTV sur Smart TV",
+          "url": "/fr/iptv-smart-tv/"
+        }
+      ]
+    },
+    "ar": {
+      "title": "IPTV على أندرويد — أفضل تطبيق IPTV لأجهزة أندرويد 2025",
+      "description": "شاهد 20,000+ قناة بجودة 4K مع IPTV 4K World. نسخة تجريبية مجانية 12h. دعم 24/7.",
+      "h1": "أفضل IPTV - 20,000+ قناة 4K",
+      "h2s": [
+        "القنوات",
+        "كيف تبدأ"
+      ],
+      "content": "<p>IPTV 4K World يقدم 20,000+ قناة 4K و 50,000+ عنوان VOD. بث سلس مع تقنية منع التجميد. دعم 24/7 واتساب.</p>",
+      "faqs": [
+        {
+          "question": "متوافق مع أندرويد؟",
+          "answer": "Contact WhatsApp for a free trial."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "خطط الأسعار",
+          "url": "/ar/pricing/"
+        },
+        {
+          "text": "كيفية تشغيل IPTV على Firestick",
+          "url": "/ar/iptv-firestick/"
+        },
+        {
+          "text": "IPTV على التلفزيون الذكي",
+          "url": "/ar/iptv-smart-tv/"
+        }
+      ]
+    },
+    "es": {
+      "title": "IPTV en Android — Mejor App IPTV para Android 2025",
+      "description": "Vea 20,000+ canales en vivo en 4K con IPTV 4K World. Prueba gratis 12h. Soporte 24/7.",
+      "h1": "Mejor IPTV - 20,000+ Canales 4K",
+      "h2s": [
+        "Canales",
+        "Como Empezar"
+      ],
+      "content": "<p>IPTV 4K World ofrece 20,000+ canales 4K y 50,000+ titulos VOD. Streaming fluido anti-freeze. Soporte 24/7 WhatsApp.</p>",
+      "faqs": [
+        {
+          "question": "Compatible con Android?",
+          "answer": "Contact WhatsApp for a free trial."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "Ver Planes",
+          "url": "/es/pricing/"
+        },
+        {
+          "text": "Como Instalar IPTV en Firestick",
+          "url": "/es/iptv-firestick/"
+        },
+        {
+          "text": "IPTV en Smart TV",
+          "url": "/es/iptv-smart-tv/"
+        }
+      ]
+    },
+    "de": {
+      "title": "IPTV auf Android - Beste App 2025",
+      "description": "Sehen Sie 20,000+ Sender in 4K mit IPTV 4K World. Kostenlose 12h-Testversion. 24/7-Support.",
+      "h1": "Bestes IPTV - 20,000+ Sender 4K",
+      "h2s": [
+        "Sender",
+        "So starten"
+      ],
+      "content": "<p>IPTV 4K World bietet 20,000+ Sender 4K und 50,000+ VOD-Titel. Flussiges Streaming. 24/7-Support.</p>",
+      "faqs": [
+        {
+          "question": "Kompatibel?",
+          "answer": "Contact WhatsApp for a free trial."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "Preise ansehen",
+          "url": "/de/pricing/"
+        },
+        {
+          "text": "IPTV auf Firestick einrichten",
+          "url": "/de/iptv-firestick/"
+        },
+        {
+          "text": "IPTV auf Smart TV",
+          "url": "/de/iptv-smart-tv/"
+        }
+      ]
+    },
+    "it": {
+      "title": "IPTV su Android - Miglior App 2025",
+      "description": "Guarda 20,000+ canali live in 4K con IPTV 4K World. Prova gratis 12h. Supporto 24/7.",
+      "h1": "Miglior IPTV - 20,000+ Canali 4K",
+      "h2s": [
+        "Canali",
+        "Come Iniziare"
+      ],
+      "content": "<p>IPTV 4K World offre 20,000+ canali 4K e 50,000+ titoli VOD. Streaming fluido. Supporto 24/7.</p>",
+      "faqs": [
+        {
+          "question": "Compatibile?",
+          "answer": "Contact WhatsApp for a free trial."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "Piani Prezzi",
+          "url": "/it/pricing/"
+        },
+        {
+          "text": "IPTV su Firestick",
+          "url": "/it/iptv-firestick/"
+        },
+        {
+          "text": "IPTV su Smart TV",
+          "url": "/it/iptv-smart-tv/"
+        }
+      ]
+    },
+    "pt": {
+      "title": "IPTV no Android - Melhor App 2025",
+      "description": "Assista 20,000+ canais ao vivo em 4K com IPTV 4K World. Teste gratis 12h. Suporte 24/7.",
+      "h1": "Melhor IPTV - 20,000+ Canais 4K",
+      "h2s": [
+        "Canais",
+        "Como Comecar"
+      ],
+      "content": "<p>IPTV 4K World oferece 20,000+ canais 4K e 50,000+ titulos VOD. Streaming fluido. Suporte 24/7.</p>",
+      "faqs": [
+        {
+          "question": "Compativel?",
+          "answer": "Contact WhatsApp for a free trial."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "Ver Precos",
+          "url": "/pt/pricing/"
+        },
+        {
+          "text": "IPTV no Firestick",
+          "url": "/pt/iptv-firestick/"
+        },
+        {
+          "text": "IPTV na Smart TV",
+          "url": "/pt/iptv-smart-tv/"
+        }
+      ]
+    }
   },
   "targetCountries": []
 }

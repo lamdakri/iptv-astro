@@ -6,17 +6,218 @@
       "title": "IPTV Malaysia — Best IPTV Subscription for Malaysian Channels 2025",
       "description": "Watch Malaysian TV channels with the best IPTV subscription. Get RTM, TV3, Astro, and 20,000+ international channels in 4K. Free trial.",
       "h1": "Best IPTV for Malaysia — Malaysian TV & Global Entertainment",
-      "h2s": ["Why IPTV is Popular in Malaysia", "Malaysian Channels Available"],
+      "h2s": [
+        "Why IPTV is Popular in Malaysia",
+        "Malaysian Channels Available"
+      ],
       "content": "<p>Experience the best of Malaysian television with IPTV 4K World. Whether in Kuala Lumpur, Penang, Johor Bahru, or abroad, enjoy RTM, TV3, Astro channels, and 20,000+ channels in stunning 4K quality.</p>",
-      "faqs": [{"question": "Can I watch Malaysian channels with IPTV?", "answer": "Yes! IPTV 4K World includes RTM, TV3, NTV7, 8TV, TV9, Astro channels, and all major Malaysian channels."}],
-      "internalLinks": [{"text": "View Pricing Plans", "url": "/en/pricing/"}, {"text": "Best IPTV Service", "url": "/en/best-iptv/"}]
+      "faqs": [
+        {
+          "question": "Can I watch Malaysian channels with IPTV?",
+          "answer": "Yes! IPTV 4K World includes RTM, TV3, NTV7, 8TV, TV9, Astro channels, and all major Malaysian channels."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "View Pricing Plans",
+          "url": "/en/pricing/"
+        },
+        {
+          "text": "Best IPTV Service",
+          "url": "/en/best-iptv/"
+        },
+        {
+          "text": "Best IPTV for India",
+          "url": "/en/iptv-india/"
+        },
+        {
+          "text": "Best IPTV for Pakistan — Pakistani Dramas, Sports & Global TV",
+          "url": "/en/iptv-pakistan/"
+        }
+      ]
     },
-    "fr": {"title": "IPTV Malaisie — Meilleur Abonnement IPTV 2025", "description": "Regardez les chaines malaisiennes avec IPTV 4K World.", "h1": "Meilleur IPTV pour la Malaisie", "h2s": [], "content": "<p>Profitez de la television malaisienne avec IPTV 4K World.</p>", "faqs": [{"question": "Disponible en Malaisie ?", "answer": "Oui."}], "internalLinks": [{"text": "Voir les Tarifs", "url": "/fr/pricing/"}]},
-    "ar": {"title": "IPTV ماليزيا — أفضل اشتراك IPTV 2025", "description": "شاهد القنوات الماليزية مع IPTV 4K World.", "h1": "أفضل IPTV في ماليزيا", "h2s": [], "content": "<p>استمتع بالتلفزيون الماليزي مع IPTV 4K World.</p>", "faqs": [{"question": "هل IPTV متوفر في ماليزيا؟", "answer": "نعم."}], "internalLinks": [{"text": "خطط الأسعار", "url": "/ar/pricing/"}]},
-    "es": {"title": "IPTV Malasia — Mejor Suscripcion IPTV 2025", "description": "Mira canales malasios con IPTV 4K World.", "h1": "Mejor IPTV para Malasia", "h2s": [], "content": "<p>Disfruta de la television malasia con IPTV 4K World.</p>", "faqs": [{"question": "Disponible en Malasia?", "answer": "Si."}], "internalLinks": [{"text": "Ver Planes", "url": "/es/pricing/"}]},
-    "de": {"title": "IPTV Malaysia - Premium IPTV", "description": "Premium IPTV fur Malaysia.", "h1": "Bestes IPTV fur Malaysia", "h2s": [], "content": "<p>Geniesen Sie 20.000+ Sender mit IPTV 4K World.</p>", "faqs": [{"question": "Verfugbar?", "answer": "Ja."}], "internalLinks": []},
-    "it": {"title": "IPTV Malaysia - Abbonamento IPTV", "description": "IPTV premium per Malaysia.", "h1": "Miglior IPTV per Malaysia", "h2s": [], "content": "<p>Godetevi 20.000+ canali con IPTV 4K World.</p>", "faqs": [{"question": "Disponibile?", "answer": "Si."}], "internalLinks": []},
-    "pt": {"title": "IPTV Malasia - Assinatura IPTV Premium", "description": "IPTV premium para Malasia.", "h1": "Melhor IPTV para Malasia", "h2s": [], "content": "<p>Desfrute de 20.000+ canais com IPTV 4K World.</p>", "faqs": [{"question": "Disponivel?", "answer": "Sim."}], "internalLinks": []}
+    "fr": {
+      "title": "IPTV Malaisie — Meilleur Abonnement IPTV 2025",
+      "description": "Regardez 20,000+ chaines en direct en 4K avec IPTV 4K World. Essai gratuit 12h. Support 24/7.",
+      "h1": "Meilleur IPTV - 20,000+ Chaines en 4K",
+      "h2s": [
+        "Pourquoi IPTV 4K World",
+        "Comment Commencer"
+      ],
+      "content": "<p>IPTV 4K World offre 20,000+ chaines en direct en 4K et 50,000+ titres VOD. Streaming fluide avec anti-freeze. Support 24/7 WhatsApp.</p>",
+      "faqs": [
+        {
+          "question": "Disponible en Malaisie ?",
+          "answer": "Contact WhatsApp for a free trial."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "Voir les Tarifs",
+          "url": "/fr/pricing/"
+        },
+        {
+          "text": "Meilleur IPTV pour India",
+          "url": "/fr/iptv-india/"
+        },
+        {
+          "text": "Meilleur IPTV pour le Pakistan",
+          "url": "/fr/iptv-pakistan/"
+        }
+      ]
+    },
+    "ar": {
+      "title": "IPTV ماليزيا — أفضل اشتراك IPTV 2025",
+      "description": "شاهد 20,000+ قناة بجودة 4K مع IPTV 4K World. نسخة تجريبية مجانية 12h. دعم 24/7.",
+      "h1": "أفضل IPTV - 20,000+ قناة 4K",
+      "h2s": [
+        "القنوات",
+        "كيف تبدأ"
+      ],
+      "content": "<p>IPTV 4K World يقدم 20,000+ قناة 4K و 50,000+ عنوان VOD. بث سلس مع تقنية منع التجميد. دعم 24/7 واتساب.</p>",
+      "faqs": [
+        {
+          "question": "هل IPTV متوفر في ماليزيا؟",
+          "answer": "Contact WhatsApp for a free trial."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "خطط الأسعار",
+          "url": "/ar/pricing/"
+        },
+        {
+          "text": "افضل IPTV — India",
+          "url": "/ar/iptv-india/"
+        },
+        {
+          "text": "أفضل IPTV في باكستان",
+          "url": "/ar/iptv-pakistan/"
+        }
+      ]
+    },
+    "es": {
+      "title": "IPTV Malasia — Mejor Suscripcion IPTV 2025",
+      "description": "Vea 20,000+ canales en vivo en 4K con IPTV 4K World. Prueba gratis 12h. Soporte 24/7.",
+      "h1": "Mejor IPTV - 20,000+ Canales 4K",
+      "h2s": [
+        "Canales",
+        "Como Empezar"
+      ],
+      "content": "<p>IPTV 4K World ofrece 20,000+ canales 4K y 50,000+ titulos VOD. Streaming fluido anti-freeze. Soporte 24/7 WhatsApp.</p>",
+      "faqs": [
+        {
+          "question": "Disponible en Malasia?",
+          "answer": "Contact WhatsApp for a free trial."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "Ver Planes",
+          "url": "/es/pricing/"
+        },
+        {
+          "text": "Mejor IPTV para India",
+          "url": "/es/iptv-india/"
+        },
+        {
+          "text": "Mejor IPTV para Pakistan",
+          "url": "/es/iptv-pakistan/"
+        }
+      ]
+    },
+    "de": {
+      "title": "IPTV Malaysia - Premium IPTV",
+      "description": "Sehen Sie 20,000+ Sender in 4K mit IPTV 4K World. Kostenlose 12h-Testversion. 24/7-Support.",
+      "h1": "Bestes IPTV - 20,000+ Sender 4K",
+      "h2s": [
+        "Sender",
+        "So starten"
+      ],
+      "content": "<p>IPTV 4K World bietet 20,000+ Sender 4K und 50,000+ VOD-Titel. Flussiges Streaming. 24/7-Support.</p>",
+      "faqs": [
+        {
+          "question": "Verfugbar?",
+          "answer": "Contact WhatsApp for a free trial."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "Preise ansehen",
+          "url": "/de/pricing/"
+        },
+        {
+          "text": "Bestes IPTV für Indien",
+          "url": "/de/iptv-india/"
+        },
+        {
+          "text": "Bestes IPTV fur Pakistan",
+          "url": "/de/iptv-pakistan/"
+        }
+      ]
+    },
+    "it": {
+      "title": "IPTV Malaysia - Abbonamento IPTV",
+      "description": "Guarda 20,000+ canali live in 4K con IPTV 4K World. Prova gratis 12h. Supporto 24/7.",
+      "h1": "Miglior IPTV - 20,000+ Canali 4K",
+      "h2s": [
+        "Canali",
+        "Come Iniziare"
+      ],
+      "content": "<p>IPTV 4K World offre 20,000+ canali 4K e 50,000+ titoli VOD. Streaming fluido. Supporto 24/7.</p>",
+      "faqs": [
+        {
+          "question": "Disponibile?",
+          "answer": "Contact WhatsApp for a free trial."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "Piani Prezzi",
+          "url": "/it/pricing/"
+        },
+        {
+          "text": "Miglior IPTV per India",
+          "url": "/it/iptv-india/"
+        },
+        {
+          "text": "Miglior IPTV per Pakistan",
+          "url": "/it/iptv-pakistan/"
+        }
+      ]
+    },
+    "pt": {
+      "title": "IPTV Malasia - Assinatura IPTV Premium",
+      "description": "Assista 20,000+ canais ao vivo em 4K com IPTV 4K World. Teste gratis 12h. Suporte 24/7.",
+      "h1": "Melhor IPTV - 20,000+ Canais 4K",
+      "h2s": [
+        "Canais",
+        "Como Comecar"
+      ],
+      "content": "<p>IPTV 4K World oferece 20,000+ canais 4K e 50,000+ titulos VOD. Streaming fluido. Suporte 24/7.</p>",
+      "faqs": [
+        {
+          "question": "Disponivel?",
+          "answer": "Contact WhatsApp for a free trial."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "Ver Precos",
+          "url": "/pt/pricing/"
+        },
+        {
+          "text": "Melhor IPTV para Índia",
+          "url": "/pt/iptv-india/"
+        },
+        {
+          "text": "Melhor IPTV para Paquistao",
+          "url": "/pt/iptv-pakistan/"
+        }
+      ]
+    }
   },
-  "targetCountries": ["MY"]
+  "targetCountries": [
+    "MY"
+  ]
 }

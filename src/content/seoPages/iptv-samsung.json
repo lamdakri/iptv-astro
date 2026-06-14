@@ -6,17 +6,221 @@
       "title": "IPTV on Samsung Smart TV — How to Watch IPTV on Samsung TV 2025",
       "description": "Learn how to watch IPTV on Samsung Smart TV. Compatible with all Samsung TV models. 20,000+ channels in 4K. Free 12-hour trial.",
       "h1": "How to Watch IPTV on Samsung Smart TV — Setup Guide 2025",
-      "h2s": ["Why Samsung TV is Great for IPTV", "How to Install IPTV on Samsung TV", "Best Settings for IPTV on Samsung"],
+      "h2s": [
+        "Why Samsung TV is Great for IPTV",
+        "How to Install IPTV on Samsung TV",
+        "Best Settings for IPTV on Samsung"
+      ],
       "content": "<p>Enjoy IPTV 4K World on your Samsung Smart TV. Whether you have a QLED, Neo QLED, Crystal UHD, or any Samsung TV, our service delivers 20,000+ live channels and 50,000+ VOD titles in stunning 4K quality.</p>",
-      "faqs": [{"question": "Can I watch IPTV on my Samsung Smart TV?", "answer": "Yes! IPTV 4K World is compatible with all Samsung Smart TV models from 2016 onwards."}, {"question": "Do I need a separate device for Samsung TV?", "answer": "You can use the built-in Tizen browser or connect a Firestick/Android box."}],
-      "internalLinks": [{"text": "View Pricing Plans", "url": "/en/pricing/"}, {"text": "IPTV on Smart TV", "url": "/en/iptv-smart-tv/"}]
+      "faqs": [
+        {
+          "question": "Can I watch IPTV on my Samsung Smart TV?",
+          "answer": "Yes! IPTV 4K World is compatible with all Samsung Smart TV models from 2016 onwards."
+        },
+        {
+          "question": "Do I need a separate device for Samsung TV?",
+          "answer": "You can use the built-in Tizen browser or connect a Firestick/Android box."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "View Pricing Plans",
+          "url": "/en/pricing/"
+        },
+        {
+          "text": "IPTV on Smart TV",
+          "url": "/en/iptv-smart-tv/"
+        },
+        {
+          "text": "How to Get IPTV on Firestick — Complete Setup Guide 2025",
+          "url": "/en/iptv-firestick/"
+        },
+        {
+          "text": "IPTV on Android — Watch 20,000+ Channels on Any Android Device",
+          "url": "/en/iptv-android/"
+        }
+      ]
     },
-    "fr": {"title": "IPTV sur Samsung Smart TV — Guide 2025", "description": "Regardez IPTV sur Samsung TV. 20 000+ chaines en 4K.", "h1": "IPTV sur Samsung TV", "h2s": [], "content": "<p>IPTV 4K World sur votre Samsung Smart TV.</p>", "faqs": [{"question": "Compatible Samsung ?", "answer": "Oui."}], "internalLinks": [{"text": "Voir les Tarifs", "url": "/fr/pricing/"}]},
-    "ar": {"title": "IPTV على تلفزيون سامسونج — دليل 2025", "description": "شاهد IPTV على تلفزيون سامسونج.", "h1": "IPTV على سامسونج", "h2s": [], "content": "<p>IPTV 4K World على تلفزيون سامسونج الذكي.</p>", "faqs": [{"question": "متوافق مع سامسونج؟", "answer": "نعم."}], "internalLinks": [{"text": "خطط الأسعار", "url": "/ar/pricing/"}]},
-    "es": {"title": "IPTV en Samsung Smart TV — Guia 2025", "description": "Mira IPTV en Samsung TV.", "h1": "IPTV en Samsung", "h2s": [], "content": "<p>IPTV 4K World en tu Samsung Smart TV.</p>", "faqs": [{"question": "Compatible Samsung?", "answer": "Si."}], "internalLinks": [{"text": "Ver Planes", "url": "/es/pricing/"}]},
-    "de": {"title": "IPTV auf Samsung TV - Anleitung", "description": "IPTV auf Samsung Smart TV.", "h1": "IPTV auf Samsung", "h2s": [], "content": "<p>IPTV 4K World auf Ihrem Samsung TV.</p>", "faqs": [{"question": "Kompatibel?", "answer": "Ja."}], "internalLinks": []},
-    "it": {"title": "IPTV su Samsung TV - Guida", "description": "IPTV su Samsung Smart TV.", "h1": "IPTV su Samsung", "h2s": [], "content": "<p>IPTV 4K World sulla tua Samsung TV.</p>", "faqs": [{"question": "Compatibile?", "answer": "Si."}], "internalLinks": []},
-    "pt": {"title": "IPTV na Samsung TV - Guia", "description": "IPTV em Samsung Smart TV.", "h1": "IPTV na Samsung", "h2s": [], "content": "<p>IPTV 4K World na sua Samsung TV.</p>", "faqs": [{"question": "Compative?", "answer": "Sim."}], "internalLinks": []}
+    "fr": {
+      "title": "IPTV sur Samsung Smart TV — Guide 2025",
+      "description": "Regardez 20,000+ chaines en direct en 4K avec IPTV 4K World. Essai gratuit 12h. Support 24/7.",
+      "h1": "Meilleur IPTV - 20,000+ Chaines en 4K",
+      "h2s": [
+        "Pourquoi IPTV 4K World",
+        "Comment Commencer"
+      ],
+      "content": "<p>IPTV 4K World offre 20,000+ chaines en direct en 4K et 50,000+ titres VOD. Streaming fluide avec anti-freeze. Support 24/7 WhatsApp.</p>",
+      "faqs": [
+        {
+          "question": "Compatible Samsung ?",
+          "answer": "Contact WhatsApp for a free trial."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "Voir les Tarifs",
+          "url": "/fr/pricing/"
+        },
+        {
+          "text": "Comment Installer IPTV sur Firestick",
+          "url": "/fr/iptv-firestick/"
+        },
+        {
+          "text": "IPTV sur Android",
+          "url": "/fr/iptv-android/"
+        }
+      ]
+    },
+    "ar": {
+      "title": "IPTV على تلفزيون سامسونج — دليل 2025",
+      "description": "شاهد 20,000+ قناة بجودة 4K مع IPTV 4K World. نسخة تجريبية مجانية 12h. دعم 24/7.",
+      "h1": "أفضل IPTV - 20,000+ قناة 4K",
+      "h2s": [
+        "القنوات",
+        "كيف تبدأ"
+      ],
+      "content": "<p>IPTV 4K World يقدم 20,000+ قناة 4K و 50,000+ عنوان VOD. بث سلس مع تقنية منع التجميد. دعم 24/7 واتساب.</p>",
+      "faqs": [
+        {
+          "question": "متوافق مع سامسونج؟",
+          "answer": "Contact WhatsApp for a free trial."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "خطط الأسعار",
+          "url": "/ar/pricing/"
+        },
+        {
+          "text": "كيفية تشغيل IPTV على Firestick",
+          "url": "/ar/iptv-firestick/"
+        },
+        {
+          "text": "IPTV على أندرويد",
+          "url": "/ar/iptv-android/"
+        }
+      ]
+    },
+    "es": {
+      "title": "IPTV en Samsung Smart TV — Guia 2025",
+      "description": "Vea 20,000+ canales en vivo en 4K con IPTV 4K World. Prueba gratis 12h. Soporte 24/7.",
+      "h1": "Mejor IPTV - 20,000+ Canales 4K",
+      "h2s": [
+        "Canales",
+        "Como Empezar"
+      ],
+      "content": "<p>IPTV 4K World ofrece 20,000+ canales 4K y 50,000+ titulos VOD. Streaming fluido anti-freeze. Soporte 24/7 WhatsApp.</p>",
+      "faqs": [
+        {
+          "question": "Compatible Samsung?",
+          "answer": "Contact WhatsApp for a free trial."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "Ver Planes",
+          "url": "/es/pricing/"
+        },
+        {
+          "text": "Como Instalar IPTV en Firestick",
+          "url": "/es/iptv-firestick/"
+        },
+        {
+          "text": "IPTV en Android",
+          "url": "/es/iptv-android/"
+        }
+      ]
+    },
+    "de": {
+      "title": "IPTV auf Samsung TV - Anleitung",
+      "description": "Sehen Sie 20,000+ Sender in 4K mit IPTV 4K World. Kostenlose 12h-Testversion. 24/7-Support.",
+      "h1": "Bestes IPTV - 20,000+ Sender 4K",
+      "h2s": [
+        "Sender",
+        "So starten"
+      ],
+      "content": "<p>IPTV 4K World bietet 20,000+ Sender 4K und 50,000+ VOD-Titel. Flussiges Streaming. 24/7-Support.</p>",
+      "faqs": [
+        {
+          "question": "Kompatibel?",
+          "answer": "Contact WhatsApp for a free trial."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "Preise ansehen",
+          "url": "/de/pricing/"
+        },
+        {
+          "text": "IPTV auf Firestick einrichten",
+          "url": "/de/iptv-firestick/"
+        },
+        {
+          "text": "IPTV auf Android",
+          "url": "/de/iptv-android/"
+        }
+      ]
+    },
+    "it": {
+      "title": "IPTV su Samsung TV - Guida",
+      "description": "Guarda 20,000+ canali live in 4K con IPTV 4K World. Prova gratis 12h. Supporto 24/7.",
+      "h1": "Miglior IPTV - 20,000+ Canali 4K",
+      "h2s": [
+        "Canali",
+        "Come Iniziare"
+      ],
+      "content": "<p>IPTV 4K World offre 20,000+ canali 4K e 50,000+ titoli VOD. Streaming fluido. Supporto 24/7.</p>",
+      "faqs": [
+        {
+          "question": "Compatibile?",
+          "answer": "Contact WhatsApp for a free trial."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "Piani Prezzi",
+          "url": "/it/pricing/"
+        },
+        {
+          "text": "IPTV su Firestick",
+          "url": "/it/iptv-firestick/"
+        },
+        {
+          "text": "IPTV su Android",
+          "url": "/it/iptv-android/"
+        }
+      ]
+    },
+    "pt": {
+      "title": "IPTV na Samsung TV - Guia",
+      "description": "Assista 20,000+ canais ao vivo em 4K com IPTV 4K World. Teste gratis 12h. Suporte 24/7.",
+      "h1": "Melhor IPTV - 20,000+ Canais 4K",
+      "h2s": [
+        "Canais",
+        "Como Comecar"
+      ],
+      "content": "<p>IPTV 4K World oferece 20,000+ canais 4K e 50,000+ titulos VOD. Streaming fluido. Suporte 24/7.</p>",
+      "faqs": [
+        {
+          "question": "Compative?",
+          "answer": "Contact WhatsApp for a free trial."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "Ver Precos",
+          "url": "/pt/pricing/"
+        },
+        {
+          "text": "IPTV no Firestick",
+          "url": "/pt/iptv-firestick/"
+        },
+        {
+          "text": "IPTV no Android",
+          "url": "/pt/iptv-android/"
+        }
+      ]
+    }
   },
   "targetCountries": []
 }

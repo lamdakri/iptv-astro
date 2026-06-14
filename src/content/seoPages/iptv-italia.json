@@ -21,6 +21,20 @@
           "question": "Can I watch Serie A with IPTV?",
           "answer": "Yes, IPTV 4K World includes all Serie A matches in 4K quality."
         }
+      ],
+      "internalLinks": [
+        {
+          "text": "View Pricing Plans",
+          "url": "/en/pricing/"
+        },
+        {
+          "text": "Best IPTV for the United Kingdom",
+          "url": "/en/iptv-uk/"
+        },
+        {
+          "text": "Best IPTV for France — Watch French TV in 4K",
+          "url": "/en/iptv-france/"
+        }
       ]
     },
     "fr": {
@@ -37,20 +51,49 @@
           "question": "IPTV 4K World est-il disponible dans mon pays?",
           "answer": "Oui, IPTV 4K World est disponible dans le monde entier."
         }
+      ],
+      "internalLinks": [
+        {
+          "text": "Voir les Offres",
+          "url": "/fr/pricing/"
+        },
+        {
+          "text": "Meilleur IPTV pour UK",
+          "url": "/fr/iptv-uk/"
+        },
+        {
+          "text": "Meilleur IPTV pour la France — Regardez la TV Française en 4K",
+          "url": "/fr/iptv-france/"
+        }
       ]
     },
     "ar": {
       "title": "IPTV Italia — افضل اشتراك IPTV 2025",
-      "description": "شاهد قنوات Italia مع IPTV 4K World. اكثر من 20,000 قناة بجودة 4K مع تجربة مجانية.",
-      "h1": "افضل IPTV في Italia",
+      "description": "شاهد 20,000+ قناة بجودة 4K مع IPTV 4K World. نسخة تجريبية مجانية 12h. دعم 24/7.",
+      "h1": "أفضل IPTV - 20,000+ قناة 4K",
       "h2s": [
-        "لماذا تختار IPTV 4K World"
+        "القنوات",
+        "كيف تبدأ"
       ],
-      "content": "<p>شاهد افضل القنوات مع IPTV 4K World. جودة 4K، دعم 24/7، تجربة مجانية 12 ساعة.</p>",
+      "content": "<p>IPTV 4K World يقدم 20,000+ قناة 4K و 50,000+ عنوان VOD. بث سلس مع تقنية منع التجميد. دعم 24/7 واتساب.</p>",
       "faqs": [
         {
           "question": "هل IPTV 4K World متوفر في بلدي؟",
           "answer": "نعم، IPTV 4K World متوفر في جميع انحاء العالم."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "خطط الأسعار",
+          "url": "/ar/pricing/"
+        },
+        {
+          "text": "افضل IPTV في UK",
+          "url": "/ar/iptv-uk/"
+        },
+        {
+          "text": "أفضل IPTV لفرنسا — شاهد التلفزيون الفرنسي بدقة 4K",
+          "url": "/ar/iptv-france/"
         }
       ]
     },
@@ -66,6 +109,20 @@
         {
           "question": "IPTV 4K World esta disponible en mi pais?",
           "answer": "Si, IPTV 4K World esta disponible en todo el mundo."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "Ver Planes",
+          "url": "/es/pricing/"
+        },
+        {
+          "text": "Mejor IPTV para UK",
+          "url": "/es/iptv-uk/"
+        },
+        {
+          "text": "Mejor IPTV para Francia — Mira TV Francesa en 4K",
+          "url": "/es/iptv-france/"
         }
       ]
     },
@@ -89,7 +146,20 @@
           "answer": "Kontaktieren Sie uns per WhatsApp für 12 Stunden kostenlos."
         }
       ],
-      "internalLinks": []
+      "internalLinks": [
+        {
+          "text": "Preise ansehen",
+          "url": "/de/pricing/"
+        },
+        {
+          "text": "Bestes IPTV für Großbritannien",
+          "url": "/de/iptv-uk/"
+        },
+        {
+          "text": "Bestes IPTV für Frankreich",
+          "url": "/de/iptv-france/"
+        }
+      ]
     },
     "it": {
       "title": "IPTV Italia - Abbonamento IPTV Premium 2025",
@@ -111,7 +181,20 @@
           "answer": "Contattaci su WhatsApp per 12 ore gratuite."
         }
       ],
-      "internalLinks": []
+      "internalLinks": [
+        {
+          "text": "Piani Prezzi",
+          "url": "/it/pricing/"
+        },
+        {
+          "text": "Miglior IPTV per Regno Unito",
+          "url": "/it/iptv-uk/"
+        },
+        {
+          "text": "Miglior IPTV per Francia",
+          "url": "/it/iptv-france/"
+        }
+      ]
     },
     "pt": {
       "title": "IPTV Itália - Assinatura IPTV Premium 2025",
@@ -133,7 +216,20 @@
           "answer": "Contacte-nos no WhatsApp para 12 horas grátis."
         }
       ],
-      "internalLinks": []
+      "internalLinks": [
+        {
+          "text": "Ver Precos",
+          "url": "/pt/pricing/"
+        },
+        {
+          "text": "Melhor IPTV para Reino Unido",
+          "url": "/pt/iptv-uk/"
+        },
+        {
+          "text": "Melhor IPTV para França",
+          "url": "/pt/iptv-france/"
+        }
+      ]
     }
   }
 }

@@ -26,6 +26,14 @@
         {
           "text": "IPTV Pricing",
           "url": "/en/pricing/"
+        },
+        {
+          "text": "Best IPTV for Algeria",
+          "url": "/en/iptv-algerie/"
+        },
+        {
+          "text": "Best IPTV for Tunisia",
+          "url": "/en/iptv-tunisie/"
         }
       ]
     },
@@ -48,6 +56,14 @@
         {
           "text": "Tarifs IPTV",
           "url": "/fr/pricing/"
+        },
+        {
+          "text": "Meilleur IPTV pour Algerie",
+          "url": "/fr/iptv-algerie/"
+        },
+        {
+          "text": "Meilleur IPTV pour Tunisie",
+          "url": "/fr/iptv-tunisie/"
         }
       ]
     },
@@ -75,6 +91,14 @@
         {
           "text": "أسعار IPTV",
           "url": "/ar/pricing/"
+        },
+        {
+          "text": "افضل IPTV — Algerie",
+          "url": "/ar/iptv-algerie/"
+        },
+        {
+          "text": "افضل IPTV — Tunisie",
+          "url": "/ar/iptv-tunisie/"
         }
       ]
     },
@@ -96,6 +120,14 @@
         {
           "text": "Precios IPTV",
           "url": "/es/pricing/"
+        },
+        {
+          "text": "Mejor IPTV para Algerie",
+          "url": "/es/iptv-algerie/"
+        },
+        {
+          "text": "Mejor IPTV para Tunisie",
+          "url": "/es/iptv-tunisie/"
         }
       ]
     },
@@ -119,7 +151,20 @@
           "answer": "Kontaktieren Sie uns per WhatsApp für 12 Stunden kostenlos."
         }
       ],
-      "internalLinks": []
+      "internalLinks": [
+        {
+          "text": "Preise ansehen",
+          "url": "/de/pricing/"
+        },
+        {
+          "text": "Bestes IPTV für Algerien",
+          "url": "/de/iptv-algerie/"
+        },
+        {
+          "text": "Bestes IPTV für Tunesien",
+          "url": "/de/iptv-tunisie/"
+        }
+      ]
     },
     "it": {
       "title": "IPTV Marocco - Abbonamento IPTV Premium 2025",
@@ -141,7 +186,20 @@
           "answer": "Contattaci su WhatsApp per 12 ore gratuite."
         }
       ],
-      "internalLinks": []
+      "internalLinks": [
+        {
+          "text": "Piani Prezzi",
+          "url": "/it/pricing/"
+        },
+        {
+          "text": "Miglior IPTV per Algeria",
+          "url": "/it/iptv-algerie/"
+        },
+        {
+          "text": "Miglior IPTV per Tunisia",
+          "url": "/it/iptv-tunisie/"
+        }
+      ]
     },
     "pt": {
       "title": "IPTV Marrocos - Assinatura IPTV Premium 2025",
@@ -163,7 +221,20 @@
           "answer": "Contacte-nos no WhatsApp para 12 horas grátis."
         }
       ],
-      "internalLinks": []
+      "internalLinks": [
+        {
+          "text": "Ver Precos",
+          "url": "/pt/pricing/"
+        },
+        {
+          "text": "Melhor IPTV para Argélia",
+          "url": "/pt/iptv-algerie/"
+        },
+        {
+          "text": "Melhor IPTV para Tunísia",
+          "url": "/pt/iptv-tunisie/"
+        }
+      ]
     }
   },
   "targetCountries": [

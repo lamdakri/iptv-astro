@@ -6,17 +6,221 @@
       "title": "IPTV on Smart TV — How to Watch IPTV on Your Smart TV 2025",
       "description": "Learn how to watch IPTV on Smart TV. Compatible with Samsung, LG, Sony, and all Smart TVs. 20,000+ channels in 4K. Free 12-hour trial. Easy setup.",
       "h1": "How to Watch IPTV on Smart TV — Complete Guide 2025",
-      "h2s": ["Best Smart TV for IPTV", "How to Install IPTV on Smart TV", "Smart TV Apps for IPTV"],
+      "h2s": [
+        "Best Smart TV for IPTV",
+        "How to Install IPTV on Smart TV",
+        "Smart TV Apps for IPTV"
+      ],
       "content": "<p>Turn your Smart TV into an entertainment powerhouse with IPTV 4K World. Compatible with Samsung, LG, Sony, Hisense, and all major Smart TV brands. Watch 20,000+ live channels and 50,000+ VOD titles in stunning 4K quality.</p>",
-      "faqs": [{"question": "Can I watch IPTV on my Smart TV?", "answer": "Yes! IPTV 4K World works on all Smart TVs including Samsung, LG, Sony, and more."}, {"question": "Do I need a separate box for IPTV on Smart TV?", "answer": "No, you can install IPTV directly on most Smart TVs or use a streaming device like Firestick."}],
-      "internalLinks": [{"text": "View Pricing Plans", "url": "/en/pricing/"}, {"text": "Getting Started Guide", "url": "/en/blog/getting-started-iptv/"}]
+      "faqs": [
+        {
+          "question": "Can I watch IPTV on my Smart TV?",
+          "answer": "Yes! IPTV 4K World works on all Smart TVs including Samsung, LG, Sony, and more."
+        },
+        {
+          "question": "Do I need a separate box for IPTV on Smart TV?",
+          "answer": "No, you can install IPTV directly on most Smart TVs or use a streaming device like Firestick."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "View Pricing Plans",
+          "url": "/en/pricing/"
+        },
+        {
+          "text": "Getting Started Guide",
+          "url": "/en/blog/getting-started-iptv/"
+        },
+        {
+          "text": "How to Get IPTV on Firestick — Complete Setup Guide 2025",
+          "url": "/en/iptv-firestick/"
+        },
+        {
+          "text": "IPTV on Android — Watch 20,000+ Channels on Any Android Device",
+          "url": "/en/iptv-android/"
+        }
+      ]
     },
-    "fr": {"title": "IPTV sur Smart TV — Comment Regarder IPTV sur votre Smart TV 2025", "description": "Regardez IPTV sur Smart TV. Compatible Samsung, LG, Sony.", "h1": "IPTV sur Smart TV", "h2s": [], "content": "<p>Transformez votre Smart TV avec IPTV 4K World.</p>", "faqs": [{"question": "Compatible avec Smart TV ?", "answer": "Oui."}], "internalLinks": [{"text": "Voir les Tarifs", "url": "/fr/pricing/"}]},
-    "ar": {"title": "IPTV على التلفزيون الذكي — كيفية مشاهدة IPTV 2025", "description": "شاهد IPTV على التلفزيون الذكي. متوافق مع سامسونج وإل جي.", "h1": "IPTV على التلفزيون الذكي", "h2s": [], "content": "<p>حول تلفزيونك الذكي مع IPTV 4K World.</p>", "faqs": [{"question": "متوافق مع التلفزيون الذكي؟", "answer": "نعم."}], "internalLinks": [{"text": "خطط الأسعار", "url": "/ar/pricing/"}]},
-    "es": {"title": "IPTV en Smart TV — Como Ver IPTV en tu Smart TV 2025", "description": "Mira IPTV en Smart TV. Compatible Samsung, LG, Sony.", "h1": "IPTV en Smart TV", "h2s": [], "content": "<p>Transforma tu Smart TV con IPTV 4K World.</p>", "faqs": [{"question": "Compatible con Smart TV?", "answer": "Si."}], "internalLinks": [{"text": "Ver Planes", "url": "/es/pricing/"}]},
-    "de": {"title": "IPTV auf Smart TV - Anleitung 2025", "description": "IPTV auf Smart TV Samsung, LG, Sony.", "h1": "IPTV auf Smart TV", "h2s": [], "content": "<p>IPTV 4K World auf Ihrem Smart TV.</p>", "faqs": [{"question": "Kompatibel?", "answer": "Ja."}], "internalLinks": []},
-    "it": {"title": "IPTV su Smart TV - Guida 2025", "description": "IPTV su Smart TV Samsung, LG, Sony.", "h1": "IPTV su Smart TV", "h2s": [], "content": "<p>IPTV 4K World sulla tua Smart TV.</p>", "faqs": [{"question": "Compatibile?", "answer": "Si."}], "internalLinks": []},
-    "pt": {"title": "IPTV na Smart TV - Guia 2025", "description": "IPTV em Smart TV Samsung, LG, Sony.", "h1": "IPTV na Smart TV", "h2s": [], "content": "<p>IPTV 4K World na sua Smart TV.</p>", "faqs": [{"question": "Compative?", "answer": "Sim."}], "internalLinks": []}
+    "fr": {
+      "title": "IPTV sur Smart TV — Comment Regarder IPTV sur votre Smart TV 2025",
+      "description": "Regardez 20,000+ chaines en direct en 4K avec IPTV 4K World. Essai gratuit 12h. Support 24/7.",
+      "h1": "Meilleur IPTV - 20,000+ Chaines en 4K",
+      "h2s": [
+        "Pourquoi IPTV 4K World",
+        "Comment Commencer"
+      ],
+      "content": "<p>IPTV 4K World offre 20,000+ chaines en direct en 4K et 50,000+ titres VOD. Streaming fluide avec anti-freeze. Support 24/7 WhatsApp.</p>",
+      "faqs": [
+        {
+          "question": "Compatible avec Smart TV ?",
+          "answer": "Contact WhatsApp for a free trial."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "Voir les Tarifs",
+          "url": "/fr/pricing/"
+        },
+        {
+          "text": "Comment Installer IPTV sur Firestick",
+          "url": "/fr/iptv-firestick/"
+        },
+        {
+          "text": "IPTV sur Android",
+          "url": "/fr/iptv-android/"
+        }
+      ]
+    },
+    "ar": {
+      "title": "IPTV على التلفزيون الذكي — كيفية مشاهدة IPTV 2025",
+      "description": "شاهد 20,000+ قناة بجودة 4K مع IPTV 4K World. نسخة تجريبية مجانية 12h. دعم 24/7.",
+      "h1": "أفضل IPTV - 20,000+ قناة 4K",
+      "h2s": [
+        "القنوات",
+        "كيف تبدأ"
+      ],
+      "content": "<p>IPTV 4K World يقدم 20,000+ قناة 4K و 50,000+ عنوان VOD. بث سلس مع تقنية منع التجميد. دعم 24/7 واتساب.</p>",
+      "faqs": [
+        {
+          "question": "متوافق مع التلفزيون الذكي؟",
+          "answer": "Contact WhatsApp for a free trial."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "خطط الأسعار",
+          "url": "/ar/pricing/"
+        },
+        {
+          "text": "كيفية تشغيل IPTV على Firestick",
+          "url": "/ar/iptv-firestick/"
+        },
+        {
+          "text": "IPTV على أندرويد",
+          "url": "/ar/iptv-android/"
+        }
+      ]
+    },
+    "es": {
+      "title": "IPTV en Smart TV — Como Ver IPTV en tu Smart TV 2025",
+      "description": "Vea 20,000+ canales en vivo en 4K con IPTV 4K World. Prueba gratis 12h. Soporte 24/7.",
+      "h1": "Mejor IPTV - 20,000+ Canales 4K",
+      "h2s": [
+        "Canales",
+        "Como Empezar"
+      ],
+      "content": "<p>IPTV 4K World ofrece 20,000+ canales 4K y 50,000+ titulos VOD. Streaming fluido anti-freeze. Soporte 24/7 WhatsApp.</p>",
+      "faqs": [
+        {
+          "question": "Compatible con Smart TV?",
+          "answer": "Contact WhatsApp for a free trial."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "Ver Planes",
+          "url": "/es/pricing/"
+        },
+        {
+          "text": "Como Instalar IPTV en Firestick",
+          "url": "/es/iptv-firestick/"
+        },
+        {
+          "text": "IPTV en Android",
+          "url": "/es/iptv-android/"
+        }
+      ]
+    },
+    "de": {
+      "title": "IPTV auf Smart TV - Anleitung 2025",
+      "description": "Sehen Sie 20,000+ Sender in 4K mit IPTV 4K World. Kostenlose 12h-Testversion. 24/7-Support.",
+      "h1": "Bestes IPTV - 20,000+ Sender 4K",
+      "h2s": [
+        "Sender",
+        "So starten"
+      ],
+      "content": "<p>IPTV 4K World bietet 20,000+ Sender 4K und 50,000+ VOD-Titel. Flussiges Streaming. 24/7-Support.</p>",
+      "faqs": [
+        {
+          "question": "Kompatibel?",
+          "answer": "Contact WhatsApp for a free trial."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "Preise ansehen",
+          "url": "/de/pricing/"
+        },
+        {
+          "text": "IPTV auf Firestick einrichten",
+          "url": "/de/iptv-firestick/"
+        },
+        {
+          "text": "IPTV auf Android",
+          "url": "/de/iptv-android/"
+        }
+      ]
+    },
+    "it": {
+      "title": "IPTV su Smart TV - Guida 2025",
+      "description": "Guarda 20,000+ canali live in 4K con IPTV 4K World. Prova gratis 12h. Supporto 24/7.",
+      "h1": "Miglior IPTV - 20,000+ Canali 4K",
+      "h2s": [
+        "Canali",
+        "Come Iniziare"
+      ],
+      "content": "<p>IPTV 4K World offre 20,000+ canali 4K e 50,000+ titoli VOD. Streaming fluido. Supporto 24/7.</p>",
+      "faqs": [
+        {
+          "question": "Compatibile?",
+          "answer": "Contact WhatsApp for a free trial."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "Piani Prezzi",
+          "url": "/it/pricing/"
+        },
+        {
+          "text": "IPTV su Firestick",
+          "url": "/it/iptv-firestick/"
+        },
+        {
+          "text": "IPTV su Android",
+          "url": "/it/iptv-android/"
+        }
+      ]
+    },
+    "pt": {
+      "title": "IPTV na Smart TV - Guia 2025",
+      "description": "Assista 20,000+ canais ao vivo em 4K com IPTV 4K World. Teste gratis 12h. Suporte 24/7.",
+      "h1": "Melhor IPTV - 20,000+ Canais 4K",
+      "h2s": [
+        "Canais",
+        "Como Comecar"
+      ],
+      "content": "<p>IPTV 4K World oferece 20,000+ canais 4K e 50,000+ titulos VOD. Streaming fluido. Suporte 24/7.</p>",
+      "faqs": [
+        {
+          "question": "Compative?",
+          "answer": "Contact WhatsApp for a free trial."
+        }
+      ],
+      "internalLinks": [
+        {
+          "text": "Ver Precos",
+          "url": "/pt/pricing/"
+        },
+        {
+          "text": "IPTV no Firestick",
+          "url": "/pt/iptv-firestick/"
+        },
+        {
+          "text": "IPTV no Android",
+          "url": "/pt/iptv-android/"
+        }
+      ]
+    }
   },
   "targetCountries": []
 }

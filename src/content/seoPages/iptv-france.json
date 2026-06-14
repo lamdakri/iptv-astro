@@ -30,6 +30,14 @@
         {
           "text": "IPTV for Sports Guide",
           "url": "/en/blog/best-iptv-for-sports/"
+        },
+        {
+          "text": "Best IPTV for the United Kingdom",
+          "url": "/en/iptv-uk/"
+        },
+        {
+          "text": "Best IPTV for Germany",
+          "url": "/en/iptv-germany/"
         }
       ]
     },
@@ -61,6 +69,14 @@
         {
           "text": "Guide IPTV pour le Sport",
           "url": "/fr/blog/best-iptv-for-sports/"
+        },
+        {
+          "text": "Meilleur IPTV pour UK",
+          "url": "/fr/iptv-uk/"
+        },
+        {
+          "text": "Meilleur IPTV pour Germany",
+          "url": "/fr/iptv-germany/"
         }
       ]
     },
@@ -84,6 +100,14 @@
         {
           "text": "عرض خطط الأسعار",
           "url": "/ar/pricing/"
+        },
+        {
+          "text": "افضل IPTV في UK",
+          "url": "/ar/iptv-uk/"
+        },
+        {
+          "text": "افضل IPTV في Germany",
+          "url": "/ar/iptv-germany/"
         }
       ]
     },
@@ -106,6 +130,14 @@
         {
           "text": "Ver Precios IPTV",
           "url": "/es/pricing/"
+        },
+        {
+          "text": "Mejor IPTV para UK",
+          "url": "/es/iptv-uk/"
+        },
+        {
+          "text": "Mejor IPTV para Germany",
+          "url": "/es/iptv-germany/"
         }
       ]
     },
@@ -129,7 +161,20 @@
           "answer": "Kontaktieren Sie uns per WhatsApp für 12 Stunden kostenlos."
         }
       ],
-      "internalLinks": []
+      "internalLinks": [
+        {
+          "text": "Preise ansehen",
+          "url": "/de/pricing/"
+        },
+        {
+          "text": "Bestes IPTV für Großbritannien",
+          "url": "/de/iptv-uk/"
+        },
+        {
+          "text": "Bestes IPTV für Deutschland",
+          "url": "/de/iptv-germany/"
+        }
+      ]
     },
     "it": {
       "title": "IPTV Francia - Abbonamento IPTV Premium 2025",
@@ -151,7 +196,20 @@
           "answer": "Contattaci su WhatsApp per 12 ore gratuite."
         }
       ],
-      "internalLinks": []
+      "internalLinks": [
+        {
+          "text": "Piani Prezzi",
+          "url": "/it/pricing/"
+        },
+        {
+          "text": "Miglior IPTV per Regno Unito",
+          "url": "/it/iptv-uk/"
+        },
+        {
+          "text": "Miglior IPTV per Germania",
+          "url": "/it/iptv-germany/"
+        }
+      ]
     },
     "pt": {
       "title": "IPTV França - Assinatura IPTV Premium 2025",
@@ -173,7 +231,20 @@
           "answer": "Contacte-nos no WhatsApp para 12 horas grátis."
         }
       ],
-      "internalLinks": []
+      "internalLinks": [
+        {
+          "text": "Ver Precos",
+          "url": "/pt/pricing/"
+        },
+        {
+          "text": "Melhor IPTV para Reino Unido",
+          "url": "/pt/iptv-uk/"
+        },
+        {
+          "text": "Melhor IPTV para Alemanha",
+          "url": "/pt/iptv-germany/"
+        }
+      ]
     }
   },
   "targetCountries": [

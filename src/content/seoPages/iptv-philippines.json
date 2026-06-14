@@ -30,6 +30,14 @@
         {
           "text": "Getting Started Guide",
           "url": "/en/blog/getting-started-iptv/"
+        },
+        {
+          "text": "Best IPTV for India",
+          "url": "/en/iptv-india/"
+        },
+        {
+          "text": "Best IPTV for Pakistan — Pakistani Dramas, Sports & Global TV",
+          "url": "/en/iptv-pakistan/"
         }
       ]
     },
@@ -56,6 +64,14 @@
         {
           "text": "Voir les Tarifs IPTV",
           "url": "/fr/pricing/"
+        },
+        {
+          "text": "Meilleur IPTV pour India",
+          "url": "/fr/iptv-india/"
+        },
+        {
+          "text": "Meilleur IPTV pour le Pakistan",
+          "url": "/fr/iptv-pakistan/"
         }
       ]
     },
@@ -78,6 +94,14 @@
         {
           "text": "عرض خطط الأسعار",
           "url": "/ar/pricing/"
+        },
+        {
+          "text": "افضل IPTV — India",
+          "url": "/ar/iptv-india/"
+        },
+        {
+          "text": "أفضل IPTV في باكستان",
+          "url": "/ar/iptv-pakistan/"
         }
       ]
     },
@@ -99,6 +123,14 @@
         {
           "text": "Ver Planes",
           "url": "/es/pricing/"
+        },
+        {
+          "text": "Mejor IPTV para India",
+          "url": "/es/iptv-india/"
+        },
+        {
+          "text": "Mejor IPTV para Pakistan",
+          "url": "/es/iptv-pakistan/"
         }
       ]
     },
@@ -121,17 +153,30 @@
           "answer": "Kontaktieren Sie uns per WhatsApp fur 12 Stunden kostenlos."
         }
       ],
-      "internalLinks": []
+      "internalLinks": [
+        {
+          "text": "Preise ansehen",
+          "url": "/de/pricing/"
+        },
+        {
+          "text": "Bestes IPTV für Indien",
+          "url": "/de/iptv-india/"
+        },
+        {
+          "text": "Bestes IPTV fur Pakistan",
+          "url": "/de/iptv-pakistan/"
+        }
+      ]
     },
     "it": {
       "title": "IPTV Filippine - Abbonamento IPTV Premium 2025",
-      "description": "IPTV premium per Filippine. 20.000+ canali in 4K.",
-      "h1": "Miglior IPTV per Filippine",
+      "description": "Guarda 20,000+ canali live in 4K con IPTV 4K World. Prova gratis 12h. Supporto 24/7.",
+      "h1": "Miglior IPTV - 20,000+ Canali 4K",
       "h2s": [
-        "Perche scegliere IPTV nelle Filippine?",
-        "Canali disponibili"
+        "Canali",
+        "Come Iniziare"
       ],
-      "content": "<p>Godetevi 20.000+ canali in 4K con IPTV 4K World nelle Filippine. Supporto 24/7.</p>",
+      "content": "<p>IPTV 4K World offre 20,000+ canali 4K e 50,000+ titoli VOD. Streaming fluido. Supporto 24/7.</p>",
       "faqs": [
         {
           "question": "IPTV 4K World e disponibile nelle Filippine?",
@@ -142,17 +187,30 @@
           "answer": "Contattaci su WhatsApp per 12 ore gratuite."
         }
       ],
-      "internalLinks": []
+      "internalLinks": [
+        {
+          "text": "Piani Prezzi",
+          "url": "/it/pricing/"
+        },
+        {
+          "text": "Miglior IPTV per India",
+          "url": "/it/iptv-india/"
+        },
+        {
+          "text": "Miglior IPTV per Pakistan",
+          "url": "/it/iptv-pakistan/"
+        }
+      ]
     },
     "pt": {
       "title": "IPTV Filipinas - Assinatura IPTV Premium 2025",
-      "description": "IPTV premium para Filipinas. 20.000+ canais em 4K.",
-      "h1": "Melhor IPTV para Filipinas",
+      "description": "Assista 20,000+ canais ao vivo em 4K com IPTV 4K World. Teste gratis 12h. Suporte 24/7.",
+      "h1": "Melhor IPTV - 20,000+ Canais 4K",
       "h2s": [
-        "Porque escolher IPTV nas Filipinas?",
-        "Canais disponiveis"
+        "Canais",
+        "Como Comecar"
       ],
-      "content": "<p>Desfrute de 20.000+ canais em 4K com IPTV 4K World nas Filipinas. Suporte 24/7.</p>",
+      "content": "<p>IPTV 4K World oferece 20,000+ canais 4K e 50,000+ titulos VOD. Streaming fluido. Suporte 24/7.</p>",
       "faqs": [
         {
           "question": "O IPTV 4K World esta disponivel nas Filipinas?",
@@ -163,8 +221,23 @@
           "answer": "Contacte-nos no WhatsApp para 12 horas gratis."
         }
       ],
-      "internalLinks": []
+      "internalLinks": [
+        {
+          "text": "Ver Precos",
+          "url": "/pt/pricing/"
+        },
+        {
+          "text": "Melhor IPTV para Índia",
+          "url": "/pt/iptv-india/"
+        },
+        {
+          "text": "Melhor IPTV para Paquistao",
+          "url": "/pt/iptv-pakistan/"
+        }
+      ]
     }
   },
-  "targetCountries": ["PH"]
+  "targetCountries": [
+    "PH"
+  ]
 }

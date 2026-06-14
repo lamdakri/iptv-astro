@@ -40,4 +40,4 @@ De plus en plus de personnes coupent le câble et passent à l IPTV. Voici une c
 
 Pour le prix, la flexibilité et la variété de contenu, l IPTV est clairement gagnante.
 
-[Commencez votre essai gratuit de 12 heures sur WhatsApp](https://wa.me/212606123321).
+[Commencez votre essai gratuit de 12 heures sur WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}).

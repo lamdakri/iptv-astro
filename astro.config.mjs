@@ -3,6 +3,7 @@ import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import fs from 'node:fs';
 import path from 'node:path';
+import remarkWhatsAppNumber from './src/plugins/remark-whatsapp-number.mjs';
 
 // Build a map of blog post slugs → frontmatter dates for real lastmod values
 const blogDateMap = {};
@@ -111,7 +112,19 @@ export default defineConfig({
       redirectToDefaultLocale: true,
     },
   },
+  markdown: {
+    remarkPlugins: [remarkWhatsAppNumber],
+  },
   vite: {
     plugins: [tailwindcss()],
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'vendor-astro': ['astro'],
+          },
+        },
+      },
+    },
   },
 });

@@ -36,4 +36,4 @@ Un fichier M3U est un fichier texte contenant une liste d'URLs pointant vers des
 - 99,9% de disponibilite
 - Essai gratuit de 12 heures
 
-[Obtenez votre essai gratuit via WhatsApp](https://wa.me/212606123321).
+[Obtenez votre essai gratuit via WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}).

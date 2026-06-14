@@ -89,6 +89,6 @@ Android is the most versatile platform for IPTV. Whether you have an Android pho
 - Free 12-hour trial to test on your device
 - 24/7 WhatsApp support
 
-Ready to start? [Get your free IPTV 4K World trial on WhatsApp](https://wa.me/212606123321).
+Ready to start? [Get your free IPTV 4K World trial on WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}).
 
 *Also check our guides on [IPTV on Firestick](/en/blog/how-to-setup-iptv-firestick/) and [IPTV on Smart TV](/en/iptv-smart-tv/).*

@@ -1,7 +1,7 @@
 ---
 import { useTranslations, LANGUAGES } from '../i18n/ui';
 import BaseLayout from '../layouts/BaseLayout.astro';
-const WA = import.meta.env.WHATSAPP_NUMBER;
+import { WHATSAPP_NUMBER as WA } from '../i18n/whatsapp';
 
 // Detect language from URL pathname, fall back to 'en'
 const lang = Object.keys(LANGUAGES).find(

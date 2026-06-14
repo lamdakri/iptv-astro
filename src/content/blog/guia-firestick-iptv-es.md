@@ -40,4 +40,4 @@ Convierta su Amazon Fire TV Stick en un potente dispositivo de streaming con IPT
 - Soporte 24/7 via WhatsApp
 - Prueba gratuita de 12 horas
 
-[Solicite su prueba gratuita via WhatsApp](https://wa.me/212606123321).
+[Solicite su prueba gratuita via WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}).

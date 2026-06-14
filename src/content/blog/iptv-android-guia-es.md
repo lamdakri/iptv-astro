@@ -32,4 +32,4 @@ Android es la plataforma mas versatil para IPTV. Ya sea que tenga un telefono An
 - Prueba gratuita de 12 horas
 - Soporte 24/7 via WhatsApp
 
-[Obtenga su prueba gratuita de IPTV 4K World via WhatsApp](https://wa.me/212606123321).
+[Obtenga su prueba gratuita de IPTV 4K World via WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}).

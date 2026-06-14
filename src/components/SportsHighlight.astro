@@ -1,4 +1,5 @@
 ---
+import { WHATSAPP_NUMBER } from '../i18n/whatsapp';
 import PayPalBadge from './PayPalBadge.astro';
 
 interface Sport {
@@ -51,7 +52,7 @@ const { title, subtitle, eyebrow, sports, ctaText, ctaButton } = Astro.props;
     <div class="text-center mt-12 reveal">
       <p class="text-surface-400 text-sm mb-4">{ctaText}</p>
       <a
-        href={`https://wa.me/${import.meta.env.WHATSAPP_NUMBER}?text=${encodeURIComponent("I want to watch live sports in 4K! Give me the free trial.")}`}
+        href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("I want to watch live sports in 4K! Give me the free trial.")}`}
         class="btn-whatsapp text-lg px-10 py-4"
         target="_blank"
         rel="noopener noreferrer"

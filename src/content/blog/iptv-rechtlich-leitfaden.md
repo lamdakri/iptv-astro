@@ -67,4 +67,4 @@ IPTV 4K World arbeitet als legitimer IPTV-Dienstanbieter:
 - 20.000+ Kanale in 4K-Qualitat
 - 50.000+ VOD-Titel
 
-[Starten Sie Ihre kostenlose Testversion per WhatsApp](https://wa.me/212606123321).
+[Starten Sie Ihre kostenlose Testversion per WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}).

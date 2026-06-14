@@ -83,6 +83,6 @@ Apple users can enjoy IPTV too. Here is how to set up IPTV on your iPhone, iPad,
 - 24/7 WhatsApp support
 - Free 12-hour trial
 
-[Get your free IPTV 4K World trial on WhatsApp](https://wa.me/212606123321) and start watching on your iPhone or iPad today.
+[Get your free IPTV 4K World trial on WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}) and start watching on your iPhone or iPad today.
 
 *Also check our guides on [IPTV on Android](/en/blog/how-to-watch-iptv-android/) and [IPTV on Firestick](/en/blog/how-to-setup-iptv-firestick/).*

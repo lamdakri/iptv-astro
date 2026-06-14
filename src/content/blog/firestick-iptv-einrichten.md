@@ -78,4 +78,4 @@ Sobald Ihre Playlist geladen ist, sehen Sie 20.000+ Kanale.
 - 24/7-WhatsApp-Support
 - Kostenlose 12-Stunden-Testversion
 
-[Fordern Sie Ihre kostenlose Testversion per WhatsApp an](https://wa.me/212606123321).
+[Fordern Sie Ihre kostenlose Testversion per WhatsApp an](https://wa.me/{{WHATSAPP_NUMBER}}).

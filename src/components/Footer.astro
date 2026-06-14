@@ -1,6 +1,6 @@
 ---
 import { getLangFromUrl, useTranslations } from '../i18n/ui';
-const WA = import.meta.env.WHATSAPP_NUMBER;
+import { WHATSAPP_NUMBER as WA } from '../i18n/whatsapp';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);

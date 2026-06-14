@@ -110,6 +110,6 @@ If you experience buffering or freezing:
 - 24/7 WhatsApp support
 - Free 12-hour trial
 
-Ready to get started? [Request your free trial on WhatsApp](https://wa.me/212606123321) and start watching on your Firestick today.
+Ready to get started? [Request your free trial on WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}) and start watching on your Firestick today.
 
 *Also check our guide on [IPTV on Smart TV](/en/iptv-smart-tv/) and [best IPTV apps](/en/blog/best-iptv-apps-2025/) for more options.*

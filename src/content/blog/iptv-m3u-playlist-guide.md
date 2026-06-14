@@ -56,7 +56,7 @@ We recommend using M3U URLs for the best experience.
 
 ### Step 1: Get Your M3U URL
 
-After subscribing to [IPTV 4K World](https://wa.me/212606123321), you will receive a unique M3U playlist URL. This URL is personal to you and should not be shared.
+After subscribing to [IPTV 4K World](https://wa.me/{{WHATSAPP_NUMBER}}), you will receive a unique M3U playlist URL. This URL is personal to you and should not be shared.
 
 ### Step 2: Open Your IPTV Player
 
@@ -95,6 +95,6 @@ IPTV 4K World supports both connection methods.
 - Regular updates with new channels
 - Free 12-hour trial
 
-Ready for a premium M3U IPTV experience? [Get your free trial on WhatsApp](https://wa.me/212606123321).
+Ready for a premium M3U IPTV experience? [Get your free trial on WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}).
 
 *Also check our guides on [IPTV on Firestick](/en/blog/how-to-setup-iptv-firestick/) and [best IPTV apps](/en/blog/best-iptv-apps-2025/).*

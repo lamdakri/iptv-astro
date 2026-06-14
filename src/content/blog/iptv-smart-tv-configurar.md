@@ -38,4 +38,4 @@ Configurar IPTV na sua Smart TV e mais facil do que voce pensa. Este guia cobre 
 - Suporte 24/7 via WhatsApp
 - Teste gratuito de 12 horas
 
-[Inicie seu teste gratuito via WhatsApp](https://wa.me/212606123321).
+[Inicie seu teste gratuito via WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}).

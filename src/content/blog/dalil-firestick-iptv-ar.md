@@ -40,4 +40,4 @@ howToSteps:
 - دعم 24/7 عبر WhatsApp
 - نسخة تجريبية مجانية لمدة 12 ساعة
 
-[اطلب نسختك التجريبية المجانية عبر WhatsApp](https://wa.me/212606123321).
+[اطلب نسختك التجريبية المجانية عبر WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}).

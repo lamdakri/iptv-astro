@@ -10,7 +10,13 @@ const langData = Object.keys(LANGUAGES).map((code) => ({
 }));
 ---
 
-<div id="lang-banner" style="display:none;" class="bg-gradient-to-r from-brand-900/95 to-surface-900/95 backdrop-blur-md border-b border-brand-500/20 shadow-lg shadow-brand-500/5">
+<div id="lang-banner"
+  data-current-lang={currentLang}
+  data-current-path={currentPath}
+  data-lang-data={JSON.stringify(langData).replace(/"/g, '&quot;')}
+  style="display:none;"
+  class="bg-gradient-to-r from-brand-900/95 to-surface-900/95 backdrop-blur-md border-b border-brand-500/20 shadow-lg shadow-brand-500/5"
+>
   <div class="container-custom flex items-center justify-between gap-3 py-2.5">
     <div class="flex items-center gap-2 text-sm text-surface-200">
       <span id="lang-banner-flag" class="text-lg"></span>
@@ -29,51 +35,43 @@ const langData = Object.keys(LANGUAGES).map((code) => ({
   </div>
 </div>
 
-<script define:vars={{ currentLang, currentPath, langData }}>
+<script>
   (function() {
     const banner = document.getElementById('lang-banner');
-    const flagEl = document.getElementById('lang-banner-flag');
-    const textEl = document.getElementById('lang-banner-text');
-    const linkEl = document.getElementById('lang-banner-link');
-    const btnEl = document.getElementById('lang-banner-btn');
-    const dismissBtn = document.getElementById('lang-banner-dismiss');
-
     if (!banner) return;
-
-    // Check if user already dismissed
     if (localStorage.getItem('lang-banner-dismissed')) return;
+
+    const currentLang = banner.getAttribute('data-current-lang');
+    const currentPath = banner.getAttribute('data-current-path');
+    const langData = JSON.parse(banner.getAttribute('data-lang-data'));
 
     const supported = { en: true, fr: true, ar: true, es: true, de: true, it: true, pt: true };
     const navLang = (navigator.language || navigator.languages?.[0] || 'en').split('-')[0];
 
-    // Don't show if already on the detected language, or if detected language isn't supported, or if it's English (default)
     if (navLang === currentLang || !supported[navLang] || navLang === 'en') return;
 
     const detected = langData.find(l => l.code === navLang);
     if (!detected) return;
 
-    // Build banner text
     const messages = {
       en: { text: 'We also speak ' + detected.label + '! Switch to ' + detected.label + '?', btn: 'Switch to ' + detected.label },
       fr: { text: 'Nous parlons aussi ' + detected.label + ' ! Passer en ' + detected.label + ' ?', btn: 'Passer en ' + detected.label },
-      ar: { text: 'نتحدث أيضاً ' + detected.label + '! التبديل إلى ' + detected.label + '؟', btn: 'التبديل إلى ' + detected.label },
-      es: { text: '¡También hablamos ' + detected.label + '! ¿Cambiar a ' + detected.label + '?', btn: 'Cambiar a ' + detected.label },
+      ar: { text: '\u0646\u062A\u062D\u062F\u062B \u0623\u064A\u0636\u0627\u064B ' + detected.label + '! \u0627\u0644\u062A\u0628\u062F\u064A\u0644 \u0625\u0644\u0649 ' + detected.label + '\u061F', btn: '\u0627\u0644\u062A\u0628\u062F\u064A\u0644 \u0625\u0644\u0649 ' + detected.label },
+      es: { text: '\u00A1Tambi\u00E9n hablamos ' + detected.label + '! \u00BFCambiar a ' + detected.label + '?', btn: 'Cambiar a ' + detected.label },
       de: { text: 'Wir sprechen auch ' + detected.label + '! Zu ' + detected.label + ' wechseln?', btn: 'Zu ' + detected.label },
       it: { text: 'Parliamo anche ' + detected.label + '! Passare a ' + detected.label + '?', btn: 'Passa a ' + detected.label },
-      pt: { text: 'Tambem falamos ' + detected.label + '! Mudar para ' + detected.label + '?', btn: 'Mudar para ' + detected.label },
+      pt: { text: 'Tamb\u00E9m falamos ' + detected.label + '! Mudar para ' + detected.label + '?', btn: 'Mudar para ' + detected.label },
     };
 
     const msg = messages[currentLang] || messages.en;
-    flagEl.textContent = detected.flag;
-    textEl.textContent = msg.text;
-    btnEl.textContent = msg.btn;
-    linkEl.href = '/' + detected.code + currentPath;
+    document.getElementById('lang-banner-flag').textContent = detected.flag;
+    document.getElementById('lang-banner-text').textContent = msg.text;
+    document.getElementById('lang-banner-btn').textContent = msg.btn;
+    document.getElementById('lang-banner-link').href = '/' + detected.code + currentPath;
 
-    // Show banner
     banner.style.display = 'block';
 
-    // Dismiss handler
-    dismissBtn.addEventListener('click', function() {
+    document.getElementById('lang-banner-dismiss').addEventListener('click', function() {
       localStorage.setItem('lang-banner-dismissed', '1');
       banner.style.display = 'none';
     });

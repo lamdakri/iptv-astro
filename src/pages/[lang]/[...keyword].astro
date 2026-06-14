@@ -5,7 +5,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import FAQ from '../../components/FAQ.astro';
 import SchemaMarkup from '../../components/SchemaMarkup.astro';
-const WA = import.meta.env.WHATSAPP_NUMBER;
+import { WHATSAPP_NUMBER as WA } from '../../i18n/whatsapp';
 
 export async function getStaticPaths() {
   const seoPages = await getCollection('seoPages');

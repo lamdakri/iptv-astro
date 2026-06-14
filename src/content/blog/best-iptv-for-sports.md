@@ -51,4 +51,4 @@ IPTV 4K World delivers the ultimate sports experience:
 - Never miss a game with 99.9% uptime
 - Watch on up to 4 devices simultaneously with Premium plan
 
-[Get your free 12-hour trial on WhatsApp](https://wa.me/212606123321) and start watching sports today.
+[Get your free 12-hour trial on WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}) and start watching sports today.

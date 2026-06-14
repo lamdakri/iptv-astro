@@ -32,4 +32,4 @@ Les utilisateurs Apple peuvent aussi profiter d'IPTV. Voici comment configurer I
 - Support 24/7 via WhatsApp
 - Essai gratuit de 12 heures
 
-[Obtenez votre essai gratuit IPTV 4K World via WhatsApp](https://wa.me/212606123321).
+[Obtenez votre essai gratuit IPTV 4K World via WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}).

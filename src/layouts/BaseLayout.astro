@@ -74,11 +74,18 @@ const gaScript = `
       keywords={keywords}
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <!-- ═══ Font Loading (optimized for Core Web Vitals) ═══ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" /></noscript>
+
     <!-- DNS prefetch for WhatsApp (used on every page for CTAs) -->
     <link rel="dns-prefetch" href="https://wa.me" />
     <link rel="preconnect" href="https://wa.me" />
+
+    <!-- Google Analytics (async = non-blocking) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GV3H6SQGFT"></script>
     <script set:html={gaScript}></script>
     <noscript>

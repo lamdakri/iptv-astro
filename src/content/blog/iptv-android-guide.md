@@ -32,4 +32,4 @@ Android est la plateforme la plus polyvalente pour IPTV. Que vous ayez un teleph
 - Essai gratuit de 12 heures
 - Support 24/7 via WhatsApp
 
-[Obtenez votre essai gratuit IPTV 4K World via WhatsApp](https://wa.me/212606123321).
+[Obtenez votre essai gratuit IPTV 4K World via WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}).

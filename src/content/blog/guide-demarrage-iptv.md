@@ -46,4 +46,4 @@ IPTV 4K World offre tout ce dont vous avez besoin :
 - Support WhatsApp 24/7
 - Essai gratuit de 12 heures
 
-[Demandez votre essai gratuit sur WhatsApp](https://wa.me/212606123321).
+[Demandez votre essai gratuit sur WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}).

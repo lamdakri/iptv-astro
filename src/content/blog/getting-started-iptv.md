@@ -69,4 +69,4 @@ IPTV 4K World offers everything you need:
 - 24/7 WhatsApp support
 - Free 12-hour trial
 
-Ready to get started? [Request your free trial now via WhatsApp](https://wa.me/212606123321).
+Ready to get started? [Request your free trial now via WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}).

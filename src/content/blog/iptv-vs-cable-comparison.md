@@ -52,4 +52,4 @@ IPTV 4K World includes features cable TV can not match:
 
 For price, flexibility, and content variety, IPTV is the clear winner. With IPTV 4K World, you get more content for a fraction of the price.
 
-[Start your free 12-hour trial on WhatsApp](https://wa.me/212606123321) and experience the difference.
+[Start your free 12-hour trial on WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}) and experience the difference.

@@ -2,7 +2,7 @@
 import { useTranslations, LANGUAGES } from '../../i18n/ui';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
-const WA = import.meta.env.WHATSAPP_NUMBER;
+import { WHATSAPP_NUMBER as WA } from '../../i18n/whatsapp';
 
 export function getStaticPaths() {
   return Object.keys(LANGUAGES).map((lang) => ({ params: { lang } }));

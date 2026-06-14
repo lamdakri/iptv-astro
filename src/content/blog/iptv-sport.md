@@ -29,4 +29,4 @@ Si vous êtes fan de sport, l IPTV est la solution ultime pour regarder du sport
 - Ne manquez jamais un match avec une disponibilité de 99,9%
 - Regardez sur jusqu à 4 appareils simultanément
 
-[Obtenez votre essai gratuit de 12 heures sur WhatsApp](https://wa.me/212606123321).
+[Obtenez votre essai gratuit de 12 heures sur WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}).

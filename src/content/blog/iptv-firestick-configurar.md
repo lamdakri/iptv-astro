@@ -41,4 +41,4 @@ Transforme seu Amazon Fire TV Stick em um poderoso dispositivo de streaming com 
 - Suporte 24/7 via WhatsApp
 - Teste gratuito de 12 horas
 
-[Solicite seu teste gratuito via WhatsApp](https://wa.me/212606123321).
+[Solicite seu teste gratuito via WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}).

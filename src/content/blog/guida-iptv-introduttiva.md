@@ -56,4 +56,4 @@ L'IPTV funziona su praticamente tutti i dispositivi moderni:
 - Supporto 24/7 via WhatsApp
 - Prova gratuita di 12 ore
 
-[Richiedi la tua prova gratuita via WhatsApp](https://wa.me/212606123321).
+[Richiedi la tua prova gratuita via WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}).

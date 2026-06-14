@@ -13,7 +13,7 @@ const langData = Object.keys(LANGUAGES).map((code) => ({
 <div id="lang-banner"
   data-current-lang={currentLang}
   data-current-path={currentPath}
-  data-lang-data={JSON.stringify(langData).replace(/"/g, '&quot;')}
+  data-lang-data={JSON.stringify(langData)}
   style="display:none;"
   class="bg-gradient-to-r from-brand-900/95 to-surface-900/95 backdrop-blur-md border-b border-brand-500/20 shadow-lg shadow-brand-500/5"
 >

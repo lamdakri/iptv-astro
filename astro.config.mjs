@@ -5,6 +5,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import remarkWhatsAppNumber from './src/plugins/remark-whatsapp-number.mjs';
 
+import cloudflare from "@astrojs/cloudflare";
+
 // Build a map of blog post slugs → frontmatter dates for real lastmod values
 const blogDateMap = {};
 const blogDir = path.resolve('src/content/blog');
@@ -36,6 +38,7 @@ export default defineConfig({
   site: 'https://iptv4kworld.com',
   output: 'static',
   trailingSlash: 'always',
+
   integrations: [
     sitemap({
       i18n: {
@@ -104,6 +107,7 @@ export default defineConfig({
       },
     }),
   ],
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'fr', 'ar', 'es', 'de', 'it', 'pt'],
@@ -112,9 +116,11 @@ export default defineConfig({
       redirectToDefaultLocale: true,
     },
   },
+
   markdown: {
     remarkPlugins: [remarkWhatsAppNumber],
   },
+
   vite: {
     plugins: [tailwindcss()],
     build: {
@@ -127,4 +133,6 @@ export default defineConfig({
       },
     },
   },
+
+  adapter: cloudflare()
 });

@@ -7,6 +7,7 @@ lang: ar
 author: "IPTV 4K World Team"
 category: "دليل"
 tags: ["دليل", "iptv", "مبتدئ"]
+image: "/blog/images/guide.svg"
 ---
 
 # دليل IPTV الشامل 2025

@@ -7,6 +7,7 @@ lang: fr
 author: "IPTV 4K World Team"
 category: "Guide"
 tags: ["iptv", "guide", "tutoriel"]
+image: "/blog/images/guide.svg"
 ---
 
 # Guide de Démarrage IPTV 2025

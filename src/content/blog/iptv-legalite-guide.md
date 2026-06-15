@@ -7,6 +7,7 @@ lang: fr
 author: "IPTV 4K World Team"
 category: "Guide"
 tags: ["legal", "guide", "information"]
+image: "/blog/images/legal.svg"
 ---
 
 # IPTV est-il legal ? — Guide complet 2025

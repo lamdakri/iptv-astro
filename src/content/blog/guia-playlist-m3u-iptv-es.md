@@ -7,6 +7,7 @@ lang: es
 author: "Equipo IPTV 4K World"
 category: "Guia"
 tags: ["m3u", "lista", "guia", "tutorial"]
+image: "/blog/images/m3u.svg"
 howToSteps:
   - name: "Obtenga una lista M3U de un proveedor IPTV premium"
     text: "Suscribase a un servicio IPTV premium como IPTV 4K World. Recibira su URL de lista M3U unica via WhatsApp o correo."

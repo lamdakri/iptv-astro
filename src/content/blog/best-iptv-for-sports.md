@@ -7,6 +7,7 @@ lang: en
 author: "IPTV 4K World Team"
 category: "Sports"
 tags: ["sports", "football", "nba", "4k"]
+image: "/blog/images/sports.svg"
 ---
 
 # Best IPTV for Sports in 2025

@@ -7,6 +7,7 @@ lang: ar
 author: "فريق IPTV 4K World"
 category: "دليل"
 tags: ["قانوني", "دليل", "معلومات"]
+image: "/blog/images/legal.svg"
 ---
 
 # هل IPTV قانوني؟ — دليل كامل 2025

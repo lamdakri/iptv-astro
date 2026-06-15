@@ -7,6 +7,7 @@ lang: en
 author: "IPTV 4K World Team"
 category: "Comparison"
 tags: ["comparison", "cable", "guide"]
+image: "/blog/images/comparison.svg"
 ---
 
 # IPTV vs Cable TV: The Ultimate 2025 Comparison

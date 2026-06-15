@@ -60,6 +60,7 @@ const articleSchema = {
   ogImage={entry.data.image}
   ogType="article"
   articlePublishedTime={entry.data.date.toISOString()}
+  articleModifiedTime={entry.data.updatedDate ? entry.data.updatedDate.toISOString() : undefined}
   articleAuthor={entry.data.author}
   articleTags={entry.data.keywords || []}
   articleSection={entry.data.category}

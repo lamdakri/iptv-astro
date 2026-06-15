@@ -7,6 +7,7 @@ lang: en
 author: "IPTV 4K World Team"
 category: "Guide"
 tags: ["iptv", "guide", "tutorial"]
+image: "/blog/images/guide.svg"
 howToSteps:
   - name: "Choose an IPTV Provider"
     text: "Research and select a reputable IPTV service like IPTV 4K World that offers the channels and features you need. Look for providers with free trials."

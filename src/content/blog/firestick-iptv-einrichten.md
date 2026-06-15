@@ -7,6 +7,7 @@ lang: de
 author: "IPTV 4K World Team"
 category: "Einrichtung"
 tags: ["firestick", "amazon", "einrichtung", "anleitung"]
+image: "/blog/images/firestick.svg"
 howToSteps:
   - name: "Firestick fur IPTV vorbereiten"
     text: "Gehen Sie zu Einstellungen > Mein Fire TV > Entwickleroptionen und aktivieren Sie 'Apps aus unbekannten Quellen'. Dies ermoglicht die Installation von IPTV-Apps."

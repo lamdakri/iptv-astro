@@ -11,17 +11,19 @@ interface Props {
   title: string;
   description: string;
   ogImage?: string;
+  ogImageAlt?: string;
   ogType?: string;
   schema?: any;
   robots?: string;
   articlePublishedTime?: string;
+  articleModifiedTime?: string;
   articleAuthor?: string;
   articleTags?: string[];
   articleSection?: string;
   keywords?: string;
 }
 
-const { title, description, ogImage, ogType, schema, robots = 'index, follow', articlePublishedTime, articleAuthor, articleTags, articleSection, keywords } = Astro.props;
+const { title, description, ogImage, ogImageAlt, ogType, schema, robots = 'index, follow', articlePublishedTime, articleModifiedTime, articleAuthor, articleTags, articleSection, keywords } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const dir = LANGUAGES[lang]?.dir || 'ltr';
 const t = useTranslations(lang);
@@ -62,12 +64,14 @@ const gaScript = `
       canonicalURL={canonicalURL}
       xDefaultUrl={xDefaultUrl}
       ogImage={ogImage}
+      ogImageAlt={ogImageAlt || description}
       ogType={ogType}
       lang={lang}
       alternateLangs={alternateLangs}
       schema={schema}
       robots={robots}
       articlePublishedTime={articlePublishedTime}
+      articleModifiedTime={articleModifiedTime || articlePublishedTime}
       articleAuthor={articleAuthor}
       articleTags={articleTags}
       articleSection={articleSection}

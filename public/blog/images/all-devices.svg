@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg-dev" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1e1b4b;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="accent-dev" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22d3ee"/>
+      <stop offset="100%" style="stop-color:#22c55e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg-dev)" rx="16"/>
+  <rect x="160" y="70" width="140" height="100" rx="8" fill="#1e293b" stroke="#22d3ee" stroke-width="1.5"/>
+  <rect x="170" y="80" width="120" height="70" rx="4" fill="#0f172a"/>
+  <text x="230" y="115" text-anchor="middle" fill="#22d3ee" font-family="system-ui" font-size="9">SMART TV</text>
+  <rect x="200" y="170" width="60" height="6" rx="3" fill="#334155"/>
+  <rect x="340" y="60" width="60" height="120" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+  <rect x="350" y="75" width="40" height="40" rx="4" fill="#0f172a"/>
+  <text x="370" y="100" text-anchor="middle" fill="#f59e0b" font-family="system-ui" font-size="7" font-weight="bold">FIRE</text>
+  <rect x="355" y="180" width="30" height="8" rx="2" fill="#334155"/>
+  <rect x="440" y="65" width="55" height="120" rx="12" fill="#1e293b" stroke="#818cf8" stroke-width="1.5"/>
+  <rect x="450" y="80" width="35" height="50" rx="4" fill="#0f172a"/>
+  <text x="467" y="108" text-anchor="middle" fill="#818cf8" font-family="system-ui" font-size="8">4K</text>
+  <rect x="530" y="80" width="100" height="70" rx="6" fill="#1e293b" stroke="#22c55e" stroke-width="1.5"/>
+  <polygon points="560,100 560,125 590,112" fill="#22c55e" opacity="0.5"/>
+  <rect x="320" y="250" width="160" height="40" rx="20" fill="#1e293b" stroke="url(#accent-dev)" stroke-width="1.5"/>
+  <text x="400" y="275" text-anchor="middle" fill="#64748b" font-family="system-ui" font-size="8">IPTV 4K CLOUD</text>
+  <text x="400" y="375" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13" letter-spacing="3">ALL DEVICES</text>
+</svg>

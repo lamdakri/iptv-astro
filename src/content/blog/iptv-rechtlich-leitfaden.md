@@ -7,6 +7,7 @@ lang: de
 author: "IPTV 4K World Team"
 category: "Leitfaden"
 tags: ["legal", "leitfaden", "information"]
+image: "/blog/images/legal.svg"
 ---
 
 # Ist IPTV legal? — Vollstandiger Leitfaden 2025

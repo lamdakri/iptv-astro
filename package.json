@@ -7,6 +7,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "prebuild": "node scripts/build-og-images.mjs",
     "preview": "astro preview"
   },
   "dependencies": {
@@ -14,11 +15,16 @@
     "@astrojs/sitemap": "^3.4.0",
     "@tailwindcss/vite": "^4.1.6",
     "astro": "^5.7.0",
+    "sharp": "^0.35.1",
     "tailwindcss": "^4.1.6",
     "typescript": "^5.8.3"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^22.15.0"
+  },
+  "allowScripts": {
+    "sharp@0.34.5": true,
+    "sharp@0.35.1": true
   }
 }

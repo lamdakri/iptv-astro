@@ -5,12 +5,14 @@ interface Props {
   canonicalURL?: string;
   xDefaultUrl?: string;
   ogImage?: string;
+  ogImageAlt?: string;
   ogType?: string;
   lang?: string;
   alternateLangs?: { lang: string; url: string }[];
   schema?: object;
   robots?: string;
   articlePublishedTime?: string;
+  articleModifiedTime?: string;
   articleAuthor?: string;
   articleTags?: string[];
   articleSection?: string;
@@ -22,13 +24,15 @@ const {
   description,
   canonicalURL = '',
   xDefaultUrl = '',
-  ogImage = '/images/og-default.svg',
+  ogImage = '/images/og-default.png',
+  ogImageAlt = '',
   ogType = 'website',
   lang = 'en',
   alternateLangs = [],
   schema,
   robots,
   articlePublishedTime,
+  articleModifiedTime,
   articleAuthor,
   articleTags = [],
   articleSection,
@@ -48,16 +52,16 @@ const ogLocale = localeMap[lang] || 'en_US';
 
 // Language-specific OG images for localized social sharing
 const ogImageMap: Record<string, string> = {
-  en: '/images/og-default.svg',
-  fr: '/images/og-fr.svg',
-  ar: '/images/og-ar.svg',
-  es: '/images/og-es.svg',
-  de: '/images/og-de.svg',
-  it: '/images/og-it.svg',
-  pt: '/images/og-pt.svg',
+  en: '/images/og-default.png',
+  fr: '/images/og-fr.png',
+  ar: '/images/og-ar.png',
+  es: '/images/og-es.png',
+  de: '/images/og-de.png',
+  it: '/images/og-it.png',
+  pt: '/images/og-pt.png',
 };
 // Use language-specific OG image only when no custom image was explicitly provided
-const localizedOgImage = ogImage === '/images/og-default.svg'
+const localizedOgImage = ogImage === '/images/og-default.png'
   ? (ogImageMap[lang] || ogImage)
   : ogImage;
 ---
@@ -78,13 +82,17 @@ const localizedOgImage = ogImage === '/images/og-default.svg'
 <meta property="og:image" content={localizedOgImage} />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:type" content="image/svg+xml" />
+<meta property="og:image:type" content="image/png" />
+{ogImageAlt && <meta property="og:image:alt" content={ogImageAlt} />}
 <meta property="og:type" content={ogType} />
 <meta property="og:site_name" content="IPTV 4K World" />
 
 <!-- Article-specific OG tags -->
 {ogType === 'article' && articlePublishedTime && (
   <meta property="article:published_time" content={articlePublishedTime} />
+)}
+{ogType === 'article' && articleModifiedTime && articleModifiedTime !== articlePublishedTime && (
+  <meta property="article:modified_time" content={articleModifiedTime} />
 )}
 {ogType === 'article' && articleAuthor && (
   <meta property="article:author" content={articleAuthor} />

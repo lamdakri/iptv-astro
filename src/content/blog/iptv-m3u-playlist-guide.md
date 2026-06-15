@@ -7,6 +7,7 @@ lang: en
 author: "IPTV 4K World Team"
 category: "Guide"
 tags: ["m3u", "playlist", "guide", "tutorial"]
+image: "/blog/images/m3u.svg"
 howToSteps:
   - name: "Get an M3U Playlist from a Premium IPTV Provider"
     text: "Subscribe to a premium IPTV service like IPTV 4K World. After subscribing, you will receive your unique M3U playlist URL via WhatsApp or email. Avoid free M3U lists from public sources."

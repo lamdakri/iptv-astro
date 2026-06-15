@@ -7,6 +7,7 @@ lang: ar
 author: "فريق IPTV 4K World"
 category: "إعداد"
 tags: ["أندرويد", "إعداد", "دليل", "جوال"]
+image: "/blog/images/android.svg"
 howToSteps:
   - name: "اختيار تطبيق مشغل IPTV لنظام Android"
     text: "افتح Google Play Store على جهاز Android الخاص بك. ابحث عن 'IPTV Smarters Pro' أو 'TiviMate' أو 'OTT Navigator'. قم بتنزيل وتثبيت التطبيق المفضل."

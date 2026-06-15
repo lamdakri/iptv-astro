@@ -7,6 +7,7 @@ lang: ar
 author: "IPTV 4K World Team"
 category: "دليل"
 tags: ["تثبيت", "اجهزة", "تطبيقات"]
+image: "/blog/images/all-devices.svg"
 ---
 
 # كيفية تثبيت IPTV على جميع الاجهزة

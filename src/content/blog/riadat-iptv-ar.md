@@ -7,6 +7,7 @@ lang: ar
 author: "IPTV 4K World Team"
 category: "رياضة"
 tags: ["رياضة", "كرة القدم", "4K"]
+image: "/blog/images/sports.svg"
 ---
 
 # افضل IPTV للرياضة 2025

@@ -1,0 +1,74 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  subtitle: string;
+  header: { feature: string; iptv: string; netflix: string; disney: string; cable: string; };
+  rows: { label: string; iptv: string; netflix: string; disney: string; cable: string; highlight?: boolean; }[];
+  ctaText: string;
+  ctaUrl: string;
+  note: string;
+}
+
+const { eyebrow, title, subtitle, header, rows, ctaText, ctaUrl, note } = Astro.props;
+---
+
+<section class="section section-alt">
+  <div class="container-custom">
+    <div class="text-center mb-14">
+      <span class="section-eyebrow mx-auto justify-center">{eyebrow}</span>
+      <h2 class="section-title">{title}</h2>
+      <p class="section-subtitle mx-auto">{subtitle}</p>
+    </div>
+
+    <div class="max-w-4xl mx-auto overflow-x-auto reveal reveal-fade">
+      <table class="w-full text-sm text-left">
+        <thead>
+          <tr class="border-b border-surface-800/30">
+            <th class="py-4 pr-6 text-surface-400 font-medium w-1/5 min-w-[140px]">{header.feature}</th>
+            <th class="py-4 pr-4 text-center w-1/5">
+              <span class="gradient-text-static font-bold">{header.iptv}</span>
+              <div class="text-xs text-surface-500 font-normal">→ Best Value</div>
+            </th>
+            <th class="py-4 px-4">{header.netflix}</th>
+            <th class="py-4 px-4">{header.disney}</th>
+            <th class="py-4 px-4">{header.cable}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row, i) => (
+            <tr class={"border-b border-surface-800/20 " + (row.highlight ? "bg-brand-900/10" : (i % 2 === 0 ? "bg-surface-900/20" : ""))}>
+              <td class="py-3.5 pr-6 text-surface-200 font-medium">{row.label}</td>
+              <td class="py-3.5 px-4 text-center text-brand-400 font-semibold">{row.iptv}</td>
+              <td class="py-3.5 px-4">{row.netflix}</td>
+              <td class="py-3.5 px-4">{row.disney}</td>
+              <td class="py-3.5 px-4">{row.cable}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      {note && (
+        <p class="text-xs text-surface-500 mt-4 text-center">{note}</p>
+      )}
+    </div>
+
+    {ctaText && ctaUrl && (
+      <div class="text-center mt-10 reveal">
+        <a href={ctaUrl} class="btn-whatsapp text-lg px-8 py-3" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-track-label="Comparison CTA" data-track-category="conversion">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157z"/></svg>
+          {ctaText}
+        </a>
+      </div>
+    )}
+  </div>
+</section>
+<style>
+  th { text-align: center; }
+  th:first-child { text-align: left; }
+  td { text-align: center; color: var(--color-surface-300); }
+  td:first-child { text-align: left; }
+  @media (max-width: 640px) {
+    th:not(:first-child), td:not(:first-child) { font-size: 0.75rem; padding-left: 0.25rem; padding-right: 0.25rem; }
+  }
+</style>

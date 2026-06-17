@@ -24,6 +24,11 @@ const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}\/?/, '/');
       <div class="ml-2">
         <LanguageSwitcher lang={lang} currentPath={currentPath} />
       </div>
+      <!-- Theme Toggle -->
+      <button id="theme-toggle" class="ml-2 p-2 rounded-lg text-surface-400 hover:text-white hover:bg-surface-800/50 transition-all duration-300" aria-label="Toggle theme" title="Toggle dark/light mode">
+        <span id="theme-icon-dark" class="text-lg">🌙</span>
+        <span id="theme-icon-light" class="text-lg hidden">☀️</span>
+      </button>
       <a
         href={`https://wa.me/${WA}?text=${encodeURIComponent('Hello! I want a free IPTV trial.')}`}
         class="btn-whatsapp text-xs px-3.5 py-2 ml-2"
@@ -74,6 +79,33 @@ const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}\/?/, '/');
 
 <script>
   (function() {
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const iconDark = document.getElementById('theme-icon-dark');
+    const iconLight = document.getElementById('theme-icon-light');
+    
+    function setTheme(isLight) {
+      if (isLight) {
+        document.documentElement.classList.add('light');
+        iconDark?.classList.add('hidden');
+        iconLight?.classList.remove('hidden');
+      } else {
+        document.documentElement.classList.remove('light');
+        iconDark?.classList.remove('hidden');
+        iconLight?.classList.add('hidden');
+      }
+      try { localStorage.setItem('theme', isLight ? 'light' : 'dark'); } catch(e) {}
+    }
+    
+    // Init from localStorage
+    const saved = (function() { try { return localStorage.getItem('theme'); } catch(e) { return null; } })();
+    const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+    setTheme(saved === 'light' || (!saved && prefersLight));
+    
+    themeToggle?.addEventListener('click', function() {
+      setTheme(!document.documentElement.classList.contains('light'));
+    });
+
     // Mobile menu toggle
     const btn = document.getElementById('mobile-menu-btn');
     const menu = document.getElementById('mobile-menu');

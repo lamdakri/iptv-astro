@@ -12,6 +12,8 @@ import PayPalBadge from '../../components/PayPalBadge.astro';
 import SportsHighlight from '../../components/SportsHighlight.astro';
 import CountdownTimer from '../../components/CountdownTimer.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import Steps from '../../components/Steps.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
 import { WHATSAPP_NUMBER as WA } from '../../i18n/whatsapp';
 
 export function getStaticPaths() {
@@ -73,7 +75,7 @@ const productSchema = {
 };
 ---
 
-<BaseLayout title={pageTitle} description={t('hero.subtitle')} keywords={'IPTV, IPTV subscription, 4K streaming, live TV channels, sports streaming, IPTV 4K World, buy IPTV, IPTV free trial'} schema={productSchema}>
+<BaseLayout title={pageTitle} description={t('hero.subtitle')} keywords={t('seo.keywords')} schema={productSchema}>
   <SchemaMarkup type="product" data={{ name: 'IPTV 4K World', lowPrice: '24.99', highPrice: '59.99', currency: 'EUR' }} />
   <SchemaMarkup type="faq" data={{ questions: faqItems }} />
   <SchemaMarkup type="organization" />
@@ -222,6 +224,21 @@ const productSchema = {
   </section>
 
 
+  <!-- ===== HOW IT WORKS ===== -->
+  <Steps
+    eyebrow={t('steps.eyebrow')}
+    title={t('steps.title')}
+    subtitle={t('steps.subtitle')}
+    steps={[
+      { number: '1', icon: '💬', title: t('steps.1.title'), description: t('steps.1.desc') },
+      { number: '2', icon: '📦', title: t('steps.2.title'), description: t('steps.2.desc') },
+      { number: '3', icon: '📺', title: t('steps.3.title'), description: t('steps.3.desc') },
+    ]}
+    ctaText={t('steps.cta')}
+    ctaUrl={whatsappUrl}
+  />
+
+
   <!-- ===== FEATURES ===== -->
   <Features title={t('features.title')} subtitle={t('features.subtitle')} features={features} />
 
@@ -243,6 +260,35 @@ const productSchema = {
   />
 
 
+  <!-- ===== COMPARISON TABLE ===== -->
+  <ComparisonTable
+    eyebrow={t('comparison.eyebrow')}
+    title={t('comparison.title')}
+    subtitle={t('comparison.subtitle')}
+    header={{
+      feature: t('comparison.header.feature'),
+      iptv: t('comparison.header.iptv'),
+      netflix: t('comparison.header.netflix'),
+      disney: t('comparison.header.disney'),
+      cable: t('comparison.header.cable'),
+    }}
+    rows={[
+      { label: t('comparison.row.channels'), iptv: t('comparison.row.channels.iptv'), netflix: t('comparison.row.channels.netflix'), disney: t('comparison.row.channels.disney'), cable: t('comparison.row.channels.cable') },
+      { label: t('comparison.row.quality'), iptv: t('comparison.row.quality.iptv'), netflix: t('comparison.row.quality.netflix'), disney: t('comparison.row.quality.disney'), cable: t('comparison.row.quality.cable') },
+      { label: t('comparison.row.sports'), iptv: t('comparison.row.sports.iptv'), netflix: t('comparison.row.sports.netflix'), disney: t('comparison.row.sports.disney'), cable: t('comparison.row.sports.cable') },
+      { label: t('comparison.row.vod'), iptv: t('comparison.row.vod.iptv'), netflix: t('comparison.row.vod.netflix'), disney: t('comparison.row.vod.disney'), cable: t('comparison.row.vod.cable') },
+      { label: t('comparison.row.devices'), iptv: t('comparison.row.devices.iptv'), netflix: t('comparison.row.devices.netflix'), disney: t('comparison.row.devices.disney'), cable: t('comparison.row.devices.cable') },
+      { label: t('comparison.row.price'), iptv: t('comparison.row.price.iptv'), netflix: t('comparison.row.price.netflix'), disney: t('comparison.row.price.disney'), cable: t('comparison.row.price.cable'), highlight: true },
+      { label: t('comparison.row.trial'), iptv: t('comparison.row.trial.iptv'), netflix: t('comparison.row.trial.netflix'), disney: t('comparison.row.trial.disney'), cable: t('comparison.row.trial.cable') },
+      { label: t('comparison.row.contract'), iptv: t('comparison.row.contract.iptv'), netflix: t('comparison.row.contract.netflix'), disney: t('comparison.row.contract.disney'), cable: t('comparison.row.contract.cable') },
+      { label: t('comparison.row.support'), iptv: t('comparison.row.support.iptv'), netflix: t('comparison.row.support.netflix'), disney: t('comparison.row.support.disney'), cable: t('comparison.row.support.cable') },
+    ]}
+    ctaText={t('comparison.cta')}
+    ctaUrl={whatsappUrl}
+    note={t('comparison.note')}
+  />
+
+
   <!-- ===== PRICING ===== -->
   <section class="section section-alt">
     <div class="container-custom">
@@ -259,6 +305,11 @@ const productSchema = {
           features={pricingFeatures}
           ctaLabel={t('pricing.cta')}
           trialLabel={t('pricing.trial')}
+          couponLabel={t('coupon.label')}
+          couponPlaceholder={t('coupon.placeholder')}
+          couponApply={t('coupon.apply')}
+          couponApplied={t('coupon.applied')}
+          couponInvalid={t('coupon.invalid')}
         />
         <PricingCard
           name={t('pricing.6months')}
@@ -268,6 +319,11 @@ const productSchema = {
           ctaLabel={t('pricing.cta')}
           trialLabel={t('pricing.trial')}
           popularLabel={t('pricing.popular')}
+          couponLabel={t('coupon.label')}
+          couponPlaceholder={t('coupon.placeholder')}
+          couponApply={t('coupon.apply')}
+          couponApplied={t('coupon.applied')}
+          couponInvalid={t('coupon.invalid')}
         />
         <PricingCard
           name={t('pricing.1year')}
@@ -280,6 +336,11 @@ const productSchema = {
           trialLabel={t('pricing.trial')}
           featured={true}
           popularLabel={t('pricing.bestValue')}
+          couponLabel={t('coupon.label')}
+          couponPlaceholder={t('coupon.placeholder')}
+          couponApply={t('coupon.apply')}
+          couponApplied={t('coupon.applied')}
+          couponInvalid={t('coupon.invalid')}
         />
       </div>
 

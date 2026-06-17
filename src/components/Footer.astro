@@ -4,6 +4,7 @@ import { WHATSAPP_NUMBER as WA } from '../i18n/whatsapp';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const newsletterBtnText = t('newsletter.button');
 ---
 
 <footer class="relative bg-surface-900/50 border-t border-brand-700/10 pt-16 pb-8">
@@ -72,6 +73,25 @@ const t = useTranslations(lang);
       </div>
     </div>
 
+    <!-- Newsletter -->
+    <div class="border-t border-surface-800/50 pt-8 mb-8">
+      <div class="max-w-md mx-auto text-center">
+        <span class="section-eyebrow mx-auto justify-center text-xs">{t('newsletter.eyebrow')}</span>
+        <h4 class="text-lg font-bold text-white mb-2">{t('newsletter.title')}</h4>
+        <p class="text-surface-400 text-sm mb-5">{t('newsletter.subtitle')}</p>
+        <form id="newsletter-form" class="flex flex-col sm:flex-row gap-2">
+          <input type="email" id="newsletter-email" placeholder={t('newsletter.placeholder')} required
+            class="flex-1 px-4 py-3 rounded-lg bg-surface-800/60 border border-surface-700/40 text-white text-sm placeholder:text-surface-500 focus:outline-none focus:border-brand-500/50 transition-colors" />
+          <button type="submit" id="newsletter-btn"
+            class="btn-primary text-sm px-5 py-3 whitespace-nowrap">
+            {t('newsletter.button')}
+          </button>
+        </form>
+        <p id="newsletter-msg" class="text-green-400 text-sm mt-3 hidden">{t('newsletter.success')}</p>
+        <p class="text-surface-500 text-xs mt-3">{t('newsletter.disclaimer')}</p>
+      </div>
+    </div>
+
     <!-- Bottom bar -->
     <div class="border-t border-surface-800/50 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-surface-500">
       <p>&copy; {new Date().getFullYear()} {t('site.name')}. {t('footer.rights')}</p>
@@ -82,3 +102,22 @@ const t = useTranslations(lang);
     </div>
   </div>
 </footer>
+
+<script>
+  (function() {
+    const form = document.getElementById('newsletter-form');
+    const msg = document.getElementById('newsletter-msg');
+    const btn = document.getElementById('newsletter-btn');
+    form?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      btn.disabled = true;
+      btn.textContent = '...';
+      setTimeout(function() {
+        msg?.classList.remove('hidden');
+        form.reset();
+        btn.disabled = false;
+        btn.textContent = '{newsletterBtnText}';
+      }, 800);
+    });
+  })();
+</script>

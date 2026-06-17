@@ -49,20 +49,69 @@
    BASE STYLES
    ============================================ */
 
+/* ═══ Light / Dark Theme Variables ═══ */
+:root {
+  --bg-primary: #030712;
+  --bg-secondary: #0f172a;
+  --bg-card: rgba(15, 23, 42, 0.4);
+  --bg-glass: rgba(15, 23, 42, 0.5);
+  --text-primary: #ffffff;
+  --text-secondary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --border-default: rgba(148, 163, 184, 0.06);
+  --border-hover: rgba(124, 58, 237, 0.2);
+}
+
+html.light {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-glass: rgba(255, 255, 255, 0.8);
+  --text-primary: #0f172a;
+  --text-secondary: #1e293b;
+  --text-muted: #475569;
+  --border-default: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(124, 58, 237, 0.3);
+}
+
+html.light .hero-orb { opacity: 0.12; }
+html.light .dot-pattern { background-image: radial-gradient(rgba(124, 58, 237, 0.06) 1px, transparent 1px); }
+html.light .section-alt { background: linear-gradient(180deg, rgba(241, 245, 249, 0.5), rgba(248, 250, 252, 0.8), rgba(241, 245, 249, 0.5)); }
+html.light .glass-card { background: rgba(255,255,255,0.7); border-color: rgba(0,0,0,0.06); }
+html.light .glass-card:hover { border-color: rgba(124,58,237,0.3); box-shadow: 0 0 30px rgba(124,58,237,0.08), 0 20px 40px rgba(0,0,0,0.1); }
+html.light .section-title { color: #0f172a; }
+html.light .section-subtitle { color: #475569; }
+html.light .sticky-header { background: rgba(255,255,255,0.8); border-bottom-color: rgba(0,0,0,0.06); }
+html.light .sticky-header.scrolled { background: rgba(255,255,255,0.95); }
+html.light .mobile-menu { background: rgba(248,250,252,0.98); }
+html.light .mobile-menu-link { color: #334155; }
+html.light .mobile-menu-link:hover { color: #0f172a; background: rgba(124,58,237,0.06); }
+html.light .pricing-card { background: rgba(255,255,255,0.7); border-color: rgba(0,0,0,0.06); }
+html.light .pricing-card.featured { background: rgba(124,58,237,0.03); }
+html.light .feature-card { background: rgba(255,255,255,0.7); }
+html.light .testimonial-card { background: rgba(255,255,255,0.7); }
+html.light .faq-item { background: rgba(255,255,255,0.7); }
+html.light .footer { border-top-color: rgba(0,0,0,0.06); }
+html.light ::-webkit-scrollbar-track { background: #f1f5f9; }
+html.light ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #a78bfa, #7c3aed); }
+
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
   overflow-x: hidden;
 }
 
+html.light { color-scheme: light; }
+
 body {
-  background-color: #030712;
-  color: var(--color-surface-200);
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
   font-family: var(--font-sans);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.7;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 [dir="rtl"] {

@@ -10,6 +10,7 @@ import SchemaMarkup from '../../components/SchemaMarkup.astro';
 import PaymentIcons from '../../components/PaymentIcons.astro';
 import PayPalBadge from '../../components/PayPalBadge.astro';
 import SportsHighlight from '../../components/SportsHighlight.astro';
+import CountdownTimer from '../../components/CountdownTimer.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import { WHATSAPP_NUMBER as WA } from '../../i18n/whatsapp';
 
@@ -67,13 +68,13 @@ const productSchema = {
   '@type': 'Product',
   name: 'IPTV 4K World',
   description: 'Premium IPTV streaming service with 20,000+ live channels, 4K quality, and 24/7 support.',
-  offers: { '@type': 'AggregateOffer', lowPrice: '19.99', highPrice: '39.99', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
+  offers: { '@type': 'AggregateOffer', lowPrice: '24.99', highPrice: '59.99', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
   aggregateRating: { '@type': 'AggregateRating', ratingValue: avgRating, bestRating: '5', reviewCount: String(testimonials.length) },
 };
 ---
 
 <BaseLayout title={pageTitle} description={t('hero.subtitle')} keywords={'IPTV, IPTV subscription, 4K streaming, live TV channels, sports streaming, IPTV 4K World, buy IPTV, IPTV free trial'} schema={productSchema}>
-  <SchemaMarkup type="product" data={{ name: 'IPTV 4K World', lowPrice: '19.99', highPrice: '39.99', currency: 'EUR' }} />
+  <SchemaMarkup type="product" data={{ name: 'IPTV 4K World', lowPrice: '24.99', highPrice: '59.99', currency: 'EUR' }} />
   <SchemaMarkup type="faq" data={{ questions: faqItems }} />
   <SchemaMarkup type="organization" />
 
@@ -153,6 +154,20 @@ const productSchema = {
         <div class="mt-3 animate-fade-in delay-400">
           <PayPalBadge />
         </div>
+
+        <!-- Countdown Timer -->
+        <CountdownTimer
+          targetDate="2026-06-30T23:59:59"
+          eyebrow={t('promo.eyebrow')}
+          title={t('promo.title')}
+          subtitle={t('promo.subtitle')}
+          ctaText={t('promo.cta')}
+          expiryLabel={t('promo.expired')}
+          daysLabel={t('promo.days')}
+          hoursLabel={t('promo.hours')}
+          minutesLabel={t('promo.minutes')}
+          secondsLabel={t('promo.seconds')}
+        />
 
         <!-- Trust badges -->
         <div class="flex flex-wrap items-center justify-center gap-5 mt-12 text-sm text-surface-500 animate-fade-in delay-500">

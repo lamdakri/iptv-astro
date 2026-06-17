@@ -1,0 +1,171 @@
+---
+import { WHATSAPP_NUMBER as WA } from '../i18n/whatsapp';
+
+interface Props {
+  targetDate: string;
+  title: string;
+  subtitle: string;
+  eyebrow: string;
+  ctaText: string;
+  expiryLabel: string;
+  daysLabel: string;
+  hoursLabel: string;
+  minutesLabel: string;
+  secondsLabel: string;
+}
+
+const { targetDate, title, subtitle, eyebrow, ctaText, expiryLabel, daysLabel, hoursLabel, minutesLabel, secondsLabel } = Astro.props;
+const encodedMsg = encodeURIComponent('Hello! I want the special promo.');
+const whatsappUrl = `https://wa.me/${WA}?text=${encodedMsg}`;
+---
+
+<div id="countdown-timer" class="relative w-full max-w-xl mx-auto mt-8 mb-2 reveal reveal-fade" data-target={targetDate} data-expiry-label={expiryLabel}>
+  <div class="countdown-card rounded-2xl p-5 md:p-7 text-center relative overflow-hidden">
+    <div class="absolute inset-0 rounded-2xl border-2 countdown-border pointer-events-none"></div>
+    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3 countdown-badge">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-red-400"></span>
+      </span>
+      {eyebrow}
+    </span>
+    <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-2 leading-tight" id="countdown-title">{title}</h3>
+    <p class="text-surface-400 text-sm md:text-base mb-5" id="countdown-subtitle">{subtitle}</p>
+    <div class="flex items-center justify-center gap-2 md:gap-3 mb-6" id="countdown-blocks">
+      <div class="countdown-block">
+        <span class="countdown-number" id="countdown-days">00</span>
+        <span class="countdown-label">{daysLabel}</span>
+      </div>
+      <span class="countdown-separator">:</span>
+      <div class="countdown-block">
+        <span class="countdown-number" id="countdown-hours">00</span>
+        <span class="countdown-label">{hoursLabel}</span>
+      </div>
+      <span class="countdown-separator">:</span>
+      <div class="countdown-block">
+        <span class="countdown-number" id="countdown-minutes">00</span>
+        <span class="countdown-label">{minutesLabel}</span>
+      </div>
+      <span class="countdown-separator">:</span>
+      <div class="countdown-block">
+        <span class="countdown-number" id="countdown-seconds">00</span>
+        <span class="countdown-label">{secondsLabel}</span>
+      </div>
+    </div>
+    <a href={whatsappUrl} class="btn-whatsapp text-base px-8 py-3" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-track-label="Countdown Timer Promo" data-track-category="conversion" id="countdown-cta">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 448 512">
+        <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157z"/>
+      </svg>
+      {ctaText}
+    </a>
+  </div>
+  <div class="countdown-card rounded-2xl p-8 md:p-10 text-center relative overflow-hidden hidden" id="countdown-expired">
+    <div class="absolute inset-0 rounded-2xl border-2 border-surface-800/60 pointer-events-none"></div>
+    <span class="text-4xl mb-3 block">&#x23F0;</span>
+    <h3 class="text-xl font-bold text-white mb-2">{expiryLabel}</h3>
+    <p class="text-surface-400 text-sm">{subtitle}</p>
+  </div>
+</div>
+
+<style>
+  .countdown-card {
+    background: linear-gradient(135deg, rgba(127, 29, 29, 0.12), rgba(15, 23, 42, 0.6), rgba(124, 58, 237, 0.06));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  .countdown-border {
+    border-color: rgba(239, 68, 68, 0.4);
+    animation: countdown-border-pulse 2.5s ease-in-out infinite;
+    box-shadow: 0 0 30px rgba(239, 68, 68, 0.08), inset 0 0 30px rgba(239, 68, 68, 0.03);
+  }
+  @keyframes countdown-border-pulse {
+    0%, 100% { border-color: rgba(239, 68, 68, 0.35); box-shadow: 0 0 20px rgba(239, 68, 68, 0.06), inset 0 0 20px rgba(239, 68, 68, 0.02); }
+    50% { border-color: rgba(239, 68, 68, 0.65); box-shadow: 0 0 40px rgba(239, 68, 68, 0.14), inset 0 0 40px rgba(239, 68, 68, 0.05); }
+  }
+  .countdown-badge {
+    background: rgba(239, 68, 68, 0.12);
+    color: #fca5a5;
+    border: 1px solid rgba(239, 68, 68, 0.25);
+  }
+  .countdown-block { display: flex; flex-direction: column; align-items: center; min-width: 64px; }
+  @media (min-width: 768px) { .countdown-block { min-width: 80px; } }
+  .countdown-number {
+    display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 1;
+    background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: 0.75rem; font-size: 1.75rem; font-weight: 800; color: white;
+    font-variant-numeric: tabular-nums; transition: all 0.15s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  @media (min-width: 768px) { .countdown-number { font-size: 2.25rem; border-radius: 1rem; } }
+  .countdown-number.flip { animation: countdown-flip 0.3s ease; }
+  @keyframes countdown-flip {
+    0% { transform: rotateX(0deg); opacity: 1; }
+    50% { transform: rotateX(90deg); opacity: 0.4; }
+    100% { transform: rotateX(0deg); opacity: 1; }
+  }
+  .countdown-label {
+    font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--color-surface-500); margin-top: 0.35rem; font-weight: 600;
+  }
+  @media (min-width: 768px) { .countdown-label { font-size: 0.7rem; } }
+  .countdown-separator {
+    font-size: 1.5rem; font-weight: 800; color: rgba(239, 68, 68, 0.5);
+    margin-bottom: 1rem; animation: countdown-separator-blink 1s step-end infinite;
+  }
+  @media (min-width: 768px) { .countdown-separator { font-size: 2rem; } }
+  @keyframes countdown-separator-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+</style>
+
+<script>
+  (function() {
+    const container = document.getElementById('countdown-timer');
+    if (!container) return;
+    const targetStr = container.dataset.target || '';
+    const expiryLabel = container.dataset.expiryLabel || 'Offer Expired';
+    const target = new Date(targetStr).getTime();
+    if (isNaN(target)) return;
+    const daysEl = document.getElementById('countdown-days');
+    const hoursEl = document.getElementById('countdown-hours');
+    const minutesEl = document.getElementById('countdown-minutes');
+    const secondsEl = document.getElementById('countdown-seconds');
+    const blocksDiv = document.getElementById('countdown-blocks');
+    const ctaEl = document.getElementById('countdown-cta');
+    const titleEl = document.getElementById('countdown-title');
+    const subtitleEl = document.getElementById('countdown-subtitle');
+    const expiredDiv = document.getElementById('countdown-expired');
+    if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+    function pad(n) { return String(n).padStart(2, '0'); }
+    function tick() {
+      const now = new Date().getTime();
+      const diff = target - now;
+      if (diff <= 0) {
+        daysEl.textContent = '00'; hoursEl.textContent = '00'; minutesEl.textContent = '00'; secondsEl.textContent = '00';
+        if (blocksDiv) blocksDiv.style.display = 'none';
+        if (ctaEl) ctaEl.style.display = 'none';
+        if (titleEl) titleEl.style.display = 'none';
+        if (subtitleEl) subtitleEl.style.display = 'none';
+        if (expiredDiv) expiredDiv.classList.remove('hidden');
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      function updateBlock(el, newVal) {
+        const padded = pad(newVal);
+        if (el.textContent !== padded) {
+          el.textContent = padded;
+          el.classList.remove('flip');
+          void el.offsetWidth;
+          el.classList.add('flip');
+        }
+      }
+      updateBlock(daysEl, days);
+      updateBlock(hoursEl, hours);
+      updateBlock(minutesEl, minutes);
+      updateBlock(secondsEl, seconds);
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
+</script>

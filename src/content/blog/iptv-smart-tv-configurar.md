@@ -21,7 +21,7 @@ howToSteps:
     text: "Apos configurado, navegue por 20.000+ canais usando o guia EPG. Assista TV ao vivo, esportes, filmes e series em qualidade 4K."
 ---
 
-# Configurar IPTV em qualquer Smart TV 2025
+# Configurar IPTV em qualquer Smart TV 2026
 
 Configurar IPTV na sua Smart TV e mais facil do que voce pensa. Este guia cobre Samsung, LG, Sony e Android TV.
 

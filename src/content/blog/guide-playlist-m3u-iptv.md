@@ -21,7 +21,7 @@ howToSteps:
     text: "Appuyez sur 'Connecter' ou 'Charger'. Le lecteur telechargera la liste des chaines. Parcourez 20 000+ chaines avec le guide EPG."
 ---
 
-# Playlist M3U IPTV — Le Guide Complet 2025
+# Playlist M3U IPTV — Le Guide Complet 2026
 
 Une playlist M3U est la facon la plus courante de distribuer les chaines IPTV.
 

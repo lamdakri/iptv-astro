@@ -3,7 +3,7 @@ title: "IPTV qui rame — Solutions Definitives contre le Buffering 2026"
 description: "Resoudre les problemes de buffering et de freeze IPTV. Guide de depannage complet : vitesse internet, VPN, optimisation des appareils et DNS pour un streaming 4K fluide."
 keywords: ["iptv rame", "iptv buffering", "iptv freeze", "iptv lag", "iptv ne fonctionne pas"]
 date: 2026-05-28
-updatedDate: 2025-06-14
+updatedDate: 2026-06-14
 lang: fr
 author: "IPTV 4K World Team"
 category: "Depannage"

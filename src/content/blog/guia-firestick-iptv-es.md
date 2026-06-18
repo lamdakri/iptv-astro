@@ -21,7 +21,7 @@ howToSteps:
     text: "Ingrese la URL M3U o los Xtream Codes proporcionados por su servicio IPTV. Una vez cargado, navegue por 20.000+ canales."
 ---
 
-# Como configurar IPTV en Amazon Firestick 2025
+# Como configurar IPTV en Amazon Firestick 2026
 
 Convierta su Amazon Fire TV Stick en un potente dispositivo de streaming con IPTV.
 

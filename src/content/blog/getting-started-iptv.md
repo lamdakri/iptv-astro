@@ -1,7 +1,7 @@
 ---
 title: "Getting Started with IPTV in 2026 - Complete Beginner Guide"
 description: "Learn everything you need to know about IPTV: what it is, how it works, device compatibility, and how to choose the best IPTV subscription for your needs."
-keywords: ["iptv", "iptv guide", "iptv tutorial", "how iptv works", "iptv 2025"]
+keywords: ["iptv", "iptv guide", "iptv tutorial", "how iptv works", "iptv 2026"]
 date: 2026-05-15
 lang: en
 author: "IPTV 4K World Team"
@@ -21,7 +21,7 @@ howToSteps:
     text: "Once the playlist loads successfully, browse the channel list or EPG (Electronic Program Guide) and start watching your favorite channels instantly."
 ---
 
-# Getting Started with IPTV in 2025
+# Getting Started with IPTV in 2026
 
 IPTV (Internet Protocol Television) has revolutionized how we consume television content. Instead of relying on traditional cable or satellite, IPTV delivers TV channels through your internet connection.
 

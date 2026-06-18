@@ -10,7 +10,7 @@ tags: ["legal", "guia", "informacao"]
 image: "/blog/images/legal.svg"
 ---
 
-# A IPTV e legal? — Guia completo 2025
+# A IPTV e legal? — Guia completo 2026
 
 Esta e uma das perguntas mais comuns sobre IPTV. A resposta curta e: **a tecnologia IPTV e completamente legal**.
 

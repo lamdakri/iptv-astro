@@ -21,7 +21,7 @@ howToSteps:
     text: "Enter the M3U URL or Xtream Codes provided by your IPTV service. For IPTV 4K World, these are sent via WhatsApp after subscription. Once loaded, browse 20,000+ channels and start watching."
 ---
 
-# How to Set Up IPTV on Amazon Firestick in 2025
+# How to Set Up IPTV on Amazon Firestick in 2026
 
 Transform your Amazon Fire TV Stick into a powerful streaming device with IPTV. This complete guide will walk you through every step.
 
@@ -113,4 +113,4 @@ If you experience buffering or freezing:
 
 Ready to get started? [Request your free trial on WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}) and start watching on your Firestick today.
 
-*Also check our guide on [IPTV on Smart TV](/en/iptv-smart-tv/) and [best IPTV apps](/en/blog/best-iptv-apps-2025/) for more options.*
+*Also check our guide on [IPTV on Smart TV](/en/iptv-smart-tv/) and [best IPTV apps](/en/blog/best-iptv-apps-2026/) for more options.*

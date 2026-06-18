@@ -21,7 +21,7 @@ howToSteps:
     text: "Once configured, browse through 20,000+ channels using the EPG guide. Start watching live TV, sports, movies, and series in 4K quality."
 ---
 
-# How to Set Up IPTV on Any Smart TV in 2025
+# How to Set Up IPTV on Any Smart TV in 2026
 
 Setting up IPTV on your Smart TV is easier than you think. This guide covers Samsung, LG, Sony, and Android TV setups with the most popular IPTV apps.
 

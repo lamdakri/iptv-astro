@@ -1,7 +1,7 @@
 ---
 title: "Guia IPTV para Iniciantes 2026 — Guia Completo"
 description: "Tudo o que voce precisa saber sobre IPTV: o que e, como funciona, compatibilidade de dispositivos e como escolher a melhor assinatura IPTV. Teste gratuito disponivel."
-keywords: ["iptv", "guia iptv", "tutorial iptv", "como funciona iptv", "iptv 2025"]
+keywords: ["iptv", "guia iptv", "tutorial iptv", "como funciona iptv", "iptv 2026"]
 date: 2026-06-14
 lang: pt
 author: "IPTV 4K World Team"
@@ -21,7 +21,7 @@ howToSteps:
     text: "Apos carregar a playlist, navegue pela lista de canais ou guia EPG e comece a assistir seus canais favoritos instantaneamente."
 ---
 
-# Guia IPTV para Iniciantes 2025
+# Guia IPTV para Iniciantes 2026
 
 A IPTV (Internet Protocol Television) revolucionou a forma como consumimos conteudo televisivo. Em vez de depender de TV a cabo ou satelite tradicional, a IPTV entrega canais de TV atraves da sua conexao de internet.
 

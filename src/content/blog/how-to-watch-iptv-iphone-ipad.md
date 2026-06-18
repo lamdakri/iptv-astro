@@ -21,7 +21,7 @@ howToSteps:
     text: "Once loaded, browse through 20,000+ channels organized by category. Use the search or EPG guide to find what you want to watch. Set favorites for quick access."
 ---
 
-# How to Watch IPTV on iPhone & iPad in 2025
+# How to Watch IPTV on iPhone & iPad in 2026
 
 Apple users can enjoy IPTV too. Here is how to set up IPTV on your iPhone, iPad, or Apple TV for the best streaming experience.
 

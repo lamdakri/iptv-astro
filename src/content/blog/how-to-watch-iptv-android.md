@@ -21,7 +21,7 @@ howToSteps:
     text: "Once configured, browse thousands of channels organized by category. Use the EPG guide to see schedules and set favorites for quick access."
 ---
 
-# How to Watch IPTV on Android Devices in 2025
+# How to Watch IPTV on Android Devices in 2026
 
 Android is the most versatile platform for IPTV. Whether you have an Android phone, tablet, TV box, or Android TV, here is everything you need to know.
 

@@ -10,7 +10,7 @@ tags: ["comparison", "cable", "guide"]
 image: "/blog/images/comparison.svg"
 ---
 
-# IPTV vs Cable TV: The Ultimate 2025 Comparison
+# IPTV vs Cable TV: The Ultimate 2026 Comparison
 
 More people than ever are cutting the cord and switching to IPTV. Here is a detailed comparison to help you decide.
 

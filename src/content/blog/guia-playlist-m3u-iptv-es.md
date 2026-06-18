@@ -21,7 +21,7 @@ howToSteps:
     text: "Pulse 'Conectar' o 'Cargar'. El reproductor descargara la lista de canales. Navegue por 20.000+ canales con la guia EPG."
 ---
 
-# Lista de Reproduccion M3U IPTV — Guia Completa 2025
+# Lista de Reproduccion M3U IPTV — Guia Completa 2026
 
 Una lista de reproduccion M3U es la forma mas comun de distribuir canales IPTV.
 

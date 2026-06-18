@@ -10,7 +10,7 @@ tags: ["iptv", "guide", "tutoriel"]
 image: "/blog/images/guide.svg"
 ---
 
-# Guide de Démarrage IPTV 2025
+# Guide de Démarrage IPTV 2026
 
 L IPTV (Télévision par Protocole Internet) a révolutionné notre façon de consommer le contenu télévisuel.
 

@@ -2,7 +2,7 @@
 title: "مشاهدة IPTV على iPhone و iPad — دليل iOS 2026"
 description: "دليل كامل لمشاهدة IPTV على iPhone و iPad. أفضل تطبيقات IPTV لنظام iOS وتعليمات الإعداد ونصائح لـ Apple TV أيضاً."
 keywords: ["iptv iphone", "iptv ipad", "iptv ios", "تطبيق iptv iphone", "iptv apple tv", "أفضل تطبيق iptv ios"]
-date: 2025-06-14
+date: 2026-06-14
 lang: ar
 author: "فريق IPTV 4K World"
 category: "إعداد"

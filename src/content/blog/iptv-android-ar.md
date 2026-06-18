@@ -2,7 +2,7 @@
 title: "مشاهدة IPTV على Android — دليل كامل 2026"
 description: "تعلم كيفية مشاهدة IPTV على أي جهاز Android. دليل خطوة بخطوة للهواتف والأجهزة اللوحية وصناديق Android TV. أفضل تطبيقات IPTV وإعدادات Android."
 keywords: ["iptv android", "تطبيق iptv android", "iptv android tv", "iptv android box", "تثبيت iptv android"]
-date: 2025-06-14
+date: 2026-06-14
 lang: ar
 author: "فريق IPTV 4K World"
 category: "إعداد"

@@ -2,7 +2,7 @@
 title: "Guida IPTV per Principianti 2026 — Guida Completa"
 description: "Tutto quello che devi sapere sull'IPTV: cos'è, come funziona, compatibilità dispositivi e come scegliere il miglior abbonamento IPTV. Prova gratuita disponibile."
 keywords: ["iptv", "guida iptv", "tutorial iptv", "come funziona iptv", "iptv 2025"]
-date: 2025-06-14
+date: 2026-06-14
 lang: it
 author: "IPTV 4K World Team"
 category: "Guida"

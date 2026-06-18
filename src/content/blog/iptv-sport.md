@@ -2,7 +2,7 @@
 title: "Meilleur IPTV pour le Sport 2026 — Regardez Football, NBA, UFC en 4K"
 description: "Decouvrez les meilleurs services IPTV pour regarder le sport en direct en 2026. Accédez a la Ligue 1, Premier League, Champions League, NBA, UFC en 4K."
 keywords: ["iptv sport", "regarder football iptv", "iptv nba", "streaming sport direct", "iptv ligue 1", "iptv ufc"]
-date: 2025-05-10
+date: 2026-05-10
 updatedDate: 2025-06-14
 lang: fr
 author: "IPTV 4K World Team"

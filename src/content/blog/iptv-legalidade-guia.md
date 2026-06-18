@@ -2,7 +2,7 @@
 title: "A IPTV e legal? — Guia completo sobre legalidade IPTV 2026"
 description: "Entenda a legalidade da IPTV no mundo. A IPTV e legal no Brasil, Portugal, Europa e no seu pais? Como escolher um provedor IPTV legal. Teste gratuito."
 keywords: ["iptv legal", "iptv e legal", "legalidade iptv", "servico iptv legal", "iptv legal brasil"]
-date: 2025-06-14
+date: 2026-06-14
 lang: pt
 author: "IPTV 4K World Team"
 category: "Guia"

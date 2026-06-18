@@ -2,7 +2,7 @@
 title: "كيفية إعداد IPTV على Firestick — دليل كامل 2026"
 description: "دليل خطوة بخطوة لتثبيت وإعداد IPTV على Amazon Firestick. شاهد 20,000+ قناة بدقة 4K على Fire TV Stick باستخدام IPTV Smarters وTiviMate والمزيد."
 keywords: ["iptv firestick", "تثبيت iptv على firestick", "iptv أمازون فاير ستيك", "إعداد iptv firestick", "أفضل تطبيق iptv firestick"]
-date: 2025-06-14
+date: 2026-06-14
 lang: ar
 author: "فريق IPTV 4K World"
 category: "إعداد"

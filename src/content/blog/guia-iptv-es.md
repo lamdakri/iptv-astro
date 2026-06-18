@@ -2,7 +2,7 @@
 title: "Guia Completa de IPTV 2026 — Todo Sobre Suscripciones IPTV"
 description: "La guia definitiva de IPTV en 2026. Aprende que es IPTV, como funciona, dispositivos compatibles y como elegir la mejor suscripcion IPTV con 20,000+ canales en 4K."
 keywords: ["iptv", "guia iptv", "suscripcion iptv", "mejor iptv", "iptv tutorial", "que es iptv"]
-date: 2025-06-10
+date: 2026-06-10
 updatedDate: 2025-06-14
 lang: es
 author: "IPTV 4K World Team"

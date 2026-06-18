@@ -2,7 +2,7 @@
 title: "Comment Configurer IPTV sur Smart TV — Guide Samsung, LG, Sony 2026"
 description: "Guide complet pour installer l'IPTV sur Smart TV Samsung, LG et Sony. Instructions pour Smart IPTV, TiviMate, et IPTV Smarters Pro avec IPTV 4K World."
 keywords: ["iptv smart tv", "configurer iptv samsung", "iptv lg", "iptv sony", "installation iptv smart tv"]
-date: 2025-06-01
+date: 2026-06-01
 lang: fr
 author: "IPTV 4K World Team"
 category: "Guide"

@@ -2,7 +2,7 @@
 title: "How to Set Up IPTV on Firestick — Complete Fire TV Stick Guide 2026"
 description: "Step-by-step guide to install and set up IPTV on Amazon Firestick. Watch 20,000+ channels in 4K on your Fire TV Stick with IPTV Smarters, TiviMate, and more."
 keywords: ["iptv firestick", "install iptv on firestick", "iptv amazon fire stick", "iptv firestick setup", "best iptv app firestick"]
-date: 2025-06-13
+date: 2026-06-13
 lang: en
 author: "IPTV 4K World Team"
 category: "Setup"

@@ -2,7 +2,7 @@
 title: "Guide de Démarrage IPTV 2026 — Guide Complet pour Débutants"
 description: "Apprenez tout ce que vous devez savoir sur l IPTV : définition, fonctionnement, compatibilité des appareils et comment choisir le meilleur abonnement IPTV."
 keywords: ["iptv", "guide iptv", "tutoriel iptv", "comment fonctionne iptv"]
-date: 2025-05-15
+date: 2026-05-15
 lang: fr
 author: "IPTV 4K World Team"
 category: "Guide"

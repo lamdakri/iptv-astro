@@ -2,7 +2,7 @@
 title: "دليل IPTV الشامل 2026 — كل ما تحتاج معرفته عن اشتراكات IPTV"
 description: "الدليل الكامل لاشتراكات IPTV في 2026. تعرف على أفضل خدمات IPTV وكيفية اختيار الاشتراك المناسب مع أكثر من 20,000 قناة بجودة 4K."
 keywords: ["iptv", "دليل iptv", "اشتراك iptv", "افضل iptv", "iptv 2025"]
-date: 2025-06-10
+date: 2026-06-10
 lang: ar
 author: "IPTV 4K World Team"
 category: "دليل"

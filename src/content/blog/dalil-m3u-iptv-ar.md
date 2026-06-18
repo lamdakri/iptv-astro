@@ -2,7 +2,7 @@
 title: "قائمة تشغيل M3U IPTV — دليل كامل 2026"
 description: "كل ما تحتاج معرفته عن قوائم تشغيل M3U IPTV. ما هي، كيفية استخدام روابط M3U، أفضل مشغلات IPTV لـ M3U، وكيفية الحصول على اشتراك M3U متميز."
 keywords: ["iptv m3u", "قائمة تشغيل m3u", "iptv m3u url", "m3u iptv قائمة", "أفضل m3u iptv", "ما هو m3u iptv"]
-date: 2025-06-14
+date: 2026-06-14
 lang: ar
 author: "فريق IPTV 4K World"
 category: "دليل"

@@ -2,7 +2,7 @@
 title: "IPTV fur Einsteiger 2026 — Vollstandiger Leitfaden"
 description: "Alles, was Sie uber IPTV wissen mussen: Was ist IPTV, wie funktioniert es, Geratekompatibilitat und wie Sie das beste IPTV-Abonnement finden. Kostenlose Testversion."
 keywords: ["iptv", "iptv leitfaden", "iptv tutorial", "wie funktioniert iptv", "iptv 2025"]
-date: 2025-06-14
+date: 2026-06-14
 lang: de
 author: "IPTV 4K World Team"
 category: "Leitfaden"

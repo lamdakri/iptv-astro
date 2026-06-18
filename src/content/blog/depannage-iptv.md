@@ -9,6 +9,21 @@ author: "IPTV 4K World Team"
 category: "Depannage"
 tags: ["buffering", "depannage", "performance"]
 image: "/blog/images/troubleshooting.svg"
+howToSteps:
+  - name: "Tester votre debit internet"
+    text: "Faites un test de vitesse sur speedtest.net. Le streaming 4K necessite 25 Mbps minimum, le FHD 10 Mbps, et le HD 5 Mbps. Si votre debit est insuffisant, passez en WiFi 5 GHz ou utilisez un cable Ethernet."
+  - name: "Vider le cache de l'application IPTV"
+    text: "Allez dans Parametres > Applications > votre lecteur IPTV > Vider le cache. Les fichiers temporaires accumules peuvent ralentir le streaming et causer des freezes."
+  - name: "Essayer un VPN"
+    text: "Certains FAI limitent le trafic IPTV. Installez un VPN rapide avec des serveurs proches de chez vous pour crypter votre connexion et eviter le throttling."
+  - name: "Changer les parametres DNS"
+    text: "Remplacez les DNS de votre FAI par Google DNS (8.8.8.8 / 8.8.4.4) ou Cloudflare DNS (1.1.1.1). Cela peut ameliorer la vitesse de resolution et reduire le buffering."
+  - name: "Mettre a jour votre lecteur IPTV"
+    text: "Assurez-vous d'utiliser la derniere version de votre lecteur IPTV. Les mises a jour corrigent les bugs et ameliorent les performances de streaming."
+  - name: "Reduire la qualite de streaming"
+    text: "Si les problemes persistent, passez de 4K a FHD ou de FHD a HD. Une qualite inferieure necessite moins de bande passante et offre une experience plus stable."
+  - name: "Contacter le support IPTV 4K World"
+    text: "Si aucune solution ne fonctionne, contactez le support IPTV 4K World 24/7 via WhatsApp. Notre equipe vous aidera a diagnostiquer et resoudre le probleme."
 ---
 
 # IPTV qui Rame : Guide de Resolution Definitif

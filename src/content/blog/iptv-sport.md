@@ -9,6 +9,19 @@ author: "IPTV 4K World Team"
 category: "Sport"
 tags: ["sport", "football", "4K"]
 image: "/blog/images/sports.svg"
+howToSteps:
+  - name: "Choisir votre abonnement IPTV Sport"
+    text: "Selectionnez un fournisseur IPTV specialise dans le contenu sportif. Recherchez des services offrant toutes les grandes ligues (Ligue 1, Premier League, Champions League, NBA, UFC) en qualite 4K."
+  - name: "Installer votre lecteur IPTV"
+    text: "Telechargez et installez un lecteur IPTV compatible sur votre appareil. TiviMate est ideal pour Android TV/Firestick, IPTVX pour les appareils Apple, et IPTV Smarters Pro pour toutes les plateformes."
+  - name: "Ajouter votre playlist sport"
+    text: "Ouvrez votre lecteur IPTV et ajoutez votre playlist en utilisant l'URL M3U ou les identifiants Xtream Codes API fournis par votre service IPTV."
+  - name: "Configurer l'EPG pour les horaires des matchs"
+    text: "Configurez le Guide Electronique des Programmes (EPG) pour voir les horaires des matchs a venir, les heures de coup d'envoi et les listes de chaines."
+  - name: "Activer le multi-ecran pour plusieurs matchs"
+    text: "Avec un abonnement IPTV premium, activez le multi-ecran pour regarder jusqu'a 4 matchs differents simultanement sur plusieurs appareils."
+  - name: "Profiter du sport en direct en 4K"
+    text: "Parcourez votre categorie sport, selectionnez votre match et profitez du streaming 4K sans coupure. Utilisez le catch-up TV pour revoir les matchs que vous avez manques."
 ---
 
 # Meilleur IPTV pour le Sport en 2026

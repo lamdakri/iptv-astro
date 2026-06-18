@@ -9,6 +9,19 @@ author: "IPTV 4K World Team"
 category: "Guia"
 tags: ["guia", "iptv", "principiante"]
 image: "/blog/images/guide.svg"
+howToSteps:
+  - name: "Aprender que es IPTV"
+    text: "Comprenda los conceptos basicos del IPTV — Television por Protocolo de Internet. Utiliza su conexion a internet para transmitir canales de TV en vivo, peliculas y series directamente a sus dispositivos."
+  - name: "Elegir el proveedor IPTV adecuado"
+    text: "Compare diferentes proveedores IPTV. Busque uno que ofrezca mas de 20,000 canales, calidad 4K, soporte 24/7 y prueba gratuita. IPTV 4K World cumple con todos estos criterios."
+  - name: "Obtener sus credenciales de suscripcion"
+    text: "Suscribase al servicio elegido y recibira sus credenciales de acceso (URL M3U o datos Xtream Codes). Con IPTV 4K World, la activacion es instantanea."
+  - name: "Instalar una aplicacion reproductor IPTV"
+    text: "Descargue e instale una aplicacion reproductor IPTV en su dispositivo. Las aplicaciones populares incluyen TiviMate, IPTV Smarters Pro, VLC Media Player y GSE Smart IPTV."
+  - name: "Agregar su lista de reproduccion y comenzar"
+    text: "Abra su reproductor IPTV, agregue la lista de reproduccion usando sus credenciales y todos los canales se cargaran. Explore mas de 20,000 canales y 50,000 titulos VOD."
+  - name: "Disfrutar de la television"
+    text: "Comience a ver sus canales favoritos. Use los favoritos para guardar canales, utilice el catch-up para ver lo que se perdio y experimente la increible calidad 4K."
 ---
 
 # Guia Completa de IPTV en 2026

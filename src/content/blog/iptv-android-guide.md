@@ -1,5 +1,5 @@
 ---
-title: "Regarder IPTV sur Android — Guide Complet 2025"
+title: "Regarder IPTV sur Android — Guide Complet 2026"
 description: "Apprenez a regarder IPTV sur n'importe quel appareil Android. Guide etape par etape pour smartphones, tablettes et box Android. Meilleures apps IPTV et configuration."
 keywords: ["iptv android", "app iptv android", "iptv android tv", "iptv android box", "installer iptv android"]
 date: 2025-06-14

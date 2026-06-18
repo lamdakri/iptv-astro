@@ -1,5 +1,5 @@
 ---
-title: "IPTV Buffering Fix — Stop Freezing & Lag in 2025"
+title: "IPTV Buffering Fix — Stop Freezing & Lag in 2026"
 description: "Fix IPTV buffering and freezing problems. Complete troubleshooting guide covering internet speed, VPN setup, device optimization, and DNS settings for smooth 4K streaming."
 keywords: ["iptv buffering", "iptv freezing", "iptv lag fix", "iptv stuttering", "iptv buffering fix 2025", "iptv not working"]
 date: 2025-05-28

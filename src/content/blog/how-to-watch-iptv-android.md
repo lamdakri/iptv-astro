@@ -1,5 +1,5 @@
 ---
-title: "How to Watch IPTV on Android — Complete Guide for Phones & TV Boxes 2025"
+title: "How to Watch IPTV on Android — Complete Guide for Phones & TV Boxes 2026"
 description: "Learn how to watch IPTV on any Android device. Step-by-step guide for Android phones, tablets, and TV boxes. Best IPTV apps and setup for Android."
 keywords: ["iptv android", "iptv app android", "iptv android tv", "iptv android box", "install iptv android", "android iptv player"]
 date: 2025-06-13

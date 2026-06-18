@@ -1,5 +1,5 @@
 ---
-title: "Configurare IPTV su Smart TV 2025 — Samsung, LG, Sony"
+title: "Configurare IPTV su Smart TV 2026 — Samsung, LG, Sony"
 description: "Guida completa passo-passo per installare IPTV su Smart TV Samsung, LG, Sony e Android TV. Include istruzioni per Smart IPTV, TiviMate e IPTV Smarters."
 keywords: ["iptv smart tv", "iptv samsung", "iptv lg", "iptv sony", "smart tv iptv configurazione", "iptv smarters smart tv"]
 date: 2025-06-14

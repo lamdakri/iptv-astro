@@ -1,5 +1,5 @@
 ---
-title: "Ist IPTV legal? — Vollstandiger Leitfaden zur IPTV-Legalitat 2025"
+title: "Ist IPTV legal? — Vollstandiger Leitfaden zur IPTV-Legalitat 2026"
 description: "Verstehen Sie die IPTV-Legalitat weltweit. Ist IPTV in Deutschland, Osterreich, der Schweiz, der EU und Ihrem Land legal? Wie Sie einen legalen IPTV-Anbieter wahlen."
 keywords: ["iptv legal", "ist iptv legal", "iptv legalitat", "legaler iptv anbieter", "iptv legal deutschland"]
 date: 2025-06-14

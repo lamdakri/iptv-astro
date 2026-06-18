@@ -1,5 +1,5 @@
 ---
-title: "L'IPTV è legale? — Guida completa alla legalità IPTV 2025"
+title: "L'IPTV è legale? — Guida completa alla legalità IPTV 2026"
 description: "Scopri la legalità dell'IPTV nel mondo. L'IPTV è legale in Italia, Europa e nel tuo paese? Come scegliere un provider IPTV legale. Prova gratuita disponibile."
 keywords: ["iptv legale", "iptv è legale", "legalità iptv", "servizio iptv legale", "iptv legale italia"]
 date: 2025-06-14

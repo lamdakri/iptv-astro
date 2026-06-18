@@ -1,5 +1,5 @@
 ---
-title: "IPTV vs Television por Cable — Comparacion Definitiva 2025"
+title: "IPTV vs Television por Cable — Comparacion Definitiva 2026"
 description: "Comparacion completa entre IPTV y television por cable tradicional. Compara precios, canales, calidad, dispositivos y descubre cual es mejor para ti."
 keywords: ["iptv vs cable", "comparacion iptv", "cortar el cable", "alternativa cable", "iptv o cable"]
 date: 2025-06-03

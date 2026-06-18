@@ -1,5 +1,5 @@
 ---
-title: "How to Watch IPTV on iPhone & iPad — Best iOS IPTV Apps 2025"
+title: "How to Watch IPTV on iPhone & iPad — Best iOS IPTV Apps 2026"
 description: "Complete guide to watching IPTV on iPhone and iPad. Best IPTV apps for iOS, step-by-step setup instructions, and tips for Apple TV too."
 keywords: ["iptv iphone", "iptv ipad", "iptv ios", "iptv app iphone", "iptv apple tv", "best iptv app ios"]
 date: 2025-06-13

@@ -1,5 +1,5 @@
 ---
-title: "IPTV est-il legal ? — Guide complet sur la legalite IPTV 2025"
+title: "IPTV est-il legal ? — Guide complet sur la legalite IPTV 2026"
 description: "Comprenez la legalite de l'IPTV dans le monde. L'IPTV est-il legal en France, en Europe et dans votre pays ? Comment choisir un fournisseur IPTV legal."
 keywords: ["iptv legal", "iptv est il legal", "legalite iptv", "service iptv legal", "iptv legal france"]
 date: 2025-06-14

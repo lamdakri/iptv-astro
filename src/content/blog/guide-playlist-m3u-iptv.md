@@ -1,5 +1,5 @@
 ---
-title: "Playlist M3U IPTV — Guide Complet 2025"
+title: "Playlist M3U IPTV — Guide Complet 2026"
 description: "Tout ce que vous devez savoir sur les playlists M3U IPTV. Ce qu'elles sont, comment utiliser les URLs M3U, meilleurs lecteurs IPTV pour M3U et abonnement premium."
 keywords: ["iptv m3u", "playlist m3u", "iptv m3u url", "m3u iptv liste", "meilleur m3u iptv", "qu'est-ce que m3u iptv"]
 date: 2025-06-14

@@ -1,5 +1,5 @@
 ---
-title: "Guia IPTV para Iniciantes 2025 — Guia Completo"
+title: "Guia IPTV para Iniciantes 2026 — Guia Completo"
 description: "Tudo o que voce precisa saber sobre IPTV: o que e, como funciona, compatibilidade de dispositivos e como escolher a melhor assinatura IPTV. Teste gratuito disponivel."
 keywords: ["iptv", "guia iptv", "tutorial iptv", "como funciona iptv", "iptv 2025"]
 date: 2025-06-14

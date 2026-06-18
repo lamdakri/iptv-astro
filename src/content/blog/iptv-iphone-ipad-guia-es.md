@@ -1,5 +1,5 @@
 ---
-title: "Ver IPTV en iPhone & iPad — Guia iOS 2025"
+title: "Ver IPTV en iPhone & iPad — Guia iOS 2026"
 description: "Guia completa para ver IPTV en iPhone y iPad. Mejores aplicaciones IPTV para iOS, instrucciones de configuracion y consejos para Apple TV."
 keywords: ["iptv iphone", "iptv ipad", "iptv ios", "app iptv iphone", "iptv apple tv", "mejor app iptv ios"]
 date: 2025-06-14

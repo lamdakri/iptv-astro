@@ -1,5 +1,5 @@
 ---
-title: "Comment installer IPTV sur Firestick — Guide Complet 2025"
+title: "Comment installer IPTV sur Firestick — Guide Complet 2026"
 description: "Guide etape par etape pour installer et configurer IPTV sur Amazon Firestick. Regardez 20 000+ chaines en 4K sur votre Fire TV Stick avec IPTV Smarters, TiviMate et plus."
 keywords: ["iptv firestick", "installer iptv sur firestick", "iptv amazon fire stick", "iptv firestick configuration", "meilleure app iptv firestick"]
 date: 2025-06-14

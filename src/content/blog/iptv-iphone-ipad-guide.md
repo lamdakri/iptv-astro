@@ -1,5 +1,5 @@
 ---
-title: "Regarder IPTV sur iPhone & iPad — Guide iOS 2025"
+title: "Regarder IPTV sur iPhone & iPad — Guide iOS 2026"
 description: "Guide complet pour regarder IPTV sur iPhone et iPad. Meilleures apps IPTV pour iOS, instructions de configuration et astuces pour Apple TV aussi."
 keywords: ["iptv iphone", "iptv ipad", "iptv ios", "app iptv iphone", "iptv apple tv", "meilleure app iptv ios"]
 date: 2025-06-14

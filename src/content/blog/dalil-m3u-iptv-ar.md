@@ -98,4 +98,4 @@ howToSteps:
 
 هل انت مستعد لتجربة M3U IPTV المتميزة؟ [احصل على نسختك التجريبية المجانية عبر WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}).
 
-*اطلع ايضاً على ادلتنا حول [IPTV على Firestick](/ar/blog/dalil-firestick-iptv-ar/) و [افضل تطبيقات IPTV](/ar/blog/best-iptv-apps-2025/).*
+*اطلع ايضاً على ادلتنا حول [IPTV على Firestick](/ar/blog/dalil-firestick-iptv-ar/) و [افضل تطبيقات IPTV](/ar/blog/best-iptv-apps-2026/).*

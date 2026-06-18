@@ -54,4 +54,4 @@ image: "/blog/images/sports.svg"
 
 [احصل على نسختك التجريبية المجانية لمدة 12 ساعة عبر WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}) وابدأ مشاهدة الرياضة اليوم.
 
-*اطلع ايضاً على [افضل تطبيقات IPTV](/ar/blog/best-iptv-apps-2025/) و [دليل IPTV الشامل](/ar/blog/dalil-iptv-ar/).*
+*اطلع ايضاً على [افضل تطبيقات IPTV](/ar/blog/best-iptv-apps-2026/) و [دليل IPTV الشامل](/ar/blog/dalil-iptv-ar/).*

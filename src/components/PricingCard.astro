@@ -12,11 +12,6 @@ interface Props {
   trialLabel: string;
   featured?: boolean;
   popularLabel?: string;
-  couponLabel?: string;
-  couponPlaceholder?: string;
-  couponApply?: string;
-  couponApplied?: string;
-  couponInvalid?: string;
 }
 
 const {
@@ -30,15 +25,10 @@ const {
   trialLabel,
   featured = false,
   popularLabel = '',
-  couponLabel = '',
-  couponPlaceholder = 'Enter code...',
-  couponApply = 'Apply',
-  couponApplied = 'Applied!',
-  couponInvalid = 'Invalid',
 } = Astro.props;
 
 const isPromo = originalPrice !== '';
-const couponCodes: Record<string, number> = { 'IPTV10': 10, 'WELCOME5': 5, 'FLASH15': 15 };
+
 ---
 
 <div class={`pricing-card reveal reveal-scale ${featured ? 'featured' : ''}`} data-reveal-delay={featured ? '200' : '0'}>
@@ -61,17 +51,7 @@ const couponCodes: Record<string, number> = { 'IPTV10': 10, 'WELCOME5': 5, 'FLAS
       <span class="text-5xl font-extrabold gradient-text-static" id={`price-${name.replace(/\s/g,'')}`}>€{price}</span>
       <span class="text-surface-400 text-sm">{period}</span>
     </div>
-    <!-- Coupon -->
-    {couponLabel && (
-      <div class="mt-3 p-3 rounded-lg bg-surface-800/40 border border-surface-700/30">
-        <p class="text-xs text-surface-400 mb-2">{couponLabel}</p>
-        <div class="flex gap-1.5">
-          <input type="text" class="coupon-input flex-1 px-3 py-1.5 rounded-md bg-surface-900/60 border border-surface-700/40 text-white text-xs placeholder:text-surface-500 focus:outline-none focus:border-brand-500/40" placeholder={couponPlaceholder} data-plan={name.replace(/\s/g,'')} />
-          <button class="coupon-btn px-3 py-1.5 rounded-md bg-brand-600/30 text-brand-300 text-xs font-semibold hover:bg-brand-600/50 transition-colors" data-plan={name.replace(/\s/g,'')} data-codes={JSON.stringify(couponCodes)} data-applied={couponApplied} data-invalid={couponInvalid}>{couponApply}</button>
-        </div>
-        <p class="coupon-msg text-xs mt-1.5 hidden"></p>
-      </div>
-    )}
+
   </div>
   <ul class="space-y-3 flex-1">
     {features.map((f) => (
@@ -109,25 +89,4 @@ const couponCodes: Record<string, number> = { 'IPTV10': 10, 'WELCOME5': 5, 'FLAS
   </div>
 </div>
 
-<script>
-  document.querySelectorAll('.coupon-btn').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      const plan = btn.dataset.plan;
-      const input = document.querySelector('.coupon-input[data-plan="' + plan + '"]');
-      const msg = btn.parentElement.parentElement.querySelector('.coupon-msg');
-      const priceEl = document.getElementById('price-' + plan);
-      const codes = JSON.parse(btn.dataset.codes || '{}');
-      const code = (input?.value || '').trim().toUpperCase();
-      if (codes[code]) {
-        const discount = codes[code];
-        const originalPrice = parseFloat(priceEl?.dataset.original || priceEl?.textContent?.replace('€','') || '0');
-        if (!priceEl?.dataset.original && priceEl) priceEl.dataset.original = String(originalPrice);
-        const newPrice = (originalPrice * (1 - discount / 100)).toFixed(2);
-        if (priceEl) priceEl.textContent = '€' + newPrice;
-        if (msg) { msg.textContent = '✅ ' + btn.dataset.applied + ' (-' + discount + '%)'; msg.className = 'coupon-msg text-xs mt-1.5 text-green-400'; }
-      } else if (code) {
-        if (msg) { msg.textContent = '❌ ' + btn.dataset.invalid; msg.className = 'coupon-msg text-xs mt-1.5 text-red-400'; }
-      }
-    });
-  });
-</script>
+

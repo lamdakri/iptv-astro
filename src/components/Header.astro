@@ -1,7 +1,7 @@
 ---
 import { getLangFromUrl, useTranslations } from '../i18n/ui';
 import LanguageSwitcher from './LanguageSwitcher.astro';
-import { WHATSAPP_NUMBER as WA } from '../i18n/whatsapp';
+import { getWhatsAppUrl, getWhatsAppTrialMsg } from '../i18n/whatsapp';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -26,7 +26,7 @@ const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}\/?/, '/');
       </div>
 
       <a
-        href={`https://wa.me/${WA}?text=${encodeURIComponent('Hello! I want a free IPTV trial.')}`}
+        href={getWhatsAppUrl(getWhatsAppTrialMsg(t))}
         class="btn-whatsapp text-xs px-3.5 py-2 ml-2"
         target="_blank"
         rel="noopener noreferrer"
@@ -59,7 +59,7 @@ const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}\/?/, '/');
         <LanguageSwitcher lang={lang} currentPath={currentPath} />
       </div>
       <a
-        href={`https://wa.me/${WA}?text=${encodeURIComponent('Hello! I want a free IPTV trial.')}`}
+        href={getWhatsAppUrl(getWhatsAppTrialMsg(t))}
         class="btn-whatsapp text-sm px-6 py-3 mt-6"
         target="_blank"
         rel="noopener noreferrer"

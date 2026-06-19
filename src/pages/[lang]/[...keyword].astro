@@ -5,7 +5,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import FAQ from '../../components/FAQ.astro';
 import SchemaMarkup from '../../components/SchemaMarkup.astro';
-import { WHATSAPP_NUMBER as WA } from '../../i18n/whatsapp';
+import { getWhatsAppUrl, getWhatsAppTrialMsg } from '../../i18n/whatsapp';
 
 export async function getStaticPaths() {
   const seoPages = await getCollection('seoPages');
@@ -84,7 +84,7 @@ const webPageSchema = {
         <h2 class="text-2xl font-bold text-white mb-3">{t('seo.cta.title')}</h2>
         <p class="text-surface-400 mb-6">{t('seo.cta.subtitle', { keyword: seoData.h1 })}</p>
         <a
-          href={`https://wa.me/${WA}?text=${encodeURIComponent('Hello! I want a free IPTV trial.')}`}
+          href={getWhatsAppUrl(getWhatsAppTrialMsg(t))}
           class="btn-whatsapp"
           target="_blank" rel="noopener noreferrer"
           data-track="whatsapp_click"

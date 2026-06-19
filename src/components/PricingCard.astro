@@ -1,5 +1,6 @@
 ---
-import { WHATSAPP_NUMBER as WA } from '../i18n/whatsapp';
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
+import { getWhatsAppUrl, getWhatsAppTrialMsg } from '../i18n/whatsapp';
 
 interface Props {
   name: string;
@@ -27,7 +28,12 @@ const {
   popularLabel = '',
 } = Astro.props;
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const isPromo = originalPrice !== '';
+
+const buyMsg = (t('whatsapp.buyPlan') || 'Hi! I want the {plan} plan.').replace('{plan}', name);
 
 ---
 
@@ -60,7 +66,7 @@ const isPromo = originalPrice !== '';
   </ul>
   <div class="flex flex-col gap-3 mt-2">
     <a
-      href={`https://wa.me/${WA}?text=${encodeURIComponent('Hi! I want the ' + name + ' plan.')}`}
+      href={getWhatsAppUrl(buyMsg)}
       class={`btn-whatsapp w-full text-base ${featured ? '!bg-gradient-to-r !from-brand-600 !to-brand-500 shadow-brand-500/30' : ''}`}
       target="_blank"
       rel="noopener noreferrer"
@@ -75,7 +81,7 @@ const isPromo = originalPrice !== '';
       {ctaLabel}
     </a>
     <a
-      href={`https://wa.me/${WA}?text=${encodeURIComponent('Hello! I want a free 12-hour IPTV trial.')}`}
+      href={getWhatsAppUrl(getWhatsAppTrialMsg(t))}
       class="text-center text-sm text-surface-400 hover:text-brand-400 transition-colors font-medium"
       target="_blank"
       rel="noopener noreferrer"

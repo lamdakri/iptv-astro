@@ -1,6 +1,6 @@
 ---
 import { getLangFromUrl, useTranslations } from '../i18n/ui';
-import { WHATSAPP_NUMBER as WA } from '../i18n/whatsapp';
+import { getWhatsAppUrl, getWhatsAppTrialMsg } from '../i18n/whatsapp';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -46,7 +46,7 @@ const newsletterBtnText = t('newsletter.button');
         <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Support</h4>
         <ul class="space-y-2.5">
           <li>
-            <a href={`https://wa.me/${WA}`} class="flex items-center gap-2 text-surface-400 text-sm hover:text-whatsapp transition-colors group" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-track-label="Footer Support" data-track-category="conversion">
+            <a href={getWhatsAppUrl('')} class="flex items-center gap-2 text-surface-400 text-sm hover:text-whatsapp transition-colors group" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-track-label="Footer Support" data-track-category="conversion">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-whatsapp" fill="currentColor" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157z"/></svg>
               WhatsApp 24/7
             </a>
@@ -60,7 +60,7 @@ const newsletterBtnText = t('newsletter.button');
         <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Get Started</h4>
         <p class="text-surface-400 text-sm mb-4">Ready to cut the cord? Try IPTV 4K World free for 12 hours.</p>
         <a
-          href={`https://wa.me/${WA}?text=${encodeURIComponent('Hello! I want a free 12-hour IPTV trial.')}`}
+          href={getWhatsAppUrl(getWhatsAppTrialMsg(t))}
           class="btn-whatsapp text-sm px-5 py-2.5"
           target="_blank"
           rel="noopener noreferrer"

@@ -1,5 +1,6 @@
 ---
-import { WHATSAPP_NUMBER as WA } from '../i18n/whatsapp';
+import { getWhatsAppUrl } from '../i18n/whatsapp';
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
 
 interface Props {
   title: string;
@@ -24,6 +25,8 @@ interface Props {
 }
 
 const { title, subtitle, headerPlan, headerMonthly, headerOurPrice, headerSavings, monthlyRate, eyebrow, bestDeal, ctaText, ctaButton, rows } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section class="section section-alt">
@@ -89,7 +92,7 @@ const { title, subtitle, headerPlan, headerMonthly, headerOurPrice, headerSaving
     <div class="text-center mt-12 reveal">
       <p class="text-surface-400 text-sm mb-4">{ctaText}</p>
       <a
-        href={`https://wa.me/${WA}?text=${encodeURIComponent('Hi! I want the best value 1 Year plan.')}`}
+        href={getWhatsAppUrl(t('whatsapp.bestValue') || 'Hi! I want the best value 1 Year plan.')}
         class="btn-whatsapp text-lg px-10 py-4"
         target="_blank" rel="noopener noreferrer"
       >

@@ -1,5 +1,6 @@
 ---
-import { WHATSAPP_NUMBER as WA } from '../i18n/whatsapp';
+import { getWhatsAppUrl } from '../i18n/whatsapp';
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
 
 interface Props {
   targetDate: string;
@@ -15,8 +16,9 @@ interface Props {
 }
 
 const { targetDate, title, subtitle, eyebrow, ctaText, expiryLabel, daysLabel, hoursLabel, minutesLabel, secondsLabel } = Astro.props;
-const encodedMsg = encodeURIComponent('Hello! I want the special promo.');
-const whatsappUrl = `https://wa.me/${WA}?text=${encodedMsg}`;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const whatsappUrl = getWhatsAppUrl(t('whatsapp.promo') || 'Hello! I want the special promo.');
 ---
 
 <div id="countdown-timer" class="relative w-full max-w-xl mx-auto mt-8 mb-2 reveal reveal-fade" data-target={targetDate} data-expiry-label={expiryLabel}>

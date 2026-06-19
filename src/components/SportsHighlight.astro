@@ -1,5 +1,6 @@
 ---
-import { WHATSAPP_NUMBER } from '../i18n/whatsapp';
+import { getWhatsAppUrl, getWhatsAppTrialMsg } from '../i18n/whatsapp';
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
 import PayPalBadge from './PayPalBadge.astro';
 
 interface Sport {
@@ -19,6 +20,8 @@ interface Props {
 }
 
 const { title, subtitle, eyebrow, sports, ctaText, ctaButton } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section class="section section-alt">
@@ -52,7 +55,7 @@ const { title, subtitle, eyebrow, sports, ctaText, ctaButton } = Astro.props;
     <div class="text-center mt-12 reveal">
       <p class="text-surface-400 text-sm mb-4">{ctaText}</p>
       <a
-        href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("I want to watch live sports in 4K! Give me the free trial.")}`}
+        href={getWhatsAppUrl(getWhatsAppTrialMsg(t))}
         class="btn-whatsapp text-lg px-10 py-4"
         target="_blank"
         rel="noopener noreferrer"

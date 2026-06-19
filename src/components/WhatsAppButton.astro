@@ -1,26 +1,32 @@
 ---
-import { getWhatsAppUrl, WHATSAPP_MESSAGE_TRIAL, WHATSAPP_MESSAGE_BUY } from '../i18n/whatsapp';
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
+import { getWhatsAppUrl, getWhatsAppTrialMsg, getWhatsAppBuyMsg } from '../i18n/whatsapp';
 
 interface Props {
   message?: string;
   variant?: 'trial' | 'buy';
   label?: string;
   className?: string;
+  lang?: string;
 }
 
+const lang = Astro.props.lang || getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const {
-  message = WHATSAPP_MESSAGE_TRIAL,
+  message,
   variant = 'trial',
   label,
   className = '',
 } = Astro.props;
 
-const defaultLabel = variant === 'buy' ? 'Buy via WhatsApp' : 'Request 12H Free Trial';
+const resolvedMessage = message || (variant === 'buy' ? getWhatsAppBuyMsg(t) : getWhatsAppTrialMsg(t));
+const defaultLabel = variant === 'buy' ? t('cta.buy') || 'Buy via WhatsApp' : t('cta.trial') || 'Request 12H Free Trial';
 const buttonLabel = label || defaultLabel;
 ---
 
 <a
-  href={getWhatsAppUrl(message)}
+  href={getWhatsAppUrl(resolvedMessage)}
   target="_blank"
   rel="noopener noreferrer"
   class={`btn-whatsapp ${className}`}

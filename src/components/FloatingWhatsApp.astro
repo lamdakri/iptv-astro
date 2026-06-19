@@ -1,6 +1,6 @@
 ---
 import { getLangFromUrl, useTranslations } from '../i18n/ui';
-import { getWhatsAppUrl, WHATSAPP_MESSAGE_TRIAL } from '../i18n/whatsapp';
+import { getWhatsAppUrl, getWhatsAppTrialMsg } from '../i18n/whatsapp';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -11,7 +11,7 @@ const t = useTranslations(lang);
   data-track="whatsapp_click"
   data-track-label="Floating Button"
   data-track-category="conversion"
-  href={getWhatsAppUrl(WHATSAPP_MESSAGE_TRIAL)}
+  href={getWhatsAppUrl(getWhatsAppTrialMsg(t))}
   target="_blank"
   rel="noopener noreferrer"
   class="floating-whatsapp"

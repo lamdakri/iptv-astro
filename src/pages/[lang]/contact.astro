@@ -12,9 +12,28 @@ const { lang } = Astro.params;
 const t = useTranslations(lang);
 const whatsappUrl = `https://wa.me/${WA}?text=${encodeURIComponent('Hello! I need help with IPTV.')}`;
 const pageTitle = t('contact.title') + ' | ' + t('site.name');
+const pageUrl = Astro.url.href;
+
+const pageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: pageTitle,
+  description: t('contact.subtitle'),
+  url: pageUrl,
+  inLanguage: lang,
+  isPartOf: {
+    '@type': 'WebSite',
+    name: t('site.name'),
+    url: Astro.site?.href || 'https://iptv4kworld.com',
+  },
+  about: {
+    '@type': 'Thing',
+    name: 'Contact Page',
+  },
+};
 ---
 
-<BaseLayout title={pageTitle} description={t('contact.subtitle')} keywords={t('seo.keywords')}>
+<BaseLayout title={pageTitle} description={t('contact.subtitle')} keywords={t('seo.keywords')} schema={pageSchema}>
   <Breadcrumb items={[{
     label: t('breadcrumb.home'), href: `/${lang}/` },
     { label: t('contact.title') }

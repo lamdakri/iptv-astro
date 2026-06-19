@@ -17,7 +17,7 @@
   <text x="310" y="180" fill="#22c55e" font-family="monospace" font-size="11">rtmp://stream.iptv/...m3u8</text>
   <rect x="310" y="195" width="160" height="4" rx="2" fill="#818cf8" opacity="0.15"/>
   <text x="310" y="215" fill="#64748b" font-family="monospace" font-size="11">#EXTINF:-1 tvg-id="CNN"</text>
-  <rect x="310" y="250" fill="#22c55e" font-family="monospace" font-size="11">rtmp://stream.iptv/...m3u8</text>
+  <text x="310" y="250" fill="#22c55e" font-family="monospace" font-size="11">rtmp://stream.iptv/...m3u8</text>
   <text x="310" y="285" fill="#64748b" font-family="monospace" font-size="11">#EXTINF:-1 tvg-id="..."</text>
   <rect x="440" y="80" width="60" height="25" rx="6" fill="url(#accent-m3u)"/>
   <text x="470" y="97" text-anchor="middle" fill="#0f172a" font-family="system-ui" font-size="10" font-weight="bold">.M3U</text>

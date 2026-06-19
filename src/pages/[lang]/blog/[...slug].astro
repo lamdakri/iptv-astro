@@ -31,6 +31,12 @@ const relatedPosts = (await getCollection('blog', ({ data }) =>
 const pageTitle = entry.data.title + ' | ' + t('blog.title') + ' | ' + t('site.name');
 
 const pageUrl = Astro.url.href;
+
+// Use PNG OG image instead of SVG for better social sharing previews
+const ogImageUrl = entry.data.image
+  ? entry.data.image.replace(/\.svg$/, '-og.png')
+  : undefined;
+
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
@@ -57,7 +63,7 @@ const articleSchema = {
 <BaseLayout
   title={pageTitle}
   description={entry.data.description}
-  ogImage={entry.data.image}
+  ogImage={ogImageUrl}
   ogType="article"
   articlePublishedTime={entry.data.date.toISOString()}
   articleModifiedTime={entry.data.updatedDate ? entry.data.updatedDate.toISOString() : undefined}
@@ -67,8 +73,6 @@ const articleSchema = {
   keywords={entry.data.keywords?.join(', ')}
   schema={articleSchema}
 >
-  <SchemaMarkup type="faq" />
-
   {entry.data.howToSteps && entry.data.howToSteps.length > 0 && (
     <script type="application/ld+json" set:html={JSON.stringify({
       '@context': 'https://schema.org',

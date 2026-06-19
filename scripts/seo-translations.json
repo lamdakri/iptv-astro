@@ -1,0 +1,354 @@
+{
+  "h2": {
+    "Why Choose IPTV in {c}": {
+      "fr": "Pourquoi Choisir IPTV en {c}",
+      "ar": "لماذا تختار IPTV في {c}",
+      "es": "Por Qué Elegir IPTV en {c}",
+      "de": "Warum IPTV in {c} wählen?",
+      "it": "Perché Scegliere IPTV in {c}",
+      "pt": "Por que Escolher IPTV em {c}"
+    },
+    "{c} Channels Available": {
+      "fr": "Chaînes {c} Disponibles",
+      "ar": "القنوات {c} المتاحة",
+      "es": "Canales {c} Disponibles",
+      "de": "Verfügbare {c} Sender",
+      "it": "Canali {c} Disponibili",
+      "pt": "Canais {c} Disponíveis"
+    },
+    "How to Set Up IPTV in {c}": {
+      "fr": "Comment Installer IPTV en {c}",
+      "ar": "كيفية إعداد IPTV في {c}",
+      "es": "Cómo Configurar IPTV en {c}",
+      "de": "IPTV in {c} einrichten",
+      "it": "Come Configurare IPTV in {c}",
+      "pt": "Como Configurar IPTV em {c}"
+    },
+    "How to Get Started in {c}": {
+      "fr": "Comment Démarrer en {c}",
+      "ar": "كيفية البدء في {c}",
+      "es": "Cómo Empezar en {c}",
+      "de": "So starten Sie in {c}",
+      "it": "Come Iniziare in {c}",
+      "pt": "Como Começar em {c}"
+    },
+    "How IPTV Works in {c}": {
+      "fr": "Comment l'IPTV Fonctionne en {c}",
+      "ar": "كيف يعمل IPTV في {c}",
+      "es": "Cómo Funciona IPTV en {c}",
+      "de": "Wie IPTV in {c} funktioniert",
+      "it": "Come Funziona IPTV in {c}",
+      "pt": "Como o IPTV Funciona em {c}"
+    },
+    "{l} & Sports Coverage": {
+      "fr": "{l} et Couverture Sportive",
+      "ar": "{l} وتغطية رياضية",
+      "es": "{l} y Cobertura Deportiva",
+      "de": "{l} & Sportberichterstattung",
+      "it": "{l} e Copertura Sportiva",
+      "pt": "{l} e Cobertura Esportiva"
+    },
+    "Why IPTV is Perfect for Sports Fans": {
+      "fr": "Pourquoi l'IPTV est Parfait pour les Fans de Sport",
+      "ar": "لماذا IPTV مثالي لعشاق الرياضة",
+      "es": "Por Qué IPTV es Perfecto para los Fans del Deporte",
+      "de": "Warum IPTV perfekt für Sportfans ist",
+      "it": "Perché IPTV è Perfetto per gli Appassionati di Sport",
+      "pt": "Por que o IPTV é Perfeito para Fãs de Esportes"
+    },
+    "Sports Channels Available": {
+      "fr": "Chaînes Sportives Disponibles",
+      "ar": "القنوات الرياضية المتاحة",
+      "es": "Canales Deportivos Disponibles",
+      "de": "Verfügbare Sportsender",
+      "it": "Canali Sportivi Disponibili",
+      "pt": "Canais Esportivos Disponíveis"
+    },
+    "Watch Multiple Games at Once": {
+      "fr": "Regardez Plusieurs Matchs en Même Temps",
+      "ar": "شاهد عدة مباريات في وقت واحد",
+      "es": "Mira Varios Partidos a la Vez",
+      "de": "Mehrere Spiele gleichzeitig ansehen",
+      "it": "Guarda Più Partite Contemporaneamente",
+      "pt": "Assista Vários Jogos ao Mesmo Tempo"
+    },
+    "Why Choose IPTV 4K World": {
+      "fr": "Pourquoi Choisir IPTV 4K World",
+      "ar": "لماذا تختار IPTV 4K World",
+      "es": "Por Qué Elegir IPTV 4K World",
+      "de": "Warum IPTV 4K World wählen?",
+      "it": "Perché Scegliere IPTV 4K World",
+      "pt": "Por que Escolher IPTV 4K World"
+    },
+    "Available Channels": {
+      "fr": "Chaînes Disponibles",
+      "ar": "القنوات المتاحة",
+      "es": "Canales Disponibles",
+      "de": "Verfügbare Sender",
+      "it": "Canali Disponibili",
+      "pt": "Canais Disponíveis"
+    },
+    "How to Get Started": {
+      "fr": "Comment Démarrer",
+      "ar": "كيفية البدء",
+      "es": "Cómo Empezar",
+      "de": "So starten Sie",
+      "it": "Come Iniziare",
+      "pt": "Como Começar"
+    },
+    "What is 4K IPTV": {
+      "fr": "Qu'est-ce que l'IPTV 4K",
+      "ar": "ما هو IPTV 4K",
+      "es": "Qué es IPTV 4K",
+      "de": "Was ist 4K IPTV",
+      "it": "Cos'è IPTV 4K",
+      "pt": "O que é IPTV 4K"
+    },
+    "Requirements for 4K Streaming": {
+      "fr": "Prérequis pour le Streaming 4K",
+      "ar": "متطلبات البث بدقة 4K",
+      "es": "Requisitos para Streaming 4K",
+      "de": "Voraussetzungen für 4K-Streaming",
+      "it": "Requisiti per lo Streaming 4K",
+      "pt": "Requisitos para Streaming 4K"
+    },
+    "Best 4K IPTV Channels": {
+      "fr": "Meilleures Chaînes IPTV 4K",
+      "ar": "أفضل قنوات IPTV 4K",
+      "es": "Mejores Canales IPTV 4K",
+      "de": "Beste 4K IPTV Sender",
+      "it": "Migliori Canali IPTV 4K",
+      "pt": "Melhores Canais IPTV 4K"
+    },
+    "What Makes the Best IPTV Service": {
+      "fr": "Ce Qui Fait le Meilleur Service IPTV",
+      "ar": "ما الذي يجعل أفضل خدمة IPTV",
+      "es": "Qué Hace al Mejor Servicio IPTV",
+      "de": "Was den besten IPTV-Dienst ausmacht",
+      "it": "Cosa Rende il Miglior Servizio IPTV",
+      "pt": "O Que Faz o Melhor Serviço IPTV"
+    },
+    "Features to Look For": {
+      "fr": "Fonctionnalités à Rechercher",
+      "ar": "الميزات التي يجب البحث عنها",
+      "es": "Características a Buscar",
+      "de": "Worauf Sie achten sollten",
+      "it": "Caratteristiche da Cercare",
+      "pt": "Recursos a Procurar"
+    },
+    "Why IPTV 4K World is the Top Choice": {
+      "fr": "Pourquoi IPTV 4K World est le Premier Choix",
+      "ar": "لماذا IPTV 4K World هو الخيار الأفضل",
+      "es": "Por Qué IPTV 4K World es la Mejor Opción",
+      "de": "Warum IPTV 4K World die beste Wahl ist",
+      "it": "Perché IPTV 4K World è la Scelta Migliore",
+      "pt": "Por que IPTV 4K World é a Melhor Escolha"
+    },
+    "What Makes a Premium IPTV Service": {
+      "fr": "Ce Qui Fait un Service IPTV Premium",
+      "ar": "ما الذي يجعل خدمة IPTV متميزة",
+      "es": "Qué Hace un Servicio IPTV Premium",
+      "de": "Was einen Premium-IPTV-Dienst ausmacht",
+      "it": "Cosa Rende un Servizio IPTV Premium",
+      "pt": "O Que Faz um Serviço IPTV Premium"
+    },
+    "Premium Features Included": {
+      "fr": "Fonctionnalités Premium Incluses",
+      "ar": "الميزات المتميزة المتضمنة",
+      "es": "Características Premium Incluidas",
+      "de": "Enthaltene Premium-Funktionen",
+      "it": "Funzionalità Premium Incluse",
+      "pt": "Recursos Premium Incluídos"
+    },
+    "Premium IPTV vs Free IPTV": {
+      "fr": "IPTV Premium vs IPTV Gratuit",
+      "ar": "IPTV المتميز مقابل IPTV المجاني",
+      "es": "IPTV Premium vs IPTV Gratis",
+      "de": "Premium IPTV vs kostenloses IPTV",
+      "it": "IPTV Premium vs IPTV Gratuito",
+      "pt": "IPTV Premium vs IPTV Grátis"
+    },
+    "How IPTV Technology Works": {
+      "fr": "Comment la Technologie IPTV Fonctionne",
+      "ar": "كيف تعمل تقنية IPTV",
+      "es": "Cómo Funciona la Tecnología IPTV",
+      "de": "Wie die IPTV-Technologie funktioniert",
+      "it": "Come Funziona la Tecnologia IPTV",
+      "pt": "Como Funciona a Tecnologia IPTV"
+    },
+    "Legal IPTV vs Illegal IPTV": {
+      "fr": "IPTV Légal vs IPTV Illégal",
+      "ar": "IPTV القانوني مقابل IPTV غير القانوني",
+      "es": "IPTV Legal vs IPTV Ilegal",
+      "de": "Legales IPTV vs. illegales IPTV",
+      "it": "IPTV Legale vs IPTV Illegale",
+      "pt": "IPTV Legal vs IPTV Ilegal"
+    },
+    "IPTV Legality by Country": {
+      "fr": "Légalité de l'IPTV par Pays",
+      "ar": "قانونية IPTV حسب البلد",
+      "es": "Legalidad de IPTV por País",
+      "de": "IPTV-Legalität nach Land",
+      "it": "Legalità IPTV per Paese",
+      "pt": "Legalidade da IPTV por País"
+    },
+    "Why Americans Are Switching to IPTV": {
+      "fr": "Pourquoi les Américains Passent à l'IPTV",
+      "ar": "لماذا يتحول الأمريكيون إلى IPTV",
+      "es": "Por Qué los Estadounidenses Cambian a IPTV",
+      "de": "Warum Amerikaner auf IPTV umsteigen",
+      "it": "Perché gli Americani Passano all'IPTV",
+      "pt": "Por que os Americanos Estão Migrando para IPTV"
+    },
+    "IPTV vs Cable: Save Hundreds": {
+      "fr": "IPTV vs Câble : Économisez des Centaines",
+      "ar": "IPTV مقابل الكابل: وفر المئات",
+      "es": "IPTV vs Cable: Ahorra Cientos",
+      "de": "IPTV vs. Kabel: Sparen Sie Hunderte",
+      "it": "IPTV vs Cavo: Risparmia Centinaia",
+      "pt": "IPTV vs TV a Cabo: Poupe Centenas"
+    },
+    "US Channels Available": {
+      "fr": "Chaînes US Disponibles",
+      "ar": "القنوات الأمريكية المتاحة",
+      "es": "Canales Estadounidenses Disponibles",
+      "de": "US-Sender verfügbar",
+      "it": "Canali USA Disponibili",
+      "pt": "Canais dos EUA Disponíveis"
+    }
+  },
+  "h1": {
+    "Best IPTV for Sports — Watch Live Sports in 4K 2026": {
+      "fr": "Meilleur IPTV pour le Sport — Regardez les Sports en Direct en 4K 2026",
+      "ar": "أفضل IPTV للرياضة — شاهد الرياضة المباشرة بدقة 4K 2026",
+      "es": "Mejor IPTV para Deportes — Mira Deportes en Vivo en 4K 2026",
+      "de": "Bestes IPTV für Sport — Live-Sport in 4K 2026",
+      "it": "Miglior IPTV per lo Sport — Guarda lo Sport in Diretta in 4K 2026",
+      "pt": "Melhor IPTV para Esportes — Assista Esportes ao Vivo em 4K 2026"
+    },
+    "Best 4K IPTV Service — Ultra HD Streaming in 2026": {
+      "fr": "Meilleur Service IPTV 4K — Streaming Ultra HD en 2026",
+      "ar": "أفضل خدمة IPTV 4K — بث فائق الدقة في 2026",
+      "es": "Mejor Servicio IPTV 4K — Streaming Ultra HD en 2026",
+      "de": "Bester 4K IPTV-Dienst — Ultra-HD-Streaming 2026",
+      "it": "Miglior Servizio IPTV 4K — Streaming Ultra HD 2026",
+      "pt": "Melhor Serviço IPTV 4K — Streaming Ultra HD 2026"
+    },
+    "Premium IPTV — The Ultimate TV Experience in 4K": {
+      "fr": "IPTV Premium — L’Expérience TV Ultime en 4K",
+      "ar": "IPTV بريميوم — تجربة تلفزيونية مثالية بدقة 4K",
+      "es": "IPTV Premium — La Experiencia TV Definitiva en 4K",
+      "de": "Premium IPTV — Das ultimative TV-Erlebnis in 4K",
+      "it": "IPTV Premium — L’Esperienza TV Definitiva in 4K",
+      "pt": "IPTV Premium — A Experiência TV Definitiva em 4K"
+    },
+    "Best IPTV Service 2026 — Why IPTV 4K World is #1": {
+      "fr": "Meilleur Service IPTV 2026 — Pourquoi IPTV 4K World est N°1",
+      "ar": "أفضل خدمة IPTV 2026 — لماذا IPTV 4K World هي الأولى",
+      "es": "Mejor Servicio IPTV 2026 — Por Qué IPTV 4K World es el N°1",
+      "de": "Bester IPTV-Dienst 2026 — Warum IPTV 4K World die Nr. 1 ist",
+      "it": "Miglior Servizio IPTV 2026 — Perché IPTV 4K World è il N°1",
+      "pt": "Melhor Serviço IPTV 2026 — Por que IPTV 4K World é o N°1"
+    }
+  },
+  "content": {
+    "Never miss a game with IPTV 4K World. Watch Premier League, LaLiga, Serie A, Bundesliga, Ligue 1, NFL, NBA, NHL, MLB, UFC, F1, WWE, and more in stunning 4K quality. With 20,000+ live channels, you can watch every major sports event live.": {
+      "fr": "Ne manquez jamais un match avec IPTV 4K World. Regardez la Premier League, LaLiga, Serie A, Bundesliga, Ligue 1, NFL, NBA, NHL, MLB, UFC, F1, WWE et plus encore en superbe qualité 4K. Avec plus de 20 000 chaînes en direct, vous pouvez regarder tous les grands événements sportifs en direct.",
+      "ar": "لا تفوّت أي مباراة مع IPTV 4K World. شاهد الدوري الإنجليزي الممتاز، الليغا، الدوري الإيطالي، البوندسليغا، الدوري الفرنسي، NFL، NBA، NHL، MLB، UFC، F1، WWE والمزيد بجودة 4K مذهلة. مع أكثر من 20,000 قناة مباشرة، يمكنك مشاهدة كل حدث رياضي كبير مباشرة.",
+      "es": "No te pierdas ningún partido con IPTV 4K World. Mira Premier League, LaLiga, Serie A, Bundesliga, Ligue 1, NFL, NBA, NHL, MLB, UFC, F1, WWE y más en impresionante calidad 4K. Con más de 20,000 canales en vivo, puedes ver cada gran evento deportivo en directo.",
+      "de": "Verpassen Sie kein Spiel mit IPTV 4K World. Sehen Sie Premier League, LaLiga, Serie A, Bundesliga, Ligue 1, NFL, NBA, NHL, MLB, UFC, F1, WWE und mehr in atemberaubender 4K-Qualität. Mit über 20.000 Live-Sendern können Sie jedes große Sportereignis live verfolgen.",
+      "it": "Non perdere mai una partita con IPTV 4K World. Guarda Premier League, LaLiga, Serie A, Bundesliga, Ligue 1, NFL, NBA, NHL, MLB, UFC, F1, WWE e altro in splendida qualità 4K. Con oltre 20.000 canali live, puoi guardare ogni grande evento sportivo in diretta.",
+      "pt": "Nunca perca um jogo com IPTV 4K World. Assista à Premier League, LaLiga, Serie A, Bundesliga, Ligue 1, NFL, NBA, NHL, MLB, UFC, F1, WWE e muito mais em impressionante qualidade 4K. Com mais de 20.000 canais ao vivo, pode assistir a todos os grandes eventos desportivos em direto."
+    },
+    "Elevate your viewing experience with IPTV 4K World 4K streaming. Watch sports, movies, and live TV in stunning Ultra HD quality. Our anti-freeze technology ensures smooth 4K playback even on moderate internet connections.": {
+      "fr": "Élevez votre expérience de visionnage avec le streaming 4K d'IPTV 4K World. Regardez sports, films et TV en direct en superbe qualité Ultra HD. Notre technologie anti-gel assure une lecture 4K fluide même sur des connexions internet modérées.",
+      "ar": "ارتقِ بتجربة المشاهدة مع بث IPTV 4K World بدقة 4K. شاهد الرياضة والأفلام والتلفزيون المباشر بجودة Ultra HD مذهلة. تضمن تقنيتنا المضادة للتجميد تشغيل 4K سلس حتى على اتصالات الإنترنت المتوسطة.",
+      "es": "Eleva tu experiencia de visualización con el streaming 4K de IPTV 4K World. Mira deportes, películas y TV en vivo en impresionante calidad Ultra HD. Nuestra tecnología anti-congelamiento garantiza una reproducción 4K fluida incluso en conexiones de internet moderadas.",
+      "de": "Verbessern Sie Ihr Seherlebnis mit IPTV 4K World 4K-Streaming. Sehen Sie Sport, Filme und Live-TV in atemberaubender Ultra-HD-Qualität. Unsere Anti-Freeze-Technologie sorgt für flüssige 4K-Wiedergabe selbst bei moderaten Internetverbindungen.",
+      "it": "Migliora la tua esperienza visiva con lo streaming 4K di IPTV 4K World. Guarda sport, film e TV in diretta in splendida qualità Ultra HD. La nostra tecnologia anti-freeze garantisce una riproduzione 4K fluida anche su connessioni internet moderate.",
+      "pt": "Eleve a sua experiência de visualização com o streaming 4K do IPTV 4K World. Assista a desporto, filmes e TV ao vivo em impressionante qualidade Ultra HD. A nossa tecnologia anti-congelamento garante uma reprodução 4K suave mesmo em ligações de internet moderadas."
+    },
+    "Experience the best of television with IPTV 4K World premium IPTV service. Unlike free IPTV services that buffer constantly and go offline, our premium service delivers 20,000+ live channels in crystal-clear 4K quality, 50,000+ VOD titles, anti-freeze streaming technology, and 24/7 WhatsApp support.": {
+      "fr": "Découvrez le meilleur de la télévision avec le service IPTV premium d'IPTV 4K World. Contrairement aux services IPTV gratuits qui tamponnent constamment et se déconnectent, notre service premium offre plus de 20 000 chaînes en direct en qualité 4K cristalline, plus de 50 000 titres VOD, une technologie de streaming anti-gel et un support WhatsApp 24/7.",
+      "ar": "استمتع بأفضل ما في التلفزيون مع خدمة IPTV 4K World المتميزة. على عكس خدمات IPTV المجانية التي تتقطع باستمرار وتنقطع، تقدم خدمتنا المتميزة أكثر من 20,000 قناة مباشرة بجودة 4K نقية وأكثر من 50,000 عنوان VOD وتقنية بث مضادة للتجميد ودعم واتساب على مدار الساعة.",
+      "es": "Experimenta lo mejor de la televisión con el servicio IPTV premium de IPTV 4K World. A diferencia de los servicios IPTV gratuitos que se almacenan en búfer constantemente y se desconectan, nuestro servicio premium ofrece más de 20,000 canales en vivo en calidad 4K cristalina, más de 50,000 títulos VOD, tecnología de streaming anti-congelamiento y soporte WhatsApp 24/7.",
+      "de": "Erleben Sie das Beste des Fernsehens mit dem Premium-IPTV-Dienst von IPTV 4K World. Im Gegensatz zu kostenlosen IPTV-Diensten, die ständig puffern und offline gehen, liefert unser Premium-Dienst über 20.000 Live-Sender in kristallklarer 4K-Qualität, über 50.000 VOD-Titel, Anti-Freeze-Streaming-Technologie und 24/7 WhatsApp-Support.",
+      "it": "Vivi il meglio della televisione con il servizio IPTV premium di IPTV 4K World. A differenza dei servizi IPTV gratuiti che fanno buffering continuamente e vanno offline, il nostro servizio premium offre oltre 20.000 canali live in qualità 4K cristallina, oltre 50.000 titoli VOD, tecnologia di streaming anti-freeze e supporto WhatsApp 24/7.",
+      "pt": "Experimente o melhor da televisão com o serviço IPTV premium do IPTV 4K World. Ao contrário dos serviços IPTV gratuitos que fazem buffer constantemente e ficam offline, o nosso serviço premium oferece mais de 20.000 canais ao vivo em qualidade 4K cristalina, mais de 50.000 títulos VOD, tecnologia de streaming anti-congelamento e suporte WhatsApp 24/7."
+    },
+    "After extensive research and testing, IPTV 4K World stands out as the best IPTV service provider in 2026. With unbeatable channel selection, premium streaming quality, and exceptional customer support, we deliver the ultimate entertainment experience.": {
+      "fr": "Après des recherches et des tests approfondis, IPTV 4K World se distingue comme le meilleur fournisseur de services IPTV en 2026. Avec une sélection de chaînes imbattable, une qualité de streaming premium et un support client exceptionnel, nous offrons l'expérience de divertissement ultime.",
+      "ar": "بعد بحث واختبار مكثف، يبرز IPTV 4K World كأفضل مزود خدمة IPTV في 2026. مع مجموعة قنوات لا تضاهى وجودة بث متميزة ودعم عملاء استثنائي، نقدم تجربة ترفيهية مثالية.",
+      "es": "Después de una extensa investigación y pruebas, IPTV 4K World se destaca como el mejor proveedor de servicios IPTV en 2026. Con una selección de canales inigualable, calidad de streaming premium y atención al cliente excepcional, ofrecemos la experiencia de entretenimiento definitiva.",
+      "de": "Nach umfangreichen Recherchen und Tests hebt sich IPTV 4K World als der beste IPTV-Dienstanbieter im Jahr 2026 hervor. Mit unschlagbarer Senderauswahl, Premium-Streaming-Qualität und außergewöhnlichem Kundensupport liefern wir das ultimative Unterhaltungserlebnis.",
+      "it": "Dopo ricerche e test approfonditi, IPTV 4K World si distingue come il miglior fornitore di servizi IPTV nel 2026. Con una selezione di canali imbattibile, qualità di streaming premium e un'assistenza clienti eccezionale, offriamo l'esperienza di intrattenimento definitiva.",
+      "pt": "Após extensa pesquisa e testes, o IPTV 4K World destaca-se como o melhor fornecedor de serviços IPTV em 2026. Com uma seleção de canais imbatível, qualidade de streaming premium e apoio ao cliente excecional, oferecemos a melhor experiência de entretenimento."
+    }
+  },
+  "countryContent": {
+    "fr": "Accédez à toutes vos chaînes TV préférées de COUNTRY avec IPTV 4K World. Notre abonnement IPTV premium offre une superbe qualité 4K avec plus de 20 000 chaînes en direct, plus de 50 000 titres VOD et un support WhatsApp 24/7. Que vous soyez chez vous ou à l'étranger, profitez d'un accès fluide aux programmes locaux et internationaux. Obtenez votre essai gratuit de 12 heures dès aujourd'hui.",
+    "ar": "يمكنك الوصول إلى جميع قنواتك التلفزيونية المفضلة من COUNTRY مع IPTV 4K World. يوفر اشتراك IPTV المتميز لدينا جودة 4K مذهلة مع أكثر من 20,000 قناة مباشرة وأكثر من 50,000 عنوان VOD ودعم واتساب على مدار الساعة. سواء كنت في المنزل أو في الخارج، استمتع بوصول سلس إلى البرامج المحلية والدولية. احصل على تجربتك المجانية لمدة 12 ساعة اليوم.",
+    "es": "Accede a todos tus canales de TV favoritos de COUNTRY con IPTV 4K World. Nuestra suscripción IPTV premium ofrece una impresionante calidad 4K con más de 20,000 canales en vivo, más de 50,000 títulos VOD y soporte WhatsApp 24/7. Ya sea en casa o en el extranjero, disfruta de acceso sin problemas a la programación local e internacional. Obtén tu prueba gratuita de 12 horas hoy.",
+    "de": "Greifen Sie auf all Ihre Lieblingssender aus COUNTRY mit IPTV 4K World zu. Unser Premium-IPTV-Abonnement liefert atemberaubende 4K-Qualität mit über 20.000 Live-Sendern, über 50.000 VOD-Titeln und 24/7 WhatsApp-Support. Ob zu Hause oder im Ausland, genießen Sie nahtlosen Zugang zu lokalen und internationalen Programmen. Holen Sie sich noch heute Ihre kostenlose 12-Stunden-Testversion.",
+    "it": "Accedi a tutti i tuoi canali TV preferiti da COUNTRY con IPTV 4K World. Il nostro abbonamento IPTV premium offre una straordinaria qualità 4K con oltre 20.000 canali live, oltre 50.000 titoli VOD e supporto WhatsApp 24/7. Che tu sia a casa o all'estero, goditi un accesso senza interruzioni alla programmazione locale e internazionale. Ottieni oggi la tua prova gratuita di 12 ore.",
+    "pt": "Aceda a todos os seus canais de TV favoritos de COUNTRY com IPTV 4K World. A nossa assinatura IPTV premium oferece uma qualidade 4K impressionante com mais de 20.000 canais ao vivo, mais de 50.000 títulos VOD e suporte WhatsApp 24/7. Esteja em casa ou no estrangeiro, desfrute de acesso contínuo à programação local e internacional. Obtenha o seu teste gratuito de 12 horas hoje."
+  },
+  "deviceContent": {
+    "android": {
+      "fr": "IPTV 4K World est entièrement compatible avec tous les appareils Android, y compris les smartphones, tablettes, Android TV et les box Android. Installez votre application IPTV préférée depuis le Google Play Store, entrez vos identifiants et commencez à regarder plus de 20 000 chaînes en direct en qualité 4K immédiatement.",
+      "ar": "IPTV 4K World متوافق بالكامل مع جميع أجهزة Android بما في ذلك الهواتف الذكية والأجهزة اللوحية وAndroid TV وصناديق Android. قم بتثبيت تطبيق IPTV المفضل لديك من متجر Google Play وأدخل بيانات الاعتماد الخاصة بك وابدأ في مشاهدة أكثر من 20,000 قناة مباشرة بجودة 4K على الفور.",
+      "es": "IPTV 4K World es totalmente compatible con todos los dispositivos Android, incluidos smartphones, tabletas, Android TV y cajas Android. Instala tu aplicación IPTV favorita desde Google Play Store, introduce tus credenciales y comienza a ver más de 20,000 canales en vivo en calidad 4K al instante.",
+      "de": "IPTV 4K World ist mit allen Android-Geräten vollständig kompatibel, einschließlich Smartphones, Tablets, Android TV und Android-Boxen. Installieren Sie Ihre bevorzugte IPTV-App aus dem Google Play Store, geben Sie Ihre Anmeldedaten ein und sehen Sie sofort über 20.000 Live-Sender in 4K-Qualität.",
+      "it": "IPTV 4K World è completamente compatibile con tutti i dispositivi Android, inclusi smartphone, tablet, Android TV e box Android. Installa la tua app IPTV preferita dal Google Play Store, inserisci le tue credenziali e inizia subito a guardare oltre 20.000 canali live in qualità 4K.",
+      "pt": "O IPTV 4K World é totalmente compatível com todos os dispositivos Android, incluindo smartphones, tablets, Android TV e boxes Android. Instale a sua aplicação IPTV favorita da Google Play Store, introduza as suas credenciais e comece a ver mais de 20.000 canais ao vivo em qualidade 4K instantaneamente."
+    },
+    "firestick": {
+      "fr": "Transformez votre Amazon Firestick en une centrale de streaming puissante avec IPTV 4K World. Regardez plus de 20 000 chaînes en direct en qualité 4K sur votre Fire TV Stick. Installation simple avec des applications comme TiviMate ou IPTV Smarters Pro. Profitez d'un streaming sans tampon avec notre technologie anti-gel.",
+      "ar": "حول Amazon Firestick الخاص بك إلى مركز بث قوي مع IPTV 4K World. شاهد أكثر من 20,000 قناة مباشرة بجودة 4K على Fire TV Stick. تثبيت بسيط مع تطبيقات مثل TiviMate أو IPTV Smarters Pro. استمتع ببث خالٍ من التقطيع مع تقنيتنا المضادة للتجميد.",
+      "es": "Transforma tu Amazon Firestick en un potente centro de streaming con IPTV 4K World. Mira más de 20,000 canales en vivo en calidad 4K en tu Fire TV Stick. Instalación sencilla con aplicaciones como TiviMate o IPTV Smarters Pro. Disfruta de streaming sin búfer con nuestra tecnología anti-congelamiento.",
+      "de": "Verwandeln Sie Ihren Amazon Firestick mit IPTV 4K World in ein leistungsstarkes Streaming-Kraftpaket. Sehen Sie über 20.000 Live-Sender in 4K-Qualität auf Ihrem Fire TV Stick. Einfache Installation mit Apps wie TiviMate oder IPTV Smarters Pro. Genießen Sie pufferfreies Streaming mit unserer Anti-Freeze-Technologie.",
+      "it": "Trasforma il tuo Amazon Firestick in un potente hub di streaming con IPTV 4K World. Guarda oltre 20.000 canali live in qualità 4K sul tuo Fire TV Stick. Installazione semplice con app come TiviMate o IPTV Smarters Pro. Goditi lo streaming senza buffering con la nostra tecnologia anti-freeze.",
+      "pt": "Transforme o seu Amazon Firestick num potente centro de streaming com IPTV 4K World. Assista a mais de 20.000 canais ao vivo em qualidade 4K no seu Fire TV Stick. Instalação simples com aplicações como TiviMate ou IPTV Smarters Pro. Desfrute de streaming sem buffer com a nossa tecnologia anti-congelamento."
+    },
+    "ios": {
+      "fr": "IPTV 4K World fonctionne parfaitement sur tous les appareils Apple, y compris iPhone, iPad et Apple TV. Téléchargez une application de lecture IPTV compatible depuis l'App Store, chargez votre playlist et profitez de plus de 20 000 chaînes en direct en superbe qualité 4K.",
+      "ar": "يعمل IPTV 4K World بسلاسة على جميع أجهزة Apple بما في ذلك iPhone و iPad و Apple TV. قم بتنزيل تطبيق مشغل IPTV متوافق من App Store وقم بتحميل قائمة التشغيل الخاصة بك واستمتع بأكثر من 20,000 قناة مباشرة بجودة 4K رائعة.",
+      "es": "IPTV 4K World funciona perfectamente en todos los dispositivos Apple, incluidos iPhone, iPad y Apple TV. Descarga una aplicación reproductora IPTV compatible desde la App Store, carga tu lista de reproducción y disfruta de más de 20,000 canales en vivo en impresionante calidad 4K.",
+      "de": "IPTV 4K World funktioniert nahtlos auf allen Apple-Geräten, einschließlich iPhone, iPad und Apple TV. Laden Sie eine kompatible IPTV-Player-App aus dem App Store herunter, laden Sie Ihre Playlist und genießen Sie über 20.000 Live-Sender in atemberaubender 4K-Qualität.",
+      "it": "IPTV 4K World funziona perfettamente su tutti i dispositivi Apple, inclusi iPhone, iPad e Apple TV. Scarica un'app player IPTV compatibile dall'App Store, carica la tua playlist e goditi oltre 20.000 canali live in splendida qualità 4K.",
+      "pt": "O IPTV 4K World funciona perfeitamente em todos os dispositivos Apple, incluindo iPhone, iPad e Apple TV. Transfira uma aplicação de leitor IPTV compatível da App Store, carregue a sua playlist e desfrute de mais de 20.000 canais ao vivo em impressionante qualidade 4K."
+    },
+    "smart-tv": {
+      "fr": "IPTV 4K World est compatible avec toutes les grandes marques de Smart TV, y compris Samsung, LG, Sony et autres. Installez une application IPTV comme Smart IPTV ou TiviMate directement sur votre téléviseur et profitez de plus de 20 000 chaînes en direct en qualité 4K sur grand écran.",
+      "ar": "IPTV 4K World متوافق مع جميع العلامات التجارية الكبرى للتلفزيون الذكي بما في ذلك Samsung و LG و Sony وغيرها. قم بتثبيت تطبيق IPTV مثل Smart IPTV أو TiviMate مباشرة على تلفزيونك واستمتع بأكثر من 20,000 قناة مباشرة بجودة 4K على الشاشة الكبيرة.",
+      "es": "IPTV 4K World es compatible con todas las principales marcas de Smart TV, incluidas Samsung, LG, Sony y otras. Instala una aplicación IPTV como Smart IPTV o TiviMate directamente en tu televisor y disfruta de más de 20,000 canales en vivo en calidad 4K en la pantalla grande.",
+      "de": "IPTV 4K World ist mit allen großen Smart-TV-Marken kompatibel, einschließlich Samsung, LG, Sony und anderen. Installieren Sie eine IPTV-App wie Smart IPTV oder TiviMate direkt auf Ihrem Fernseher und genießen Sie über 20.000 Live-Sender in 4K-Qualität auf dem großen Bildschirm.",
+      "it": "IPTV 4K World è compatibile con tutti i principali marchi di Smart TV, inclusi Samsung, LG, Sony e altri. Installa un'app IPTV come Smart IPTV o TiviMate direttamente sulla tua TV e goditi oltre 20.000 canali live in qualità 4K sul grande schermo.",
+      "pt": "O IPTV 4K World é compatível com todas as principais marcas de Smart TV, incluindo Samsung, LG, Sony e outras. Instale uma aplicação IPTV como Smart IPTV ou TiviMate diretamente na sua TV e desfrute de mais de 20.000 canais ao vivo em qualidade 4K no grande ecrã."
+    },
+    "samsung": {
+      "fr": "IPTV 4K World fonctionne parfaitement sur tous les téléviseurs Samsung Smart TV. Installez l'application Smart IPTV depuis le Samsung App Store, téléchargez votre playlist et commencez à regarder plus de 20 000 chaînes en direct en superbe qualité 4K sur votre téléviseur Samsung.",
+      "ar": "يعمل IPTV 4K World بسلاسة على جميع تلفزيونات Samsung الذكية. قم بتثبيت تطبيق Smart IPTV من متجر تطبيقات Samsung وقم بتحميل قائمة التشغيل الخاصة بك وابدأ في مشاهدة أكثر من 20,000 قناة مباشرة بجودة 4K رائعة على تلفزيون Samsung الخاص بك.",
+      "es": "IPTV 4K World funciona perfectamente en todos los televisores Samsung Smart TV. Instala la aplicación Smart IPTV desde Samsung App Store, carga tu lista de reproducción y comienza a ver más de 20,000 canales en vivo en impresionante calidad 4K en tu televisor Samsung.",
+      "de": "IPTV 4K World funktioniert nahtlos auf allen Samsung Smart TVs. Installieren Sie die Smart IPTV-App aus dem Samsung App Store, laden Sie Ihre Playlist und sehen Sie über 20.000 Live-Sender in atemberaubender 4K-Qualität auf Ihrem Samsung-Fernseher.",
+      "it": "IPTV 4K World funziona perfettamente su tutti i televisori Samsung Smart TV. Installa l'app Smart IPTV dal Samsung App Store, carica la tua playlist e inizia a guardare oltre 20.000 canali live in splendida qualità 4K sul tuo televisore Samsung.",
+      "pt": "O IPTV 4K World funciona perfeitamente em todas as TVs Samsung Smart TV. Instale a aplicação Smart IPTV da Samsung App Store, carregue a sua playlist e comece a ver mais de 20.000 canais ao vivo em impressionante qualidade 4K no seu televisor Samsung."
+    },
+    "m3u": {
+      "fr": "IPTV 4K World prend en charge les playlists M3U pour une compatibilité maximale avec tous les lecteurs IPTV. Il vous suffit de charger votre URL M3U dans votre application préférée comme VLC, TiviMate ou IPTV Smarters Pro pour accéder instantanément à plus de 20 000 chaînes en direct en qualité 4K.",
+      "ar": "يدعم IPTV 4K World قوائم التشغيل M3U للحصول على أقصى توافق مع جميع مشغلات IPTV. ما عليك سوى تحميل رابط M3U الخاص بك في تطبيقك المفضل مثل VLC أو TiviMate أو IPTV Smarters Pro للوصول الفوري إلى أكثر من 20,000 قناة مباشرة بجودة 4K.",
+      "es": "IPTV 4K World soporta listas de reproducción M3U para máxima compatibilidad con todos los reproductores IPTV. Simplemente carga tu URL M3U en tu aplicación favorita como VLC, TiviMate o IPTV Smarters Pro para acceder al instante a más de 20,000 canales en vivo en calidad 4K.",
+      "de": "IPTV 4K World unterstützt M3U-Wiedergabelisten für maximale Kompatibilität mit allen IPTV-Playern. Laden Sie einfach Ihre M3U-URL in Ihre bevorzugte App wie VLC, TiviMate oder IPTV Smarters Pro, um sofort auf über 20.000 Live-Sender in 4K-Qualität zuzugreifen.",
+      "it": "IPTV 4K World supporta le playlist M3U per la massima compatibilità con tutti i lettori IPTV. Basta caricare il tuo URL M3U nella tua app preferita come VLC, TiviMate o IPTV Smarters Pro per accedere immediatamente a oltre 20.000 canali live in qualità 4K.",
+      "pt": "O IPTV 4K World suporta playlists M3U para máxima compatibilidade com todos os leitores IPTV. Basta carregar o seu URL M3U na sua aplicação favorita como VLC, TiviMate ou IPTV Smarters Pro para aceder instantaneamente a mais de 20.000 canais ao vivo em qualidade 4K."
+    },
+    "smarters": {
+      "fr": "IPTV 4K World fonctionne parfaitement avec IPTV Smarters Pro, l'une des applications IPTV les plus populaires. Il vous suffit de télécharger IPTV Smarters Pro, d'entrer vos identifiants IPTV 4K World et de profiter instantanément de plus de 20 000 chaînes en direct en qualité 4K avec une interface élégante.",
+      "ar": "يعمل IPTV 4K World بسلاسة مع IPTV Smarters Pro، أحد أشهر تطبيقات IPTV. ما عليك سوى تنزيل IPTV Smarters Pro وإدخال بيانات اعتماد IPTV 4K World الخاصة بك والاستمتاع فوراً بأكثر من 20,000 قناة مباشرة بجودة 4K مع واجهة أنيقة.",
+      "es": "IPTV 4K World funciona perfectamente con IPTV Smarters Pro, una de las aplicaciones IPTV más populares. Simplemente descarga IPTV Smarters Pro, introduce tus credenciales de IPTV 4K World y disfruta al instante de más de 20,000 canales en vivo en calidad 4K con una interfaz elegante.",
+      "de": "IPTV 4K World funktioniert nahtlos mit IPTV Smarters Pro, einer der beliebtesten IPTV-Apps. Laden Sie einfach IPTV Smarters Pro herunter, geben Sie Ihre IPTV 4K World-Anmeldedaten ein und genießen Sie sofort über 20.000 Live-Sender in 4K-Qualität mit einer eleganten Benutzeroberfläche.",
+      "it": "IPTV 4K World funziona perfettamente con IPTV Smarters Pro, una delle app IPTV più popolari. Basta scaricare IPTV Smarters Pro, inserire le tue credenziali IPTV 4K World e goderti immediatamente oltre 20.000 canali live in qualità 4K con un'interfaccia elegante.",
+      "pt": "O IPTV 4K World funciona perfeitamente com o IPTV Smarters Pro, uma das aplicações IPTV mais populares. Basta transferir o IPTV Smarters Pro, introduzir as suas credenciais IPTV 4K World e desfrutar instantaneamente de mais de 20.000 canais ao vivo em qualidade 4K com uma interface elegante."
+    }
+  }
+}

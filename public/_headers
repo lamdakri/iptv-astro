@@ -1,0 +1,40 @@
+# Cloudflare Pages custom headers
+# Note: Cloudflare Pages uses "last match wins" — specific rules below override the catch-all above
+
+# ── Catch-all default (7 days) — overridden by specific rules below ──
+/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# ── Hashed _astro/ assets (CSS, SVG, JS, fonts) ──
+# Versioned with content hashes — aggressive 1-year cache, immutable
+/_astro/*
+  Cache-Control: public, max-age=31536000, s-maxage=31536000, stale-while-revalidate=86400, immutable
+
+# ── Static scripts (/scripts/) ──
+# Moderate 30-day cache — updated occasionally
+/scripts/*
+  Cache-Control: public, max-age=2592000, s-maxage=2592000, stale-while-revalidate=86400
+
+# ── Static images (favicons, OG images, etc.) ──
+# 30-day cache
+/images/*
+  Cache-Control: public, max-age=2592000, s-maxage=2592000, stale-while-revalidate=86400
+
+# ── HTML pages (per-language clean URLs) ──
+# Short 1-hour browser / 2-hour CDN cache — content changes between deploys
+/en/*
+/fr/*
+/ar/*
+/es/*
+/de/*
+/it/*
+/pt/*
+  Cache-Control: public, max-age=3600, s-maxage=7200, stale-while-revalidate=3600
+
+# ── Sitemap & robots.txt ──
+/sitemap-index.xml
+  Cache-Control: public, max-age=3600, s-maxage=3600
+/sitemap-*.xml
+  Cache-Control: public, max-age=3600, s-maxage=3600
+/robots.txt
+  Cache-Control: public, max-age=86400

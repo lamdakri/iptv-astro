@@ -8,7 +8,7 @@ lang: es
 author: "IPTV 4K World Team"
 category: "Comparacion"
 tags: ["comparacion", "cable", "guia"]
-image: "/blog/images/comparison.svg"
+image: "../../assets/blog/images/comparison.svg"
 howToSteps:
   - name: "Comparar los costos mensuales"
     text: "Calcule el costo total de su factura de cable (paquete base + complementos deportivos/cine + alquiler del decodificador + tarifas de activacion) y comparelo con la tarifa plana de IPTV desde 9,99€/mes."

@@ -8,7 +8,7 @@ lang: es
 author: "IPTV 4K World Team"
 category: "Guia"
 tags: ["guia", "iptv", "principiante"]
-image: "/blog/images/guide.svg"
+image: "../../assets/blog/images/guide.svg"
 howToSteps:
   - name: "Aprender que es IPTV"
     text: "Comprenda los conceptos basicos del IPTV — Television por Protocolo de Internet. Utiliza su conexion a internet para transmitir canales de TV en vivo, peliculas y series directamente a sus dispositivos."

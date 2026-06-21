@@ -7,7 +7,7 @@ lang: fr
 author: "IPTV 4K World Team"
 category: "Configuration"
 tags: ["ios", "iphone", "ipad", "apple", "mobile"]
-image: "/blog/images/iphone-ipad.svg"
+image: "../../assets/blog/images/iphone-ipad.svg"
 howToSteps:
   - name: "Telechargez un lecteur IPTV depuis l'App Store"
     text: "Ouvrez l'App Store sur votre iPhone ou iPad. Cherchez 'IPTVX', 'GSE Smart IPTV' ou 'IPTV Smarters Pro'. Telechargez et installez votre lecteur IPTV prefere."

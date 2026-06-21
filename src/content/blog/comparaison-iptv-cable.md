@@ -8,7 +8,7 @@ lang: fr
 author: "IPTV 4K World Team"
 category: "Comparaison"
 tags: ["comparaison", "cable", "guide"]
-image: "/blog/images/comparison.svg"
+image: "../../assets/blog/images/comparison.svg"
 howToSteps:
   - name: "Comparer les couts mensuels"
     text: "Calculez le cout total de votre abonnement cable (abonnement de base + options sport/cinema + location decodeur + frais d'activation) et comparez-le au tarif unique de l'IPTV a partir de 9,99€/mois."

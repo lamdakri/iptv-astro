@@ -7,7 +7,7 @@ lang: it
 author: "IPTV 4K World Team"
 category: "Guida"
 tags: ["legale", "guida", "informazione"]
-image: "/blog/images/legal.svg"
+image: "../../assets/blog/images/legal.svg"
 howToSteps:
   - name: "Ricercare la legalita dell'IPTV nel tuo paese"
     text: "Comprendi che la tecnologia IPTV di per se e legale. La legalita dipende dal fatto che il provider abbia le licenze sui contenuti. Ricerca le leggi locali sul copyright."

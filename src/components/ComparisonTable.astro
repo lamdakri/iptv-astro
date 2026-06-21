@@ -1,4 +1,6 @@
 ---
+import WhatsAppIcon from './icons/WhatsAppIcon.astro';
+
 interface Props {
   eyebrow: string;
   title: string;
@@ -56,7 +58,7 @@ const { eyebrow, title, subtitle, header, rows, ctaText, ctaUrl, note } = Astro.
     {ctaText && ctaUrl && (
       <div class="text-center mt-10 reveal">
         <a href={ctaUrl} class="btn-whatsapp text-lg px-8 py-3" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-track-label="Comparison CTA" data-track-category="conversion">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157z"/></svg>
+          <WhatsAppIcon class="h-5 w-5" />
           {ctaText}
         </a>
       </div>

@@ -7,7 +7,7 @@ lang: ar
 author: "IPTV 4K World Team"
 category: "رياضة"
 tags: ["رياضة", "كرة القدم", "4K"]
-image: "/blog/images/sports.svg"
+image: "../../assets/blog/images/sports.svg"
 howToSteps:
   - name: "اختر اشتراك IPTV الرياضي المناسب"
     text: "اختر مزود IPTV متخصص في المحتوى الرياضي. ابحث عن خدمات توفر جميع الدوريات الكبرى (الدوري الانجليزي، الاسباني، دوري الابطال، NBA، UFC) بجودة 4K."

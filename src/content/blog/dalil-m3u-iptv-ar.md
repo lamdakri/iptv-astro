@@ -7,7 +7,7 @@ lang: ar
 author: "فريق IPTV 4K World"
 category: "دليل"
 tags: ["m3u", "قائمة تشغيل", "دليل", "تعليمي"]
-image: "/blog/images/m3u.svg"
+image: "../../assets/blog/images/m3u.svg"
 howToSteps:
   - name: "الحصول على قائمة تشغيل M3U من مزود IPTV متميز"
     text: "اشترك في خدمة IPTV متميزة مثل IPTV 4K World. بعد الاشتراك، ستستلم رابط قائمة تشغيل M3U الفريد عبر WhatsApp أو البريد الإلكتروني."

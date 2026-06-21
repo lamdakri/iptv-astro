@@ -7,7 +7,7 @@ lang: ar
 author: "فريق IPTV 4K World"
 category: "إعداد"
 tags: ["فايرستيك", "أمازون", "إعداد", "دليل"]
-image: "/blog/images/firestick.svg"
+image: "../../assets/blog/images/firestick.svg"
 howToSteps:
   - name: "تجهيز Firestick لـ IPTV"
     text: "اذهب إلى الإعدادات > جهاز Fire TV الخاص بي > خيارات المطور وقم بتشغيل 'التطبيقات من مصادر غير معروفة'. هذا يسمح بتثبيت تطبيقات IPTV."

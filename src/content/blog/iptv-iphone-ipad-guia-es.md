@@ -7,7 +7,7 @@ lang: es
 author: "Equipo IPTV 4K World"
 category: "Configuracion"
 tags: ["ios", "iphone", "ipad", "apple", "movil"]
-image: "/blog/images/iphone-ipad.svg"
+image: "../../assets/blog/images/iphone-ipad.svg"
 howToSteps:
   - name: "Descargue un reproductor IPTV desde App Store"
     text: "Abra App Store en su iPhone o iPad. Busque 'IPTVX', 'GSE Smart IPTV' o 'IPTV Smarters Pro'. Descargue e instale su reproductor IPTV preferido."

@@ -7,7 +7,7 @@ lang: en
 author: "IPTV 4K World Team"
 category: "Comparison"
 tags: ["comparison", "cable", "guide"]
-image: "/blog/images/comparison.svg"
+image: "../../assets/blog/images/comparison.svg"
 howToSteps:
   - name: "Compare Monthly Costs"
     text: "Calculate your total cable bill (base package + sports/movie add-ons + box rental + activation fees) and compare it to IPTV 4K World's flat rate starting at €9.99/month with no hidden fees."

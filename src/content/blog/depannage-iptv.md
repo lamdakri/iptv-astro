@@ -8,7 +8,7 @@ lang: fr
 author: "IPTV 4K World Team"
 category: "Depannage"
 tags: ["buffering", "depannage", "performance"]
-image: "/blog/images/troubleshooting.svg"
+image: "../../assets/blog/images/troubleshooting.svg"
 howToSteps:
   - name: "Tester votre debit internet"
     text: "Faites un test de vitesse sur speedtest.net. Le streaming 4K necessite 25 Mbps minimum, le FHD 10 Mbps, et le HD 5 Mbps. Si votre debit est insuffisant, passez en WiFi 5 GHz ou utilisez un cable Ethernet."

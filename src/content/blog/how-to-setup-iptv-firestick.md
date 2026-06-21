@@ -7,7 +7,7 @@ lang: en
 author: "IPTV 4K World Team"
 category: "Setup"
 tags: ["firestick", "amazon", "setup", "tutorial"]
-image: "/blog/images/firestick.svg"
+image: "../../assets/blog/images/firestick.svg"
 howToSteps:
   - name: "Prepare Your Firestick for IPTV"
     text: "Go to Settings > My Fire TV > Developer Options and turn on 'Apps from Unknown Sources'. This allows you to install IPTV apps not available on the Amazon App Store."

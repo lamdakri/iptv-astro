@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import compress from '@playform/compress';
 import tailwindcss from '@tailwindcss/vite';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -36,6 +37,11 @@ export default defineConfig({
   site: 'https://iptv4kworld.com',
   output: 'static',
   trailingSlash: 'always',
+  image: {
+    service: {
+      entrypoint: 'astro/assets/services/sharp',
+    },
+  },
   integrations: [
     sitemap({
       i18n: {
@@ -102,6 +108,9 @@ export default defineConfig({
 
         return item;
       },
+    }),
+    compress({
+      png: false,
     }),
   ],
   i18n: {

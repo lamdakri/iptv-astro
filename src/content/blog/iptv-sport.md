@@ -8,7 +8,7 @@ lang: fr
 author: "IPTV 4K World Team"
 category: "Sport"
 tags: ["sport", "football", "4K"]
-image: "/blog/images/sports.svg"
+image: "../../assets/blog/images/sports.svg"
 howToSteps:
   - name: "Choisir votre abonnement IPTV Sport"
     text: "Selectionnez un fournisseur IPTV specialise dans le contenu sportif. Recherchez des services offrant toutes les grandes ligues (Ligue 1, Premier League, Champions League, NBA, UFC) en qualite 4K."

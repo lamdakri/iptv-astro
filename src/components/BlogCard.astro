@@ -1,4 +1,6 @@
 ---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
 import { useTranslations } from '../i18n/ui';
 
 interface Props {
@@ -8,7 +10,7 @@ interface Props {
   lang: string;
   date: Date;
   category?: string;
-  image?: string;
+  image?: ImageMetadata | string;
 }
 
 const { title, description, slug, lang, date, category, image } = Astro.props;
@@ -22,7 +24,15 @@ const formattedDate = new Date(date).toLocaleDateString(
 <article class="blog-card">
   {image && (
     <div class="blog-image-wrapper">
-      <img src={image} alt={title} width="400" height="208" class="w-full h-48 object-cover" loading="lazy" />
+      <Image
+          src={image as ImageMetadata}
+          alt={title}
+          class="w-full h-48 object-cover"
+          loading="lazy"
+          format={(image as ImageMetadata).format === 'svg' ? undefined : 'webp'}
+          widths={[400, 800]}
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        />
     </div>
   )}
   <div class="p-6">

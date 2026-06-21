@@ -7,7 +7,7 @@ lang: en
 author: "IPTV 4K World Team"
 category: "Sports"
 tags: ["sports", "football", "nba", "4k"]
-image: "/blog/images/sports.svg"
+image: "../../assets/blog/images/sports.svg"
 howToSteps:
   - name: "Choose Your IPTV Sports Subscription"
     text: "Select an IPTV provider that specializes in sports content. Look for services offering all major leagues (Premier League, La Liga, Champions League, NBA, UFC) in 4K quality."

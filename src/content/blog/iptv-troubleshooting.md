@@ -7,7 +7,7 @@ lang: en
 author: "IPTV 4K World Team"
 category: "Troubleshooting"
 tags: ["buffering", "troubleshooting", "performance"]
-image: "/blog/images/troubleshooting.svg"
+image: "../../assets/blog/images/troubleshooting.svg"
 howToSteps:
   - name: "Check Your Internet Speed"
     text: "Run a speed test at speedtest.net. Ensure you have at least 25 Mbps for 4K streaming, 10 Mbps for FHD, or 5 Mbps for HD. Disconnect other devices and use a 5 GHz Wi-Fi band if needed."

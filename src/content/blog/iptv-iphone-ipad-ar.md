@@ -7,7 +7,7 @@ lang: ar
 author: "فريق IPTV 4K World"
 category: "إعداد"
 tags: ["ios", "iphone", "ipad", "آبل", "جوال"]
-image: "/blog/images/iphone-ipad.svg"
+image: "../../assets/blog/images/iphone-ipad.svg"
 howToSteps:
   - name: "تنزيل مشغل IPTV من App Store"
     text: "افتح App Store على iPhone أو iPad. ابحث عن 'IPTVX' أو 'GSE Smart IPTV' أو 'IPTV Smarters Pro'. قم بتنزيل وتثبيت مشغل IPTV المفضل."

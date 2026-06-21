@@ -7,7 +7,7 @@ lang: ar
 author: "IPTV 4K World Team"
 category: "دليل"
 tags: ["تثبيت", "اجهزة", "تطبيقات"]
-image: "/blog/images/all-devices.svg"
+image: "../../assets/blog/images/all-devices.svg"
 howToSteps:
   - name: "اختر جهازك المفضل"
     text: "حدد الجهاز الذي تريد مشاهدة IPTV عليه. الخيارات تشمل: التلفزيون الذكي (سامسونج، ال جي، سوني)، فاير ستيك، ايفون، اندرويد، او الكمبيوتر."

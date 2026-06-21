@@ -1,6 +1,7 @@
 ---
 import { getWhatsAppUrl } from '../i18n/whatsapp';
 import { getLangFromUrl, useTranslations } from '../i18n/ui';
+import WhatsAppIcon from './icons/WhatsAppIcon.astro';
 
 interface Props {
   targetDate: string;
@@ -55,9 +56,7 @@ const whatsappUrl = getWhatsAppUrl(t('whatsapp.promo') || 'Hello! I want the spe
       </div>
     </div>
     <a href={whatsappUrl} class="btn-whatsapp text-base px-8 py-3" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-track-label="Countdown Timer Promo" data-track-category="conversion" id="countdown-cta">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 448 512">
-        <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157z"/>
-      </svg>
+      <WhatsAppIcon class="h-4 w-4" />
       {ctaText}
     </a>
   </div>
@@ -123,7 +122,6 @@ const whatsappUrl = getWhatsAppUrl(t('whatsapp.promo') || 'Hello! I want the spe
     const container = document.getElementById('countdown-timer');
     if (!container) return;
     const targetStr = container.dataset.target || '';
-    const expiryLabel = container.dataset.expiryLabel || 'Offer Expired';
     const target = new Date(targetStr).getTime();
     if (isNaN(target)) return;
     const daysEl = document.getElementById('countdown-days');
@@ -136,12 +134,12 @@ const whatsappUrl = getWhatsAppUrl(t('whatsapp.promo') || 'Hello! I want the spe
     const subtitleEl = document.getElementById('countdown-subtitle');
     const expiredDiv = document.getElementById('countdown-expired');
     if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
-    function pad(n) { return String(n).padStart(2, '0'); }
+    function pad(n: number): string { return String(n).padStart(2, '0'); }
     function tick() {
       const now = new Date().getTime();
       const diff = target - now;
       if (diff <= 0) {
-        daysEl.textContent = '00'; hoursEl.textContent = '00'; minutesEl.textContent = '00'; secondsEl.textContent = '00';
+        daysEl!.textContent = '00'; hoursEl!.textContent = '00'; minutesEl!.textContent = '00'; secondsEl!.textContent = '00';
         if (blocksDiv) blocksDiv.style.display = 'none';
         if (ctaEl) ctaEl.style.display = 'none';
         if (titleEl) titleEl.style.display = 'none';
@@ -153,7 +151,7 @@ const whatsappUrl = getWhatsAppUrl(t('whatsapp.promo') || 'Hello! I want the spe
       const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-      function updateBlock(el, newVal) {
+      function updateBlock(el: HTMLElement, newVal: number) {
         const padded = pad(newVal);
         if (el.textContent !== padded) {
           el.textContent = padded;
@@ -162,10 +160,10 @@ const whatsappUrl = getWhatsAppUrl(t('whatsapp.promo') || 'Hello! I want the spe
           el.classList.add('flip');
         }
       }
-      updateBlock(daysEl, days);
-      updateBlock(hoursEl, hours);
-      updateBlock(minutesEl, minutes);
-      updateBlock(secondsEl, seconds);
+      updateBlock(daysEl!, days);
+      updateBlock(hoursEl!, hours);
+      updateBlock(minutesEl!, minutes);
+      updateBlock(secondsEl!, seconds);
     }
     tick();
     setInterval(tick, 1000);

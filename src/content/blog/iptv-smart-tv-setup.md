@@ -7,7 +7,7 @@ lang: en
 author: "IPTV 4K World Team"
 category: "Guide"
 tags: ["setup", "smart-tv", "tutorial"]
-image: "/blog/images/smart-tv.svg"
+image: "../../assets/blog/images/smart-tv.svg"
 howToSteps:
   - name: "Install Smart IPTV App on Your TV"
     text: "Go to your TV's app store (Samsung App Store, LG Content Store, or Google Play Store on Android TV). Search for 'Smart IPTV' or 'TiviMate' and install the app."

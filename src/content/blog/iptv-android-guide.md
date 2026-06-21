@@ -7,7 +7,7 @@ lang: fr
 author: "IPTV 4K World Team"
 category: "Configuration"
 tags: ["android", "configuration", "guide", "mobile"]
-image: "/blog/images/android.svg"
+image: "../../assets/blog/images/android.svg"
 howToSteps:
   - name: "Choisissez une application IPTV Player pour Android"
     text: "Ouvrez le Google Play Store sur votre appareil Android. Cherchez 'IPTV Smarters Pro', 'TiviMate' ou 'OTT Navigator'. Telechargez et installez votre application preferee."

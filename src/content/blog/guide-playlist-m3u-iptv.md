@@ -7,7 +7,7 @@ lang: fr
 author: "IPTV 4K World Team"
 category: "Guide"
 tags: ["m3u", "playlist", "guide", "tutoriel"]
-image: "/blog/images/m3u.svg"
+image: "../../assets/blog/images/m3u.svg"
 howToSteps:
   - name: "Obtenez une playlist M3U d'un fournisseur IPTV premium"
     text: "Abonnez-vous a un service IPTV premium comme IPTV 4K World. Vous recevrez votre URL de playlist M3U unique via WhatsApp ou email."

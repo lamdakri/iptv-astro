@@ -1,10 +1,10 @@
 ---
 import { getLangFromUrl, useTranslations } from '../i18n/ui';
 import { getWhatsAppUrl, getWhatsAppTrialMsg } from '../i18n/whatsapp';
+import WhatsAppIcon from './icons/WhatsAppIcon.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const newsletterBtnText = t('newsletter.button');
 ---
 
 <footer class="relative bg-surface-900/50 border-t border-brand-700/10 pt-16 pb-8">
@@ -27,13 +27,13 @@ const newsletterBtnText = t('newsletter.button');
             <div class="w-8 h-8 rounded-full bg-cyan-500 flex items-center justify-center text-xs font-bold text-white border-2 border-surface-900">S</div>
             <div class="w-8 h-8 rounded-full bg-whatsapp flex items-center justify-center text-xs font-bold text-white border-2 border-surface-900">A</div>
           </div>
-          <span class="text-sm text-surface-400">1,250+ happy customers</span>
+          <span class="text-sm text-surface-400">{t('footer.happyCustomers')}</span>
         </div>
       </div>
 
       <!-- Quick Links -->
       <div>
-        <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Menu</h4>
+        <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">{t('footer.menuHeading')}</h4>
         <ul class="space-y-2.5">
           <li><a href={`/${lang}/`} class="text-surface-400 text-sm hover:text-brand-400 transition-colors" data-track="nav_click" data-track-label="Footer Home">{t('nav.home')}</a></li>
           <li><a href={`/${lang}/pricing/`} class="text-surface-400 text-sm hover:text-brand-400 transition-colors" data-track="nav_click" data-track-label="Footer Pricing">{t('nav.pricing')}</a></li>
@@ -43,12 +43,12 @@ const newsletterBtnText = t('newsletter.button');
 
       <!-- Support -->
       <div>
-        <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Support</h4>
+        <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">{t('footer.supportHeading')}</h4>
         <ul class="space-y-2.5">
           <li>
             <a href={getWhatsAppUrl('')} class="flex items-center gap-2 text-surface-400 text-sm hover:text-whatsapp transition-colors group" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-track-label="Footer Support" data-track-category="conversion">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-whatsapp" fill="currentColor" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157z"/></svg>
-              WhatsApp 24/7
+              <WhatsAppIcon class="h-4 w-4 text-whatsapp" />
+              {t('footer.whatsapp')}
             </a>
           </li>
           <li><a href={`/${lang}/pricing/`} class="text-surface-400 text-sm hover:text-brand-400 transition-colors" data-track="nav_click" data-track-label="Footer Trial Link">{t('cta.trial.short')}</a></li>
@@ -57,8 +57,8 @@ const newsletterBtnText = t('newsletter.button');
 
       <!-- CTA -->
       <div>
-        <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Get Started</h4>
-        <p class="text-surface-400 text-sm mb-4">Ready to cut the cord? Try IPTV 4K World free for 12 hours.</p>
+        <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">{t('footer.getStartedHeading')}</h4>
+        <p class="text-surface-400 text-sm mb-4">{t('footer.ctaText')}</p>
         <a
           href={getWhatsAppUrl(getWhatsAppTrialMsg(t))}
           class="btn-whatsapp text-sm px-5 py-2.5"
@@ -80,6 +80,7 @@ const newsletterBtnText = t('newsletter.button');
         <h4 class="text-lg font-bold text-white mb-2">{t('newsletter.title')}</h4>
         <p class="text-surface-400 text-sm mb-5">{t('newsletter.subtitle')}</p>
         <form id="newsletter-form" class="flex flex-col sm:flex-row gap-2">
+          <label for="newsletter-email" class="sr-only">{t('newsletter.placeholder')}</label>
           <input type="email" id="newsletter-email" placeholder={t('newsletter.placeholder')} required
             class="flex-1 px-4 py-3 rounded-lg bg-surface-800/60 border border-surface-700/40 text-white text-sm placeholder:text-surface-500 focus:outline-none focus:border-brand-500/50 transition-colors" />
           <button type="submit" id="newsletter-btn"
@@ -105,18 +106,20 @@ const newsletterBtnText = t('newsletter.button');
 
 <script>
   (function() {
-    const form = document.getElementById('newsletter-form');
+    const form = document.getElementById('newsletter-form') as HTMLFormElement | null;
     const msg = document.getElementById('newsletter-msg');
-    const btn = document.getElementById('newsletter-btn');
-    form?.addEventListener('submit', function(e) {
+    const btn = document.getElementById('newsletter-btn') as HTMLButtonElement | null;
+    if (!form || !btn) return;
+    form.addEventListener('submit', function(e) {
       e.preventDefault();
+      const originalText = btn.textContent;
       btn.disabled = true;
       btn.textContent = '...';
       setTimeout(function() {
         msg?.classList.remove('hidden');
         form.reset();
         btn.disabled = false;
-        btn.textContent = '{newsletterBtnText}';
+        btn.textContent = originalText;
       }, 800);
     });
   })();

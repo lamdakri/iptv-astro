@@ -1,5 +1,6 @@
 ---
 import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
 import { getLangFromUrl, useTranslations, LANGUAGES } from '../../../i18n/ui';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
@@ -24,17 +25,17 @@ const { Content } = await entry.render();
 const { lang } = Astro.params;
 const t = useTranslations(lang);
 
-const relatedPosts = (await getCollection('blog', ({ data }) =>
-  !data.draft && data.lang === lang && data.slug !== entry.slug
+const relatedPosts = (await getCollection('blog', ({ data, slug }) =>
+  !data.draft && data.lang === lang && slug !== entry.slug
 )).sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 3);
 
 const pageTitle = entry.data.title + ' | ' + t('blog.title') + ' | ' + t('site.name');
 
 const pageUrl = Astro.url.href;
 
-// Use PNG OG image instead of SVG for better social sharing previews
+// Use the optimized image directly for OG (Astro processes it automatically)
 const ogImageUrl = entry.data.image
-  ? entry.data.image.replace(/\.svg$/, '-og.png')
+  ? new URL(entry.data.image.src, Astro.site).href
   : undefined;
 
 const articleSchema = {
@@ -43,7 +44,7 @@ const articleSchema = {
   '@id': pageUrl + '#article',
   headline: entry.data.title,
   description: entry.data.description,
-  image: entry.data.image ? new URL(entry.data.image, Astro.site || 'https://iptv4kworld.com').href : undefined,
+  image: entry.data.image ? new URL(entry.data.image.src, Astro.site || 'https://iptv4kworld.com').href : undefined,
   author: { '@type': 'Person', name: entry.data.author },
   publisher: {
     '@type': 'Organization',
@@ -72,6 +73,7 @@ const articleSchema = {
   articleSection={entry.data.category}
   keywords={entry.data.keywords?.join(', ')}
   schema={articleSchema}
+  alternateLangs={[]}
 >
   {entry.data.howToSteps && entry.data.howToSteps.length > 0 && (
     <script type="application/ld+json" set:html={JSON.stringify({
@@ -89,7 +91,7 @@ const articleSchema = {
       })),
       ...(entry.data.image && { image: {
         '@type': 'ImageObject',
-        url: new URL(entry.data.image, Astro.site || 'https://iptv4kworld.com').href,
+        url: new URL(entry.data.image.src, Astro.site || 'https://iptv4kworld.com').href,
       }}),
     })}></script>
   )}
@@ -117,7 +119,16 @@ const articleSchema = {
       </header>
 
       {entry.data.image && (
-        <img src={entry.data.image} alt={entry.data.title} width="800" height="400" class="w-full max-h-96 object-cover rounded-2xl mb-12" loading="eager" fetchpriority="high" />
+        <Image
+          src={entry.data.image}
+          alt={entry.data.title}
+          class="w-full max-h-96 object-cover rounded-2xl mb-12"
+          loading="eager"
+          format={entry.data.image.format === 'svg' ? undefined : 'webp'}
+          widths={[400, 800, 1600]}
+          sizes="(max-width: 768px) 100vw, 768px"
+          fetchpriority="high"
+        />
       )}
 
       <div class="prose prose-invert prose-lg max-w-3xl mx-auto reveal" data-reveal-delay="100">

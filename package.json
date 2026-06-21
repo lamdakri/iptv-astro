@@ -20,11 +20,11 @@
     "typescript": "^5.8.3"
   },
   "devDependencies": {
+    "@playform/compress": "0.2.3",
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^22.15.0"
   },
   "allowScripts": {
-    "sharp@0.34.5": true,
     "sharp@0.35.1": true
   }
 }

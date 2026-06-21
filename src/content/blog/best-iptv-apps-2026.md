@@ -7,7 +7,7 @@ lang: en
 author: "IPTV 4K World Team"
 category: "Apps"
 tags: ["apps", "players", "comparison"]
-image: "/blog/images/apps.svg"
+image: "../../assets/blog/images/apps.svg"
 howToSteps:
   - name: "Download Your Preferred IPTV Player"
     text: "Choose and download an IPTV player app based on your device. TiviMate is best for Android TV, IPTV Smarters Pro works on all platforms, and IPTVX is ideal for Apple devices."

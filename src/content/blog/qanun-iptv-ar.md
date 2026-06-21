@@ -7,7 +7,7 @@ lang: ar
 author: "فريق IPTV 4K World"
 category: "دليل"
 tags: ["قانوني", "دليل", "معلومات"]
-image: "/blog/images/legal.svg"
+image: "../../assets/blog/images/legal.svg"
 howToSteps:
   - name: "البحث عن قانونية IPTV في بلدك"
     text: "افهم ان تقنية IPTV نفسها قانونية. تعتمد القانونية على ما اذا كان المزود لديه تراخيص محتوى مناسبة. ابحث عن قوانين حقوق النشر المحلية."

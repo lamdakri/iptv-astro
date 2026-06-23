@@ -26,15 +26,16 @@ const t = useTranslations(lang);
   (function() {
     const btn = document.getElementById('floating-wa-btn');
     if (!btn) return;
-    let timeout;
+    let timeout: ReturnType<typeof setTimeout> | undefined;
+    const floatingBtn = btn;
     function checkFooter() {
       const scrollBottom = window.innerHeight + window.scrollY;
       const docHeight = document.documentElement.scrollHeight;
       const nearBottom = docHeight - scrollBottom < 250;
       if (nearBottom) {
-        btn.classList.add('floating-whatsapp--hidden');
+        floatingBtn.classList.add('floating-whatsapp--hidden');
       } else {
-        btn.classList.remove('floating-whatsapp--hidden');
+        floatingBtn.classList.remove('floating-whatsapp--hidden');
       }
     }
     window.addEventListener('scroll', function() {

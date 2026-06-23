@@ -1,4 +1,8 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
+
+const t = useTranslations(getLangFromUrl(Astro.url));
+
 interface Crumb {
   label: string;
   href?: string;
@@ -23,8 +27,8 @@ const breadcrumbSchema = {
 };
 ---
 
-<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
-<nav class="breadcrumb" aria-label="Breadcrumb">
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} is:inline></script>
+<nav class="breadcrumb" aria-label={t('a11y.breadcrumb')}>
   {items.map((item, i) => (
     <>
       {i > 0 && <span class="separator">/</span>}

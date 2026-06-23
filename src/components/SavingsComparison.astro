@@ -63,7 +63,7 @@ const t = useTranslations(lang);
 
     <!-- Mobile cards -->
     <div class="md:hidden space-y-4 reveal">
-      {rows.map((row, i) => (
+      {rows.map((row) => (
         <div class={`glass-card p-5 ${row.featured ? 'border-brand-500/40 bg-brand-900/10' : ''}`}>
           <div class="flex items-center justify-between mb-3">
             <span class="font-bold text-white text-lg">{row.duration}</span>

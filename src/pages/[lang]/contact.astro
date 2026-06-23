@@ -1,17 +1,17 @@
 ---
-import { getLangFromUrl, useTranslations } from '../../i18n/ui';
+import { useTranslations, LANGUAGES } from '../../i18n/ui';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import { WHATSAPP_NUMBER as WA } from '../../i18n/whatsapp';
 import WhatsAppIcon from '../../components/icons/WhatsAppIcon.astro';
 
 export function getStaticPaths() {
-  return Object.keys({ en: true, fr: true, ar: true, es: true, de: true, it: true, pt: true }).map((lang) => ({ params: { lang } }));
+  return Object.keys(LANGUAGES).map((lang) => ({ params: { lang } }));
 }
 
 const { lang } = Astro.params;
 const t = useTranslations(lang);
-const whatsappUrl = `https://wa.me/${WA}?text=${encodeURIComponent('Hello! I need help with IPTV.')}`;
+const whatsappUrl = `https://wa.me/${WA}?text=${encodeURIComponent(t('whatsapp.help'))}`;
 const pageTitle = t('contact.title') + ' | ' + t('site.name');
 const pageUrl = Astro.url.href;
 
@@ -53,7 +53,13 @@ const pageSchema = {
         <div class="glass-card p-8 reveal reveal-scale">
           <h2 class="text-xl font-bold text-white mb-1">{t('contact.formTitle')}</h2>
           <p class="text-surface-400 text-sm mb-6">{t('contact.formDesc')}</p>
-          <form id="contact-form" class="space-y-5">
+          <form id="contact-form" class="space-y-5"
+            data-wa-number={WA}
+            data-wa-subject={t('contact.whatsappSubject')}
+            data-label-name={t('contact.name')}
+            data-label-email={t('contact.email')}
+            data-label-phone={t('contact.phone')}
+            data-label-message={t('contact.message')}>
             <div>
               <label for="contact-name" class="block text-sm font-medium text-surface-300 mb-1.5">{t('contact.name')} *</label>
               <input type="text" id="contact-name" name="name" required autocomplete="name"
@@ -102,17 +108,41 @@ const pageSchema = {
 
 <script>
   (function() {
-    const form = document.getElementById('contact-form');
+    const form = document.getElementById('contact-form') as HTMLFormElement | null;
     const msg = document.getElementById('contact-success');
-    const btn = document.getElementById('contact-btn');
-    form?.addEventListener('submit', function(e) {
+    const btn = document.getElementById('contact-btn') as HTMLButtonElement | null;
+    if (!form || !btn) return;
+    form.addEventListener('submit', function(e) {
       e.preventDefault();
-      if (btn) btn.disabled = true;
-      setTimeout(function() {
-        if (msg) msg.classList.remove('hidden');
-        form?.reset();
-        if (btn) btn.disabled = false;
-      }, 1000);
+      btn.disabled = true;
+
+      const name = (document.getElementById('contact-name') as HTMLInputElement | null)?.value?.trim() || '';
+      const email = (document.getElementById('contact-email') as HTMLInputElement | null)?.value?.trim() || '';
+      const phone = (document.getElementById('contact-phone') as HTMLInputElement | null)?.value?.trim() || '';
+      const message = (document.getElementById('contact-message') as HTMLTextAreaElement | null)?.value?.trim() || '';
+
+      const waNumber = form.dataset.waNumber || '212606123321';
+      const subject = form.dataset.waSubject || 'New contact from IPTV 4K World website';
+      const labelName = form.dataset.labelName || 'Name';
+      const labelEmail = form.dataset.labelEmail || 'Email';
+      const labelPhone = form.dataset.labelPhone || 'Phone';
+      const labelMessage = form.dataset.labelMessage || 'Message';
+
+      const waMessage = [
+        encodeURIComponent('\uD83D\uDCEC ' + subject),
+        encodeURIComponent(''),
+        encodeURIComponent('\uD83D\uDC64 ' + labelName + ': ' + name),
+        encodeURIComponent('\uD83D\uDCE7 ' + labelEmail + ': ' + email),
+        phone ? encodeURIComponent('\uD83D\uDCF1 ' + labelPhone + ': ' + phone) : '',
+        encodeURIComponent(''),
+        encodeURIComponent('\uD83D\uDCAC ' + labelMessage + ': ' + message),
+      ].filter(Boolean).join('%0A');
+
+      window.open('https://wa.me/' + waNumber + '?text=' + waMessage, '_blank');
+
+      if (msg) msg.classList.remove('hidden');
+      form.reset();
+      btn.disabled = false;
     });
   })();
 </script>

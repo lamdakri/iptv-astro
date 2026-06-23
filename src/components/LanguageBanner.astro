@@ -1,8 +1,9 @@
 ---
-import { LANGUAGES, getLangFromUrl } from '../i18n/ui';
+import { LANGUAGES, getLangFromUrl, useTranslations } from '../i18n/ui';
 
 const currentLang = getLangFromUrl(Astro.url);
 const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}\/?/, '/');
+const t = useTranslations(currentLang);
 const langData = Object.keys(LANGUAGES).map((code) => ({
   code,
   flag: LANGUAGES[code as keyof typeof LANGUAGES].flag,
@@ -26,7 +27,7 @@ const langData = Object.keys(LANGUAGES).map((code) => ({
       <a id="lang-banner-link" href="#" class="btn-primary text-xs px-4 py-1.5 rounded-lg" data-track="lang_switch" data-track-category="engagement">
         <span id="lang-banner-btn"></span>
       </a>
-      <button id="lang-banner-dismiss" class="text-surface-400 hover:text-white p-1.5 transition-colors" aria-label="Dismiss">
+      <button id="lang-banner-dismiss" class="text-surface-400 hover:text-white p-1.5 transition-colors" aria-label={t('a11y.dismiss')}>
         <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path d="M18 6L6 18M6 6l12 12"/>
         </svg>
@@ -41,19 +42,20 @@ const langData = Object.keys(LANGUAGES).map((code) => ({
     if (!banner) return;
     if (localStorage.getItem('lang-banner-dismissed')) return;
 
-    const currentLang = banner.getAttribute('data-current-lang');
-    const currentPath = banner.getAttribute('data-current-path');
-    const langData = JSON.parse(banner.getAttribute('data-lang-data'));
+    const currentLang = banner.getAttribute('data-current-lang') || 'en';
+    const currentPath = banner.getAttribute('data-current-path') || '/';
+    const rawLangData = banner.getAttribute('data-lang-data') || '[]';
+    const langData: Array<{code: string; flag: string; label: string}> = JSON.parse(rawLangData);
 
-    const supported = { en: true, fr: true, ar: true, es: true, de: true, it: true, pt: true };
-    const navLang = (navigator.language || navigator.languages?.[0] || 'en').split('-')[0];
+    const supported: Record<string, boolean> = { en: true, fr: true, ar: true, es: true, de: true, it: true, pt: true };
+    const navLang = (navigator.language || (navigator as any).languages?.[0] || 'en').split('-')[0];
 
     if (navLang === currentLang || !supported[navLang] || navLang === 'en') return;
 
-    const detected = langData.find(l => l.code === navLang);
+    const detected = langData.find((l: {code: string}) => l.code === navLang);
     if (!detected) return;
 
-    const messages = {
+    const messages: Record<string, {text: string; btn: string}> = {
       en: { text: 'We also speak ' + detected.label + '! Switch to ' + detected.label + '?', btn: 'Switch to ' + detected.label },
       fr: { text: 'Nous parlons aussi ' + detected.label + ' ! Passer en ' + detected.label + ' ?', btn: 'Passer en ' + detected.label },
       ar: { text: '\u0646\u062A\u062D\u062F\u062B \u0623\u064A\u0636\u0627\u064B ' + detected.label + '! \u0627\u0644\u062A\u0628\u062F\u064A\u0644 \u0625\u0644\u0649 ' + detected.label + '\u061F', btn: '\u0627\u0644\u062A\u0628\u062F\u064A\u0644 \u0625\u0644\u0649 ' + detected.label },
@@ -64,16 +66,24 @@ const langData = Object.keys(LANGUAGES).map((code) => ({
     };
 
     const msg = messages[currentLang] || messages.en;
-    document.getElementById('lang-banner-flag').textContent = detected.flag;
-    document.getElementById('lang-banner-text').textContent = msg.text;
-    document.getElementById('lang-banner-btn').textContent = msg.btn;
-    document.getElementById('lang-banner-link').href = '/' + detected.code + currentPath;
+    const flagEl = document.getElementById('lang-banner-flag');
+    const textEl = document.getElementById('lang-banner-text');
+    const btnEl = document.getElementById('lang-banner-btn');
+    const linkEl = document.getElementById('lang-banner-link') as HTMLAnchorElement | null;
+    if (!flagEl || !textEl || !btnEl || !linkEl) return;
+    flagEl.textContent = detected.flag;
+    textEl.textContent = msg.text;
+    btnEl.textContent = msg.btn;
+    linkEl.href = '/' + detected.code + currentPath;
 
     banner.style.display = 'block';
 
-    document.getElementById('lang-banner-dismiss').addEventListener('click', function() {
-      localStorage.setItem('lang-banner-dismissed', '1');
-      banner.style.display = 'none';
-    });
+    const dismissEl = document.getElementById('lang-banner-dismiss');
+    if (dismissEl) {
+      dismissEl.addEventListener('click', function() {
+        localStorage.setItem('lang-banner-dismissed', '1');
+        banner.style.display = 'none';
+      });
+    }
   })();
 </script>

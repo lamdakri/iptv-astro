@@ -33,7 +33,7 @@ if (type === 'faq') {
     offers: {
       '@type': 'AggregateOffer',
       lowPrice: data.lowPrice || '9.99',
-      highPrice: data.highPrice || '19.99',
+      highPrice: data.highPrice || '59.99',
       priceCurrency: data.currency || 'EUR',
       availability: 'https://schema.org/InStock',
     },
@@ -60,4 +60,4 @@ if (type === 'faq') {
 }
 ---
 
-<script type="application/ld+json" set:html={JSON.stringify(schema)}></script>
+<script type="application/ld+json" set:html={JSON.stringify(schema)} is:inline></script>

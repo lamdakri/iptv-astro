@@ -1,5 +1,5 @@
 ---
-import { getLangFromUrl, useTranslations, LANGUAGES } from '../../i18n/ui';
+import { useTranslations, LANGUAGES } from '../../i18n/ui';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Features from '../../components/Features.astro';
 import FAQ from '../../components/FAQ.astro';
@@ -11,7 +11,6 @@ import PaymentIcons from '../../components/PaymentIcons.astro';
 import PayPalBadge from '../../components/PayPalBadge.astro';
 import SportsHighlight from '../../components/SportsHighlight.astro';
 import CountdownTimer from '../../components/CountdownTimer.astro';
-import Breadcrumb from '../../components/Breadcrumb.astro';
 import Steps from '../../components/Steps.astro';
 import ComparisonTable from '../../components/ComparisonTable.astro';
 import WhatsAppIcon from '../../components/icons/WhatsAppIcon.astro';
@@ -89,10 +88,10 @@ const productSchema = {
     url: Astro.site?.href || 'https://iptv4kworld.com',
     inLanguage: ogLocale,
     description: t('hero.subtitle'),
-  })}></script>
+  })} is:inline></script>
 
   <!-- Review schemas for testimonials -->
-  {testimonials.map((t, i) => (
+  {testimonials.map((t) => (
     <script type="application/ld+json" set:html={JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Review',
@@ -100,7 +99,7 @@ const productSchema = {
       reviewRating: { '@type': 'Rating', ratingValue: t.rating, bestRating: 5 },
       reviewBody: t.text,
       itemReviewed: { '@type': 'Product', name: 'IPTV 4K World' },
-    })}></script>
+    })} is:inline></script>
   ))}
 
 

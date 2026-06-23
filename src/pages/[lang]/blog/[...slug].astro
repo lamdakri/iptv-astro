@@ -1,11 +1,10 @@
 ---
-import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import { Image } from 'astro:assets';
-import { getLangFromUrl, useTranslations, LANGUAGES } from '../../../i18n/ui';
+import { useTranslations } from '../../../i18n/ui';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
 import BlogCard from '../../../components/BlogCard.astro';
-import SchemaMarkup from '../../../components/SchemaMarkup.astro';
 import { getWhatsAppUrl, getWhatsAppTrialMsg } from '../../../i18n/whatsapp';
 
 interface Props {
@@ -93,7 +92,7 @@ const articleSchema = {
         '@type': 'ImageObject',
         url: new URL(entry.data.image.src, Astro.site || 'https://iptv4kworld.com').href,
       }}),
-    })}></script>
+    })} is:inline></script>
   )}
 
   <article class="pt-32 pb-20">

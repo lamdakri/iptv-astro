@@ -1,6 +1,6 @@
 ---
 import { getLangFromUrl, useTranslations } from '../i18n/ui';
-import { getWhatsAppUrl, getWhatsAppTrialMsg } from '../i18n/whatsapp';
+import { getWhatsAppUrl, getWhatsAppTrialMsg, WHATSAPP_NUMBER } from '../i18n/whatsapp';
 import WhatsAppIcon from './icons/WhatsAppIcon.astro';
 
 const lang = getLangFromUrl(Astro.url);
@@ -79,7 +79,9 @@ const t = useTranslations(lang);
         <span class="section-eyebrow mx-auto justify-center text-xs">{t('newsletter.eyebrow')}</span>
         <h4 class="text-lg font-bold text-white mb-2">{t('newsletter.title')}</h4>
         <p class="text-surface-400 text-sm mb-5">{t('newsletter.subtitle')}</p>
-        <form id="newsletter-form" class="flex flex-col sm:flex-row gap-2">
+        <form id="newsletter-form" class="flex flex-col sm:flex-row gap-2"
+          data-wa-number={WHATSAPP_NUMBER}
+          data-wa-message={t('whatsapp.newsletter')}>
           <label for="newsletter-email" class="sr-only">{t('newsletter.placeholder')}</label>
           <input type="email" id="newsletter-email" placeholder={t('newsletter.placeholder')} required
             class="flex-1 px-4 py-3 rounded-lg bg-surface-800/60 border border-surface-700/40 text-white text-sm placeholder:text-surface-500 focus:outline-none focus:border-brand-500/50 transition-colors" />
@@ -112,15 +114,21 @@ const t = useTranslations(lang);
     if (!form || !btn) return;
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-      const originalText = btn.textContent;
+      const input = document.getElementById('newsletter-email') as HTMLInputElement | null;
+      const email = input?.value?.trim() || '';
+      if (!email) return;
+
       btn.disabled = true;
-      btn.textContent = '...';
-      setTimeout(function() {
-        msg?.classList.remove('hidden');
-        form.reset();
-        btn.disabled = false;
-        btn.textContent = originalText;
-      }, 800);
+
+      const waNumber = form.dataset.waNumber || '212606123321';
+      const template = form.dataset.waMessage || 'Hi! I want to subscribe to the IPTV 4K World newsletter. My email is: {email}';
+      const waMessage = encodeURIComponent(template.replace('{email}', email));
+
+      window.open('https://wa.me/' + waNumber + '?text=' + waMessage, '_blank');
+
+      if (msg) msg.classList.remove('hidden');
+      form.reset();
+      btn.disabled = false;
     });
   })();
 </script>

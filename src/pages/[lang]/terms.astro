@@ -78,12 +78,12 @@ const pageSchema = {
           <h2 class="text-2xl font-bold text-white mb-4">{t('terms.contact')}</h2>
           <p class="text-surface-400 leading-relaxed">{t('terms.contact.text')}</p>
           <a
-            href={`https://wa.me/${WA}?text=Hello! I have a question about the Terms of Service.`}
+            href={`https://wa.me/${WA}?text=${encodeURIComponent(t('whatsapp.termsQuestion'))}`}
             class="btn-whatsapp mt-5"
             target="_blank"
             rel="noopener noreferrer"
           >              <WhatsAppIcon class="h-5 w-5" />
-            Contact Support via WhatsApp
+            {t('cta.whatsappSupport')}
           </a>
         </section>
       </div>

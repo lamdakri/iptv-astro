@@ -129,8 +129,8 @@ const ar: Record<string, string> = {
     'contact.message': 'رسالتك', 'contact.submit': 'إرسال', 'contact.success': 'تم الإرسال! سنرد قريباً.',
     'contact.whatsappTitle': 'تفضل واتساب؟', 'contact.whatsappDesc': 'تحدث معنا مباشرة على واتساب للدعم الفوري والتجربة المجانية.',
     'contact.whatsappCta': 'محادثة واتساب',
-    'whatsapp.trial': 'مرحباً ! أريد تجربة IPTV مجانية لمدة 12 ساعة.', 'whatsapp.buy': 'مرحباً ! أريد الاشتراك في IPTV 4K World.',
-    'whatsapp.promo': 'مرحباً ! أريد العرض الخاص.', 'whatsapp.buyPlan': 'مرحباً ! أريد خطة {plan}.', 'whatsapp.bestValue': 'مرحباً ! أريد أفضل قيمة خطة سنة واحدة.',
+    'whatsapp.trial': 'مرحباً! أريد تجربة IPTV مجانية لمدة 12 ساعة.', 'whatsapp.buy': 'مرحباً! أريد الاشتراك في IPTV 4K World.',
+    'whatsapp.promo': 'مرحباً! أريد العرض الخاص.', 'whatsapp.buyPlan': 'مرحباً! أريد خطة {plan}.', 'whatsapp.bestValue': 'مرحباً! أريد أفضل قيمة خطة سنة واحدة.',
     'footer.rights': 'جميع الحقوق محفوظة.', 'footer.privacy': 'سياسة الخصوصية', 'footer.terms': 'شروط الخدمة',
     'footer.description': 'اشتراك IPTV متميز مع أكثر من 20,000 قناة، جودة 4K، دعم واتساب 24/7.',
     'breadcrumb.home': 'الرئيسية',
@@ -169,8 +169,17 @@ const ar: Record<string, string> = {
     'footer.getStartedHeading': 'ابدأ الآن',
     'footer.whatsapp': 'واتساب 24/7',
     'site.rating': 'تقييم 4.8/5',
+    'whatsapp.privacyQuestion': 'لدي سؤال حول سياسة الخصوصية.',
+    'whatsapp.termsQuestion': 'لدي سؤال حول شروط الخدمة.',
+    'whatsapp.help': 'مرحباً! أحتاج مساعدة بخصوص IPTV.',
+    'whatsapp.notFoundHelp': 'مرحباً! أحتاج مساعدة في العثور على شيء ما في موقعكم.',
+    'cta.whatsappSupport': 'اتصل بالدعم عبر واتساب',
+    'contact.whatsappSubject': 'جهة اتصال جديدة من موقع IPTV 4K World',
+    'whatsapp.newsletter': 'مرحباً! أريد الاشتراك في النشرة البريدية لـ IPTV 4K World. بريدي الإلكتروني هو: {email}',
     'a11y.skipToContent': 'تخطى إلى المحتوى',
     'a11y.menuToggle': 'تبديل القائمة',
+    'a11y.breadcrumb': 'مسار التنقل',
+    'a11y.dismiss': 'تجاهل',
 };
 
 export default ar;

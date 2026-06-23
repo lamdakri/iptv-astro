@@ -655,13 +655,10 @@ for (const file of files) {
     const section = data.languages[lang];
     if (!section || !Array.isArray(section.h2s)) continue;
 
-    let sectionChanged = false;
     for (let i = 0; i < section.h2s.length; i++) {
       const h2 = section.h2s[i];
-      if (translations[h2] && translations[h2][lang]) {
-        section.h2s[i] = translations[h2][lang];
-        sectionChanged = true;
-        fileChanged++;
+      if (translations[h2] && translations[h2][lang]) {            section.h2s[i] = translations[h2][lang];
+            fileChanged++;
       }
     }
   }

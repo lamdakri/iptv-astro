@@ -168,8 +168,17 @@ const es: Record<string, string> = {
     'footer.getStartedHeading': 'Comenzar',
     'footer.whatsapp': 'WhatsApp 24/7',
     'site.rating': 'Calificación 4.8/5',
+    'whatsapp.privacyQuestion': 'Tengo una pregunta sobre la Política de Privacidad.',
+    'whatsapp.termsQuestion': 'Tengo una pregunta sobre los Términos de Servicio.',
+    'whatsapp.help': '¡Hola! Necesito ayuda con IPTV.',
+    'whatsapp.notFoundHelp': '¡Hola! Necesito ayuda para encontrar algo en su sitio.',
+    'cta.whatsappSupport': 'Contactar Soporte por WhatsApp',
+    'contact.whatsappSubject': 'Nuevo contacto desde el sitio IPTV 4K World',
+    'whatsapp.newsletter': '¡Hola! Quiero suscribirme al boletín de IPTV 4K World. Mi email es: {email}',
     'a11y.skipToContent': 'Saltar al contenido',
     'a11y.menuToggle': 'Alternar menú',
+    'a11y.breadcrumb': 'Ruta de navegación',
+    'a11y.dismiss': 'Descartar',
 };
 
 export default es;

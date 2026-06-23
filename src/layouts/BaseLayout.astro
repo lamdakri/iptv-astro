@@ -25,7 +25,7 @@ interface Props {
 }
 
 const { title, description, ogImage, ogImageAlt, ogType, schema, robots = 'index, follow', articlePublishedTime, articleModifiedTime, articleAuthor, articleTags, articleSection, keywords, alternateLangs: alternateLangsOverride } = Astro.props;
-const lang = getLangFromUrl(Astro.url);
+const lang = getLangFromUrl(Astro.url) as keyof typeof LANGUAGES;
 const dir = LANGUAGES[lang]?.dir || 'ltr';
 const t = useTranslations(lang);
 const canonicalURL = Astro.url.href;
@@ -37,7 +37,7 @@ const alternateLangs = alternateLangsOverride ?? Object.keys(LANGUAGES).map((cod
     pathSegments[0] = code;
   }
   return {
-    lang: LANGUAGES[code]?.locale || code,
+    lang: LANGUAGES[code as keyof typeof LANGUAGES]?.locale || code,
     url: `${siteBase}/${pathSegments.length ? pathSegments.join('/') + '/' : ''}`,
   };
 });
@@ -86,12 +86,8 @@ const gaScript = `
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Subset to Latin + Arabic only to reduce download size; load asynchronously -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap&subset=latin,arabic"
-      media="print"
-      onload="this.media='all';this.onload=null"
-    />
+    <!-- Note: astro check flags media/onload as unused variables (false positive, these are HTML attributes) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap&subset=latin,arabic" media="print" onload="this.media='all';this.onload=null" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap&subset=latin,arabic" /></noscript>
     <!-- Fallback font-display: swap ensures text is visible immediately with system font -->
     <style>
@@ -113,8 +109,8 @@ const gaScript = `
     <link rel="preconnect" href="https://wa.me" />
 
     <!-- Google Analytics (async = non-blocking) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GV3H6SQGFT"></script>
-    <script set:html={gaScript}></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GV3H6SQGFT" is:inline></script>
+    <script set:html={gaScript} is:inline></script>
     <noscript>
       <style>
         .reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade {
@@ -134,7 +130,7 @@ const gaScript = `
     </main>
     <Footer />
     <FloatingWhatsApp />
-    <script src="/scripts/reveal.js" defer></script>
-    <script src="/scripts/analytics.js" defer></script>
+    <script src="/scripts/reveal.js" defer is:inline></script>
+    <script src="/scripts/analytics.js" defer is:inline></script>
   </body>
 </html>

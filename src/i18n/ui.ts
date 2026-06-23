@@ -1,1 +1,2 @@
-export { LANGUAGES, Lang, t, getLangFromUrl, useTranslations } from "./index.js";
+export { LANGUAGES, t, getLangFromUrl, useTranslations } from "./index.js";
+export type { Lang } from "./index.js";

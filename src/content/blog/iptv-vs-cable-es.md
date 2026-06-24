@@ -5,7 +5,7 @@ keywords: ["iptv vs cable", "comparacion iptv", "cortar el cable", "alternativa 
 date: 2026-06-03
 updatedDate: 2026-06-14
 lang: es
-author: "IPTV 4K World Team"
+author: "Equipo IPTV 4K World"
 category: "Comparacion"
 tags: ["comparacion", "cable", "guia"]
 image: "../../assets/blog/images/comparison.svg"

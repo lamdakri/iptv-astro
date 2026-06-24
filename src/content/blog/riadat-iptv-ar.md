@@ -4,7 +4,7 @@ description: "اكتشف افضل خدمات IPTV لمشاهدة الرياضة 
 keywords: ["iptv رياضة", "مشاهدة كرة القدم iptv", "iptv دوري", "بث رياضي مباشر"]
 date: 2026-06-08
 lang: ar
-author: "IPTV 4K World Team"
+author: "فريق IPTV 4K World"
 category: "رياضة"
 tags: ["رياضة", "كرة القدم", "4K"]
 image: "../../assets/blog/images/sports.svg"

@@ -5,7 +5,7 @@ keywords: ["iptv deportes", "ver futbol iptv", "iptv nba", "streaming deportes",
 date: 2026-06-08
 updatedDate: 2026-06-14
 lang: es
-author: "IPTV 4K World Team"
+author: "Equipo IPTV 4K World"
 category: "Deportes"
 tags: ["deportes", "futbol", "4K"]
 image: "../../assets/blog/images/sports.svg"

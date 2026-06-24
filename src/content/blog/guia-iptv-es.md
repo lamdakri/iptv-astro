@@ -5,7 +5,7 @@ keywords: ["iptv", "guia iptv", "suscripcion iptv", "mejor iptv", "iptv tutorial
 date: 2026-06-10
 updatedDate: 2026-06-14
 lang: es
-author: "IPTV 4K World Team"
+author: "Equipo IPTV 4K World"
 category: "Guia"
 tags: ["guia", "iptv", "principiante"]
 image: "../../assets/blog/images/guide.svg"

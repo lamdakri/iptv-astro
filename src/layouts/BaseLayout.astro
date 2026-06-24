@@ -6,6 +6,7 @@ import Footer from '../components/Footer.astro';
 import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
 import LanguageBanner from '../components/LanguageBanner.astro';
 import '../styles/globals.css';
+import '../styles/fonts.css';
 
 interface Props {
   title: string;
@@ -82,21 +83,15 @@ const gaScript = `
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
     <link rel="manifest" href="/manifest.json" />
 
-    <!-- ═══ Font Loading (non-blocking for Core Web Vitals) ═══ -->
+    <!-- ═══ Font Loading ═══ -->
+    <!-- Inter (weights 400-800) is self-hosted via Fontsource — zero external requests -->
+    <!-- Noto Naskh Arabic (RTL pages) loaded from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Subset to Latin + Arabic only to reduce download size; load asynchronously -->
-    <!-- Note: astro check flags media/onload as unused variables (false positive, these are HTML attributes) -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap&subset=latin,arabic" media="print" onload="this.media='all';this.onload=null" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap&subset=latin,arabic" /></noscript>
-    <!-- Fallback font-display: swap ensures text is visible immediately with system font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" media="print" onload="this.media='all';this.onload=null" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" /></noscript>
     <style>
       body { font-display: swap; }
-      @font-face {
-        font-family: 'Inter-fallback';
-        size-adjust: 107%;
-        src: local('Arial');
-      }
       @font-face {
         font-family: 'Noto-Naskh-Arabic-fallback';
         size-adjust: 105%;

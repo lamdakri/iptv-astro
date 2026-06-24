@@ -33,7 +33,7 @@ const t = useTranslations(lang);
 
       <!-- Quick Links -->
       <div>
-        <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">{t('footer.menuHeading')}</h4>
+        <p class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">{t('footer.menuHeading')}</p>
         <ul class="space-y-2.5">
           <li><a href={`/${lang}/`} class="text-surface-400 text-sm hover:text-brand-400 transition-colors" data-track="nav_click" data-track-label="Footer Home">{t('nav.home')}</a></li>
           <li><a href={`/${lang}/pricing/`} class="text-surface-400 text-sm hover:text-brand-400 transition-colors" data-track="nav_click" data-track-label="Footer Pricing">{t('nav.pricing')}</a></li>
@@ -43,7 +43,7 @@ const t = useTranslations(lang);
 
       <!-- Support -->
       <div>
-        <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">{t('footer.supportHeading')}</h4>
+        <p class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">{t('footer.supportHeading')}</p>
         <ul class="space-y-2.5">
           <li>
             <a href={getWhatsAppUrl('')} class="flex items-center gap-2 text-surface-400 text-sm hover:text-whatsapp transition-colors group" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-track-label="Footer Support" data-track-category="conversion">
@@ -57,7 +57,7 @@ const t = useTranslations(lang);
 
       <!-- CTA -->
       <div>
-        <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">{t('footer.getStartedHeading')}</h4>
+        <p class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">{t('footer.getStartedHeading')}</p>
         <p class="text-surface-400 text-sm mb-4">{t('footer.ctaText')}</p>
         <a
           href={getWhatsAppUrl(getWhatsAppTrialMsg(t))}
@@ -77,7 +77,7 @@ const t = useTranslations(lang);
     <div class="border-t border-surface-800/50 pt-8 mb-8">
       <div class="max-w-md mx-auto text-center">
         <span class="section-eyebrow mx-auto justify-center text-xs">{t('newsletter.eyebrow')}</span>
-        <h4 class="text-lg font-bold text-white mb-2">{t('newsletter.title')}</h4>
+        <p class="text-lg font-bold text-white mb-2">{t('newsletter.title')}</p>
         <p class="text-surface-400 text-sm mb-5">{t('newsletter.subtitle')}</p>
         <form id="newsletter-form" class="flex flex-col sm:flex-row gap-2"
           data-wa-number={WHATSAPP_NUMBER}

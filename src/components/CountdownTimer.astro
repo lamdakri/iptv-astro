@@ -134,38 +134,82 @@ const whatsappUrl = getWhatsAppUrl(t('whatsapp.promo') || 'Hello! I want the spe
     const subtitleEl = document.getElementById('countdown-subtitle');
     const expiredDiv = document.getElementById('countdown-expired');
     if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+
     function pad(n: number): string { return String(n).padStart(2, '0'); }
+
+    let lastDisplayedSecond = -1;
+    let rafId = 0;
+    let expired = false;
+
+    let onVisibility: (() => void) | null = null;
+
+    function cleanup() {
+      cancelAnimationFrame(rafId);
+      if (onVisibility) document.removeEventListener('visibilitychange', onVisibility);
+    }
+
+    function showExpired() {
+      daysEl!.textContent = '00'; hoursEl!.textContent = '00'; minutesEl!.textContent = '00'; secondsEl!.textContent = '00';
+      if (blocksDiv) blocksDiv.style.display = 'none';
+      if (ctaEl) ctaEl.style.display = 'none';
+      if (titleEl) titleEl.style.display = 'none';
+      if (subtitleEl) subtitleEl.style.display = 'none';
+      if (expiredDiv) expiredDiv.classList.remove('hidden');
+      cleanup();
+    }
+
+    function updateBlock(el: HTMLElement, newVal: number) {
+      const padded = pad(newVal);
+      if (el.textContent !== padded) {
+        el.textContent = padded;
+        el.classList.remove('flip');
+        void el.offsetWidth;
+        el.classList.add('flip');
+      }
+    }
+
     function tick() {
       const now = new Date().getTime();
       const diff = target - now;
       if (diff <= 0) {
-        daysEl!.textContent = '00'; hoursEl!.textContent = '00'; minutesEl!.textContent = '00'; secondsEl!.textContent = '00';
-        if (blocksDiv) blocksDiv.style.display = 'none';
-        if (ctaEl) ctaEl.style.display = 'none';
-        if (titleEl) titleEl.style.display = 'none';
-        if (subtitleEl) subtitleEl.style.display = 'none';
-        if (expiredDiv) expiredDiv.classList.remove('hidden');
+        if (!expired) { showExpired(); expired = true; }
         return;
       }
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-      function updateBlock(el: HTMLElement, newVal: number) {
-        const padded = pad(newVal);
-        if (el.textContent !== padded) {
-          el.textContent = padded;
-          el.classList.remove('flip');
-          void el.offsetWidth;
-          el.classList.add('flip');
-        }
-      }
+
+      const totalSeconds = Math.floor(diff / 1000);
+      // Only update DOM when the displayed second actually changes
+      if (totalSeconds === lastDisplayedSecond) return;
+      lastDisplayedSecond = totalSeconds;
+
+      const days = Math.floor(totalSeconds / 86400);
+      const hours = Math.floor((totalSeconds % 86400) / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+
       updateBlock(daysEl!, days);
       updateBlock(hoursEl!, hours);
       updateBlock(minutesEl!, minutes);
       updateBlock(secondsEl!, seconds);
     }
+
+    function loop() {
+      if (document.hidden) { rafId = requestAnimationFrame(loop); return; }
+      tick();
+      rafId = requestAnimationFrame(loop);
+    }
+
+    // Initial render
     tick();
-    setInterval(tick, 1000);
+    rafId = requestAnimationFrame(loop);
+
+    // Pause when page hidden; resume when visible
+    onVisibility = () => {
+      if (!document.hidden && !expired) {
+        // Force re-check on return to ensure immediate accuracy
+        lastDisplayedSecond = -1;
+        tick();
+      }
+    };
+    document.addEventListener('visibilitychange', onVisibility);
   })();
 </script>

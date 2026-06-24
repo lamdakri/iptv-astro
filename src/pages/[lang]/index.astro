@@ -238,7 +238,7 @@ const productSchema = {
 
 
   <!-- ===== FEATURES ===== -->
-  <Features title={t('features.title')} subtitle={t('features.subtitle')} features={features} />
+  <Features eyebrow={t('features.eyebrow')} title={t('features.title')} subtitle={t('features.subtitle')} features={features} />
 
 
   <!-- ===== LIVE SPORTS ===== -->
@@ -291,7 +291,7 @@ const productSchema = {
   <section class="section section-alt">
     <div class="container-custom">
       <div class="text-center mb-14">
-        <span class="section-eyebrow">Pricing</span>
+        <span class="section-eyebrow">{t('pricing.eyebrow')}</span>
         <h2 class="section-title">{t('pricing.title')}</h2>
         <p class="section-subtitle mx-auto">{t('pricing.subtitle')}</p>
       </div>
@@ -361,11 +361,11 @@ const productSchema = {
   />
 
   <!-- ===== TESTIMONIALS ===== -->
-  <Testimonials title={t('testimonials.title')} subtitle={t('testimonials.subtitle')} testimonials={testimonials} />
+  <Testimonials eyebrow={t('testimonials.eyebrow')} title={t('testimonials.title')} subtitle={t('testimonials.subtitle')} testimonials={testimonials} />
 
 
   <!-- ===== FAQ ===== -->
-  <FAQ title={t('faq.title')} subtitle={t('faq.subtitle')} items={faqItems} />
+  <FAQ eyebrow={t('faq.eyebrow')} title={t('faq.title')} subtitle={t('faq.subtitle')} items={faqItems} />
 
 
   <!-- ===== FINAL CTA ===== -->
@@ -377,7 +377,7 @@ const productSchema = {
 
     <div class="container-custom relative z-10 text-center">
       <div class="max-w-2xl mx-auto">
-        <span class="section-eyebrow mx-auto justify-center">Get Started</span>
+        <span class="section-eyebrow mx-auto justify-center">{t('cta.final.eyebrow')}</span>
         <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-4 leading-tight">
           {t('cta.final.title')}
         </h2>

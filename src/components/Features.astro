@@ -8,17 +8,18 @@ interface Feature {
 interface Props {
   title: string;
   subtitle?: string;
+  eyebrow?: string;
   features: Feature[];
 }
 
-const { title, subtitle, features } = Astro.props;
+const { title, subtitle, eyebrow, features } = Astro.props;
 ---
 
 <section class="section">
   <div class="section-divider"></div>
   <div class="container-custom">
     <div class="text-center mb-14">
-      <span class="section-eyebrow">Features</span>
+      <span class="section-eyebrow">{eyebrow}</span>
       <h2 class="section-title">{title}</h2>
       {subtitle && <p class="section-subtitle mx-auto">{subtitle}</p>}
     </div>

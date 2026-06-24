@@ -224,7 +224,27 @@ function translateLinkText(text, lang) {
   return null;
 }
 
-let totalFixed = 0, h1c = 0, h2c = 0, cc = 0, descC = 0, linkC = 0;
+// Accent replacement dictionaries (unambiguous word-level fixes)
+const accentDict = {
+  fr: {'chaines':'chaînes','Chaines':'Chaînes','francaises':'françaises','Francaises':'Françaises','francaise':'française','Francaise':'Française','legale':'légale','legaux':'légaux','meme':'même','equipe':'équipe','Equipe':'Équipe','acces':'accès','qualite':'qualité','Qualite':'Qualité','systeme':'système','experience':'expérience','Experience':'Expérience','operation':'opération','probleme':'problème','deja':'déjà','apres':'après','ete':'été'},
+  de: {'Geniessen':'Genießen','geniessen':'genießen','Verfuegung':'Verfügung','verfuegung':'verfügung','Verfuegbar':'Verfügbar','verfuegbar':'verfügbar','fuer':'für','Fuer':'Für','fuehrend':'führend','fuehrt':'führt','aussergewoehnlich':'außergewöhnlich','Unterstuetzung':'Unterstützung','unterstuetzung':'unterstützung'},
+  es: {'tecnologia':'tecnología','Tecnologia':'Tecnología','suscripcion':'suscripción','Suscripcion':'Suscripción','tambien':'también','despues':'después','ingles':'inglés','Ingles':'Inglés','frances':'francés','Frances':'Francés','aleman':'alemán','Aleman':'Alemán','portugues':'portugués','Portugues':'Portugués','proximo':'próximo','proxima':'próxima','basico':'básico','basica':'básica','unico':'único','unica':'única','rapido':'rápido','rapida':'rápida','ultimo':'último','ultima':'última','configuracion':'configuración','Configuracion':'Configuración','rapidamente':'rápidamente','contactanos':'contáctanos'},
+  it: {'perche':'perché','Perche':'Perché','piu':'più','Piu':'Più','cosi':'così','Cosi':'Così','citta':'città','Citta':'Città','possibilita':'possibilità','Possibilita':'Possibilità','difficolta':'difficoltà','Difficolta':'Difficoltà','velocita':'velocità','Velocita':'Velocità','qualita':'qualità','Qualita':'Qualità'},
+  pt: {'gratis':'grátis','Gratis':'Grátis','disponivel':'disponível','Disponivel':'Disponível','duvida':'dúvida','Duvida':'Dúvida','lusofona':'lusófona','Lusofona':'Lusófona','ultima':'última','Ultima':'Última','ultimo':'último','Ultimo':'Último','rapida':'rápida','Rapida':'Rápida','rapido':'rápido','Rapido':'Rápido','unica':'única','Unica':'Única','unico':'único','Unico':'Único','serie':'série','Serie':'Série','series':'séries','Series':'Séries','basica':'básica','Basica':'Básica','basico':'básico','Basico':'Básico','assistencia':'assistência','Assistencia':'Assistência','configuracao':'configuração','Configuracao':'Configuração','experiencia':'experiência','Experiencia':'Experiência','estavel':'estável','Estavel':'Estável','genero':'género','Genero':'Género','generos':'géneros','Generos':'Géneros','precos':'preços','Precos':'Preços','rapidamente':'rápidamente','Rapidamente':'Rápidamente'}
+};
+
+function fixAccents(text, lang) {
+  if (!text || !accentDict[lang]) return text;
+  let result = text;
+  for (const [wrong, correct] of Object.entries(accentDict[lang])) {
+    const escaped = wrong.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const re = new RegExp('\\b' + escaped + '\\b', 'g');
+    result = result.replace(re, correct);
+  }
+  return result;
+}
+
+let totalFixed = 0, h1c = 0, h2c = 0, cc = 0, descC = 0, linkC = 0, accentC = 0;
 
 files.forEach(f => {
   const fp = path.join(dir, f);
@@ -273,6 +293,33 @@ files.forEach(f => {
       }
     }
 
+    // Accent fixes: apply word-level diacritical mark corrections to all text fields
+    const accentFields = ['h1', 'description'];
+    for (const k of accentFields) {
+      if (s[k]) {
+        const fx = fixAccents(s[k], l);
+        if (fx !== s[k]) { s[k] = fx; accentC++; mod = true; }
+      }
+    }
+    if (s.h2s) for (let i = 0; i < s.h2s.length; i++) {
+      const fx = fixAccents(s.h2s[i], l);
+      if (fx !== s.h2s[i]) { s.h2s[i] = fx; accentC++; mod = true; }
+    }
+    if (s.content) {
+      const fx = fixAccents(s.content, l);
+      if (fx !== s.content) { s.content = fx; accentC++; mod = true; }
+    }
+    if (s.faqs) for (const fq of s.faqs) {
+      const qx = fixAccents(fq.question, l);
+      if (qx !== fq.question) { fq.question = qx; accentC++; mod = true; }
+      const ax = fixAccents(fq.answer, l);
+      if (ax !== fq.answer) { fq.answer = ax; accentC++; mod = true; }
+    }
+    if (s.internalLinks) for (const link of s.internalLinks) {
+      const lx = fixAccents(link.text, l);
+      if (lx !== link.text) { link.text = lx; accentC++; mod = true; }
+    }
+
     if (s.content && dict.content) {
       const clean = s.content.replace(/<[^>]+>/g, '').trim();
       if (isEnglish(clean.substring(0, 100))) {
@@ -319,4 +366,4 @@ files.forEach(f => {
   }
 });
 
-console.log('\nTotal: ' + totalFixed + ' files - H1s:' + h1c + ' H2s:' + h2c + ' Descs:' + descC + ' Links:' + linkC + ' Content:' + cc);
+console.log('\nTotal: ' + totalFixed + ' files - H1s:' + h1c + ' H2s:' + h2c + ' Descs:' + descC + ' Links:' + linkC + ' Content:' + cc + ' Accents:' + accentC);

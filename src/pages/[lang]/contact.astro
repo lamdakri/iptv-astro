@@ -29,7 +29,7 @@ const pageSchema = {
   },
   about: {
     '@type': 'Thing',
-    name: 'Contact Page',
+    name: t('contact.title'),
   },
 };
 ---
@@ -98,7 +98,7 @@ const pageSchema = {
               <WhatsAppIcon class="h-5 w-5" />
               {t('contact.whatsappCta')}
             </a>
-            <p class="text-surface-500 text-xs mt-4">📞 24/7 Support • Reply in Minutes</p>
+            <p class="text-surface-500 text-xs mt-4">{t('contact.supportBadge')}</p>
           </div>
         </div>
       </div>

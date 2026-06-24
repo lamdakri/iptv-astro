@@ -28,7 +28,7 @@ const pageSchema = {
   },
   about: {
     '@type': 'Thing',
-    name: 'Terms of Service',
+    name: t('terms.title'),
   },
   lastReviewed: '2026-06-12',
 };
@@ -44,7 +44,7 @@ const pageSchema = {
 
       <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 reveal">{t('terms.title')}</h1>
       <p class="text-surface-400 text-lg mb-2 reveal" data-reveal-delay="100">{t('terms.subtitle')}</p>
-      <p class="text-surface-500 text-sm mb-12 reveal" data-reveal-delay="150">{t('terms.lastUpdated')}: June 12, 2026</p>
+      <p class="text-surface-500 text-sm mb-12 reveal" data-reveal-delay="150">{t('terms.lastUpdated')}: {t('terms.lastUpdatedDate')}</p>
 
       <div class="space-y-10 reveal" data-reveal-delay="200">
         <p class="text-surface-300 leading-relaxed">{t('terms.intro')}</p>

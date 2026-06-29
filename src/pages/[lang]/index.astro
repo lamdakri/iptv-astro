@@ -1,20 +1,20 @@
 ---
-import { useTranslations, LANGUAGES } from '../../i18n/ui';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Features from '../../components/Features.astro';
-import FAQ from '../../components/FAQ.astro';
-import Testimonials from '../../components/Testimonials.astro';
-import PricingCard from '../../components/PricingCard.astro';
-import SavingsComparison from '../../components/SavingsComparison.astro';
-import SchemaMarkup from '../../components/SchemaMarkup.astro';
-import PaymentIcons from '../../components/PaymentIcons.astro';
-import PayPalBadge from '../../components/PayPalBadge.astro';
-import SportsHighlight from '../../components/SportsHighlight.astro';
-import CountdownTimer from '../../components/CountdownTimer.astro';
-import Steps from '../../components/Steps.astro';
-import ComparisonTable from '../../components/ComparisonTable.astro';
-import WhatsAppIcon from '../../components/icons/WhatsAppIcon.astro';
-import { getWhatsAppUrl, getWhatsAppTrialMsg } from '../../i18n/whatsapp';
+import { useTranslations, LANGUAGES } from "../../i18n/ui";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Features from "../../components/Features.astro";
+import FAQ from "../../components/FAQ.astro";
+import Testimonials from "../../components/Testimonials.astro";
+import PricingCard from "../../components/PricingCard.astro";
+import SavingsComparison from "../../components/SavingsComparison.astro";
+import SchemaMarkup from "../../components/SchemaMarkup.astro";
+import PaymentIcons from "../../components/PaymentIcons.astro";
+import PayPalBadge from "../../components/PayPalBadge.astro";
+import SportsHighlight from "../../components/SportsHighlight.astro";
+import CountdownTimer from "../../components/CountdownTimer.astro";
+import Steps from "../../components/Steps.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+import WhatsAppIcon from "../../components/icons/WhatsAppIcon.astro";
+import { getWhatsAppUrl, getWhatsAppTrialMsg } from "../../i18n/whatsapp";
 
 export function getStaticPaths() {
   return Object.keys(LANGUAGES).map((lang) => ({ params: { lang } }));
@@ -23,86 +23,149 @@ export function getStaticPaths() {
 const { lang } = Astro.params;
 const t = useTranslations(lang);
 
-const localeMap: Record<string, string> = { en: 'en_US', fr: 'fr_FR', ar: 'ar_SA', es: 'es_ES', de: 'de_DE', it: 'it_IT', pt: 'pt_PT' };
-const ogLocale = localeMap[lang] || 'en_US';
+const localeMap: Record<string, string> = {
+  en: "en_US",
+  fr: "fr_FR",
+  ar: "ar_SA",
+  es: "es_ES",
+  de: "de_DE",
+  it: "it_IT",
+  pt: "pt_PT",
+};
+const ogLocale = localeMap[lang] || "en_US";
 
 const features = [
-  { icon: '📺', title: t('features.channels'), description: t('features.channels.desc') },
-  { icon: '✨', title: t('features.quality'), description: t('features.quality.desc') },
-  { icon: '📱', title: t('features.devices'), description: t('features.devices.desc') },
-  { icon: '💬', title: t('features.support'), description: t('features.support.desc') },
-  { icon: '🎁', title: t('features.trial'), description: t('features.trial.desc') },
-  { icon: '🎬', title: t('features.vod'), description: t('features.vod.desc') },
+  { icon: "📺", title: t("features.channels"), description: t("features.channels.desc") },
+  { icon: "✨", title: t("features.quality"), description: t("features.quality.desc") },
+  { icon: "📱", title: t("features.devices"), description: t("features.devices.desc") },
+  { icon: "💬", title: t("features.support"), description: t("features.support.desc") },
+  { icon: "🎁", title: t("features.trial"), description: t("features.trial.desc") },
+  { icon: "🎬", title: t("features.vod"), description: t("features.vod.desc") },
 ];
 
 const faqItems = [
-  { question: t('faq.q1'), answer: t('faq.a1') },
-  { question: t('faq.q2'), answer: t('faq.a2') },
-  { question: t('faq.q3'), answer: t('faq.a3') },
-  { question: t('faq.q4'), answer: t('faq.a4') },
-  { question: t('faq.q5'), answer: t('faq.a5') },
-  { question: t('faq.q6'), answer: t('faq.a6') },
+  { question: t("faq.q1"), answer: t("faq.a1") },
+  { question: t("faq.q2"), answer: t("faq.a2") },
+  { question: t("faq.q3"), answer: t("faq.a3") },
+  { question: t("faq.q4"), answer: t("faq.a4") },
+  { question: t("faq.q5"), answer: t("faq.a5") },
+  { question: t("faq.q6"), answer: t("faq.a6") },
 ];
 
 const testimonials = [
-  { name: t('testimonials.1.name'), role: t('testimonials.1.role'), text: t('testimonials.1.text'), rating: 5 },
-  { name: t('testimonials.2.name'), role: t('testimonials.2.role'), text: t('testimonials.2.text'), rating: 5 },
-  { name: t('testimonials.3.name'), role: t('testimonials.3.role'), text: t('testimonials.3.text'), rating: 5 },
+  {
+    name: t("testimonials.1.name"),
+    role: t("testimonials.1.role"),
+    text: t("testimonials.1.text"),
+    rating: 5,
+  },
+  {
+    name: t("testimonials.2.name"),
+    role: t("testimonials.2.role"),
+    text: t("testimonials.2.text"),
+    rating: 5,
+  },
+  {
+    name: t("testimonials.3.name"),
+    role: t("testimonials.3.role"),
+    text: t("testimonials.3.text"),
+    rating: 5,
+  },
 ];
 
-const avgRating = (testimonials.reduce((sum, t) => sum + t.rating, 0) / testimonials.length).toFixed(1);
+const avgRating = (
+  testimonials.reduce((sum, t) => sum + t.rating, 0) / testimonials.length
+).toFixed(1);
 
-const pageTitle = t('hero.title') + ' | ' + t('site.name');
+const pageTitle = t("hero.title") + " | " + t("site.name");
 const whatsappUrl = getWhatsAppUrl(getWhatsAppTrialMsg(t));
 
 const pricingFeatures = [
-  t('pricing.feature.channels'),
-  t('pricing.feature.quality'),
-  t('pricing.feature.vod'),
-  t('pricing.feature.devices'),
-  t('pricing.feature.antifreeze'),
-  t('pricing.feature.support'),
-  t('pricing.feature.instant'),
+  t("pricing.feature.channels"),
+  t("pricing.feature.quality"),
+  t("pricing.feature.vod"),
+  t("pricing.feature.devices"),
+  t("pricing.feature.antifreeze"),
+  t("pricing.feature.support"),
+  t("pricing.feature.instant"),
 ];
 
 const productSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Product',
-  name: 'IPTV 4K World',
-  description: 'Premium IPTV streaming service with 20,000+ live channels, 4K quality, and 24/7 support.',
-  offers: { '@type': 'AggregateOffer', lowPrice: '24.99', highPrice: '59.99', priceCurrency: 'EUR', availability: 'https://schema.org/InStock' },
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: avgRating, bestRating: '5', reviewCount: String(testimonials.length) },
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "IPTV 4K World",
+  description:
+    "Premium IPTV streaming service with 20,000+ live channels, 4K quality, and 24/7 support.",
+  offers: {
+    "@type": "AggregateOffer",
+    lowPrice: "24.99",
+    highPrice: "59.99",
+    priceCurrency: "EUR",
+    availability: "https://schema.org/InStock",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: avgRating,
+    bestRating: "5",
+    reviewCount: String(testimonials.length),
+  },
 };
 ---
 
-<BaseLayout title={pageTitle} description={t('hero.subtitle')} keywords={t('seo.keywords')} schema={productSchema}>
-  <SchemaMarkup type="product" data={{ name: 'IPTV 4K World', lowPrice: '24.99', highPrice: '59.99', currency: 'EUR' }} />
+<BaseLayout
+  title={pageTitle}
+  description={t("hero.subtitle")}
+  keywords={t("seo.keywords")}
+  schema={productSchema}
+>
+  <SchemaMarkup
+    type="product"
+    data={{ name: "IPTV 4K World", lowPrice: "24.99", highPrice: "59.99", currency: "EUR" }}
+  />
   <SchemaMarkup type="faq" data={{ questions: faqItems }} />
   <SchemaMarkup type="organization" />
 
   <!-- WebSite schema -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: t('site.name'),
-    url: Astro.site?.href || 'https://iptv4kworld.com',
-    inLanguage: ogLocale,
-    description: t('hero.subtitle'),
-  })} is:inline></script>
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: t("site.name"),
+      url: Astro.site?.href || "https://iptv4kworld.com",
+      inLanguage: ogLocale,
+      description: t("hero.subtitle"),
+    })}
+    is:inline
+  />
 
   <!-- Review schemas for testimonials -->
-  {testimonials.map((t) => (
-    <script type="application/ld+json" set:html={JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'Review',
-      author: { '@type': 'Person', name: t.name },
-      reviewRating: { '@type': 'Rating', ratingValue: t.rating, bestRating: 5 },
-      reviewBody: t.text,
-      itemReviewed: { '@type': 'Product', name: 'IPTV 4K World' },
-    })} is:inline></script>
-  ))}
-
-
+  {
+    testimonials.map((t) => (
+      <script
+        type="application/ld+json"
+        set:html={JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Review",
+          author: { "@type": "Person", name: t.name },
+          reviewRating: { "@type": "Rating", ratingValue: t.rating, bestRating: 5 },
+          reviewBody: t.text,
+          itemReviewed: {
+            "@type": "Product",
+            name: "IPTV 4K World",
+            offers: {
+              "@type": "AggregateOffer",
+              lowPrice: "24.99",
+              highPrice: "59.99",
+              priceCurrency: "EUR",
+              availability: "https://schema.org/InStock",
+            },
+          },
+        })}
+        is:inline
+      />
+    ))
+  }
 
   <!-- ===== HERO ===== -->
   <section class="relative min-h-[95vh] flex items-center justify-center overflow-hidden">
@@ -118,35 +181,56 @@ const productSchema = {
     <div class="container-custom relative z-10 text-center py-20">
       <div class="max-w-5xl mx-auto">
         <!-- Badge -->
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-8 border animate-fade-in"
-          style="background: rgba(37,211,102,0.08); border-color: rgba(37,211,102,0.2); color: #25D366;">
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-8 border animate-fade-in"
+          style="background: rgba(37,211,102,0.08); border-color: rgba(37,211,102,0.2); color: #25D366;"
+        >
           <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-whatsapp opacity-75"></span>
+            <span
+              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-whatsapp opacity-75"
+            ></span>
             <span class="relative inline-flex rounded-full h-2 w-2 bg-whatsapp"></span>
           </span>
-          {t('cta.instant')}
+          {t("cta.instant")}
           <span class="text-surface-500">•</span>
-          {t('cta.support')}
+          {t("cta.support")}
         </span>
 
         <!-- Main heading -->
         <h1 class="heading-xl text-white mb-6 animate-fade-in-up delay-100">
-          <span class="gradient-text">{t('hero.title')}</span>
+          <span class="gradient-text">{t("hero.title")}</span>
         </h1>
 
         <!-- Subtitle -->
-        <p class="text-surface-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up delay-200">
-          {t('hero.subtitle')}
+        <p
+          class="text-surface-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up delay-200"
+        >
+          {t("hero.subtitle")}
         </p>
 
         <!-- CTAs -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up delay-300">
-          <a href={whatsappUrl} class="btn-whatsapp text-lg px-10 py-4" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-track-label="Hero CTA" data-track-category="conversion">
+        <div
+          class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up delay-300"
+        >
+          <a
+            href={whatsappUrl}
+            class="btn-whatsapp text-lg px-10 py-4"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-track="whatsapp_click"
+            data-track-label="Hero CTA"
+            data-track-category="conversion"
+          >
             <WhatsAppIcon class="h-5 w-5" />
-            {t('hero.cta')}
+            {t("hero.cta")}
           </a>
-          <a href={`/${lang}/pricing/`} class="btn-outline text-lg px-10 py-4" data-track="nav_click" data-track-label="Hero Pricing">
-            {t('hero.secondary')}
+          <a
+            href={`/${lang}/pricing/`}
+            class="btn-outline text-lg px-10 py-4"
+            data-track="nav_click"
+            data-track-label="Hero Pricing"
+          >
+            {t("hero.secondary")}
           </a>
         </div>
 
@@ -157,43 +241,51 @@ const productSchema = {
 
         <!-- Countdown Timer -->
         <CountdownTimer
-          targetDate={import.meta.env.COUNTDOWN_TARGET || '2026-06-30T23:59:59'}
-          eyebrow={t('promo.eyebrow')}
-          title={t('promo.title')}
-          subtitle={t('promo.subtitle')}
-          ctaText={t('promo.cta')}
-          expiryLabel={t('promo.expired')}
-          daysLabel={t('promo.days')}
-          hoursLabel={t('promo.hours')}
-          minutesLabel={t('promo.minutes')}
-          secondsLabel={t('promo.seconds')}
+          targetDate={import.meta.env.COUNTDOWN_TARGET || "2026-06-30T23:59:59"}
+          eyebrow={t("promo.eyebrow")}
+          title={t("promo.title")}
+          subtitle={t("promo.subtitle")}
+          ctaText={t("promo.cta")}
+          expiryLabel={t("promo.expired")}
+          daysLabel={t("promo.days")}
+          hoursLabel={t("promo.hours")}
+          minutesLabel={t("promo.minutes")}
+          secondsLabel={t("promo.seconds")}
         />
 
         <!-- Trust badges -->
-        <div class="flex flex-wrap items-center justify-center gap-5 mt-12 text-sm text-surface-500 animate-fade-in delay-500">
+        <div
+          class="flex flex-wrap items-center justify-center gap-5 mt-12 text-sm text-surface-500 animate-fade-in delay-500"
+        >
           <span class="flex items-center gap-1.5">
-            <span class="text-brand-400 text-base">⚡</span> {t('cta.instant')}
+            <span class="text-brand-400 text-base">⚡</span>
+            {t("cta.instant")}
           </span>
           <span class="w-1 h-1 rounded-full bg-surface-700"></span>
           <span class="flex items-center gap-1.5">
-            <span class="text-cyan-400 text-base">🎁</span> {t('cta.trial.short')}
+            <span class="text-cyan-400 text-base">🎁</span>
+            {t("cta.trial.short")}
           </span>
           <span class="w-1 h-1 rounded-full bg-surface-700"></span>
           <span class="flex items-center gap-1.5">
-            <span class="text-accent text-base">💬</span> {t('cta.support')}
+            <span class="text-accent text-base">💬</span>
+            {t("cta.support")}
           </span>
           <span class="w-1 h-1 rounded-full bg-surface-700"></span>
           <span class="flex items-center gap-1.5">
-            <span class="text-accent-rose text-base">⭐</span> {t('site.rating')}
+            <span class="text-accent-rose text-base">⭐</span>
+            {t("site.rating")}
           </span>
         </div>
       </div>
     </div>
 
     <!-- Bottom gradient fade -->
-    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-surface-950 to-transparent pointer-events-none"></div>
+    <div
+      class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-surface-950 to-transparent pointer-events-none"
+    >
+    </div>
   </section>
-
 
   <!-- ===== STATS ===== -->
   <section class="relative -mt-16 pb-16">
@@ -221,152 +313,250 @@ const productSchema = {
     </div>
   </section>
 
-
   <!-- ===== HOW IT WORKS ===== -->
   <Steps
-    eyebrow={t('steps.eyebrow')}
-    title={t('steps.title')}
-    subtitle={t('steps.subtitle')}
+    eyebrow={t("steps.eyebrow")}
+    title={t("steps.title")}
+    subtitle={t("steps.subtitle")}
     steps={[
-      { number: '1', icon: '💬', title: t('steps.1.title'), description: t('steps.1.desc') },
-      { number: '2', icon: '📦', title: t('steps.2.title'), description: t('steps.2.desc') },
-      { number: '3', icon: '📺', title: t('steps.3.title'), description: t('steps.3.desc') },
+      { number: "1", icon: "💬", title: t("steps.1.title"), description: t("steps.1.desc") },
+      { number: "2", icon: "📦", title: t("steps.2.title"), description: t("steps.2.desc") },
+      { number: "3", icon: "📺", title: t("steps.3.title"), description: t("steps.3.desc") },
     ]}
-    ctaText={t('steps.cta')}
+    ctaText={t("steps.cta")}
     ctaUrl={whatsappUrl}
   />
 
-
   <!-- ===== FEATURES ===== -->
-  <Features eyebrow={t('features.eyebrow')} title={t('features.title')} subtitle={t('features.subtitle')} features={features} />
-
+  <Features
+    eyebrow={t("features.eyebrow")}
+    title={t("features.title")}
+    subtitle={t("features.subtitle")}
+    features={features}
+  />
 
   <!-- ===== LIVE SPORTS ===== -->
   <SportsHighlight
-    title={t('sports.title')}
-    subtitle={t('sports.subtitle')}
-    eyebrow={t('sports.eyebrow')}
-    ctaText={t('sports.cta.text')}
-    ctaButton={t('sports.cta.button')}
+    title={t("sports.title")}
+    subtitle={t("sports.subtitle")}
+    eyebrow={t("sports.eyebrow")}
+    ctaText={t("sports.cta.text")}
+    ctaButton={t("sports.cta.button")}
     sports={[
-      { icon: '⚽', name: t('sports.football'), tagline: t('sports.football.tag'), color: 'text-green-400' },
-      { icon: '🏎️', name: t('sports.f1'), tagline: t('sports.f1.tag'), color: 'text-red-400' },
-      { icon: '🥊', name: t('sports.boxing'), tagline: t('sports.boxing.tag'), color: 'text-orange-400' },
-      { icon: '🎾', name: t('sports.tennis'), tagline: t('sports.tennis.tag'), color: 'text-yellow-400' },
-      { icon: '🥋', name: t('sports.ufc'), tagline: t('sports.ufc.tag'), color: 'text-cyan-400' },
+      {
+        icon: "⚽",
+        name: t("sports.football"),
+        tagline: t("sports.football.tag"),
+        color: "text-green-400",
+      },
+      { icon: "🏎️", name: t("sports.f1"), tagline: t("sports.f1.tag"), color: "text-red-400" },
+      {
+        icon: "🥊",
+        name: t("sports.boxing"),
+        tagline: t("sports.boxing.tag"),
+        color: "text-orange-400",
+      },
+      {
+        icon: "🎾",
+        name: t("sports.tennis"),
+        tagline: t("sports.tennis.tag"),
+        color: "text-yellow-400",
+      },
+      { icon: "🥋", name: t("sports.ufc"), tagline: t("sports.ufc.tag"), color: "text-cyan-400" },
     ]}
   />
-
 
   <!-- ===== COMPARISON TABLE ===== -->
   <ComparisonTable
-    eyebrow={t('comparison.eyebrow')}
-    title={t('comparison.title')}
-    subtitle={t('comparison.subtitle')}
+    eyebrow={t("comparison.eyebrow")}
+    title={t("comparison.title")}
+    subtitle={t("comparison.subtitle")}
     header={{
-      feature: t('comparison.header.feature'),
-      iptv: t('comparison.header.iptv'),
-      netflix: t('comparison.header.netflix'),
-      disney: t('comparison.header.disney'),
-      cable: t('comparison.header.cable'),
+      feature: t("comparison.header.feature"),
+      iptv: t("comparison.header.iptv"),
+      netflix: t("comparison.header.netflix"),
+      disney: t("comparison.header.disney"),
+      cable: t("comparison.header.cable"),
     }}
     rows={[
-      { label: t('comparison.row.channels'), iptv: t('comparison.row.channels.iptv'), netflix: t('comparison.row.channels.netflix'), disney: t('comparison.row.channels.disney'), cable: t('comparison.row.channels.cable') },
-      { label: t('comparison.row.quality'), iptv: t('comparison.row.quality.iptv'), netflix: t('comparison.row.quality.netflix'), disney: t('comparison.row.quality.disney'), cable: t('comparison.row.quality.cable') },
-      { label: t('comparison.row.sports'), iptv: t('comparison.row.sports.iptv'), netflix: t('comparison.row.sports.netflix'), disney: t('comparison.row.sports.disney'), cable: t('comparison.row.sports.cable') },
-      { label: t('comparison.row.vod'), iptv: t('comparison.row.vod.iptv'), netflix: t('comparison.row.vod.netflix'), disney: t('comparison.row.vod.disney'), cable: t('comparison.row.vod.cable') },
-      { label: t('comparison.row.devices'), iptv: t('comparison.row.devices.iptv'), netflix: t('comparison.row.devices.netflix'), disney: t('comparison.row.devices.disney'), cable: t('comparison.row.devices.cable') },
-      { label: t('comparison.row.price'), iptv: t('comparison.row.price.iptv'), netflix: t('comparison.row.price.netflix'), disney: t('comparison.row.price.disney'), cable: t('comparison.row.price.cable'), highlight: true },
-      { label: t('comparison.row.trial'), iptv: t('comparison.row.trial.iptv'), netflix: t('comparison.row.trial.netflix'), disney: t('comparison.row.trial.disney'), cable: t('comparison.row.trial.cable') },
-      { label: t('comparison.row.contract'), iptv: t('comparison.row.contract.iptv'), netflix: t('comparison.row.contract.netflix'), disney: t('comparison.row.contract.disney'), cable: t('comparison.row.contract.cable') },
-      { label: t('comparison.row.support'), iptv: t('comparison.row.support.iptv'), netflix: t('comparison.row.support.netflix'), disney: t('comparison.row.support.disney'), cable: t('comparison.row.support.cable') },
+      {
+        label: t("comparison.row.channels"),
+        iptv: t("comparison.row.channels.iptv"),
+        netflix: t("comparison.row.channels.netflix"),
+        disney: t("comparison.row.channels.disney"),
+        cable: t("comparison.row.channels.cable"),
+      },
+      {
+        label: t("comparison.row.quality"),
+        iptv: t("comparison.row.quality.iptv"),
+        netflix: t("comparison.row.quality.netflix"),
+        disney: t("comparison.row.quality.disney"),
+        cable: t("comparison.row.quality.cable"),
+      },
+      {
+        label: t("comparison.row.sports"),
+        iptv: t("comparison.row.sports.iptv"),
+        netflix: t("comparison.row.sports.netflix"),
+        disney: t("comparison.row.sports.disney"),
+        cable: t("comparison.row.sports.cable"),
+      },
+      {
+        label: t("comparison.row.vod"),
+        iptv: t("comparison.row.vod.iptv"),
+        netflix: t("comparison.row.vod.netflix"),
+        disney: t("comparison.row.vod.disney"),
+        cable: t("comparison.row.vod.cable"),
+      },
+      {
+        label: t("comparison.row.devices"),
+        iptv: t("comparison.row.devices.iptv"),
+        netflix: t("comparison.row.devices.netflix"),
+        disney: t("comparison.row.devices.disney"),
+        cable: t("comparison.row.devices.cable"),
+      },
+      {
+        label: t("comparison.row.price"),
+        iptv: t("comparison.row.price.iptv"),
+        netflix: t("comparison.row.price.netflix"),
+        disney: t("comparison.row.price.disney"),
+        cable: t("comparison.row.price.cable"),
+        highlight: true,
+      },
+      {
+        label: t("comparison.row.trial"),
+        iptv: t("comparison.row.trial.iptv"),
+        netflix: t("comparison.row.trial.netflix"),
+        disney: t("comparison.row.trial.disney"),
+        cable: t("comparison.row.trial.cable"),
+      },
+      {
+        label: t("comparison.row.contract"),
+        iptv: t("comparison.row.contract.iptv"),
+        netflix: t("comparison.row.contract.netflix"),
+        disney: t("comparison.row.contract.disney"),
+        cable: t("comparison.row.contract.cable"),
+      },
+      {
+        label: t("comparison.row.support"),
+        iptv: t("comparison.row.support.iptv"),
+        netflix: t("comparison.row.support.netflix"),
+        disney: t("comparison.row.support.disney"),
+        cable: t("comparison.row.support.cable"),
+      },
     ]}
-    ctaText={t('comparison.cta')}
+    ctaText={t("comparison.cta")}
     ctaUrl={whatsappUrl}
-    note={t('comparison.note')}
+    note={t("comparison.note")}
   />
-
 
   <!-- ===== PRICING ===== -->
   <section class="section section-alt">
     <div class="container-custom">
       <div class="text-center mb-14">
-        <span class="section-eyebrow">{t('pricing.eyebrow')}</span>
-        <h2 class="section-title">{t('pricing.title')}</h2>
-        <p class="section-subtitle mx-auto">{t('pricing.subtitle')}</p>
+        <span class="section-eyebrow">{t("pricing.eyebrow")}</span>
+        <h2 class="section-title">{t("pricing.title")}</h2>
+        <p class="section-subtitle mx-auto">{t("pricing.subtitle")}</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
         <PricingCard
-          name={t('pricing.3months')}
-          price={t('pricing.3months.price')}
-          period={t('pricing.period.3months')}
+          name={t("pricing.3months")}
+          price={t("pricing.3months.price")}
+          period={t("pricing.period.3months")}
           features={pricingFeatures}
-          ctaLabel={t('pricing.cta')}
-          trialLabel={t('pricing.trial')}
+          ctaLabel={t("pricing.cta")}
+          trialLabel={t("pricing.trial")}
         />
         <PricingCard
-          name={t('pricing.6months')}
-          price={t('pricing.6months.price')}
-          period={t('pricing.period.6months')}
+          name={t("pricing.6months")}
+          price={t("pricing.6months.price")}
+          period={t("pricing.period.6months")}
           features={pricingFeatures}
-          ctaLabel={t('pricing.cta')}
-          trialLabel={t('pricing.trial')}
-          popularLabel={t('pricing.popular')}
+          ctaLabel={t("pricing.cta")}
+          trialLabel={t("pricing.trial")}
+          popularLabel={t("pricing.popular")}
         />
         <PricingCard
-          name={t('pricing.1year')}
-          price={t('pricing.1year.price')}
-          period={t('pricing.period.1year')}
-          originalPrice={t('pricing.originalPrice')}
-          savings={t('pricing.savings')}
+          name={t("pricing.1year")}
+          price={t("pricing.1year.price")}
+          period={t("pricing.period.1year")}
+          originalPrice={t("pricing.originalPrice")}
+          savings={t("pricing.savings")}
           features={pricingFeatures}
-          ctaLabel={t('pricing.cta')}
-          trialLabel={t('pricing.trial')}
+          ctaLabel={t("pricing.cta")}
+          trialLabel={t("pricing.trial")}
           featured={true}
-          popularLabel={t('pricing.bestValue')}
+          popularLabel={t("pricing.bestValue")}
         />
       </div>
 
       <!-- Payment methods -->
       <div class="text-center mt-8 reveal">
-        <div class="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-surface-900/50 border border-surface-800/30">
+        <div
+          class="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-surface-900/50 border border-surface-800/30"
+        >
           <PaymentIcons />
-          <span class="text-surface-300 text-sm font-medium">{t('payment.methods')}</span>
+          <span class="text-surface-300 text-sm font-medium">{t("payment.methods")}</span>
           <span class="w-1 h-1 rounded-full bg-green-500"></span>
-          <span class="text-surface-500 text-xs">{t('payment.trust')}</span>
+          <span class="text-surface-500 text-xs">{t("payment.trust")}</span>
         </div>
       </div>
     </div>
   </section>
 
-
   <!-- ===== SAVINGS COMPARISON ===== -->
   <SavingsComparison
-    title={t('savings.title')}
-    subtitle={t('savings.subtitle')}
-    headerPlan={t('savings.headerPlan')}
-    headerMonthly={t('savings.headerMonthly')}
-    headerOurPrice={t('savings.headerOurPrice')}
-    headerSavings={t('savings.headerSavings')}
-    monthlyRate={t('savings.monthlyRate')}
-    eyebrow={t('savings.eyebrow')}
-    bestDeal={t('savings.bestDeal')}
-    ctaText={t('savings.ctaText')}
-    ctaButton={t('savings.ctaButton')}
+    title={t("savings.title")}
+    subtitle={t("savings.subtitle")}
+    headerPlan={t("savings.headerPlan")}
+    headerMonthly={t("savings.headerMonthly")}
+    headerOurPrice={t("savings.headerOurPrice")}
+    headerSavings={t("savings.headerSavings")}
+    monthlyRate={t("savings.monthlyRate")}
+    eyebrow={t("savings.eyebrow")}
+    bestDeal={t("savings.bestDeal")}
+    ctaText={t("savings.ctaText")}
+    ctaButton={t("savings.ctaButton")}
     rows={[
-      { duration: t('pricing.3months'), monthlyCost: t('savings.3months.monthlyCost'), ourPrice: '€' + t('pricing.3months.price'), savings: t('savings.3months.savings'), savingsPct: t('savings.3months.pct') },
-      { duration: t('pricing.6months'), monthlyCost: t('savings.6months.monthlyCost'), ourPrice: '€' + t('pricing.6months.price'), savings: t('savings.6months.savings'), savingsPct: t('savings.6months.pct') },
-      { duration: t('pricing.1year'), monthlyCost: t('savings.1year.monthlyCost'), ourPrice: '€' + t('pricing.1year.price'), savings: t('savings.1year.savings'), savingsPct: t('savings.1year.pct'), featured: true },
+      {
+        duration: t("pricing.3months"),
+        monthlyCost: t("savings.3months.monthlyCost"),
+        ourPrice: "€" + t("pricing.3months.price"),
+        savings: t("savings.3months.savings"),
+        savingsPct: t("savings.3months.pct"),
+      },
+      {
+        duration: t("pricing.6months"),
+        monthlyCost: t("savings.6months.monthlyCost"),
+        ourPrice: "€" + t("pricing.6months.price"),
+        savings: t("savings.6months.savings"),
+        savingsPct: t("savings.6months.pct"),
+      },
+      {
+        duration: t("pricing.1year"),
+        monthlyCost: t("savings.1year.monthlyCost"),
+        ourPrice: "€" + t("pricing.1year.price"),
+        savings: t("savings.1year.savings"),
+        savingsPct: t("savings.1year.pct"),
+        featured: true,
+      },
     ]}
   />
 
   <!-- ===== TESTIMONIALS ===== -->
-  <Testimonials eyebrow={t('testimonials.eyebrow')} title={t('testimonials.title')} subtitle={t('testimonials.subtitle')} testimonials={testimonials} />
-
+  <Testimonials
+    eyebrow={t("testimonials.eyebrow")}
+    title={t("testimonials.title")}
+    subtitle={t("testimonials.subtitle")}
+    testimonials={testimonials}
+  />
 
   <!-- ===== FAQ ===== -->
-  <FAQ eyebrow={t('faq.eyebrow')} title={t('faq.title')} subtitle={t('faq.subtitle')} items={faqItems} />
-
+  <FAQ
+    eyebrow={t("faq.eyebrow")}
+    title={t("faq.title")}
+    subtitle={t("faq.subtitle")}
+    items={faqItems}
+  />
 
   <!-- ===== FINAL CTA ===== -->
   <section class="relative py-24 md:py-32 overflow-hidden reveal">
@@ -377,16 +567,24 @@ const productSchema = {
 
     <div class="container-custom relative z-10 text-center">
       <div class="max-w-2xl mx-auto">
-        <span class="section-eyebrow mx-auto justify-center">{t('cta.final.eyebrow')}</span>
+        <span class="section-eyebrow mx-auto justify-center">{t("cta.final.eyebrow")}</span>
         <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-4 leading-tight">
-          {t('cta.final.title')}
+          {t("cta.final.title")}
         </h2>
         <p class="text-surface-400 text-lg mb-10 leading-relaxed">
-          {t('cta.final.subtitle')}
+          {t("cta.final.subtitle")}
         </p>
-        <a href={whatsappUrl} class="btn-whatsapp text-xl px-12 py-5" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" data-track-label="Final CTA" data-track-category="conversion">
+        <a
+          href={whatsappUrl}
+          class="btn-whatsapp text-xl px-12 py-5"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-track="whatsapp_click"
+          data-track-label="Final CTA"
+          data-track-category="conversion"
+        >
           <WhatsAppIcon class="h-6 w-6" />
-          {t('cta.final.button')}
+          {t("cta.final.button")}
         </a>
         <div class="mt-4">
           <PayPalBadge />
@@ -395,75 +593,78 @@ const productSchema = {
     </div>
 
     <!-- Bottom fade -->
-    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-surface-950 to-transparent pointer-events-none"></div>
+    <div
+      class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-surface-950 to-transparent pointer-events-none"
+    >
+    </div>
   </section>
 </BaseLayout>
 <style is:global>
-/* ============================================
+  /* ============================================
    HERO ORB BACKGROUNDS
    ============================================ */
 
-.hero-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.3;
-  pointer-events: none;
-}
+  .hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.3;
+    pointer-events: none;
+  }
 
-.hero-orb-1 {
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.4), transparent 70%);
-  top: -200px;
-  right: -100px;
-  animation: drift 25s ease-in-out infinite;
-}
+  .hero-orb-1 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(124, 58, 237, 0.4), transparent 70%);
+    top: -200px;
+    right: -100px;
+    animation: drift 25s ease-in-out infinite;
+  }
 
-.hero-orb-2 {
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(34, 211, 238, 0.3), transparent 70%);
-  bottom: -150px;
-  left: -100px;
-  animation: drift 30s ease-in-out 5s infinite;
-}
+  .hero-orb-2 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(34, 211, 238, 0.3), transparent 70%);
+    bottom: -150px;
+    left: -100px;
+    animation: drift 30s ease-in-out 5s infinite;
+  }
 
-.hero-orb-3 {
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.25), transparent 70%);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: pulse-glow 8s ease-in-out infinite;
-}
+  .hero-orb-3 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.25), transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse-glow 8s ease-in-out infinite;
+  }
 
-/* ============================================
+  /* ============================================
    STAT COUNTER
    ============================================ */
 
-.stat-number {
-  font-size: 3rem;
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--color-brand-400), var(--color-cyan-400));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  line-height: 1;
-}
+  .stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--color-brand-400), var(--color-cyan-400));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 1;
+  }
 
-.stat-label {
-  color: var(--color-surface-400);
-  font-size: 0.9375rem;
-  margin-top: 0.5rem;
-}
+  .stat-label {
+    color: var(--color-surface-400);
+    font-size: 0.9375rem;
+    margin-top: 0.5rem;
+  }
 
-/* Stat counter count-up animation */
-.stat-item {
-  transition: transform 0.3s ease;
-}
-.stat-item:hover {
-  transform: translateY(-4px);
-}
+  /* Stat counter count-up animation */
+  .stat-item {
+    transition: transform 0.3s ease;
+  }
+  .stat-item:hover {
+    transform: translateY(-4px);
+  }
 </style>

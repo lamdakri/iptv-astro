@@ -1,13 +1,13 @@
 ---
-import { getLangFromUrl, useTranslations, LANGUAGES } from '../i18n/ui';
-import SEOHead from '../components/SEOHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
-import LanguageBanner from '../components/LanguageBanner.astro';
-import ArabicFont from '../components/ArabicFont.astro';
-import '../styles/globals.css';
-import '../styles/fonts.css';
+import { getLangFromUrl, useTranslations, LANGUAGES } from "../i18n/ui";
+import SEOHead from "../components/SEOHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import FloatingWhatsApp from "../components/FloatingWhatsApp.astro";
+import LanguageBanner from "../components/LanguageBanner.astro";
+import ArabicFont from "../components/ArabicFont.astro";
+import "../styles/globals.css";
+import "../styles/fonts.css";
 
 interface Props {
   title: string;
@@ -23,29 +23,50 @@ interface Props {
   articleTags?: string[];
   articleSection?: string;
   keywords?: string;
+  twitterSite?: string;
+  twitterCreator?: string;
   alternateLangs?: { lang: string; url: string }[];
 }
 
-const { title, description, ogImage, ogImageAlt, ogType, schema, robots = 'index, follow', articlePublishedTime, articleModifiedTime, articleAuthor, articleTags, articleSection, keywords, alternateLangs: alternateLangsOverride } = Astro.props;
+const {
+  title,
+  description,
+  ogImage,
+  ogImageAlt,
+  ogType,
+  schema,
+  robots = "index, follow",
+  articlePublishedTime,
+  articleModifiedTime,
+  articleAuthor,
+  articleTags,
+  articleSection,
+  keywords,
+  twitterSite,
+  twitterCreator,
+  alternateLangs: alternateLangsOverride,
+} = Astro.props;
 const lang = getLangFromUrl(Astro.url) as keyof typeof LANGUAGES;
-const dir = LANGUAGES[lang]?.dir || 'ltr';
+const dir = LANGUAGES[lang]?.dir || "ltr";
 const t = useTranslations(lang);
 const canonicalURL = Astro.url.href;
 
-const siteBase = (Astro.site?.href || 'https://iptv4kworld.com').replace(/\/$/, '');
-const alternateLangs = alternateLangsOverride ?? Object.keys(LANGUAGES).map((code) => {
-  const pathSegments = Astro.url.pathname.split('/').filter(Boolean);
-  if (pathSegments.length > 0 && pathSegments[0] in LANGUAGES) {
-    pathSegments[0] = code;
-  }
-  return {
-    lang: LANGUAGES[code as keyof typeof LANGUAGES]?.locale || code,
-    url: `${siteBase}/${pathSegments.length ? pathSegments.join('/') + '/' : ''}`,
-  };
-});
+const siteBase = (Astro.site?.href || "https://iptv4kworld.com").replace(/\/$/, "");
+const alternateLangs =
+  alternateLangsOverride ??
+  Object.keys(LANGUAGES).map((code) => {
+    const pathSegments = Astro.url.pathname.split("/").filter(Boolean);
+    if (pathSegments.length > 0 && pathSegments[0] in LANGUAGES) {
+      pathSegments[0] = code;
+    }
+    return {
+      lang: LANGUAGES[code as keyof typeof LANGUAGES]?.locale || code,
+      url: `${siteBase}/${pathSegments.length ? pathSegments.join("/") + "/" : ""}`,
+    };
+  });
 
 // x-default hreflang must always point to the English (default) version
-const xDefaultUrl = alternateLangs.find((a) => a.lang === 'en-US')?.url || canonicalURL;
+const xDefaultUrl = alternateLangs.find((a) => a.lang === "en-US")?.url || canonicalURL;
 
 const gaScript = `
   window.dataLayer = window.dataLayer || [];
@@ -56,7 +77,7 @@ const gaScript = `
 ---
 
 <!doctype html>
-<html lang={LANGUAGES[lang]?.locale || 'en'} dir={dir}>
+<html lang={LANGUAGES[lang]?.locale || "en"} dir={dir}>
   <head>
     <meta charset="UTF-8" />
     <meta name="theme-color" content="#0f172a" />
@@ -79,6 +100,8 @@ const gaScript = `
       articleTags={articleTags}
       articleSection={articleSection}
       keywords={keywords}
+      twitterSite={twitterSite}
+      twitterCreator={twitterCreator}
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
@@ -87,7 +110,7 @@ const gaScript = `
     <!-- ═══ Font Loading ═══ -->
     <!-- Inter (weights 400-800) is self-hosted via Fontsource — zero external requests -->
     <!-- Noto Naskh Arabic (400, 600, 700) is also self-hosted via Fontsource — only on Arabic pages -->
-    {lang === 'ar' && <ArabicFont />}
+    {lang === "ar" && <ArabicFont />}
 
     <!-- DNS prefetch for WhatsApp (used on every page for CTAs) -->
     <link rel="dns-prefetch" href="https://wa.me" />
@@ -95,34 +118,44 @@ const gaScript = `
 
     <!-- Google Analytics (deferred to idle — keeps 163KB off the critical path) -->
     <script is:inline>
-      (function() {
+      (function () {
         const MAX_DELAY = 4000;
         function loadGA() {
-          const s = document.createElement('script');
+          const s = document.createElement("script");
           s.async = true;
-          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-GV3H6SQGFT';
+          s.src = "https://www.googletagmanager.com/gtag/js?id=G-GV3H6SQGFT";
           document.head.appendChild(s);
         }
-        if ('requestIdleCallback' in window) {
+        if ("requestIdleCallback" in window) {
           requestIdleCallback(loadGA, { timeout: MAX_DELAY });
         } else {
           setTimeout(loadGA, MAX_DELAY);
         }
       })();
     </script>
-    <script set:html={gaScript} is:inline></script>
+    <script set:html={gaScript} is:inline />
     <noscript>
       <style>
-        .reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade {
+        .reveal,
+        .reveal-left,
+        .reveal-right,
+        .reveal-scale,
+        .reveal-fade {
           opacity: 1 !important;
           transform: none !important;
         }
-        #countdown-timer { display: none !important; }
+        #countdown-timer {
+          display: none !important;
+        }
       </style>
     </noscript>
   </head>
   <body class="font-sans">
-    <a href="#main-content" class="sr-only focus:w-auto focus:h-auto focus:overflow-visible focus:[clip:auto] focus:whitespace-normal focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-3 focus:bg-brand-600 focus:text-white focus:rounded-lg focus:font-semibold focus:outline-none focus:ring-2 focus:ring-brand-400">{t('a11y.skipToContent')}</a>
+    <a
+      href="#main-content"
+      class="sr-only focus:w-auto focus:h-auto focus:overflow-visible focus:[clip:auto] focus:whitespace-normal focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-3 focus:bg-brand-600 focus:text-white focus:rounded-lg focus:font-semibold focus:outline-none focus:ring-2 focus:ring-brand-400"
+      >{t("a11y.skipToContent")}</a
+    >
     <LanguageBanner />
     <Header />
     <main id="main-content">
@@ -132,5 +165,6 @@ const gaScript = `
     <FloatingWhatsApp />
     <script src="/scripts/reveal.js" defer is:inline></script>
     <script src="/scripts/analytics.js" defer is:inline></script>
+
   </body>
 </html>

@@ -456,16 +456,14 @@ const articleSchema = {
           }, 2000);
         })
         .catch(function () {
-          // Fallback: select text
-          var input = document.createElement("input");
-          input.value = window.location.href;
-          document.body.appendChild(input);
-          input.select();
-          document.execCommand("copy");
-          document.body.removeChild(input);
-          label.textContent = copiedText;
+          // Clipboard API unavailable — show error state briefly
+          label.textContent = "⚠";
+          label.style.color = "#f87171";
+          label.style.borderColor = "#f87171";
           setTimeout(function () {
             label.textContent = originalText;
+            label.style.color = "";
+            label.style.borderColor = "";
           }, 2000);
         });
     });

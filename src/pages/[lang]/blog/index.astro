@@ -73,6 +73,8 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout title={pageTitle} description={t("blog.subtitle")} schema={blogSchema}>
+  <!-- BreadcrumbList structured data -->
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} is:inline />
   <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
     <div class="hero-orb-1"></div>
     <div class="hero-orb-2"></div>

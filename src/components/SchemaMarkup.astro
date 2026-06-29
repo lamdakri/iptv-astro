@@ -1,63 +1,71 @@
 ---
-import { getLangFromUrl } from '../i18n/ui';
-import { WHATSAPP_NUMBER as WA } from '../i18n/whatsapp';
+import { getLangFromUrl } from "../i18n/ui";
+import { WHATSAPP_NUMBER as WA } from "../i18n/whatsapp";
 
 interface Props {
-  type: 'faq' | 'product' | 'organization';
+  type: "faq" | "product" | "organization";
   data?: Record<string, unknown>;
 }
 
 const { type, data = {} } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
-const siteUrl = Astro.site?.href || 'https://iptv4kworld.com';
+const siteUrl = Astro.site?.href || "https://iptv4kworld.com";
 
 let schema: Record<string, unknown>;
 
-if (type === 'faq') {
+if (type === "faq") {
   schema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: (data.questions as Array<{question: string; answer: string}> || []).map((q) => ({
-      '@type': 'Question',
-      name: q.question,
-      acceptedAnswer: { '@type': 'Answer', text: q.answer },
-    })),
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: ((data.questions as Array<{ question: string; answer: string }>) || []).map(
+      (q) => ({
+        "@type": "Question",
+        name: q.question,
+        acceptedAnswer: { "@type": "Answer", text: q.answer },
+      }),
+    ),
     inLanguage: lang,
   };
-} else if (type === 'product') {
+} else if (type === "product") {
   schema = {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: data.name || 'IPTV 4K World',
-    description: data.description || 'Premium IPTV subscription service',
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: data.name || "IPTV 4K World",
+    description: data.description || "Premium IPTV subscription service",
     offers: {
-      '@type': 'AggregateOffer',
-      lowPrice: data.lowPrice || '9.99',
-      highPrice: data.highPrice || '59.99',
-      priceCurrency: data.currency || 'EUR',
-      availability: 'https://schema.org/InStock',
+      "@type": "AggregateOffer",
+      offerCount: 3,
+      lowPrice: data.lowPrice || "9.99",
+      highPrice: data.highPrice || "59.99",
+      priceCurrency: data.currency || "EUR",
+      availability: "https://schema.org/InStock",
     },
   };
 } else {
   schema = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'IPTV 4K World',
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "IPTV 4K World",
     url: siteUrl,
-    description: 'Premium IPTV streaming service with 20,000+ channels in 4K quality',
+    description: "Premium IPTV streaming service with 20,000+ channels in 4K quality",
     logo: `${siteUrl}/favicon.svg`,
-    sameAs: [
-      `https://wa.me/${WA}`,
-      'https://t.me/iptv4kworld',
-    ],
+    sameAs: [`https://wa.me/${WA}`, "https://t.me/iptv4kworld"],
     contactPoint: {
-      '@type': 'ContactPoint',
-      contactType: 'customer support',
-      availableLanguage: ['English', 'French', 'Arabic', 'Spanish', 'German', 'Italian', 'Portuguese'],
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      availableLanguage: [
+        "English",
+        "French",
+        "Arabic",
+        "Spanish",
+        "German",
+        "Italian",
+        "Portuguese",
+      ],
       url: `https://wa.me/${WA}`,
     },
   };
 }
 ---
 
-<script type="application/ld+json" set:html={JSON.stringify(schema)} is:inline></script>
+<script type="application/ld+json" set:html={JSON.stringify(schema)} is:inline />

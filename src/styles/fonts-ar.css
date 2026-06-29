@@ -1,0 +1,11 @@
+/* ============================================
+   Self-Hosted Noto Naskh Arabic (via Fontsource)
+   ============================================ */
+/* Replaces the external fonts.googleapis.com request for Arabic pages. */
+/* Weight files include Arabic subset with unicode-range.               */
+/* Woff2 files are hashed and output to _astro/ by Vite.                */
+
+/* Arabic subset only — strips latin, latin-ext, math, symbols (12 woff2 files saved) */
+@import '@fontsource/noto-naskh-arabic/arabic-400.css';
+@import '@fontsource/noto-naskh-arabic/arabic-600.css';
+@import '@fontsource/noto-naskh-arabic/arabic-700.css';

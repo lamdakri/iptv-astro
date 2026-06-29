@@ -49,10 +49,44 @@ async function convertOgImages() {
     }
   }
 
-  console.log('✅ OG PNG images generated successfully!');
+    console.log('✅ OG PNG images generated successfully!');
 }
 
-convertOgImages().catch((err) => {
-  console.error('❌ OG image conversion failed:', err);
+// Generate favicon PNGs (192px + 512px) from the master SVG
+// Keep these in sync with any future SVG edits
+async function convertFavicons() {
+  const srcDir = path.resolve(__dirname, '../public');
+  const svgPath = path.join(srcDir, 'favicon.svg');
+
+  if (!fs.existsSync(svgPath)) {
+    console.log('⚠ No favicon.svg found in public/');
+    return;
+  }
+
+  const svgContent = fs.readFileSync(svgPath, 'utf8');
+
+  // 192x192 — PWA install icon
+  await sharp(Buffer.from(svgContent))
+    .resize(192, 192)
+    .png()
+    .toFile(path.join(srcDir, 'favicon.png'));
+  console.log('  ✅ favicon.svg → favicon.png (192×192)');
+
+  // 512x512 — high-DPI Android install screen
+  await sharp(Buffer.from(svgContent))
+    .resize(512, 512)
+    .png()
+    .toFile(path.join(srcDir, 'favicon-512.png'));
+  console.log('  ✅ favicon.svg → favicon-512.png (512×512)');
+
+  console.log('✅ Favicon PNGs generated successfully!');
+}
+
+(async () => {
+  await convertOgImages();
+  console.log('');
+  await convertFavicons();
+})().catch((err) => {
+  console.error('❌ Prebuild image conversion failed:', err);
   process.exit(1);
 });

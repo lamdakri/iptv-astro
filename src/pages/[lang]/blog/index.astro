@@ -1,9 +1,11 @@
 ---
-import { getCollection } from 'astro:content';
-import { useTranslations, LANGUAGES } from '../../../i18n/ui';
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import BlogCard from '../../../components/BlogCard.astro';
-import Breadcrumb from '../../../components/Breadcrumb.astro';
+import { getCollection } from "astro:content";
+import { useTranslations, LANGUAGES } from "../../../i18n/ui";
+import { Image } from "astro:assets";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BlogCard from "../../../components/BlogCard.astro";
+import Breadcrumb from "../../../components/Breadcrumb.astro";
+import { getWhatsAppUrl, getWhatsAppTrialMsg } from "../../../i18n/whatsapp";
 
 export function getStaticPaths() {
   return Object.keys(LANGUAGES).map((lang) => ({ params: { lang } }));
@@ -12,60 +14,482 @@ export function getStaticPaths() {
 const { lang } = Astro.params;
 const t = useTranslations(lang);
 
-const allPosts = await getCollection('blog', ({ data }) => !data.draft && data.lang === lang);
+const allPosts = await getCollection("blog", ({ data }) => !data.draft && data.lang === lang);
 const posts = allPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const [featured, ...remainingPosts] = posts;
+const INITIAL_POSTS = 6;
+const hasMore = remainingPosts.length > INITIAL_POSTS;
 
-const pageTitle = t('blog.title') + ' | ' + t('site.name');
-const siteUrl = Astro.site?.href || 'https://iptv4kworld.com';
-const blogUrl = siteUrl.replace(/\/$/, '') + '/' + lang + '/blog/';
+const categories = [...new Set(posts.map((p) => p.data.category).filter(Boolean))] as string[];
+
+const localeMap: Record<string, string> = {
+  en: "en-US",
+  fr: "fr-FR",
+  ar: "ar-SA",
+  es: "es-ES",
+  de: "de-DE",
+  it: "it-IT",
+  pt: "pt-BR",
+};
+const fmtLocale = localeMap[lang] || "en-US";
+
+const pageTitle = t("blog.title") + " | " + t("site.name");
+const siteUrl = Astro.site?.href || "https://iptv4kworld.com";
+const blogUrl = siteUrl.replace(/\/$/, "") + "/" + lang + "/blog/";
 
 const blogSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Blog',
-  name: t('blog.title'),
-  description: t('blog.subtitle'),
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: t("blog.title"),
+  description: t("blog.subtitle"),
   url: blogUrl,
   inLanguage: lang,
   blogPost: posts.map((post) => ({
-    '@type': 'BlogPosting',
+    "@type": "BlogPosting",
     headline: post.data.title,
-    url: siteUrl.replace(/\/$/, '') + '/' + lang + '/blog/' + post.slug + '/',
+    url: siteUrl.replace(/\/$/, "") + "/" + lang + "/blog/" + post.slug + "/",
     datePublished: post.data.date.toISOString(),
-    author: { '@type': 'Person', name: post.data.author },
+    author: { "@type": "Person", name: post.data.author },
   })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: t("breadcrumb.home"),
+      item: new URL("/" + lang + "/", Astro.site || "https://iptv4kworld.com").href,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: t("blog.title"),
+    },
+  ],
 };
 ---
 
-<BaseLayout title={pageTitle} description={t('blog.subtitle')} schema={blogSchema}>
-  <section class="pt-32 pb-20">
-    <div class="container-custom">
-      <Breadcrumb items={[
-        { label: t('breadcrumb.home'), href: '/' + lang + '/' },
-        { label: t('blog.title') },
-      ]} />
+<BaseLayout title={pageTitle} description={t("blog.subtitle")} schema={blogSchema}>
+  <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+    <div class="hero-orb-1"></div>
+    <div class="hero-orb-2"></div>
+  </div>
 
-      <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 reveal">{t('blog.title')}</h1>
-      <p class="text-surface-400 text-lg mb-12 reveal" data-reveal-delay="100">{t('blog.subtitle')}</p>
+  <section class="relative pt-32 pb-16 overflow-hidden">
+    <div
+      class="absolute inset-0 bg-gradient-to-b from-brand-950/30 via-surface-950/90 to-surface-950"
+    >
+    </div>
+    <div
+      class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-brand-600/10 rounded-full blur-[120px]"
+    >
+    </div>
 
-      {posts.length === 0 ? (
-        <p class="text-surface-500 text-center py-20">{t('blog.noPosts')}</p>
-      ) : (
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {posts.map((post, i) => (
-            <div class="reveal reveal-scale" data-reveal-delay={String(i * 120)}>
-            <BlogCard
-              title={post.data.title}
-              description={post.data.description}
-              slug={post.slug}
-              lang={lang}
-              date={post.data.date}
-              category={post.data.category}
-              image={post.data.image}
+    <div class="container-custom relative">
+      <Breadcrumb
+        items={[
+          { label: t("breadcrumb.home"), href: "/" + lang + "/" },
+          { label: t("blog.title") },
+        ]}
+      />
+
+      <div class="text-center max-w-3xl mx-auto mt-8 reveal">
+        <span class="section-eyebrow">{t("nav.blog")}</span>
+        <h1
+          class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mt-4 mb-6 leading-tight"
+        >
+          {t("blog.title")}
+        </h1>
+        <p class="text-lg md:text-xl text-surface-400 leading-relaxed">{t("blog.subtitle")}</p>
+
+        <div class="max-w-xl mx-auto mt-8 relative reveal" data-reveal-delay="150">
+          <div class="relative">
+            <svg
+              class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-surface-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+            <input
+              type="text"
+              id="blog-search"
+              placeholder={t("search.placeholder")}
+              class="w-full pl-12 pr-6 py-4 bg-surface-900/60 backdrop-blur-md border border-surface-800 rounded-2xl text-white placeholder-surface-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500/30 transition-all duration-300"
             />
-            </div>
-          ))}
+          </div>
         </div>
-      )}
+
+        <div
+          class="flex flex-wrap items-center justify-center gap-4 mt-10 reveal"
+          data-reveal-delay="200"
+        >
+          <div class="glass-card px-5 py-3 rounded-xl flex items-center gap-3">
+            <span
+              class="w-8 h-8 rounded-lg bg-brand-600/20 flex items-center justify-center text-brand-400 text-sm font-bold"
+              >{posts.length}</span
+            >
+            <span class="text-surface-400 text-sm font-medium">{t("blog.stats.posts")}</span>
+          </div>
+          <div class="glass-card px-5 py-3 rounded-xl flex items-center gap-3">
+            <span
+              class="w-8 h-8 rounded-lg bg-cyan-600/20 flex items-center justify-center text-cyan-400 text-sm font-bold"
+              >{categories.length}</span
+            >
+            <span class="text-surface-400 text-sm font-medium">{t("blog.stats.categories")}</span>
+          </div>
+          <div class="glass-card px-5 py-3 rounded-xl flex items-center gap-3">
+            <span
+              class="w-8 h-8 rounded-lg bg-amber-600/20 flex items-center justify-center text-amber-400 text-sm font-bold"
+              >7</span
+            >
+            <span class="text-surface-400 text-sm font-medium">{t("blog.stats.languages")}</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+
+  <section class="pb-20">
+    <div class="container-custom">
+      {
+        posts.length === 0 ? (
+          <div class="text-center py-20 reveal">
+            <div class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-surface-800 flex items-center justify-center">
+              <svg
+                class="w-10 h-10 text-surface-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                />
+              </svg>
+            </div>
+            <p class="text-surface-500 text-lg">{t("blog.noPosts")}</p>
+          </div>
+        ) : (
+          <>
+            {featured && (
+              <div class="reveal reveal-scale mb-16">
+                <span class="section-eyebrow">{t("blog.featured")}</span>
+                <a href={`/${lang}/blog/${featured.slug}/`} class="block mt-4 group">
+                  <article class="glass-card rounded-2xl overflow-hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-0">
+                      {featured.data.image && (
+                        <div class="lg:col-span-2 relative overflow-hidden">
+                          <Image
+                            src={featured.data.image}
+                            alt={featured.data.title}
+                            class="w-full h-64 lg:h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            loading="eager"
+                            format="webp"
+                            widths={[400, 800, 1200]}
+                            sizes="(max-width: 1024px) 100vw, 40vw"
+                          />
+                          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-surface-950/80 hidden lg:block" />
+                          <div class="absolute inset-0 bg-gradient-to-t from-surface-950/80 to-transparent lg:hidden" />
+                        </div>
+                      )}
+                      <div
+                        class={`lg:col-span-${featured.data.image ? "3" : "5"} p-8 lg:p-10 flex flex-col justify-center`}
+                      >
+                        {featured.data.category && (
+                          <span class="inline-block px-3 py-1 rounded-full bg-brand-600/20 text-brand-400 text-xs font-semibold uppercase tracking-wider mb-4 w-fit">
+                            {featured.data.category}
+                          </span>
+                        )}
+                        <h2 class="text-2xl lg:text-3xl font-bold text-white mb-4 group-hover:text-brand-400 transition-colors">
+                          {featured.data.title}
+                        </h2>
+                        <p class="text-surface-400 leading-relaxed mb-6 line-clamp-3">
+                          {featured.data.description}
+                        </p>
+                        <div class="flex items-center gap-4 text-sm text-surface-500">
+                          <span>{featured.data.author}</span>
+                          <span class="text-surface-700">·</span>
+                          <time datetime={featured.data.date.toISOString()}>
+                            {new Date(featured.data.date).toLocaleDateString(fmtLocale, {
+                              year: "numeric",
+                              month: "long",
+                              day: "numeric",
+                            })}
+                          </time>
+                          <span class="text-surface-700">·</span>
+                          <span class="text-brand-400 font-medium">{t("blog.readMore")} →</span>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+              </div>
+            )}
+
+            {categories.length > 1 && (
+              <div class="flex flex-wrap items-center gap-3 mb-12 reveal" data-reveal-delay="100">
+                <span class="text-surface-500 text-sm font-medium mr-2">{t("blog.filterBy")}:</span>
+                <button
+                  class="blog-filter-btn active px-4 py-2 rounded-full bg-brand-600 text-white text-sm font-medium transition-all duration-300 hover:bg-brand-500"
+                  data-category="all"
+                >
+                  {t("blog.all")}
+                </button>
+                {categories.map((cat) => (
+                  <button
+                    class="blog-filter-btn px-4 py-2 rounded-full bg-surface-800 text-surface-400 text-sm font-medium transition-all duration-300 hover:bg-surface-700 hover:text-white border border-surface-700"
+                    data-category={cat.toLowerCase().replace(/\s+/g, "-")}
+                  >
+                    {cat}
+                  </button>
+                ))}
+              </div>
+            )}
+
+            <div
+              class="blog-posts-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+              id="blog-posts-grid"
+              data-init-posts={INITIAL_POSTS}
+            >
+              {remainingPosts.map((post, i) => (
+                <div
+                  class:list={[
+                    "reveal reveal-scale blog-post-item",
+                    { hidden: i >= INITIAL_POSTS },
+                  ]}
+                  data-post-index={i}
+                  data-reveal-delay={String(i * 100)}
+                  data-category={post.data.category?.toLowerCase().replace(/\s+/g, "-") || ""}
+                >
+                  <BlogCard
+                    title={post.data.title}
+                    description={post.data.description}
+                    slug={post.slug}
+                    lang={lang}
+                    date={post.data.date}
+                    category={post.data.category}
+                    image={post.data.image}
+                  />
+                </div>
+              ))}
+            </div>
+            {hasMore && (
+              <div class="text-center mt-10" id="load-more-container">
+                <button
+                  id="load-more-btn"
+                  class="btn-outline px-8 py-3 rounded-full font-semibold text-surface-200 border-surface-600 hover:border-brand-500 hover:text-brand-400 transition-all duration-300 hover-lift"
+                >
+                  {t("blog.loadMore") || "Load More Articles"} →
+                </button>
+              </div>
+            )}
+          </>
+        )
+      }
+    </div>
+  </section>
+
+  <section class="pb-24 reveal reveal-scale">
+    <div class="container-custom">
+      <div class="relative glass-card rounded-3xl p-10 md:p-16 text-center overflow-hidden">
+        <div
+          class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brand-600/10 rounded-full blur-[100px]"
+        >
+        </div>
+        <div
+          class="absolute bottom-0 right-0 w-[400px] h-[200px] bg-cyan-600/5 rounded-full blur-[80px]"
+        >
+        </div>
+
+        <div class="relative z-10">
+          <span class="section-eyebrow">{t("promo.eyebrow")}</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4 mb-4">
+            {t("cta.final.title")}
+          </h2>
+          <p class="text-surface-400 text-lg max-w-2xl mx-auto mb-8">{t("cta.final.subtitle")}</p>
+          <a
+            href={getWhatsAppUrl(getWhatsAppTrialMsg(t))}
+            class="btn-whatsapp"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t("cta.final.button")}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SCRIPTS & STYLES ===== -->
 </BaseLayout>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", function () {
+    var grid = document.getElementById("blog-posts-grid");
+    var INITIAL_POSTS = grid ? parseInt(grid.dataset.initPosts) : 6;
+    var filterBtns = document.querySelectorAll(".blog-filter-btn");
+    var postItems = document.querySelectorAll(".blog-post-item");
+    var searchInput = document.getElementById("blog-search");
+    var loadMoreBtn = document.getElementById("load-more-btn");
+
+    // ── Helper: re-apply hidden state when no search/filter active ──
+    function reapplyHidden() {
+      var activeCatBtn = document.querySelector(".blog-filter-btn.active");
+      var activeCat = activeCatBtn ? activeCatBtn.dataset.category : "all";
+      var query = searchInput ? searchInput.value.toLowerCase().trim() : "";
+      if (activeCat === "all" && !query) {
+        postItems.forEach(function (item) {
+          var idx = parseInt(item.dataset.postIndex);
+          if (idx >= INITIAL_POSTS && item.classList.contains("hidden")) {
+            item.style.display = "none";
+          } else {
+            item.style.display = "";
+          }
+        });
+      }
+    }
+
+    // ── Load More ──
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener("click", function () {
+        var hiddenItems = document.querySelectorAll(".blog-post-item.hidden");
+        var toShow = Math.min(hiddenItems.length, INITIAL_POSTS);
+        var activeCatBtn = document.querySelector(".blog-filter-btn.active");
+        var activeCat = activeCatBtn ? activeCatBtn.dataset.category : "all";
+
+        var searchQuery = searchInput ? searchInput.value.toLowerCase().trim() : "";
+
+        for (var j = 0; j < toShow; j++) {
+          hiddenItems[j].classList.remove("hidden");
+          var matchesFilter = activeCat === "all" || hiddenItems[j].dataset.category === activeCat;
+          var matchesSearch = true;
+          if (searchQuery) {
+            var title = (
+              (hiddenItems[j].querySelector("h3") &&
+                hiddenItems[j].querySelector("h3").textContent) ||
+              ""
+            ).toLowerCase();
+            var desc = (
+              (hiddenItems[j].querySelector("p") &&
+                hiddenItems[j].querySelector("p").textContent) ||
+              ""
+            ).toLowerCase();
+            matchesSearch = title.indexOf(searchQuery) !== -1 || desc.indexOf(searchQuery) !== -1;
+          }
+          hiddenItems[j].style.display = matchesFilter && matchesSearch ? "" : "none";
+        }
+
+        if (document.querySelectorAll(".blog-post-item.hidden").length === 0) {
+          loadMoreBtn.remove();
+        }
+      });
+    }
+
+    // ── Category Filter ──
+    if (filterBtns.length) {
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var category = this.dataset.category;
+
+          filterBtns.forEach(function (b) {
+            b.classList.remove("active", "bg-brand-600", "text-white");
+            b.classList.add("bg-surface-800", "text-surface-400", "border", "border-surface-700");
+          });
+          this.classList.add("active", "bg-brand-600", "text-white");
+          this.classList.remove(
+            "bg-surface-800",
+            "text-surface-400",
+            "border",
+            "border-surface-700",
+          );
+
+          postItems.forEach(function (item) {
+            if (category === "all" || item.dataset.category === category) {
+              item.style.display = "";
+              item.style.animation = "blogFadeIn 0.4s ease forwards";
+            } else {
+              item.style.display = "none";
+            }
+          });
+
+          // Re-apply hidden state when showing "all" with no search
+          if (category === "all") {
+            reapplyHidden();
+          }
+        });
+      });
+    }
+
+    // ── Search ──
+    if (searchInput) {
+      searchInput.addEventListener("input", function () {
+        var query = this.value.toLowerCase().trim();
+        postItems.forEach(function (item) {
+          var title = (
+            (item.querySelector("h3") && item.querySelector("h3").textContent) ||
+            ""
+          ).toLowerCase();
+          var desc = (
+            (item.querySelector("p") && item.querySelector("p").textContent) ||
+            ""
+          ).toLowerCase();
+          if (!query || title.indexOf(query) !== -1 || desc.indexOf(query) !== -1) {
+            item.style.display = "";
+          } else {
+            item.style.display = "none";
+          }
+        });
+
+        // Re-apply hidden state when search is cleared
+        if (!query) {
+          reapplyHidden();
+        }
+      });
+    }
+  });
+</script>
+
+<style is:global>
+  .blog-filter-btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .blog-filter-btn:hover {
+    transform: translateY(-1px);
+  }
+
+  .blog-post-item.hidden {
+    display: none !important;
+  }
+
+  .blog-post-item {
+    transition:
+      opacity 0.4s ease,
+      transform 0.4s ease;
+  }
+
+  #load-more-btn:hover {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.25);
+  }
+
+  @keyframes blogFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

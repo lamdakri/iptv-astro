@@ -40,3 +40,28 @@ const breadcrumbSchema = {
     </>
   ))}
 </nav>
+<style is:global>
+/* ============================================
+   BREADCRUMB
+   ============================================ */
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-surface-400);
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+.breadcrumb a {
+  color: var(--color-surface-400);
+  transition: color 0.2s;
+}
+.breadcrumb a:hover {
+  color: var(--color-brand-400);
+}
+.breadcrumb .separator {
+  color: var(--color-surface-600);
+}
+</style>

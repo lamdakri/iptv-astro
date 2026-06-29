@@ -7,6 +7,11 @@ import { getWhatsAppUrl, getWhatsAppTrialMsg } from '../i18n/whatsapp';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}\/?/, '/');
+
+// Determine active nav item for aria-current
+const isHome = currentPath === '/';
+const isPricing = currentPath === '/pricing/';
+const isBlog = currentPath.startsWith('/blog/');
 ---
 
 <header class="sticky-header">
@@ -19,9 +24,9 @@ const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}\/?/, '/');
 
     <!-- Desktop Nav -->
     <div class="hidden md:flex items-center gap-0.5">
-      <a href={`/${lang}/`} class="nav-link px-2.5 py-1.5 text-xs font-medium" data-track="nav_click" data-track-label="Home">{t('nav.home')}</a>
-      <a href={`/${lang}/pricing/`} class="nav-link px-2.5 py-1.5 text-xs font-medium" data-track="nav_click" data-track-label="Pricing">{t('nav.pricing')}</a>
-      <a href={`/${lang}/blog/`} class="nav-link px-2.5 py-1.5 text-xs font-medium" data-track="nav_click" data-track-label="Blog">{t('nav.blog')}</a>
+      <a href={`/${lang}/`} class="nav-link px-2.5 py-1.5 text-xs font-medium" data-track="nav_click" data-track-label="Home" aria-current={isHome ? 'page' : undefined}>{t('nav.home')}</a>
+      <a href={`/${lang}/pricing/`} class="nav-link px-2.5 py-1.5 text-xs font-medium" data-track="nav_click" data-track-label="Pricing" aria-current={isPricing ? 'page' : undefined}>{t('nav.pricing')}</a>
+      <a href={`/${lang}/blog/`} class="nav-link px-2.5 py-1.5 text-xs font-medium" data-track="nav_click" data-track-label="Blog" aria-current={isBlog ? 'page' : undefined}>{t('nav.blog')}</a>
       <div class="ml-2">
         <LanguageSwitcher lang={lang} currentPath={currentPath} />
       </div>
@@ -51,9 +56,9 @@ const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}\/?/, '/');
   <!-- Mobile Menu Overlay -->
   <div id="mobile-menu" class="mobile-menu">
     <div class="mobile-menu-inner">
-      <a href={`/${lang}/`} data-track="nav_click" data-track-label="Mobile Home" class="mobile-menu-link">{t('nav.home')}</a>
-      <a href={`/${lang}/pricing/`} data-track="nav_click" data-track-label="Mobile Pricing" class="mobile-menu-link">{t('nav.pricing')}</a>
-      <a href={`/${lang}/blog/`} data-track="nav_click" data-track-label="Mobile Blog" class="mobile-menu-link">{t('nav.blog')}</a>
+      <a href={`/${lang}/`} data-track="nav_click" data-track-label="Mobile Home" class="mobile-menu-link" aria-current={isHome ? 'page' : undefined}>{t('nav.home')}</a>
+      <a href={`/${lang}/pricing/`} data-track="nav_click" data-track-label="Mobile Pricing" class="mobile-menu-link" aria-current={isPricing ? 'page' : undefined}>{t('nav.pricing')}</a>
+      <a href={`/${lang}/blog/`} data-track="nav_click" data-track-label="Mobile Blog" class="mobile-menu-link" aria-current={isBlog ? 'page' : undefined}>{t('nav.blog')}</a>
       <div class="mt-4">
         <LanguageSwitcher lang={lang} currentPath={currentPath} />
       </div>
@@ -98,7 +103,7 @@ const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}\/?/, '/');
     // Header scroll effect — add .scrolled class when scrolled past threshold
     const header = document.querySelector('.sticky-header');
     if (!header) return;
-    var ticking = false;
+    let ticking = false;
     const headerEl = header;
     function updateHeader() {
       if (window.scrollY > 20) {
@@ -118,3 +123,131 @@ const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}\/?/, '/');
     updateHeader();
   })();
 </script>
+<style is:global>
+/* ============================================
+   STICKY HEADER
+   ============================================ */
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(3, 7, 18, 0.75);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid rgba(124, 58, 237, 0.1);
+  transition: all 0.3s ease;
+}
+
+.sticky-header.scrolled {
+  background: rgba(3, 7, 18, 0.9);
+  border-bottom-color: rgba(124, 58, 237, 0.2);
+}
+
+/* ============================================
+   NAVIGATION LINKS
+   ============================================ */
+
+.nav-link {
+  position: relative;
+  color: var(--color-surface-400);
+  font-weight: 500;
+  transition: color 0.25s ease;
+  letter-spacing: 0.01em;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1.5px;
+  background: linear-gradient(90deg, var(--color-brand-500), var(--color-cyan-400));
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+.nav-link:hover {
+  color: white;
+}
+.nav-link:hover::after {
+  width: 60%;
+}
+
+/* ============================================
+   MOBILE MENU
+   ============================================ */
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+  background: rgba(3, 7, 18, 0.96);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.mobile-menu-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mobile-menu-link {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--color-surface-300);
+  padding: 0.75rem 2rem;
+  border-radius: 0.75rem;
+  transition: all 0.25s ease;
+  position: relative;
+}
+.mobile-menu-link:hover {
+  color: white;
+  background: rgba(124, 58, 237, 0.1);
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-surface-300);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+</style>

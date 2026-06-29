@@ -48,7 +48,7 @@ const langData = Object.keys(LANGUAGES).map((code) => ({
     const langData: Array<{code: string; flag: string; label: string}> = JSON.parse(rawLangData);
 
     const supported: Record<string, boolean> = { en: true, fr: true, ar: true, es: true, de: true, it: true, pt: true };
-    const navLang = (navigator.language || (navigator as any).languages?.[0] || 'en').split('-')[0];
+    const navLang = (navigator.language || (navigator as Navigator & { languages?: string[] }).languages?.[0] || 'en').split('-')[0];
 
     if (navLang === currentLang || !supported[navLang] || navLang === 'en') return;
 

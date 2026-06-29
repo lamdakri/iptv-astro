@@ -25,3 +25,10 @@ pnpm-debug.log*
 
 # astro
 .astro/
+
+# generated favicon PNGs (built from public/favicon.svg by prebuild)
+public/favicon.png
+public/favicon-512.png
+
+# generated Lighthouse reports
+*.report.json

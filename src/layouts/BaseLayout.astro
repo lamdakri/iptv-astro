@@ -5,6 +5,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
 import LanguageBanner from '../components/LanguageBanner.astro';
+import ArabicFont from '../components/ArabicFont.astro';
 import '../styles/globals.css';
 import '../styles/fonts.css';
 
@@ -14,7 +15,7 @@ interface Props {
   ogImage?: string;
   ogImageAlt?: string;
   ogType?: string;
-  schema?: any;
+  schema?: Record<string, unknown>;
   robots?: string;
   articlePublishedTime?: string;
   articleModifiedTime?: string;
@@ -85,26 +86,30 @@ const gaScript = `
 
     <!-- ═══ Font Loading ═══ -->
     <!-- Inter (weights 400-800) is self-hosted via Fontsource — zero external requests -->
-    <!-- Noto Naskh Arabic (RTL pages) loaded from Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" media="print" onload="this.media='all';this.onload=null" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" /></noscript>
-    <style>
-      body { font-display: swap; }
-      @font-face {
-        font-family: 'Noto-Naskh-Arabic-fallback';
-        size-adjust: 105%;
-        src: local('Arial');
-      }
-    </style>
+    <!-- Noto Naskh Arabic (400, 600, 700) is also self-hosted via Fontsource — only on Arabic pages -->
+    {lang === 'ar' && <ArabicFont />}
 
     <!-- DNS prefetch for WhatsApp (used on every page for CTAs) -->
     <link rel="dns-prefetch" href="https://wa.me" />
     <link rel="preconnect" href="https://wa.me" />
 
-    <!-- Google Analytics (async = non-blocking) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GV3H6SQGFT" is:inline></script>
+    <!-- Google Analytics (deferred to idle — keeps 163KB off the critical path) -->
+    <script is:inline>
+      (function() {
+        const MAX_DELAY = 4000;
+        function loadGA() {
+          const s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-GV3H6SQGFT';
+          document.head.appendChild(s);
+        }
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(loadGA, { timeout: MAX_DELAY });
+        } else {
+          setTimeout(loadGA, MAX_DELAY);
+        }
+      })();
+    </script>
     <script set:html={gaScript} is:inline></script>
     <noscript>
       <style>
@@ -117,7 +122,7 @@ const gaScript = `
     </noscript>
   </head>
   <body class="font-sans">
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-3 focus:bg-brand-600 focus:text-white focus:rounded-lg focus:font-semibold focus:outline-none focus:ring-2 focus:ring-brand-400">{t('a11y.skipToContent')}</a>
+    <a href="#main-content" class="sr-only focus:w-auto focus:h-auto focus:overflow-visible focus:[clip:auto] focus:whitespace-normal focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-3 focus:bg-brand-600 focus:text-white focus:rounded-lg focus:font-semibold focus:outline-none focus:ring-2 focus:ring-brand-400">{t('a11y.skipToContent')}</a>
     <LanguageBanner />
     <Header />
     <main id="main-content">

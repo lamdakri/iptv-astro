@@ -93,5 +93,67 @@ const buyMsg = (t('whatsapp.buyPlan') || 'Hi! I want the {plan} plan.').replace(
     </a>
   </div>
 </div>
+<style is:global>
+/* ============================================
+   PRICING CARDS
+   ============================================ */
 
+.pricing-card {
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(148, 163, 184, 0.08);
+  border-radius: 1.5rem;
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+.pricing-card:hover {
+  border-color: rgba(124, 58, 237, 0.3);
+  box-shadow:
+    0 0 40px rgba(124, 58, 237, 0.08),
+    0 25px 50px rgba(0, 0, 0, 0.5);
+  transform: translateY(-8px);
+}
 
+.pricing-card.featured {
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  background: rgba(30, 20, 60, 0.5);
+  box-shadow:
+    0 0 50px rgba(124, 58, 237, 0.15),
+    0 20px 40px rgba(0, 0, 0, 0.4);
+  animation: border-glow 4s ease-in-out infinite;
+}
+.pricing-card.featured:hover {
+  box-shadow:
+    0 0 60px rgba(124, 58, 237, 0.25),
+    0 30px 60px rgba(0, 0, 0, 0.6);
+  transform: translateY(-10px);
+}
+
+.pricing-badge {
+  background: linear-gradient(135deg, var(--color-brand-600), var(--color-brand-500));
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.375rem 1rem;
+  border-radius: 9999px;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 10px rgba(124, 58, 237, 0.4);
+}
+
+.pricing-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.pricing-badge--sale {
+  background: linear-gradient(135deg, #EF4444, #DC2626);
+  color: white;
+  box-shadow: 0 2px 10px rgba(239, 68, 68, 0.4);
+}
+</style>

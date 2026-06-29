@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import { useTranslations } from '../../i18n/ui';
+import { useTranslations, LANGUAGES } from '../../i18n/ui';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import FAQ from '../../components/FAQ.astro';
@@ -36,6 +36,20 @@ if (!seoData) {
   return Astro.redirect('/' + lang + '/', 301);
 }
 
+// Build alternateLangs only for languages that actually have content for this page
+const siteBase = (Astro.site?.href || 'https://iptv4kworld.com').replace(/$/, '');
+const availableLangs = Object.keys(seoEntry.data.languages) as (keyof typeof LANGUAGES)[];
+const alternateLangs = availableLangs.map((code) => {
+  const pathSegments = Astro.url.pathname.split('/').filter(Boolean);
+  if (pathSegments.length > 0) {
+    pathSegments[0] = code;
+  }
+  return {
+    lang: LANGUAGES[code]?.locale || code,
+    url: `${siteBase}/${pathSegments.join('/')}/`,
+  };
+});
+
 const faqItems = (seoData.faqs || []).map((f: { question: string; answer: string }) => ({
   question: f.question,
   answer: f.answer,
@@ -59,7 +73,7 @@ const webPageSchema = {
 };
 ---
 
-<BaseLayout title={pageTitle} description={seoData.description} keywords={seoData.h1 + ', IPTV, IPTV subscription'} schema={webPageSchema}>
+<BaseLayout title={pageTitle} description={seoData.description} keywords={seoData.h1 + ', IPTV, IPTV subscription'} schema={webPageSchema} alternateLangs={alternateLangs}>
   <SchemaMarkup type="faq" data={{ questions: faqItems }} />
 
   <section class="pt-32 pb-20">

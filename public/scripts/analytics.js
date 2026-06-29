@@ -73,5 +73,5 @@
     });
   }
 
-  waitForGtag(10);
+  waitForGtag(30); // ~9s window — GA script is now deferred to idle, so gtag loads later
 })();

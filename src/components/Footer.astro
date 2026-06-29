@@ -91,16 +91,16 @@ const t = useTranslations(lang);
           </button>
         </form>
         <p id="newsletter-msg" class="text-green-400 text-sm mt-3 hidden">{t('newsletter.success')}</p>
-        <p class="text-surface-500 text-xs mt-3">{t('newsletter.disclaimer')}</p>
+        <p class="text-surface-400 text-xs mt-3">{t('newsletter.disclaimer')}</p>
       </div>
     </div>
 
     <!-- Bottom bar -->
-    <div class="border-t border-surface-800/50 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-surface-500">
+    <div class="border-t border-surface-800/50 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-surface-400">
       <p>&copy; {new Date().getFullYear()} {t('site.name')}. {t('footer.rights')}</p>
       <div class="flex items-center gap-6">
-        <a href={`/${lang}/privacy/`} class="hover:text-surface-400 transition-colors">{t('footer.privacy')}</a>
-        <a href={`/${lang}/terms/`} class="hover:text-surface-400 transition-colors">{t('footer.terms')}</a>
+        <a href={`/${lang}/privacy/`} class="hover:text-surface-300 transition-colors">{t('footer.privacy')}</a>
+        <a href={`/${lang}/terms/`} class="hover:text-surface-300 transition-colors">{t('footer.terms')}</a>
       </div>
     </div>
   </div>

@@ -53,3 +53,47 @@ const formattedDate = new Date(date).toLocaleDateString(
     </div>
   </div>
 </article>
+<style is:global>
+/* ============================================
+   BLOG CARDS
+   ============================================ */
+
+.blog-card {
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(148, 163, 184, 0.06);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+.blog-card:hover {
+  border-color: rgba(124, 58, 237, 0.2);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+  transform: translateY(-5px);
+}
+
+/* Blog card image hover with overlay */
+.blog-card .blog-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.blog-card .blog-image-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(124, 58, 237, 0.3) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.blog-card:hover .blog-image-wrapper::after {
+  opacity: 1;
+}
+.blog-card img {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.blog-card:hover img {
+  transform: scale(1.08);
+}
+</style>

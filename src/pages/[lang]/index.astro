@@ -15,6 +15,7 @@ import Steps from "../../components/Steps.astro";
 import ComparisonTable from "../../components/ComparisonTable.astro";
 import WhatsAppIcon from "../../components/icons/WhatsAppIcon.astro";
 import { getWhatsAppUrl, getWhatsAppTrialMsg } from "../../i18n/whatsapp";
+import { getAggregateRating } from "../../data/testimonials";
 
 export function getStaticPaths() {
   return Object.keys(LANGUAGES).map((lang) => ({ params: { lang } }));
@@ -73,10 +74,6 @@ const testimonials = [
   },
 ];
 
-const avgRating = (
-  testimonials.reduce((sum, t) => sum + t.rating, 0) / testimonials.length
-).toFixed(1);
-
 const pageTitle = t("hero.title") + " | " + t("site.name");
 const whatsappUrl = getWhatsAppUrl(getWhatsAppTrialMsg(t));
 
@@ -104,13 +101,7 @@ const productSchema = {
     priceCurrency: "EUR",
     availability: "https://schema.org/InStock",
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: avgRating,
-    bestRating: "5",
-    ratingCount: String(testimonials.length),
-    reviewCount: String(testimonials.length),
-  },
+  aggregateRating: getAggregateRating(testimonials),
 };
 ---
 

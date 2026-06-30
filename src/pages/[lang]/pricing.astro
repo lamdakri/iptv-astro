@@ -9,6 +9,7 @@ import SchemaMarkup from "../../components/SchemaMarkup.astro";
 import PaymentIcons from "../../components/PaymentIcons.astro";
 import PayPalBadge from "../../components/PayPalBadge.astro";
 import { getWhatsAppUrl, getWhatsAppTrialMsg } from "../../i18n/whatsapp";
+import { getAggregateRating } from "../../data/testimonials";
 
 export function getStaticPaths() {
   return Object.keys(LANGUAGES).map((lang) => ({ params: { lang } }));
@@ -55,13 +56,7 @@ const pageTitle = t("pricing.title") + " | " + t("site.name");
       priceCurrency: "EUR",
       availability: "https://schema.org/InStock",
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      bestRating: "5",
-      ratingCount: "150",
-      reviewCount: "150",
-    },
+    aggregateRating: getAggregateRating(),
   }}
 >
   <SchemaMarkup type="product" data={{ lowPrice: "24.99", highPrice: "59.99", currency: "EUR" }} />

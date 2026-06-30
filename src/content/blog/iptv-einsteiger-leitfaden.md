@@ -8,6 +8,7 @@ author: "IPTV 4K World Team"
 category: "Leitfaden"
 tags: ["iptv", "leitfaden", "tutorial"]
 image: "../../assets/blog/images/guide.svg"
+translationKey: iptv-guide
 howToSteps:
   - name: "Wahlen Sie einen IPTV-Anbieter"
     text: "Recherchieren und wahlen Sie einen seriosen IPTV-Dienst wie IPTV 4K World, der die gewunschten Kanale und Funktionen bietet. Achten Sie auf Anbieter mit kostenlosen Testversionen."

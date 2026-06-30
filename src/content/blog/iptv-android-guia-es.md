@@ -1,13 +1,21 @@
 ---
 title: "Ver IPTV en Android — Guia Completa 2026"
 description: "Aprenda a ver IPTV en cualquier dispositivo Android. Guia paso a paso para telefonos, tabletas y cajas Android TV. Mejores aplicaciones IPTV y configuracion."
-keywords: ["iptv android", "app iptv android", "iptv android tv", "iptv android box", "instalar iptv android"]
+keywords:
+  [
+    "iptv android",
+    "app iptv android",
+    "iptv android tv",
+    "iptv android box",
+    "instalar iptv android",
+  ]
 date: 2026-06-14
 lang: es
 author: "Equipo IPTV 4K World"
 category: "Configuracion"
 tags: ["android", "configuracion", "guia", "movil"]
 image: "../../assets/blog/images/android.svg"
+translationKey: iptv-android
 howToSteps:
   - name: "Elija una aplicacion IPTV Player para Android"
     text: "Abra Google Play Store en su dispositivo Android. Busque 'IPTV Smarters Pro', 'TiviMate' u 'OTT Navigator'. Descargue e instale su aplicacion preferida."
@@ -35,12 +43,15 @@ Android es la plataforma mas versatil para IPTV. Ya sea que tenga un telefono An
 ## Mejores Aplicaciones IPTV para Android
 
 ### IPTV Smarters Pro
+
 Aplicacion gratuita disponible en Google Play. Soporta M3U y Xtream Codes. Multi-pantalla, control parental y soporte para reproductores internos y externos. Interfaz facil de usar ideal para principiantes y expertos.
 
 ### TiviMate
+
 La mejor interfaz EPG en Android TV. La version premium elimina anuncios. Soporta multiples listas de reproduccion. Funcion de repeticion y grabacion. Optimizado para Android TV con control remoto.
 
 ### OTT Navigator
+
 Interfaz altamente personalizable. Busqueda avanzada y filtros inteligentes. Soporta listas multiples. Gratis con version premium opcional.
 
 ## Configuracion Paso a Paso de IPTV en Android
@@ -81,4 +92,4 @@ Interfaz altamente personalizable. Busqueda avanzada y filtros inteligentes. Sop
 
 [Obtenga su prueba gratuita de IPTV 4K World via WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}) y comience a ver en su dispositivo Android hoy.
 
-*Consulte tambien nuestras guias sobre [IPTV en Firestick](/es/blog/guia-firestick-iptv-es/) y [IPTV en Smart TV](/es/iptv-smart-tv/).*
+_Consulte tambien nuestras guias sobre [IPTV en Firestick](/es/blog/guia-firestick-iptv-es/) y [IPTV en Smart TV](/es/iptv-smart-tv/)._

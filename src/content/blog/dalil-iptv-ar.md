@@ -8,6 +8,7 @@ author: "فريق IPTV 4K World"
 category: "دليل"
 tags: ["دليل", "iptv", "مبتدئ"]
 image: "../../assets/blog/images/guide.svg"
+translationKey: iptv-guide
 howToSteps:
   - name: "تعرف على ما هو IPTV"
     text: "افهم اساسيات IPTV — هو اختصار لـ Internet Protocol Television، يستخدم اتصالك بالانترنت لبث القنوات التلفزيونية المباشرة والافلام والمسلسلات مباشرة الى اجهزتك."

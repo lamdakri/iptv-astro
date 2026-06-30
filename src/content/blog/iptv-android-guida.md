@@ -1,13 +1,21 @@
 ---
 title: "IPTV su Android 2026 — Guida Completa per Cellulare e Tablet"
 description: "Come installare e configurare IPTV su dispositivi Android. Guida passo-passo per IPTV Smarters Pro, TiviMate e altre app su smartphone e tablet Android."
-keywords: ["iptv android", "iptv cellulare", "iptv android guida", "iptv smarter android", "app iptv android"]
+keywords:
+  [
+    "iptv android",
+    "iptv cellulare",
+    "iptv android guida",
+    "iptv smarter android",
+    "app iptv android",
+  ]
 date: 2026-06-18
 lang: it
 author: "IPTV 4K World Team"
 category: "Setup"
 tags: ["android", "cellulare", "setup", "guida"]
 image: "../../assets/blog/images/android.svg"
+translationKey: iptv-android
 howToSteps:
   - name: "Installare l'app IPTV Player dal Play Store"
     text: "Apri il Google Play Store sul tuo dispositivo Android e cerca 'IPTV Smarters Pro' o 'TiviMate'. Installa l'app gratuitamente."
@@ -61,11 +69,11 @@ I dispositivi Android sono perfetti per IPTV. Che tu abbia uno smartphone o un t
 
 ## Migliori app IPTV per Android
 
-| App | Prezzo | Caratteristica |
-|-----|--------|---------------|
-| TiviMate | Gratis/Premium | Miglior EPG |
-| IPTV Smarters Pro | Gratis | Multi-schermo |
-| OTT Navigator | Gratis/Premium | Altamente personalizzabile |
+| App               | Prezzo         | Caratteristica             |
+| ----------------- | -------------- | -------------------------- |
+| TiviMate          | Gratis/Premium | Miglior EPG                |
+| IPTV Smarters Pro | Gratis         | Multi-schermo              |
+| OTT Navigator     | Gratis/Premium | Altamente personalizzabile |
 
 ## Perché IPTV 4K World?
 

@@ -8,6 +8,7 @@ author: "IPTV 4K World Team"
 category: "Setup"
 tags: ["iphone", "ipad", "ios", "setup", "apple"]
 image: "../../assets/blog/images/iphone-ipad.svg"
+translationKey: iptv-iphone-ipad
 howToSteps:
   - name: "Scaricare IPTV Player dall'App Store"
     text: "Apri l'App Store di Apple e cerca 'IPTVX', 'Smarters Player Lite' o 'GSE SMART IPTV'. Scarica l'app gratuitamente."
@@ -42,11 +43,11 @@ I dispositivi Apple sono eccellenti per lo streaming IPTV. Con l'app giusta, puo
 
 ## Migliori app IPTV per iOS
 
-| App | Prezzo | Caratteristica |
-|-----|--------|---------------|
-| IPTVX | Gratis/Premium | Migliore integrazione iOS |
-| Smarters Player Lite | Gratis | Piena funzionalità |
-| GSE SMART IPTV | Gratis | Multipiattaforma |
+| App                  | Prezzo         | Caratteristica            |
+| -------------------- | -------------- | ------------------------- |
+| IPTVX                | Gratis/Premium | Migliore integrazione iOS |
+| Smarters Player Lite | Gratis         | Piena funzionalità        |
+| GSE SMART IPTV       | Gratis         | Multipiattaforma          |
 
 ## Perché IPTV 4K World?
 

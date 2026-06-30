@@ -1,13 +1,21 @@
 ---
 title: "Regarder IPTV sur Android — Guide Complet 2026"
 description: "Apprenez a regarder IPTV sur n'importe quel appareil Android. Guide etape par etape pour smartphones, tablettes et box Android. Meilleures apps IPTV et configuration."
-keywords: ["iptv android", "app iptv android", "iptv android tv", "iptv android box", "installer iptv android"]
+keywords:
+  [
+    "iptv android",
+    "app iptv android",
+    "iptv android tv",
+    "iptv android box",
+    "installer iptv android",
+  ]
 date: 2026-06-14
 lang: fr
 author: "IPTV 4K World Team"
 category: "Configuration"
 tags: ["android", "configuration", "guide", "mobile"]
 image: "../../assets/blog/images/android.svg"
+translationKey: iptv-android
 howToSteps:
   - name: "Choisissez une application IPTV Player pour Android"
     text: "Ouvrez le Google Play Store sur votre appareil Android. Cherchez 'IPTV Smarters Pro', 'TiviMate' ou 'OTT Navigator'. Telechargez et installez votre application preferee."
@@ -35,12 +43,15 @@ Android est la plateforme la plus polyvalente pour IPTV. Que vous ayez un teleph
 ## Meilleures Applications IPTV pour Android
 
 ### IPTV Smarters Pro
+
 Application gratuite disponible sur Google Play. Supporte M3U et Xtream Codes. Visualisation multi-ecrans, controle parental et support des lecteurs internes et externes. Interface facile a utiliser, ideale pour debutants et experts.
 
 ### TiviMate
+
 La meilleure interface EPG sur Android TV. La version premium supprime les publicites. Support de plusieurs playlists. Fonction de rattrapage et d'enregistrement. Optimise pour Android TV avec telecommande.
 
 ### OTT Navigator
+
 Interface hautement personnalisable. Recherche avancee et filtres intelligents. Supporte plusieurs playlists. Gratuit avec version premium optionnelle.
 
 ## Configuration IPTV sur Android Etape par Etape
@@ -81,4 +92,4 @@ Interface hautement personnalisable. Recherche avancee et filtres intelligents. 
 
 [Obtenez votre essai gratuit IPTV 4K World via WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}) et commencez a regarder sur votre appareil Android des aujourd'hui.
 
-*Consultez aussi nos guides sur [IPTV sur Firestick](/fr/blog/configuration-iptv-firestick/) et [IPTV sur Smart TV](/fr/iptv-smart-tv/).*
+_Consultez aussi nos guides sur [IPTV sur Firestick](/fr/blog/configuration-iptv-firestick/) et [IPTV sur Smart TV](/fr/iptv-smart-tv/)._

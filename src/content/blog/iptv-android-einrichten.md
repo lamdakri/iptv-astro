@@ -1,13 +1,21 @@
 ---
 title: "IPTV auf Android einrichten 2026 — Komplette Anleitung für Handy & Tablet"
 description: "So installieren und konfigurieren Sie IPTV auf Android-Geräten. Schritt-für-Schritt-Anleitung für IPTV Smarters Pro, TiviMate und mehr auf Android-Smartphones und -Tablets."
-keywords: ["iptv android", "iptv auf handy", "iptv android einrichten", "iptv smarter android", "iptv app android 2026"]
+keywords:
+  [
+    "iptv android",
+    "iptv auf handy",
+    "iptv android einrichten",
+    "iptv smarter android",
+    "iptv app android 2026",
+  ]
 date: 2026-06-18
 lang: de
 author: "IPTV 4K World Team"
 category: "Setup"
 tags: ["android", "handy", "setup", "tutorial"]
 image: "../../assets/blog/images/android.svg"
+translationKey: iptv-android
 howToSteps:
   - name: "IPTV-Player-App aus dem Play Store installieren"
     text: "Öffnen Sie den Google Play Store auf Ihrem Android-Gerät und suchen Sie nach 'IPTV Smarters Pro' oder 'TiviMate'. Installieren Sie die gewünschte App kostenlos."
@@ -66,12 +74,12 @@ Nach dem Laden der Playlist erscheinen alle verfügbaren Sender. Nutzen Sie die 
 
 ## Beste IPTV-Apps für Android
 
-| App | Preis | Besonderheit |
-|-----|-------|-------------|
-| TiviMate | Kostenlos/Premium | Bester EPG |
-| IPTV Smarters Pro | Kostenlos | Multi-Screen |
-| OTT Navigator | Kostenlos/Premium | Hochgradig anpassbar |
-| VLC Media Player | Kostenlos | Einfach und zuverlässig |
+| App               | Preis             | Besonderheit            |
+| ----------------- | ----------------- | ----------------------- |
+| TiviMate          | Kostenlos/Premium | Bester EPG              |
+| IPTV Smarters Pro | Kostenlos         | Multi-Screen            |
+| OTT Navigator     | Kostenlos/Premium | Hochgradig anpassbar    |
+| VLC Media Player  | Kostenlos         | Einfach und zuverlässig |
 
 ## Tipps für optimales IPTV-Streaming auf Android
 

@@ -1,13 +1,22 @@
 ---
 title: "مشاهدة IPTV على iPhone و iPad — دليل iOS 2026"
 description: "دليل كامل لمشاهدة IPTV على iPhone و iPad. أفضل تطبيقات IPTV لنظام iOS وتعليمات الإعداد ونصائح لـ Apple TV أيضاً."
-keywords: ["iptv iphone", "iptv ipad", "iptv ios", "تطبيق iptv iphone", "iptv apple tv", "أفضل تطبيق iptv ios"]
+keywords:
+  [
+    "iptv iphone",
+    "iptv ipad",
+    "iptv ios",
+    "تطبيق iptv iphone",
+    "iptv apple tv",
+    "أفضل تطبيق iptv ios",
+  ]
 date: 2026-06-14
 lang: ar
 author: "فريق IPTV 4K World"
 category: "إعداد"
 tags: ["ios", "iphone", "ipad", "آبل", "جوال"]
 image: "../../assets/blog/images/iphone-ipad.svg"
+translationKey: iptv-iphone-ipad
 howToSteps:
   - name: "تنزيل مشغل IPTV من App Store"
     text: "افتح App Store على iPhone أو iPad. ابحث عن 'IPTVX' أو 'GSE Smart IPTV' أو 'IPTV Smarters Pro'. قم بتنزيل وتثبيت مشغل IPTV المفضل."
@@ -28,12 +37,15 @@ howToSteps:
 ## أفضل تطبيقات IPTV لنظام iOS
 
 ### IPTVX — أفضل تطبيق IPTV مميز لنظام iOS
+
 تصميم جميل محسن لنظام iOS. مزامنة iCloud عبر جميع أجهزة Apple. دعم Siri و AirPlay. دليل EPG مع تنبيهات البرامج. متاح على iPhone و iPad و Apple TV. شراء مرة واحدة بدون اشتراك شهري.
 
 ### GSE Smart IPTV
+
 مجاني مع عمليات شراء داخل التطبيق. يدعم M3U و Xtream Codes. مشغل فيديو مدمج. رقابة أبوية. إدارة قوائم التشغيل بسهولة.
 
 ### IPTV Smarters Pro
+
 مجاني للاستخدام. دعم متعدد المنصات. تكامل EPG. إدارة المفضلة. دعم الفيديو حسب الطلب.
 
 ## خطوات إعداد IPTV على iOS بالتفصيل
@@ -73,4 +85,4 @@ howToSteps:
 
 [احصل على نسختك التجريبية المجانية عبر WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}) وابدأ المشاهدة على iPhone أو iPad اليوم.
 
-*اطلع أيضاً على أدلتنا حول [IPTV على Android](/ar/blog/iptv-android-ar/) و [IPTV على Firestick](/ar/blog/dalil-firestick-iptv-ar/).*
+_اطلع أيضاً على أدلتنا حول [IPTV على Android](/ar/blog/iptv-android-ar/) و [IPTV على Firestick](/ar/blog/dalil-firestick-iptv-ar/)._

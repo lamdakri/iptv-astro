@@ -1,13 +1,22 @@
 ---
 title: "Miglior IPTV per lo Sport 2026 — Serie A, Champions, F1 in 4K"
 description: "Scopri i migliori servizi IPTV per lo sport in diretta nel 2026. Serie A, Champions League, Formula 1, NBA e UFC in qualità 4K."
-keywords: ["iptv sport", "iptv calcio", "iptv serie a", "iptv champions league", "iptv formula 1", "sport streaming iptv"]
+keywords:
+  [
+    "iptv sport",
+    "iptv calcio",
+    "iptv serie a",
+    "iptv champions league",
+    "iptv formula 1",
+    "sport streaming iptv",
+  ]
 date: 2026-06-10
 lang: it
 author: "IPTV 4K World Team"
 category: "Sport"
 tags: ["sport", "calcio", "formula1", "4K"]
 image: "../../assets/blog/images/sports.svg"
+translationKey: iptv-sports
 howToSteps:
   - name: "Scegliere l'abbonamento IPTV Sport"
     text: "Seleziona un provider IPTV specializzato in contenuti sportivi con copertura di tutte le principali leghe (Serie A, Premier League, Champions League) in qualità 4K."
@@ -24,15 +33,18 @@ Non perdere mai più una partita. Con IPTV 4K World trasmetti tutti i grandi eve
 ## Quali sport puoi vedere con IPTV?
 
 ### Calcio
+
 - **Serie A**: Tutte le partite in diretta
 - **Champions League**: Ogni partita in 4K
 - **Premier League, Liga, Bundesliga**: Tutti i top campionati europei
 
 ### Motori
+
 - **Formula 1**: Tutte le gare, qualifiche e prove
 - **MotoGP**: Diretta di tutte le gare
 
 ### Combattimenti
+
 - **UFC**: Fight Night ed eventi PPV
 - **Boxe**: Incontri mondiali in diretta
 

@@ -4,6 +4,7 @@ description: "Como configurar IPTV no iPhone e iPad. Guia passo a passo para IPT
 keywords: ["iptv iphone", "iptv ipad", "iptv ios", "app iptv iphone", "iptv apple"]
 date: 2026-06-16
 lang: pt
+translationKey: iptv-iphone-ipad
 author: "IPTV 4K World Team"
 category: "Configuração"
 tags: ["iphone", "ipad", "ios", "configuração", "apple"]
@@ -40,10 +41,10 @@ Dispositivos Apple são excelentes para streaming IPTV. Com o app certo, você a
 
 ## Melhores apps IPTV para iOS
 
-| App | Preço | Destaque |
-|-----|-------|---------|
-| IPTVX | Grátis/Premium | Melhor integração iOS |
-| Smarters Player Lite | Grátis | Funcionalidade completa |
+| App                  | Preço          | Destaque                |
+| -------------------- | -------------- | ----------------------- |
+| IPTVX                | Grátis/Premium | Melhor integração iOS   |
+| Smarters Player Lite | Grátis         | Funcionalidade completa |
 
 ## Por que IPTV 4K World?
 

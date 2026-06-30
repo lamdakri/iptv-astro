@@ -1,13 +1,22 @@
 ---
 title: "IPTV auf Smart TV einrichten 2026 — Samsung, LG, Sony Anleitung"
 description: "Vollstandige Schritt-fur-Schritt-Anleitung zur Installation von IPTV auf Samsung, LG, Sony und Android Smart-TVs. Inklusive Smart IPTV, TiviMate und IPTV Smarters Setup."
-keywords: ["iptv smart tv", "iptv samsung", "iptv lg", "iptv sony", "smart tv iptv einrichten", "iptv smarters smart tv"]
+keywords:
+  [
+    "iptv smart tv",
+    "iptv samsung",
+    "iptv lg",
+    "iptv sony",
+    "smart tv iptv einrichten",
+    "iptv smarters smart tv",
+  ]
 date: 2026-06-14
 lang: de
 author: "IPTV 4K World Team"
 category: "Leitfaden"
 tags: ["einrichtung", "smart-tv", "anleitung"]
 image: "../../assets/blog/images/smart-tv.svg"
+translationKey: iptv-smart-tv
 howToSteps:
   - name: "Smart IPTV App auf Ihrem TV installieren"
     text: "Gehen Sie zum App-Store Ihres TVs (Samsung App Store, LG Content Store oder Google Play Store bei Android TV). Suchen Sie nach 'Smart IPTV' oder 'TiviMate' und installieren Sie die App."

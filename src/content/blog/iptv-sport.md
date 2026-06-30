@@ -1,7 +1,15 @@
 ---
 title: "Meilleur IPTV pour le Sport 2026 — Regardez Football, NBA, UFC en 4K"
 description: "Decouvrez les meilleurs services IPTV pour regarder le sport en direct en 2026. Accédez a la Ligue 1, Premier League, Champions League, NBA, UFC en 4K."
-keywords: ["iptv sport", "regarder football iptv", "iptv nba", "streaming sport direct", "iptv ligue 1", "iptv ufc"]
+keywords:
+  [
+    "iptv sport",
+    "regarder football iptv",
+    "iptv nba",
+    "streaming sport direct",
+    "iptv ligue 1",
+    "iptv ufc",
+  ]
 date: 2026-05-10
 updatedDate: 2026-06-14
 lang: fr
@@ -9,6 +17,7 @@ author: "IPTV 4K World Team"
 category: "Sport"
 tags: ["sport", "football", "4K"]
 image: "../../assets/blog/images/sports.svg"
+translationKey: iptv-sports
 howToSteps:
   - name: "Choisir votre abonnement IPTV Sport"
     text: "Selectionnez un fournisseur IPTV specialise dans le contenu sportif. Recherchez des services offrant toutes les grandes ligues (Ligue 1, Premier League, Champions League, NBA, UFC) en qualite 4K."
@@ -50,10 +59,10 @@ L IPTV 4K World vous donne acces a toutes les grandes competions sportives :
 
 ## Comparaison IPTV vs Abonnement Sport Traditionnel
 
-| Service | Prix/mois | Chaines Sport | Engagement |
-|---------|-----------|---------------|------------|
-| Cable + Options Sport | 80-120€ | 5-10 chaines | 12-24 mois |
-| IPTV 4K World | 9,99-19,99€ | Toutes les chaines | Sans engagement |
+| Service               | Prix/mois   | Chaines Sport      | Engagement      |
+| --------------------- | ----------- | ------------------ | --------------- |
+| Cable + Options Sport | 80-120€     | 5-10 chaines       | 12-24 mois      |
+| IPTV 4K World         | 9,99-19,99€ | Toutes les chaines | Sans engagement |
 
 ## Prêt a Regarder le Sport en 4K ?
 

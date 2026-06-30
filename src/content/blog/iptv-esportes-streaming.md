@@ -1,13 +1,22 @@
 ---
 title: "Melhor IPTV para Esportes 2026 — Brasileirão, Champions, NBA em 4K"
 description: "Descubra os melhores serviços IPTV para esportes ao vivo em 2026. Brasileirão, Champions League, Fórmula 1, NBA e UFC em qualidade 4K."
-keywords: ["iptv esportes", "iptv futebol", "iptv brasileirão", "iptv champions", "iptv formula 1", "esportes streaming iptv"]
+keywords:
+  [
+    "iptv esportes",
+    "iptv futebol",
+    "iptv brasileirão",
+    "iptv champions",
+    "iptv formula 1",
+    "esportes streaming iptv",
+  ]
 date: 2026-06-10
 lang: pt
 author: "IPTV 4K World Team"
 category: "Esportes"
 tags: ["esportes", "futebol", "formula1", "4K"]
 image: "../../assets/blog/images/sports.svg"
+translationKey: iptv-sports
 howToSteps:
   - name: "Escolher assinatura IPTV Esportes"
     text: "Selecione um provedor IPTV especializado em conteúdo esportivo com cobertura de todas as principais ligas em qualidade 4K."
@@ -24,14 +33,17 @@ Nunca mais perca um jogo. Com IPTV 4K World você assiste todos os grandes event
 ## Quais esportes você pode ver com IPTV?
 
 ### Futebol
+
 - **Brasileirão**: Todos os jogos ao vivo
 - **Champions League**: Cada partida em 4K
 - **Premier League, La Liga, Serie A**: Principais ligas europeias
 
 ### Automobilismo
+
 - **Fórmula 1**: Todas as corridas, classificações e treinos
 
 ### Lutas
+
 - **UFC**: Fight Night e eventos PPV
 - **Boxe**: Lutas mundiais ao vivo
 

@@ -1,13 +1,15 @@
 ---
 title: "IPTV con Buffering — Solución Definitiva sin Congelamientos 2026"
 description: "Resuelve los problemas de buffering y congelamiento de IPTV. Guía completa con prueba de velocidad, VPN, DNS y optimización de dispositivos."
-keywords: ["iptv buffering", "iptv se congela", "iptv lento", "solucion iptv buffering", "iptv no funciona"]
+keywords:
+  ["iptv buffering", "iptv se congela", "iptv lento", "solucion iptv buffering", "iptv no funciona"]
 date: 2026-06-12
 lang: es
 author: "IPTV 4K World Team"
 category: "Solución de Problemas"
 tags: ["buffering", "soluciones", "rendimiento"]
 image: "../../assets/blog/images/troubleshooting.svg"
+translationKey: iptv-buffering
 howToSteps:
   - name: "Verificar velocidad de internet"
     text: "Ejecuta una prueba en speedtest.net. Para 4K necesitas 25 Mbps mínimo, 10 Mbps para FHD. Desconecta otros dispositivos y usa Wi-Fi 5 GHz."
@@ -34,15 +36,19 @@ Nada arruina más un partido en vivo o una noche de películas que el buffering 
 ## Soluciones comunes
 
 ### 1. Limpia la caché de la app
+
 Ajustes > Apps > Tu app IPTV > Limpiar caché
 
 ### 2. Usa una VPN
+
 Evita que tu proveedor de internet limite el tráfico IPTV.
 
 ### 3. Cambia el DNS
+
 Google DNS (8.8.8.8) o Cloudflare (1.1.1.1)
 
 ### 4. Actualiza tu app IPTV
+
 Usa siempre la versión más reciente.
 
 ## ¿Por qué IPTV 4K World?

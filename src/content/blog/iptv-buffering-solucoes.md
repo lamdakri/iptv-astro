@@ -8,6 +8,7 @@ author: "IPTV 4K World Team"
 category: "Solução de Problemas"
 tags: ["buffering", "travamento", "performance", "soluções"]
 image: "../../assets/blog/images/troubleshooting.svg"
+translationKey: iptv-buffering
 howToSteps:
   - name: "Verificar velocidade da internet"
     text: "Execute um teste em speedtest.net. Para 4K precisa de 25 Mbps, FHD 10 Mbps. Desconecte outros dispositivos e use Wi-Fi 5 GHz."
@@ -32,15 +33,19 @@ Nada estraga uma partida de futebol ou noite de filme como buffering constante. 
 ## Soluções comuns
 
 ### 1. Limpe o cache do app
+
 Configurações > Apps > App IPTV > Limpar cache
 
 ### 2. Use uma VPN
+
 Previne a limitação de tráfego IPTV pelos provedores.
 
 ### 3. Mude o DNS
+
 Google DNS (8.8.8.8) ou Cloudflare (1.1.1.1)
 
 ### 4. Atualize o app IPTV
+
 Use sempre a versão mais recente.
 
 ## Por que IPTV 4K World?

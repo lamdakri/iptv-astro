@@ -8,6 +8,7 @@ author: "IPTV 4K World Team"
 category: "Guide"
 tags: ["m3u", "playlist", "guide", "tutorial"]
 image: "../../assets/blog/images/m3u.svg"
+translationKey: iptv-m3u
 howToSteps:
   - name: "M3U-Playlist von Ihrem IPTV-Anbieter erhalten"
     text: "Nach der Anmeldung bei IPTV 4K World erhalten Sie eine M3U-Playlist-URL per WhatsApp oder E-Mail. Speichern Sie diese URL — sie enthält alle Ihre Sender."
@@ -30,6 +31,7 @@ Die M3U-Playlist ist das Herzstück jedes IPTV-Systems. Sie enthält alle Sender
 M3U steht für **MP3 URL** und ist ein einfaches Textformat, das ursprünglich für Musik-Playlists entwickelt wurde. Für IPTV wird es verwendet, um TV-Sender-Adressen, Namen und Kategorien zu speichern.
 
 Eine typische M3U-Datei enthält:
+
 - **#EXTINF**: Metadaten wie Sendername und Gruppenzugehörigkeit
 - **Stream-URL**: Die direkte Adresse des Live-Streams
 - **Kategorien**: Gruppierung wie Sport, Filme, Nachrichten
@@ -44,18 +46,21 @@ IPTV 4K World stellt M3U-URLs bereit, die automatisch aktualisiert werden.
 ## So laden Sie eine M3U-Playlist
 
 ### Auf Android (TiviMate)
+
 1. TiviMate öffnen
 2. **Playlist hinzufügen** > **M3U-Playlist**
 3. URL einfügen und **Weiter** klicken
 4. EPG-URL hinzufügen (falls vorhanden)
 
 ### Auf Firestick (IPTV Smarters Pro)
+
 1. IPTV Smarters Pro öffnen
 2. **Mit URL laden** auswählen
 3. M3U-URL in das Feld einfügen
 4. **Playlist laden** klicken
 
 ### Auf VLC (Computer)
+
 1. VLC öffnen
 2. **Medien** > **Netzwerkstream öffnen**
 3. M3U-URL einfügen und **Wiedergabe** klicken
@@ -68,11 +73,11 @@ IPTV 4K World stellt M3U-URLs bereit, die automatisch aktualisiert werden.
 
 ## Häufige M3U-Probleme und Lösungen
 
-| Problem | Lösung |
-|---------|--------|
-| Playlist lädt nicht | Internetverbindung prüfen, URL auf Tippfehler prüfen |
-| Keine Sender sichtbar | App-Cache leeren, Playlist neu laden |
-| Veraltete Senderliste | Playlist in den App-Einstellungen aktualisieren |
+| Problem               | Lösung                                               |
+| --------------------- | ---------------------------------------------------- |
+| Playlist lädt nicht   | Internetverbindung prüfen, URL auf Tippfehler prüfen |
+| Keine Sender sichtbar | App-Cache leeren, Playlist neu laden                 |
+| Veraltete Senderliste | Playlist in den App-Einstellungen aktualisieren      |
 
 ## Warum IPTV 4K World?
 

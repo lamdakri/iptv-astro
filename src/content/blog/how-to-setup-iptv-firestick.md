@@ -1,13 +1,21 @@
 ---
 title: "How to Set Up IPTV on Firestick — Complete Fire TV Stick Guide 2026"
 description: "Step-by-step guide to install and set up IPTV on Amazon Firestick. Watch 20,000+ channels in 4K on your Fire TV Stick with IPTV Smarters, TiviMate, and more."
-keywords: ["iptv firestick", "install iptv on firestick", "iptv amazon fire stick", "iptv firestick setup", "best iptv app firestick"]
+keywords:
+  [
+    "iptv firestick",
+    "install iptv on firestick",
+    "iptv amazon fire stick",
+    "iptv firestick setup",
+    "best iptv app firestick",
+  ]
 date: 2026-06-13
 lang: en
 author: "IPTV 4K World Team"
 category: "Setup"
 tags: ["firestick", "amazon", "setup", "tutorial"]
 image: "../../assets/blog/images/firestick.svg"
+translationKey: iptv-firestick
 howToSteps:
   - name: "Prepare Your Firestick for IPTV"
     text: "Go to Settings > My Fire TV > Developer Options and turn on 'Apps from Unknown Sources'. This allows you to install IPTV apps not available on the Amazon App Store."
@@ -86,12 +94,12 @@ Once your playlist loads, you will see 20,000+ channels organized by category. U
 
 ## Best IPTV Apps for Firestick
 
-| App | Free/Paid | Best Feature |
-|-----|-----------|-------------|
-| TiviMate | Free/Premium | Best EPG guide |
-| IPTV Smarters Pro | Free | Multi-screen |
-| OTT Navigator | Free/Premium | Highly customizable |
-| VLC for Firestick | Free | Simple and reliable |
+| App               | Free/Paid    | Best Feature        |
+| ----------------- | ------------ | ------------------- |
+| TiviMate          | Free/Premium | Best EPG guide      |
+| IPTV Smarters Pro | Free         | Multi-screen        |
+| OTT Navigator     | Free/Premium | Highly customizable |
+| VLC for Firestick | Free         | Simple and reliable |
 
 ## Troubleshooting Firestick IPTV
 
@@ -113,4 +121,4 @@ If you experience buffering or freezing:
 
 Ready to get started? [Request your free trial on WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}) and start watching on your Firestick today.
 
-*Also check our guide on [IPTV on Smart TV](/en/iptv-smart-tv/) and [best IPTV apps](/en/blog/best-iptv-apps-2026/) for more options.*
+_Also check our guide on [IPTV on Smart TV](/en/iptv-smart-tv/) and [best IPTV apps](/en/blog/best-iptv-apps-2026/) for more options._

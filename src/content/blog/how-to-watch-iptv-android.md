@@ -1,13 +1,22 @@
 ---
 title: "How to Watch IPTV on Android — Complete Guide for Phones & TV Boxes 2026"
 description: "Learn how to watch IPTV on any Android device. Step-by-step guide for Android phones, tablets, and TV boxes. Best IPTV apps and setup for Android."
-keywords: ["iptv android", "iptv app android", "iptv android tv", "iptv android box", "install iptv android", "android iptv player"]
+keywords:
+  [
+    "iptv android",
+    "iptv app android",
+    "iptv android tv",
+    "iptv android box",
+    "install iptv android",
+    "android iptv player",
+  ]
 date: 2026-06-13
 lang: en
 author: "IPTV 4K World Team"
 category: "Setup"
 tags: ["android", "setup", "guide", "mobile"]
 image: "../../assets/blog/images/android.svg"
+translationKey: iptv-android
 howToSteps:
   - name: "Choose an IPTV Player App for Android"
     text: "Open the Google Play Store on your Android device. Search for 'IPTV Smarters Pro', 'TiviMate', or 'OTT Navigator'. Download and install your preferred IPTV player app."
@@ -35,6 +44,7 @@ Android is the most versatile platform for IPTV. Whether you have an Android pho
 ## Best IPTV Apps for Android
 
 ### IPTV Smarters Pro
+
 - Free app available on Google Play
 - Supports M3U and Xtream Codes
 - Multi-screen viewing
@@ -42,6 +52,7 @@ Android is the most versatile platform for IPTV. Whether you have an Android pho
 - Built-in and external player support
 
 ### TiviMate
+
 - Best EPG interface on Android TV
 - Premium version removes ads
 - Multiple playlist support
@@ -49,6 +60,7 @@ Android is the most versatile platform for IPTV. Whether you have an Android pho
 - Android TV optimized
 
 ### OTT Navigator
+
 - Highly customizable interface
 - Advanced search and filters
 - Supports multiple playlists
@@ -92,4 +104,4 @@ Android is the most versatile platform for IPTV. Whether you have an Android pho
 
 Ready to start? [Get your free IPTV 4K World trial on WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}).
 
-*Also check our guides on [IPTV on Firestick](/en/blog/how-to-setup-iptv-firestick/) and [IPTV on Smart TV](/en/iptv-smart-tv/).*
+_Also check our guides on [IPTV on Firestick](/en/blog/how-to-setup-iptv-firestick/) and [IPTV on Smart TV](/en/iptv-smart-tv/)._

@@ -9,6 +9,7 @@ author: "Equipo IPTV 4K World"
 category: "Guia"
 tags: ["guia", "iptv", "principiante"]
 image: "../../assets/blog/images/guide.svg"
+translationKey: iptv-guide
 howToSteps:
   - name: "Aprender que es IPTV"
     text: "Comprenda los conceptos basicos del IPTV — Television por Protocolo de Internet. Utiliza su conexion a internet para transmitir canales de TV en vivo, peliculas y series directamente a sus dispositivos."
@@ -35,6 +36,7 @@ IPTV significa Television por Protocolo de Internet. Utiliza tu conexion a inter
 ## Como Funciona IPTV?
 
 El proceso es sencillo:
+
 1. Te suscribes a un servicio IPTV como IPTV 4K World
 2. Recibes tus credenciales de acceso (URL M3U o Xtream Codes)
 3. Instalas una aplicacion IPTV player en tu dispositivo

@@ -8,6 +8,7 @@ author: "IPTV 4K World Team"
 category: "Guide"
 tags: ["iptv", "guide", "tutoriel"]
 image: "../../assets/blog/images/guide.svg"
+translationKey: iptv-guide
 howToSteps:
   - name: "Comprendre ce qu'est l'IPTV"
     text: "Apprenez les bases de l'IPTV — Television par Protocole Internet. Cette technologie utilise votre connexion internet pour diffuser des chaines TV en direct, films et series directement sur vos appareils."

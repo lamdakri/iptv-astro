@@ -1,13 +1,21 @@
 ---
 title: "IPTV auf Firestick einrichten 2026 — Vollstandige Anleitung"
 description: "Schritt-fur-Schritt-Anleitung zur Installation und Einrichtung von IPTV auf dem Amazon Firestick. 20.000+ Kanale in 4K auf Ihrem Fire TV Stick mit IPTV Smarters, TiviMate und mehr."
-keywords: ["iptv firestick", "firestick iptv einrichten", "iptv amazon fire stick", "iptv firestick anleitung", "beste iptv app firestick"]
+keywords:
+  [
+    "iptv firestick",
+    "firestick iptv einrichten",
+    "iptv amazon fire stick",
+    "iptv firestick anleitung",
+    "beste iptv app firestick",
+  ]
 date: 2026-06-14
 lang: de
 author: "IPTV 4K World Team"
 category: "Einrichtung"
 tags: ["firestick", "amazon", "einrichtung", "anleitung"]
 image: "../../assets/blog/images/firestick.svg"
+translationKey: iptv-firestick
 howToSteps:
   - name: "Firestick fur IPTV vorbereiten"
     text: "Gehen Sie zu Einstellungen > Mein Fire TV > Entwickleroptionen und aktivieren Sie 'Apps aus unbekannten Quellen'. Dies ermoglicht die Installation von IPTV-Apps."
@@ -57,6 +65,7 @@ Verwandeln Sie Ihren Amazon Fire TV Stick in ein leistungsstarkes Streaming-Gera
 ### Schritt 3: IPTV-Player herunterladen
 
 Offnen Sie die Downloader-App und geben Sie eine dieser URLs ein:
+
 - **TiviMate**: https://tivimate.com
 - **IPTV Smarters Pro**: https://iptvsmarters.com
 

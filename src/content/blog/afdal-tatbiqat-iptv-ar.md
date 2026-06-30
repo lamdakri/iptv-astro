@@ -1,13 +1,23 @@
 ---
 title: "أفضل تطبيقات IPTV 2026 — TiviMate و Smarters و IPTVX والمزيد"
 description: "اكتشف أفضل تطبيقات ومشغلات IPTV لكل جهاز في 2026. مقارنة بين TiviMate و IPTV Smarters Pro و IPTVX و OTT Navigator والمزيد لأندرويد و iOS والتلفزيون الذكي."
-keywords: ["أفضل تطبيقات iptv", "مشغل iptv", "tivimate", "iptv smarters pro", "iptvx", "تطبيق iptv اندرويد", "تطبيق iptv ايفون"]
+keywords:
+  [
+    "أفضل تطبيقات iptv",
+    "مشغل iptv",
+    "tivimate",
+    "iptv smarters pro",
+    "iptvx",
+    "تطبيق iptv اندرويد",
+    "تطبيق iptv ايفون",
+  ]
 date: 2026-06-22
 lang: ar
 author: "فريق IPTV 4K World"
 category: "تطبيقات"
 tags: ["تطبيقات", "مشغلات", "مقارنة"]
 image: "../../assets/blog/images/apps.svg"
+translationKey: iptv-apps
 howToSteps:
   - name: "حمّل مشغل IPTV المفضل لديك"
     text: "اختر وحمّل تطبيق مشغل IPTV بناءً على جهازك. TiviMate هو الأفضل لأندرويد TV، وIPTV Smarters Pro يعمل على جميع المنصات، وIPTVX مثالي لأجهزة آبل."
@@ -27,17 +37,18 @@ howToSteps:
 
 ## أفضل مشغلات IPTV مقارنة
 
-| التطبيق | المنصة | السعر | الأفضل لـ |
-|---------|--------|-------|-----------|
-| TiviMate | Android TV | مجاني/مدفوع | دليل EPG للبث المباشر |
-| IPTV Smarters Pro | الكل | مجاني | متعدد الأجهزة |
-| IPTVX | iOS/Apple TV | مدفوع | مستخدمي آبل |
-| OTT Navigator | Android | مجاني/مدفوع | التخصيص |
-| VLC Media Player | الكل | مجاني | البساطة |
+| التطبيق           | المنصة       | السعر       | الأفضل لـ             |
+| ----------------- | ------------ | ----------- | --------------------- |
+| TiviMate          | Android TV   | مجاني/مدفوع | دليل EPG للبث المباشر |
+| IPTV Smarters Pro | الكل         | مجاني       | متعدد الأجهزة         |
+| IPTVX             | iOS/Apple TV | مدفوع       | مستخدمي آبل           |
+| OTT Navigator     | Android      | مجاني/مدفوع | التخصيص               |
+| VLC Media Player  | الكل         | مجاني       | البساطة               |
 
 ## TiviMate — الأفضل للبث المباشر
 
 يقدم TiviMate أفضل تجربة دليل برامج إلكتروني (EPG). الميزات تشمل:
+
 - واجهة دليل تلفزيوني جميلة
 - دعم قوائم تشغيل متعددة
 - إدارة القنوات المفضلة
@@ -47,6 +58,7 @@ howToSteps:
 ## IPTV Smarters Pro — الأفضل الشامل
 
 يعمل IPTV Smarters Pro على أندرويد و iOS والتلفزيون الذكي وويندوز وماك. يدعم:
+
 - Xtream Codes API و M3U
 - مشاهدة متعددة الشاشات
 - مشغل فيديو مدمج
@@ -56,6 +68,7 @@ howToSteps:
 ## IPTVX — الأفضل لآيفون وآبل TV
 
 IPTVX هو المشغل المتميز لأجهزة آبل. الميزات:
+
 - تصميم جميل بنمط iOS
 - مزامنة iCloud عبر الأجهزة
 - تكامل مع Siri

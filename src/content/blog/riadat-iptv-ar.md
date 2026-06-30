@@ -8,6 +8,7 @@ author: "فريق IPTV 4K World"
 category: "رياضة"
 tags: ["رياضة", "كرة القدم", "4K"]
 image: "../../assets/blog/images/sports.svg"
+translationKey: iptv-sports
 howToSteps:
   - name: "اختر اشتراك IPTV الرياضي المناسب"
     text: "اختر مزود IPTV متخصص في المحتوى الرياضي. ابحث عن خدمات توفر جميع الدوريات الكبرى (الدوري الانجليزي، الاسباني، دوري الابطال، NBA، UFC) بجودة 4K."
@@ -67,4 +68,4 @@ howToSteps:
 
 [احصل على نسختك التجريبية المجانية لمدة 12 ساعة عبر WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}) وابدأ مشاهدة الرياضة اليوم.
 
-*اطلع ايضاً على [افضل تطبيقات IPTV](/ar/blog/best-iptv-apps-2026/) و [دليل IPTV الشامل](/ar/blog/dalil-iptv-ar/).*
+_اطلع ايضاً على [افضل تطبيقات IPTV](/ar/blog/best-iptv-apps-2026/) و [دليل IPTV الشامل](/ar/blog/dalil-iptv-ar/)._

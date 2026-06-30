@@ -8,6 +8,7 @@ author: "IPTV 4K World Team"
 category: "Guide"
 tags: ["m3u", "playlist", "guida", "tutorial"]
 image: "../../assets/blog/images/m3u.svg"
+translationKey: iptv-m3u
 howToSteps:
   - name: "Ricevere la playlist M3U dal provider IPTV"
     text: "Dopo l'iscrizione a IPTV 4K World, riceverai un URL playlist M3U via WhatsApp o email. Conserva questo URL — contiene tutti i tuoi canali."
@@ -39,21 +40,23 @@ IPTV 4K World fornisce URL M3U automaticamente aggiornati.
 ## Come caricare una playlist M3U
 
 ### Su Android (TiviMate)
+
 1. Apri TiviMate
 2. **Aggiungi Playlist** > **Playlist M3U**
 3. Incolla URL e clicca **Avanti**
 
 ### Su Firestick (IPTV Smarters Pro)
+
 1. Apri IPTV Smarters Pro
 2. Seleziona **Carica da URL**
 3. Incolla URL M3U e clicca **Carica**
 
 ## Problemi comuni M3U
 
-| Problema | Soluzione |
-|----------|----------|
-| Playlist non carica | Verifica connessione e URL |
-| Nessun canale visibile | Svuota cache app, ricarica |
-| Lista canali obsoleta | Aggiorna playlist nelle impostazioni |
+| Problema               | Soluzione                            |
+| ---------------------- | ------------------------------------ |
+| Playlist non carica    | Verifica connessione e URL           |
+| Nessun canale visibile | Svuota cache app, ricarica           |
+| Lista canali obsoleta  | Aggiorna playlist nelle impostazioni |
 
 Pronto? [Richiedi la tua playlist M3U su WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}).

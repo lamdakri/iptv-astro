@@ -9,6 +9,7 @@ author: "IPTV 4K World Team"
 category: "Depannage"
 tags: ["buffering", "depannage", "performance"]
 image: "../../assets/blog/images/troubleshooting.svg"
+translationKey: iptv-buffering
 howToSteps:
   - name: "Tester votre debit internet"
     text: "Faites un test de vitesse sur speedtest.net. Le streaming 4K necessite 25 Mbps minimum, le FHD 10 Mbps, et le HD 5 Mbps. Si votre debit est insuffisant, passez en WiFi 5 GHz ou utilisez un cable Ethernet."
@@ -39,6 +40,7 @@ Avant tout depannage, verifiez votre connexion. Un debit insuffisant est la caus
 - **Streaming HD (720p)** : 5 Mbps minimum
 
 Faites un test sur speedtest.net. Si votre debit est insuffisant, essayez ces solutions :
+
 - Passez en WiFi 5 GHz au lieu de 2.4 GHz (moins d'interferences)
 - Eloignez les autres appareils connectes
 - Redemarrez votre box internet
@@ -47,18 +49,23 @@ Faites un test sur speedtest.net. Si votre debit est insuffisant, essayez ces so
 ## Solutions Courantes contre le Freeze IPTV
 
 ### 1. Vider le Cache de l'Application
+
 Allez dans Parametres > Applications > Votre Lecteur IPTV > Vider le Cache. Les fichiers temporaires accumules peuvent ralentir le streaming.
 
 ### 2. Utiliser un VPN Anti-Throttling
+
 Certains fournisseurs d'acces Internet limitent volontairement le trafic IPTV. Un VPN crypte votre connexion et empeche cette limitation. Choisissez un VPN rapide avec des serveurs proches de chez vous.
 
 ### 3. Changer les DNS
+
 Les DNS de votre FAI peuvent etre lents. Passez a Google DNS (8.8.8.8 et 8.8.4.4) ou Cloudflare DNS (1.1.1.1) pour une resolution plus rapide.
 
 ### 4. Mettre a Jour Votre Application IPTV
+
 Les mises a jour corrigent des bugs et ameliorent les performances. Assurez-vous d'utiliser la derniere version de TiviMate, IPTV Smarters Pro ou VLC.
 
 ### 5. Reduire la Qualite du Streaming
+
 Si le probleme persiste, passez de 4K a FHD ou de FHD a HD. Une qualite inferieure necessite moins de bande passante et offre une experience plus fluide.
 
 ## Pourquoi IPTV 4K World a Moins de Problemes

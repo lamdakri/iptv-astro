@@ -1,13 +1,15 @@
 ---
 title: "IPTV Buffering & Probleme lösen 2026 — Kein Ruckeln mehr"
 description: "Beheben Sie IPTV-Buffering, Einfrieren und Streaming-Probleme. Vollständige Anleitung zur Fehlerbehebung mit Internet-Geschwindigkeit, VPN, DNS und Geräteoptimierung."
-keywords: ["iptv buffering", "iptv ruckeln", "iptv probleme", "iptv lag beheben", "iptv streaming probleme"]
+keywords:
+  ["iptv buffering", "iptv ruckeln", "iptv probleme", "iptv lag beheben", "iptv streaming probleme"]
 date: 2026-06-12
 lang: de
 author: "IPTV 4K World Team"
 category: "Troubleshooting"
 tags: ["buffering", "troubleshooting", "performance", "probleme"]
 image: "../../assets/blog/images/troubleshooting.svg"
+translationKey: iptv-buffering
 howToSteps:
   - name: "Internetgeschwindigkeit prüfen"
     text: "Führen Sie einen Geschwindigkeitstest auf speedtest.net durch. Für 4K benötigen Sie mindestens 25 Mbit/s, für FHD 10 Mbit/s. Trennen Sie andere Geräte und nutzen Sie 5 GHz WLAN."
@@ -41,18 +43,23 @@ Speedtest auf speedtest.net durchführen. Bei zu geringer Geschwindigkeit:
 ## Häufige IPTV-Probleme und Lösungen
 
 ### 1. App-Cache leeren
+
 Einstellungen > Apps > IPTV-App > Cache leeren. Temporäre Daten entfernen, die das Streaming verlangsamen.
 
 ### 2. VPN verwenden
+
 Einige ISPs drosseln IPTV-Verkehr. Ein VPN verschlüsselt Ihre Verbindung und verhindert Drosselung.
 
 ### 3. DNS-Einstellungen ändern
+
 Wechseln zu Google DNS (8.8.8.8) oder Cloudflare DNS (1.1.1.1) für schnellere Namensauflösung.
 
 ### 4. IPTV-App aktualisieren
+
 Immer die neueste Version Ihrer IPTV-App verwenden. Updates enthalten Leistungsverbesserungen und Fehlerbehebungen.
 
 ### 5. Stream-Qualität reduzieren
+
 Wenn nichts hilft, von 4K auf FHD oder HD wechseln. Geringere Qualität benötigt weniger Bandbreite.
 
 ## Warum IPTV 4K World weniger Buffering hat

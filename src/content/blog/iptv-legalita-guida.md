@@ -1,13 +1,15 @@
 ---
 title: "L'IPTV è legale? — Guida completa alla legalità IPTV 2026"
 description: "Scopri la legalità dell'IPTV nel mondo. L'IPTV è legale in Italia, Europa e nel tuo paese? Come scegliere un provider IPTV legale. Prova gratuita disponibile."
-keywords: ["iptv legale", "iptv è legale", "legalità iptv", "servizio iptv legale", "iptv legale italia"]
+keywords:
+  ["iptv legale", "iptv è legale", "legalità iptv", "servizio iptv legale", "iptv legale italia"]
 date: 2026-06-14
 lang: it
 author: "IPTV 4K World Team"
 category: "Guida"
 tags: ["legale", "guida", "informazione"]
 image: "../../assets/blog/images/legal.svg"
+translationKey: iptv-legal
 howToSteps:
   - name: "Ricercare la legalita dell'IPTV nel tuo paese"
     text: "Comprendi che la tecnologia IPTV di per se e legale. La legalita dipende dal fatto che il provider abbia le licenze sui contenuti. Ricerca le leggi locali sul copyright."
@@ -41,12 +43,14 @@ Questi sono tutti servizi IPTV. La differenza fondamentale è la **licenza dei c
 ## IPTV legale vs IPTV illegale
 
 ### Servizi IPTV legali
+
 - Hanno accordi di licenza con i proprietari dei contenuti
 - Sono trasparenti nelle loro operazioni
 - Offrono supporto clienti
 - Accettano metodi di pagamento standard
 
 ### Servizi IPTV illegali
+
 - Trasmettono contenuti senza licenza
 - Spesso vanno offline senza preavviso
 - Offrono prezzi sospettosamente bassi

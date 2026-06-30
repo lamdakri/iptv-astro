@@ -1,13 +1,22 @@
 ---
 title: "Lista de Reproduccion M3U IPTV — Guia Completa 2026"
 description: "Todo lo que necesita saber sobre listas de reproduccion M3U IPTV. Que son, como usar URLs M3U, mejores reproductores IPTV para M3U y suscripcion premium."
-keywords: ["iptv m3u", "lista reproduccion m3u", "iptv m3u url", "m3u iptv lista", "mejor m3u iptv", "que es m3u iptv"]
+keywords:
+  [
+    "iptv m3u",
+    "lista reproduccion m3u",
+    "iptv m3u url",
+    "m3u iptv lista",
+    "mejor m3u iptv",
+    "que es m3u iptv",
+  ]
 date: 2026-06-14
 lang: es
 author: "Equipo IPTV 4K World"
 category: "Guia"
 tags: ["m3u", "lista", "guia", "tutorial"]
 image: "../../assets/blog/images/m3u.svg"
+translationKey: iptv-m3u
 howToSteps:
   - name: "Obtenga una lista M3U de un proveedor IPTV premium"
     text: "Suscribase a un servicio IPTV premium como IPTV 4K World. Recibira su URL de lista M3U unica via WhatsApp o correo."

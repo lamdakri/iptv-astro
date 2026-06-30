@@ -9,17 +9,41 @@ import { getWhatsAppUrl, getWhatsAppTrialMsg } from "../../../i18n/whatsapp";
 
 interface Props {
   entry: CollectionEntry<"blog">;
+  alternateLangs?: { lang: string; url: string }[];
 }
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog", ({ data }) => !data.draft);
-  return posts.map((entry) => ({
-    params: { lang: entry.data.lang, slug: entry.slug },
-    props: { entry },
-  }));
+
+  // Build translationKey -> posts map for proper hreflang URLs
+  const translationMap = new Map<string, typeof posts>();
+  for (const post of posts) {
+    const key = post.data.translationKey;
+    if (key) {
+      if (!translationMap.has(key)) translationMap.set(key, []);
+      translationMap.get(key)!.push(post);
+    }
+  }
+
+  return posts.map((entry) => {
+    const tKey = entry.data.translationKey;
+    const alternateLangs = tKey
+      ? (translationMap.get(tKey) || [])
+          .filter((p) => p.data.lang !== entry.data.lang)
+          .map((p) => ({
+            lang: p.data.lang,
+            url: `/${p.data.lang}/blog/${p.slug}/`,
+          }))
+      : undefined;
+
+    return {
+      params: { lang: entry.data.lang, slug: entry.slug },
+      props: { entry, alternateLangs },
+    };
+  });
 }
 
-const { entry } = Astro.props;
+const { entry, alternateLangs } = Astro.props;
 const { Content } = await entry.render();
 const { lang } = Astro.params;
 const t = useTranslations(lang);
@@ -76,6 +100,7 @@ const articleSchema = {
   articleSection={entry.data.category}
   keywords={entry.data.keywords?.join(", ")}
   schema={articleSchema}
+  alternateLangs={alternateLangs}
 >
   {
     entry.data.howToSteps && entry.data.howToSteps.length > 0 && (

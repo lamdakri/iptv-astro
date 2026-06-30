@@ -1,13 +1,15 @@
 ---
 title: "Ver IPTV en iPhone & iPad — Guia iOS 2026"
 description: "Guia completa para ver IPTV en iPhone y iPad. Mejores aplicaciones IPTV para iOS, instrucciones de configuracion y consejos para Apple TV."
-keywords: ["iptv iphone", "iptv ipad", "iptv ios", "app iptv iphone", "iptv apple tv", "mejor app iptv ios"]
+keywords:
+  ["iptv iphone", "iptv ipad", "iptv ios", "app iptv iphone", "iptv apple tv", "mejor app iptv ios"]
 date: 2026-06-14
 lang: es
 author: "Equipo IPTV 4K World"
 category: "Configuracion"
 tags: ["ios", "iphone", "ipad", "apple", "movil"]
 image: "../../assets/blog/images/iphone-ipad.svg"
+translationKey: iptv-iphone-ipad
 howToSteps:
   - name: "Descargue un reproductor IPTV desde App Store"
     text: "Abra App Store en su iPhone o iPad. Busque 'IPTVX', 'GSE Smart IPTV' o 'IPTV Smarters Pro'. Descargue e instale su reproductor IPTV preferido."
@@ -28,12 +30,15 @@ Los usuarios de Apple tambien pueden disfrutar de IPTV. Aqui le mostramos como c
 ## Mejores Aplicaciones IPTV para iOS
 
 ### IPTVX — La Mejor App IPTV Premium para iOS
+
 Diseno elegante optimizado para iOS. Sincronizacion iCloud en todos sus dispositivos Apple. Soporte Siri y AirPlay. Guia EPG con recordatorios de programas. Disponible en iPhone, iPad y Apple TV. Compra unica, sin suscripcion.
 
 ### GSE Smart IPTV
+
 Gratis con compras dentro de la app. Soporta M3U y Xtream Codes. Reproductor de video integrado. Control parental. Gestion facil de listas de reproduccion.
 
 ### IPTV Smarters Pro
+
 Gratis para usar. Soporte multiplataforma. Integracion EPG. Gestion de favoritos. Soporte de video bajo demanda.
 
 ## Configuracion de IPTV en iOS Paso a Paso
@@ -73,4 +78,4 @@ Gratis para usar. Soporte multiplataforma. Integracion EPG. Gestion de favoritos
 
 [Obtenga su prueba gratuita de IPTV 4K World via WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}) y comience a ver en su iPhone o iPad hoy.
 
-*Consulte tambien nuestras guias sobre [IPTV en Android](/es/blog/iptv-android-guia-es/) y [IPTV en Firestick](/es/blog/guia-firestick-iptv-es/).*
+_Consulte tambien nuestras guias sobre [IPTV en Android](/es/blog/iptv-android-guia-es/) y [IPTV en Firestick](/es/blog/guia-firestick-iptv-es/)._

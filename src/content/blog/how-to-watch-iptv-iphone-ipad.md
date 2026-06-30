@@ -1,13 +1,15 @@
 ---
 title: "How to Watch IPTV on iPhone & iPad — Best iOS IPTV Apps 2026"
 description: "Complete guide to watching IPTV on iPhone and iPad. Best IPTV apps for iOS, step-by-step setup instructions, and tips for Apple TV too."
-keywords: ["iptv iphone", "iptv ipad", "iptv ios", "iptv app iphone", "iptv apple tv", "best iptv app ios"]
+keywords:
+  ["iptv iphone", "iptv ipad", "iptv ios", "iptv app iphone", "iptv apple tv", "best iptv app ios"]
 date: 2026-06-13
 lang: en
 author: "IPTV 4K World Team"
 category: "Setup"
 tags: ["ios", "iphone", "ipad", "apple", "mobile"]
 image: "../../assets/blog/images/iphone-ipad.svg"
+translationKey: iptv-iphone-ipad
 howToSteps:
   - name: "Download an IPTV Player from the App Store"
     text: "Open the App Store on your iPhone or iPad. Search for 'IPTVX', 'GSE Smart IPTV', or 'IPTV Smarters Pro'. Download and install your preferred IPTV player."
@@ -28,6 +30,7 @@ Apple users can enjoy IPTV too. Here is how to set up IPTV on your iPhone, iPad,
 ## Best IPTV Apps for iOS
 
 ### IPTVX — Best Premium iOS IPTV App
+
 - Beautiful design optimized for iOS
 - iCloud sync across all your Apple devices
 - Siri and AirPlay support
@@ -36,6 +39,7 @@ Apple users can enjoy IPTV too. Here is how to set up IPTV on your iPhone, iPad,
 - One-time purchase, no subscription
 
 ### GSE Smart IPTV
+
 - Free with in-app purchases
 - Supports M3U and Xtream Codes
 - Built-in video player
@@ -43,6 +47,7 @@ Apple users can enjoy IPTV too. Here is how to set up IPTV on your iPhone, iPad,
 - Playlist management
 
 ### IPTV Smarters Pro
+
 - Free to use
 - Multi-platform support
 - EPG integration
@@ -86,4 +91,4 @@ Apple users can enjoy IPTV too. Here is how to set up IPTV on your iPhone, iPad,
 
 [Get your free IPTV 4K World trial on WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}) and start watching on your iPhone or iPad today.
 
-*Also check our guides on [IPTV on Android](/en/blog/how-to-watch-iptv-android/) and [IPTV on Firestick](/en/blog/how-to-setup-iptv-firestick/).*
+_Also check our guides on [IPTV on Android](/en/blog/how-to-watch-iptv-android/) and [IPTV on Firestick](/en/blog/how-to-setup-iptv-firestick/)._

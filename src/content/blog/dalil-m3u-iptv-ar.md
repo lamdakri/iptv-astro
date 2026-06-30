@@ -1,13 +1,22 @@
 ---
 title: "قائمة تشغيل M3U IPTV — دليل كامل 2026"
 description: "كل ما تحتاج معرفته عن قوائم تشغيل M3U IPTV. ما هي، كيفية استخدام روابط M3U، أفضل مشغلات IPTV لـ M3U، وكيفية الحصول على اشتراك M3U متميز."
-keywords: ["iptv m3u", "قائمة تشغيل m3u", "iptv m3u url", "m3u iptv قائمة", "أفضل m3u iptv", "ما هو m3u iptv"]
+keywords:
+  [
+    "iptv m3u",
+    "قائمة تشغيل m3u",
+    "iptv m3u url",
+    "m3u iptv قائمة",
+    "أفضل m3u iptv",
+    "ما هو m3u iptv",
+  ]
 date: 2026-06-14
 lang: ar
 author: "فريق IPTV 4K World"
 category: "دليل"
 tags: ["m3u", "قائمة تشغيل", "دليل", "تعليمي"]
 image: "../../assets/blog/images/m3u.svg"
+translationKey: iptv-m3u
 howToSteps:
   - name: "الحصول على قائمة تشغيل M3U من مزود IPTV متميز"
     text: "اشترك في خدمة IPTV متميزة مثل IPTV 4K World. بعد الاشتراك، ستستلم رابط قائمة تشغيل M3U الفريد عبر WhatsApp أو البريد الإلكتروني."
@@ -44,14 +53,14 @@ howToSteps:
 
 ## أفضل مشغلات IPTV لقوائم تشغيل M3U
 
-| المشغل | المنصة | السعر | دعم M3U |
-|--------|----------|-------|-------------|
-| TiviMate | Android TV | مجاني/مميز | ممتاز |
-| IPTV Smarters Pro | جميع المنصات | مجاني | ممتاز |
-| GSE Smart IPTV | iOS/Android | مجاني/مدفوع | رائع |
-| IPTVX | iOS/Apple TV | مدفوع | رائع |
-| VLC Media Player | جميع المنصات | مجاني | اساسي |
-| OTT Navigator | Android | مجاني/مميز | ممتاز |
+| المشغل            | المنصة       | السعر       | دعم M3U |
+| ----------------- | ------------ | ----------- | ------- |
+| TiviMate          | Android TV   | مجاني/مميز  | ممتاز   |
+| IPTV Smarters Pro | جميع المنصات | مجاني       | ممتاز   |
+| GSE Smart IPTV    | iOS/Android  | مجاني/مدفوع | رائع    |
+| IPTVX             | iOS/Apple TV | مدفوع       | رائع    |
+| VLC Media Player  | جميع المنصات | مجاني       | اساسي   |
+| OTT Navigator     | Android      | مجاني/مميز  | ممتاز   |
 
 ## كيفية استخدام قائمة تشغيل M3U IPTV
 
@@ -77,13 +86,13 @@ howToSteps:
 
 ## M3U مقابل Xtream Codes: ما الفرق؟
 
-| الميزة | M3U URL | Xtream Codes API |
-|---------|---------|------------------|
-| الاعداد | لصق الرابط | ادخال الخادم + تسجيل الدخول |
-| التحديثات | تحديث يدوي | تحديث تلقائي |
-| EPG | رابط منفصل | مدمج |
-| VOD | منفصل | مدمج |
-| الامان | اقل اماناً | اكثر اماناً |
+| الميزة    | M3U URL    | Xtream Codes API            |
+| --------- | ---------- | --------------------------- |
+| الاعداد   | لصق الرابط | ادخال الخادم + تسجيل الدخول |
+| التحديثات | تحديث يدوي | تحديث تلقائي                |
+| EPG       | رابط منفصل | مدمج                        |
+| VOD       | منفصل      | مدمج                        |
+| الامان    | اقل اماناً | اكثر اماناً                 |
 
 يدعم IPTV 4K World كلا طريقتي الاتصال.
 
@@ -98,4 +107,4 @@ howToSteps:
 
 هل انت مستعد لتجربة M3U IPTV المتميزة؟ [احصل على نسختك التجريبية المجانية عبر WhatsApp](https://wa.me/{{WHATSAPP_NUMBER}}).
 
-*اطلع ايضاً على ادلتنا حول [IPTV على Firestick](/ar/blog/dalil-firestick-iptv-ar/) و [افضل تطبيقات IPTV](/ar/blog/best-iptv-apps-2026/).*
+_اطلع ايضاً على ادلتنا حول [IPTV على Firestick](/ar/blog/dalil-firestick-iptv-ar/) و [افضل تطبيقات IPTV](/ar/blog/best-iptv-apps-2026/)._

@@ -72,7 +72,12 @@ const breadcrumbSchema = {
 };
 ---
 
-<BaseLayout title={pageTitle} description={t("blog.subtitle")} schema={blogSchema}>
+<BaseLayout
+  title={pageTitle}
+  description={t("blog.subtitle")}
+  schema={blogSchema}
+  keywords={t("seo.keywords")}
+>
   <!-- BreadcrumbList structured data -->
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} is:inline />
   <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">

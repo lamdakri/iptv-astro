@@ -1,0 +1,198 @@
+---
+import { getCollection } from "astro:content";
+import { useTranslations, LANGUAGES } from "../../i18n/ui";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export function getStaticPaths() {
+  return Object.keys(LANGUAGES).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = useTranslations(lang);
+
+const siteUrl = Astro.site?.href || "https://iptv4kworld.com";
+const baseUrl = siteUrl.replace(/\/$/, "");
+const searchUrl = baseUrl + "/" + lang + "/search/";
+
+const allPosts = await getCollection("blog", ({ data }) => !data.draft);
+const searchIndex = allPosts.map((post) => ({
+  title: post.data.title,
+  description: post.data.description || "",
+  slug: post.slug,
+  category: post.data.category || "",
+  lang: post.data.lang,
+  date: post.data.date.toISOString(),
+  url: baseUrl + "/" + post.data.lang + "/blog/" + post.slug + "/",
+}));
+
+const localeMap: Record<string, string> = {
+  en: "en-US",
+  fr: "fr-FR",
+  ar: "ar-SA",
+  es: "es-ES",
+  de: "de-DE",
+  it: "it-IT",
+  pt: "pt-BR",
+};
+const ogLocale = localeMap[lang] || "en-US";
+const pageTitle = t("search.placeholder") + " | " + t("site.name");
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: pageTitle,
+  description: t("hero.subtitle"),
+  url: searchUrl,
+  inLanguage: ogLocale,
+  isPartOf: { "@type": "WebSite", name: t("site.name"), url: baseUrl },
+};
+
+const alternateLangs = Object.keys(LANGUAGES).map((l) => ({
+  lang: l,
+  url: baseUrl + "/" + l + "/search/",
+}));
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={t("hero.subtitle")}
+  schema={webPageSchema}
+  alternateLangs={alternateLangs}
+>
+  <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+    <div class="hero-orb-1"></div>
+    <div class="hero-orb-2"></div>
+  </div>
+  <section class="relative pt-32 pb-16 overflow-hidden">
+    <div
+      class="absolute inset-0 bg-gradient-to-b from-brand-950/30 via-surface-950/90 to-surface-950"
+    >
+    </div>
+    <div
+      class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-brand-600/10 rounded-full blur-[120px]"
+    >
+    </div>
+    <div class="container-custom relative">
+      <header class="mb-10 text-center reveal">
+        <span
+          class="inline-block px-3 py-1 text-xs font-semibold text-brand-400 bg-brand-400/10 rounded-full mb-4"
+          >{t("site.name")}</span
+        >
+        <h1 class="text-3xl md:text-5xl font-extrabold text-white mt-2 mb-4 leading-tight">
+          {t("search.placeholder")}
+        </h1>
+        <p class="text-surface-300 max-w-2xl mx-auto text-base md:text-lg">{t("hero.subtitle")}</p>
+      </header>
+      <div class="max-w-2xl mx-auto mb-12">
+        <div class="relative">
+          <svg
+            class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-surface-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+          <input
+            type="text"
+            id="search-input"
+            placeholder={t("search.placeholder")}
+            class="w-full pl-12 pr-4 py-3 bg-surface-800 border border-surface-700 rounded-lg text-white placeholder-surface-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all duration-200"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+      <div id="search-results" class="max-w-3xl mx-auto">
+        <p id="no-query-msg" class="text-center text-surface-400 py-12">
+          Search for IPTV guides, apps, setup tutorials, and more.
+        </p>
+        <p id="no-results-msg" class="text-center text-surface-400 py-12 hidden">
+          No results found. Try a different search term.
+        </p>
+        <div id="results-list" class="space-y-4 hidden"></div>
+        <p id="results-count" class="text-surface-500 text-sm mb-6 hidden"></p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script define:vars={{ searchIndexJson: JSON.stringify(searchIndex) }}>
+  const SEARCH_INDEX = JSON.parse(searchIndexJson);
+  const input = document.getElementById("search-input");
+  const resultsList = document.getElementById("results-list");
+  const noQueryMsg = document.getElementById("no-query-msg");
+  const noResultsMsg = document.getElementById("no-results-msg");
+  const resultsCount = document.getElementById("results-count");
+  function normalize(text) {
+    return text.toLowerCase().replace(/\s+/g, " ").trim();
+  }
+  function search(query) {
+    if (!query || query.trim().length < 2) {
+      noQueryMsg.classList.remove("hidden");
+      noResultsMsg.classList.add("hidden");
+      resultsList.classList.add("hidden");
+      resultsCount.classList.add("hidden");
+      return;
+    }
+    const q = normalize(query);
+    const results = SEARCH_INDEX.filter((post) => {
+      const title = normalize(post.title);
+      const desc = normalize(post.description);
+      const cat = normalize(post.category);
+      return title.includes(q) || desc.includes(q) || cat.includes(q);
+    });
+    noQueryMsg.classList.add("hidden");
+    if (results.length === 0) {
+      noResultsMsg.classList.remove("hidden");
+      resultsList.classList.add("hidden");
+      resultsCount.classList.add("hidden");
+      return;
+    }
+    noResultsMsg.classList.add("hidden");
+    resultsList.classList.remove("hidden");
+    resultsCount.classList.remove("hidden");
+    resultsCount.textContent = results.length + " result" + (results.length !== 1 ? "s" : "");
+    resultsList.innerHTML = results
+      .map(
+        (post) =>
+          '<a href="' +
+          post.url +
+          '" class="block p-4 bg-surface-800/50 rounded-lg border border-surface-700/50 hover:border-brand-500/50 hover:bg-surface-800 transition-all duration-200 group"><div class="flex items-start gap-3"><div class="flex-1 min-w-0"><h2 class="text-lg font-semibold text-white group-hover:text-brand-400 transition-colors duration-200 truncate">' +
+          post.title +
+          '</h2><p class="text-surface-400 text-sm mt-1 line-clamp-2">' +
+          post.description +
+          '</p><div class="flex items-center gap-2 mt-2 text-xs text-surface-500"><span class="uppercase">' +
+          post.lang +
+          "</span><span>·</span><span>" +
+          post.category +
+          '</span></div></div><svg class="w-4 h-4 text-surface-500 group-hover:text-brand-400 mt-1 flex-shrink-0 transition-colors duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></div></a>',
+      )
+      .join("");
+  }
+  const urlParams = new URLSearchParams(window.location.search);
+  const qParam = urlParams.get("q");
+  if (qParam) {
+    input.value = qParam;
+    search(qParam);
+  }
+  let debounceTimer;
+  input.addEventListener("input", () => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => {
+      const query = input.value;
+      const newUrl = new URL(window.location);
+      if (query.trim().length >= 2) {
+        newUrl.searchParams.set("q", query);
+      } else {
+        newUrl.searchParams.delete("q");
+      }
+      window.history.replaceState({}, "", newUrl);
+      search(query);
+    }, 300);
+  });
+  input.focus();
+</script>

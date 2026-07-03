@@ -111,10 +111,6 @@ const productSchema = {
   keywords={t("seo.keywords")}
   schema={productSchema}
 >
-  <SchemaMarkup
-    type="product"
-    data={{ name: "IPTV 4K World", lowPrice: "24.99", highPrice: "59.99", currency: "EUR" }}
-  />
   <SchemaMarkup type="faq" data={{ questions: faqItems }} />
   <SchemaMarkup type="organization" />
 
@@ -247,7 +243,7 @@ const productSchema = {
 
         <!-- Countdown Timer -->
         <CountdownTimer
-          targetDate={import.meta.env.COUNTDOWN_TARGET || "2026-06-30T23:59:59"}
+          targetDate={import.meta.env.COUNTDOWN_TARGET || "2026-07-30T23:59:59"}
           eyebrow={t("promo.eyebrow")}
           title={t("promo.title")}
           subtitle={t("promo.subtitle")}

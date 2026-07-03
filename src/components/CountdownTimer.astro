@@ -121,8 +121,7 @@ const whatsappUrl = getWhatsAppUrl(t('whatsapp.promo') || 'Hello! I want the spe
   (function() {
     const container = document.getElementById('countdown-timer');
     if (!container) return;
-    const targetStr = container.dataset.target || '';
-    const target = new Date(targetStr).getTime();
+    const target = new Date(container.dataset.target || '').getTime();
     if (isNaN(target)) return;
     const daysEl = document.getElementById('countdown-days');
     const hoursEl = document.getElementById('countdown-hours');

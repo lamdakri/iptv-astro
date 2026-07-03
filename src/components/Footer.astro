@@ -1,6 +1,6 @@
 ---
 import { getLangFromUrl, useTranslations } from "../i18n/ui";
-import { getWhatsAppUrl, getWhatsAppTrialMsg, WHATSAPP_NUMBER } from "../i18n/whatsapp";
+import { getWhatsAppUrl, getWhatsAppTrialMsg } from "../i18n/whatsapp";
 import WhatsAppIcon from "./icons/WhatsAppIcon.astro";
 
 const lang = getLangFromUrl(Astro.url);
@@ -124,41 +124,30 @@ const t = useTranslations(lang);
           {t("cta.trial.short")}
         </a>
       </div>
-    </div>
-
-    <!-- Newsletter -->
+    </div>      <!-- Newsletter -->
     <div class="border-t border-surface-800/50 pt-8 mb-8">
       <div class="max-w-md mx-auto text-center">
         <span class="section-eyebrow mx-auto justify-center text-xs">{t("newsletter.eyebrow")}</span
         >
         <p class="text-lg font-bold text-white mb-2">{t("newsletter.title")}</p>
         <p class="text-surface-400 text-sm mb-5">{t("newsletter.subtitle")}</p>
-        <form
-          id="newsletter-form"
-          class="flex flex-col sm:flex-row gap-2"
-          data-wa-number={WHATSAPP_NUMBER}
-          data-wa-message={t("whatsapp.newsletter")}
+        <a
+          href={getWhatsAppUrl(t("whatsapp.newsletter") || "Hi! I want to subscribe to the IPTV 4K World newsletter.")}
+          class="btn-whatsapp text-sm px-6 py-3"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-track="whatsapp_click"
+          data-track-label="Footer Newsletter"
+          data-track-category="conversion"
         >
-          <label for="newsletter-email" class="sr-only">{t("newsletter.placeholder")}</label>
-          <input
-            type="email"
-            id="newsletter-email"
-            placeholder={t("newsletter.placeholder")}
-            required
-            class="flex-1 px-4 py-3 rounded-lg bg-surface-800/60 border border-surface-700/40 text-white text-sm placeholder:text-surface-500 focus:outline-none focus:border-brand-500/50 transition-colors"
-          />
-          <button
-            type="submit"
-            id="newsletter-btn"
-            class="btn-primary text-sm px-5 py-3 whitespace-nowrap"
-          >
-            {t("newsletter.button")}
-          </button>
-        </form>
-        <p id="newsletter-msg" class="text-green-400 text-sm mt-3 hidden">
-          {t("newsletter.success")}
+          <WhatsAppIcon class="h-4 w-4" />
+          {t("newsletter.button")}
+        </a>
+        <p class="text-surface-400 text-xs mt-3">
+          {t("newsletter.disclaimer")}
+          <span class="text-whatsapp"> · </span>
+          <span class="text-whatsapp">{t("footer.whatsapp")}</span>
         </p>
-        <p class="text-surface-400 text-xs mt-3">{t("newsletter.disclaimer")}</p>
       </div>
     </div>
 
@@ -196,31 +185,3 @@ const t = useTranslations(lang);
   </div>
 </footer>
 
-<script>
-  (function () {
-    const form = document.getElementById("newsletter-form") as HTMLFormElement | null;
-    const msg = document.getElementById("newsletter-msg");
-    const btn = document.getElementById("newsletter-btn") as HTMLButtonElement | null;
-    if (!form || !btn) return;
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const input = document.getElementById("newsletter-email") as HTMLInputElement | null;
-      const email = input?.value?.trim() || "";
-      if (!email) return;
-
-      btn.disabled = true;
-
-      const waNumber = form.dataset.waNumber || "212606123321";
-      const template =
-        form.dataset.waMessage ||
-        "Hi! I want to subscribe to the IPTV 4K World newsletter. My email is: {email}";
-      const waMessage = encodeURIComponent(template.replace("{email}", email));
-
-      window.open("https://wa.me/" + waNumber + "?text=" + waMessage, "_blank");
-
-      if (msg) msg.classList.remove("hidden");
-      form.reset();
-      btn.disabled = false;
-    });
-  })();
-</script>

@@ -59,6 +59,17 @@ const relatedPosts = (
 
 const pageTitle = entry.data.title + " | " + t("blog.title") + " | " + t("site.name");
 
+const dateLocaleMap = {
+  en: "en-US",
+  fr: "fr-FR",
+  ar: "ar-SA",
+  es: "es-ES",
+  de: "de-DE",
+  it: "it-IT",
+  pt: "pt-PT",
+} as const;
+const dateLocale = (dateLocaleMap as Record<string, string>)[lang] || "en-US";
+
 const pageUrl = Astro.url.href;
 
 const ogImageUrl = entry.data.image ? new URL(entry.data.image.src, Astro.site).href : undefined;
@@ -159,7 +170,7 @@ const articleSchema = {
           <span class="text-surface-600">·</span>
           <time datetime={entry.data.date.toISOString()}>
             {
-              new Date(entry.data.date).toLocaleDateString("en-US", {
+              new Date(entry.data.date).toLocaleDateString(dateLocale, {
                 year: "numeric",
                 month: "long",
                 day: "numeric",
@@ -412,102 +423,7 @@ const articleSchema = {
 </BaseLayout>
 
 <!-- ===== CLIENT-SIDE SCRIPTS ===== -->
-<script is:inline>
-  // ── Table of Contents Generator ──
-  (function () {
-    var tocList = document.getElementById("toc-list");
-    var content = document.getElementById("blog-content");
-    if (!tocList || !content) return;
-
-    var headings = content.querySelectorAll("h2, h3");
-    if (headings.length === 0) {
-      tocList.innerHTML = '<p class="text-surface-500 text-sm py-2">No sections found.</p>';
-      return;
-    }
-
-    var html = '<ul class="space-y-1 border-l-2 border-surface-700 pl-4">';
-    headings.forEach(function (h, index) {
-      // Generate a robust ID that works with any language
-      var slug = h.textContent
-        .toLowerCase()
-        .replace(/[^a-z0-9\u00C0-\u024F\u0600-\u06FF\u0750-\u077F]+/g, "-")
-        .replace(/(^-|-$)/g, "");
-      if (!slug || slug.length < 2) slug = "section-" + (index + 1);
-      // Ensure uniqueness
-      var baseId = slug;
-      var counter = 1;
-      var el = document.getElementById(slug);
-      while (el && el !== h) {
-        slug = baseId + "-" + counter++;
-        el = document.getElementById(slug);
-      }
-      h.id = slug;
-
-      var isH3 = h.tagName === "H3";
-      var paddingClass = isH3 ? "pl-3 text-xs" : "text-sm font-medium";
-      html += '<li class="' + paddingClass + '">';
-      html +=
-        '<a href="#' +
-        slug +
-        '" class="block py-1 text-surface-400 hover:text-brand-400 transition-colors duration-200 truncate" title="' +
-        h.textContent +
-        '">';
-      html += h.textContent;
-      html += "</a>";
-      html += "</li>";
-    });
-    html += "</ul>";
-    tocList.innerHTML = html;
-  })();
-
-  // ── Copy Link Button ──
-  (function () {
-    var btn = document.getElementById("copy-link-btn");
-    var label = document.getElementById("copy-link-text");
-    if (!btn || !label) return;
-
-    var originalText = label.textContent;
-    var copiedText = btn.dataset.copiedText || "Copied!";
-    btn.addEventListener("click", function () {
-      navigator.clipboard
-        .writeText(window.location.href)
-        .then(function () {
-          label.textContent = copiedText;
-          btn.classList.add("border-green-500", "text-green-400");
-          setTimeout(function () {
-            label.textContent = originalText;
-            btn.classList.remove("border-green-500", "text-green-400");
-          }, 2000);
-        })
-        .catch(function () {
-          // Clipboard API unavailable — show error state briefly
-          label.textContent = "⚠";
-          label.style.color = "#f87171";
-          label.style.borderColor = "#f87171";
-          setTimeout(function () {
-            label.textContent = originalText;
-            label.style.color = "";
-            label.style.borderColor = "";
-          }, 2000);
-        });
-    });
-  })();
-
-  // ── Smooth scroll for TOC links ──
-  (function () {
-    var tocList = document.getElementById("toc-list");
-    if (!tocList) return;
-    tocList.addEventListener("click", function (e) {
-      var link = e.target.closest("a");
-      if (!link) return;
-      e.preventDefault();
-      var target = document.querySelector(link.getAttribute("href"));
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    });
-  })();
-</script>
+<script src="/scripts/blog-post.js" defer></script>
 
 <style is:global>
   /* TOC hover effect */

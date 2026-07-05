@@ -16,6 +16,7 @@ import ComparisonTable from "../../components/ComparisonTable.astro";
 import WhatsAppIcon from "../../components/icons/WhatsAppIcon.astro";
 import { getWhatsAppUrl, getWhatsAppTrialMsg } from "../../i18n/whatsapp";
 import { getAggregateRating } from "../../data/testimonials";
+import promoConfig from "../../data/promo.json";
 
 export function getStaticPaths() {
   return Object.keys(LANGUAGES).map((lang) => ({ params: { lang } }));
@@ -243,7 +244,7 @@ const productSchema = {
 
         <!-- Countdown Timer -->
         <CountdownTimer
-          targetDate={import.meta.env.COUNTDOWN_TARGET || "2026-07-30T23:59:59"}
+          targetDate={promoConfig.countdownTarget}
           eyebrow={t("promo.eyebrow")}
           title={t("promo.title")}
           subtitle={t("promo.subtitle")}

@@ -9,6 +9,15 @@ category: "Anleitung"
 tags: ["multi-gerat","multi-screen","einrichtung"]
 image: "../../assets/blog/images/all-devices.svg"
 translationKey: iptv-multi-device
+howToSteps:
+  - name: "IPTV-Tarif auf Multi-Device-Unterstützung prüfen"
+    text: "Überprüfen Sie, ob Ihr IPTV-Abonnement mehrere gleichzeitige Verbindungen unterstützt. IPTV 4K World unterstützt bis zu 4 Geräte gleichzeitig."
+  - name: "IPTV-Player auf allen Geräten installieren"
+    text: "Installieren Sie einen kompatiblen IPTV-Player auf jedem Gerät. TiviMate für Android TV, IPTVX für Apple, Smarters für plattformübergreifende Nutzung."
+  - name: "Dieselben Anmeldedaten verwenden"
+    text: "Melden Sie sich mit derselben M3U-URL oder denselben Xtream-Codes-Anmeldedaten auf jedem Gerät an. Ihre Playlist wird geräteübergreifend synchronisiert."
+  - name: "Gleichzeitiges Streaming starten"
+    text: "Starten Sie den IPTV-Player auf jedem Gerät und beginnen Sie mit dem Streaming. Sie können auf jedem Gerät gleichzeitig unterschiedliche Sender ansehen."
 ---
 
 # IPTV auf mehreren Geraten nutzen

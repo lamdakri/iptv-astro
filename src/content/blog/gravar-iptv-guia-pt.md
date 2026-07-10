@@ -9,6 +9,17 @@ category: "Guia"
 tags: ["gravacao","pvr","timeshift"]
 image: "../../assets/blog/images/all-devices.svg"
 translationKey: iptv-recording
+howToSteps:
+  - name: "Escolher um player IPTV com suporte a gravação"
+    text: "Selecione um player IPTV compatível com gravação PVR. TiviMate Premium, IPTV Smarters Pro e OTT Navigator oferecem recursos de gravação."
+  - name: "Configurar o armazenamento"
+    text: "Configure o local de armazenamento para suas gravações. No Android TV e Firestick, use o armazenamento interno ou uma unidade USB."
+  - name: "Agendar ou iniciar uma gravação"
+    text: "No seu player IPTV, encontre o programa desejado no guia EPG e selecione Gravar ou Agendar gravação."
+  - name: "Usar timeshift para pausar TV ao vivo"
+    text: "Ative o timeshift nas configurações do player IPTV. Isso permite pausar, retroceder e avançar a TV ao vivo como um DVR."
+  - name: "Acessar suas gravações"
+    text: "Navegue até a seção Gravações ou DVR do seu player IPTV para assistir, gerenciar ou excluir suas gravações salvas."
 ---
 
 # Como Gravar IPTV ao Vivo

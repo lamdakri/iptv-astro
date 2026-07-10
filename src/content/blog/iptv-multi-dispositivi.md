@@ -9,6 +9,15 @@ category: "Guida"
 tags: ["multi-dispositivo","multi-schermo","configurazione"]
 image: "../../assets/blog/images/all-devices.svg"
 translationKey: iptv-multi-device
+howToSteps:
+  - name: "Verificare il supporto multi-dispositivo del piano IPTV"
+    text: "Verifica che il tuo abbonamento IPTV supporti più connessioni simultanee. IPTV 4K World supporta fino a 4 dispositivi contemporaneamente."
+  - name: "Installare lettori IPTV su tutti i dispositivi"
+    text: "Installa un lettore IPTV compatibile su ogni dispositivo. TiviMate per Android TV, IPTVX per Apple, Smarters per multipiattaforma."
+  - name: "Usare le stesse credenziali"
+    text: "Accedi con lo stesso URL M3U o le stesse credenziali Xtream Codes su ogni dispositivo. La tua playlist si sincronizzerà su tutti i dispositivi."
+  - name: "Avviare lo streaming simultaneo"
+    text: "Avvia il lettore IPTV su ogni dispositivo e inizia a guardare. Puoi guardare canali diversi su ogni dispositivo contemporaneamente."
 ---
 
 # Come Usare IPTV su Piu Dispositivi

@@ -1,5 +1,6 @@
 ---
 import promoConfig from "../data/promo.json";
+import prices from "../data/prices.json";
 ---
 
 <!DOCTYPE html>
@@ -8,7 +9,7 @@ import promoConfig from "../data/promo.json";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
-    <title>Promo Date Generator — IPTV 4K World</title>
+    <title>Admin Tools — IPTV 4K World</title>
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body {
@@ -17,8 +18,10 @@ import promoConfig from "../data/promo.json";
         color: #e2e8f0;
         min-height: 100vh;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 2rem;
         padding: 2rem;
       }
       .card {
@@ -60,7 +63,14 @@ import promoConfig from "../data/promo.json";
         align-items: flex-end;
       }
       .row .field { flex: 1; }
-      input[type="date"], input[type="time"] {
+      .divider {
+        width: 100%;
+        max-width: 480px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.3), transparent);
+        margin: 0.5rem 0;
+      }
+      input[type="date"], input[type="time"], input[type="number"], select {
         width: 100%;
         padding: 0.75rem 1rem;
         border: 1px solid rgba(148, 163, 184, 0.2);
@@ -71,6 +81,16 @@ import promoConfig from "../data/promo.json";
         font-family: inherit;
         outline: none;
         transition: border-color 0.2s;
+        cursor: text;
+      }
+      select {
+        cursor: pointer;
+        appearance: none;
+        -webkit-appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2394a3b8' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 0.75rem center;
+        padding-right: 2.25rem;
       }
       input:focus {
         border-color: #22d3ee;
@@ -157,6 +177,118 @@ import promoConfig from "../data/promo.json";
         padding: 0.125rem 0.5rem;
         border-radius: 0.375rem;
       }
+      .price-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem 1rem;
+      }
+      .price-grid .field { flex: 1; }
+      .field label small {
+        font-weight: 400;
+        color: #64748b;
+        text-transform: none;
+        letter-spacing: 0;
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        opacity: 0.5;
+      }
+      .sep {
+        margin: 1.5rem 0 1rem;
+        border: none;
+        border-top: 1px solid rgba(148, 163, 184, 0.08);
+      }
+      /* ── Savings preview ── */
+      .savings-preview {
+        margin-top: 1rem;
+        padding: 1rem 1.25rem;
+        background: rgba(15, 23, 42, 0.6);
+        border: 1px solid rgba(148, 163, 184, 0.1);
+        border-radius: 0.75rem;
+        display: none;
+      }
+      .savings-preview h3 {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #94a3b8;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.75rem;
+      }
+      .savings-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(148, 163, 184, 0.06);
+        font-size: 0.8125rem;
+      }
+      .savings-row:last-child { border-bottom: none; }
+      .savings-plan-name {
+        color: #cbd5e1;
+        font-weight: 600;
+      }
+      .savings-metrics {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+      .savings-metric {
+        text-align: right;
+      }
+      .savings-metric-label {
+        font-size: 0.625rem;
+        color: #64748b;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+      .savings-metric-value {
+        color: #e2e8f0;
+        font-weight: 600;
+        font-variant-numeric: tabular-nums;
+      }
+      .savings-metric-value.highlight {
+        color: #34d399;
+        font-size: 0.9375rem;
+      }
+      .savings-metric-value.negative {
+        color: #f87171;
+        font-size: 0.9375rem;
+      }
+      /* ── Warnings ── */
+      .warnings-list {
+        margin-top: 0.75rem;
+        display: none;
+        flex-direction: column;
+        gap: 0.375rem;
+      }
+      .warning-badge {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 500;
+      }
+      .warning-badge.warn {
+        background: rgba(250, 204, 21, 0.08);
+        border: 1px solid rgba(250, 204, 21, 0.2);
+        color: #facc15;
+      }
+      .warning-badge.error {
+        background: rgba(239, 68, 68, 0.08);
+        border: 1px solid rgba(239, 68, 68, 0.2);
+        color: #f87171;
+      }
+      .input-warn {
+        border-color: #facc15 !important;
+        box-shadow: 0 0 0 1px rgba(250, 204, 21, 0.25);
+      }
+      .input-error {
+        border-color: #f87171 !important;
+        box-shadow: 0 0 0 1px rgba(248, 113, 113, 0.25);
+      }
     </style>
   </head>
   <body>
@@ -201,6 +333,115 @@ import promoConfig from "../data/promo.json";
         2. Click <strong>Copy</strong><br />
         3. Paste into <span class="file-path">src/data/promo.json</span> → <code>"countdownTarget"</code><br />
         4. Redeploy on Cloudflare Pages
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="card">
+      <h1>&#x1F4B6; Subscription Prices Editor</h1>
+      <p class="subtitle">
+        Update the prices in
+        <span class="file-path">src/data/prices.json</span>
+      </p>
+
+      <div class="price-grid">
+        <div class="field">
+          <label for="price-3m">3 Months <small>(EUR)</small></label>
+          <input type="number" id="price-3m" step="0.01" min="0" value={prices.threeMonths} />
+        </div>
+        <div class="field">
+          <label for="price-6m">6 Months <small>(EUR)</small></label>
+          <input type="number" id="price-6m" step="0.01" min="0" value={prices.sixMonths} />
+        </div>
+        <div class="field">
+          <label for="price-1y">1 Year <small>(EUR)</small></label>
+          <input type="number" id="price-1y" step="0.01" min="0" value={prices.oneYear} />
+        </div>
+        <div class="field">
+          <label for="price-orig">Original Price <small>(strikethrough, EUR)</small></label>
+          <input type="number" id="price-orig" step="0.01" min="0" value={prices.originalPrice} />
+        </div>
+      </div>
+
+      <hr class="sep" />
+
+      <div class="field" style="margin-bottom: 0.5rem;">
+        <label for="price-compare">Comparison Monthly Rate <small>(used for savings calc)</small></label>
+        <input type="number" id="price-compare" step="0.01" min="0" value={prices.monthlyComparisonRate} />
+      </div>
+
+      <div class="field" style="margin-bottom: 0.5rem;">
+        <label for="currency-select">Currency</label>
+        <select id="currency-select">
+          <option value="EUR" data-symbol="€" selected={prices.currency === "EUR"}>EUR (€)</option>
+          <option value="USD" data-symbol="$" selected={prices.currency === "USD"}>USD ($)</option>
+          <option value="GBP" data-symbol="£" selected={prices.currency === "GBP"}>GBP (£)</option>
+        </select>
+      </div>
+
+      <!-- Savings Live Preview -->
+      <div class="savings-preview" id="savings-preview">
+        <h3>Live Savings Preview</h3>
+        <div class="savings-row">
+          <span class="savings-plan-name">3 Months</span>
+          <div class="savings-metrics">
+            <div class="savings-metric">
+              <div class="savings-metric-label">/month</div>
+              <div class="savings-metric-value" id="sav-3m-monthly">—</div>
+            </div>
+            <div class="savings-metric">
+              <div class="savings-metric-label">Save</div>
+              <div class="savings-metric-value" id="sav-3m-pct">—</div>
+            </div>
+          </div>
+        </div>
+        <div class="savings-row">
+          <span class="savings-plan-name">6 Months</span>
+          <div class="savings-metrics">
+            <div class="savings-metric">
+              <div class="savings-metric-label">/month</div>
+              <div class="savings-metric-value" id="sav-6m-monthly">—</div>
+            </div>
+            <div class="savings-metric">
+              <div class="savings-metric-label">Save</div>
+              <div class="savings-metric-value" id="sav-6m-pct">—</div>
+            </div>
+          </div>
+        </div>
+        <div class="savings-row">
+          <span class="savings-plan-name">1 Year</span>
+          <div class="savings-metrics">
+            <div class="savings-metric">
+              <div class="savings-metric-label">/month</div>
+              <div class="savings-metric-value" id="sav-1y-monthly">—</div>
+            </div>
+            <div class="savings-metric">
+              <div class="savings-metric-label">Save</div>
+              <div class="savings-metric-value" id="sav-1y-pct">—</div>
+            </div>
+          </div>
+        </div>
+        <!-- Warnings -->
+        <div class="warnings-list" id="warnings-list"></div>
+      </div>
+
+      <button class="btn btn-secondary" id="load-prices-btn" data-prices={JSON.stringify(prices)}>Load current values</button>
+      <p class="current-hint" id="prices-hint"></p>
+
+      <div class="output-box" id="prices-output-box">
+        <code class="output-str" id="prices-output-str"></code>
+        <button class="btn btn-primary" id="copy-prices-btn">Copy JSON</button>
+      </div>
+      <div class="copied-feedback" id="copied-prices-msg"></div>
+
+      <div class="info-block">
+        <strong>How to use:</strong><br />
+        1. Edit the price values above<br />
+        2. Click <strong>Copy JSON</strong><br />
+        3. Paste into <span class="file-path">src/data/prices.json</span><br />
+        4. Savings values auto-recalculate on redeploy<br />
+        5. Redeploy on Cloudflare Pages
       </div>
     </div>
 
@@ -320,6 +561,217 @@ import promoConfig from "../data/promo.json";
 
       copyJsonBtn.addEventListener('click', function () {
         doCopy(jsonOutputStr.textContent, copyJsonBtn, copiedJsonMsg);
+      });
+
+      /* ── Prices Editor ── */
+      const price3m = document.getElementById('price-3m');
+      const price6m = document.getElementById('price-6m');
+      const price1y = document.getElementById('price-1y');
+      const priceOrig = document.getElementById('price-orig');
+      const priceCompare = document.getElementById('price-compare');
+      const pricesOutputBox = document.getElementById('prices-output-box');
+      const pricesOutputStr = document.getElementById('prices-output-str');
+      const copyPricesBtn = document.getElementById('copy-prices-btn');
+      const copiedPricesMsg = document.getElementById('copied-prices-msg');
+      const loadPricesBtn = document.getElementById('load-prices-btn');
+      const pricesHint = document.getElementById('prices-hint');
+      const currencySelect = document.getElementById('currency-select');
+
+      function updatePrices() {
+        const p3 = parseFloat(price3m.value) || 0;
+        const p6 = parseFloat(price6m.value) || 0;
+        const p1 = parseFloat(price1y.value) || 0;
+        const pOrig = parseFloat(priceOrig.value) || 0;
+        const pCompare = parseFloat(priceCompare.value) || 0;
+        const obj = {
+          threeMonths: p3.toFixed(2),
+          sixMonths: p6.toFixed(2),
+          oneYear: p1.toFixed(2),
+          originalPrice: pOrig.toFixed(2),
+          monthlyComparisonRate: pCompare.toFixed(2),
+          currency: currencySelect.value,
+          symbol: getCurSymbol()
+        };
+        pricesOutputStr.textContent = JSON.stringify(obj, null, 2);
+        pricesOutputBox.style.display = 'flex';
+
+        // ── Live savings preview ──
+        const preview = document.getElementById('savings-preview');
+        const hasAnyPrice = p3 > 0 || p6 > 0 || p1 > 0;
+        preview.style.display = hasAnyPrice ? 'block' : 'none';
+        if (!hasAnyPrice) return;
+
+        const m3 = p3 > 0 ? (p3 / 3).toFixed(2) : '—';
+        const m6 = p6 > 0 ? (p6 / 6).toFixed(2) : '—';
+        const m1 = p1 > 0 ? (p1 / 12).toFixed(2) : '—';
+
+        const pct3 = p3 > 0 && pCompare > 0 ? Math.round((1 - p3 / (pCompare * 3)) * 100) : null;
+        const pct6 = p6 > 0 && pCompare > 0 ? Math.round((1 - p6 / (pCompare * 6)) * 100) : null;
+        const pct1 = p1 > 0 && pCompare > 0 ? Math.round((1 - p1 / (pCompare * 12)) * 100) : null;
+
+        function getCurSymbol() {
+          var sel = currencySelect.options[currencySelect.selectedIndex];
+          return sel ? (sel.getAttribute('data-symbol') || '€') : '€';
+        }
+
+        const curSym = getCurSymbol();
+
+        document.getElementById('sav-3m-monthly').textContent = p3 > 0 ? curSym + m3 : '—';
+        document.getElementById('sav-6m-monthly').textContent = p6 > 0 ? curSym + m6 : '—';
+        document.getElementById('sav-1y-monthly').textContent = p1 > 0 ? curSym + m1 : '—';
+
+        document.getElementById('sav-3m-pct').textContent = pct3 !== null ? pct3 + '%' : '—';
+        document.getElementById('sav-6m-pct').textContent = pct6 !== null ? pct6 + '%' : '—';
+        document.getElementById('sav-1y-pct').textContent = pct1 !== null ? pct1 + '%' : '—';
+
+        // Dynamically color savings percentages
+        var el3 = document.getElementById('sav-3m-pct');
+        var el6 = document.getElementById('sav-6m-pct');
+        var el1 = document.getElementById('sav-1y-pct');
+        el3.className = 'savings-metric-value' + (pct3 !== null ? (pct3 >= 0 ? ' highlight' : ' negative') : '');
+        el6.className = 'savings-metric-value' + (pct6 !== null ? (pct6 >= 0 ? ' highlight' : ' negative') : '');
+        el1.className = 'savings-metric-value' + (pct1 !== null ? (pct1 >= 0 ? ' highlight' : ' negative') : '');
+
+        // ── Validation warnings ──
+        const warnings = [];
+        const warnFields = new Set();
+        const errorFields = new Set();
+
+        // Per-month cost should decrease with longer plans
+        if (p3 > 0 && p6 > 0 && (p6 / 6) >= (p3 / 3)) {
+          warnings.push({ text: '6-month plan costs ≥ 3-month plan per month — should be cheaper', level: 'error' });
+          errorFields.add('price-6m');
+        }
+        if (p6 > 0 && p1 > 0 && (p1 / 12) >= (p6 / 6)) {
+          warnings.push({ text: '1-year plan costs ≥ 6-month plan per month — should be cheaper', level: 'error' });
+          errorFields.add('price-1y');
+        }
+
+        // Original price must be higher than 1-year price
+        if (pOrig > 0 && p1 > 0 && pOrig <= p1) {
+          warnings.push({ text: 'Original price (' + pOrig.toFixed(2) + ') should be higher than 1-year price (' + p1.toFixed(2) + ')', level: 'warn' });
+          warnFields.add('price-orig');
+        }
+        if (pOrig > 0 && p1 === 0) {
+          warnings.push({ text: 'Original price is set but 1-year price is 0', level: 'warn' });
+          warnFields.add('price-orig');
+        }
+
+        // Comparison rate should be higher than per-month cost of all plans
+        if (pCompare > 0 && p1 > 0 && pCompare <= (p1 / 12)) {
+          warnings.push({ text: 'Comparison rate (' + curSym + pCompare.toFixed(2) + ') should exceed per-month of 1-year plan (' + curSym + (p1/12).toFixed(2) + ') to show savings', level: 'warn' });
+          warnFields.add('price-compare');
+        }
+
+        // Per-month cost exceeds comparison rate (negative savings = loss)
+        if (pct3 !== null && pct3 < 0) {
+          warnings.push({ text: '3-month plan per-month (' + curSym + m3 + ') exceeds comparison rate (' + curSym + pCompare.toFixed(2) + ') — not a saving', level: 'error' });
+          errorFields.add('price-3m');
+        }
+        if (pct6 !== null && pct6 < 0) {
+          warnings.push({ text: '6-month plan per-month (' + curSym + m6 + ') exceeds comparison rate (' + curSym + pCompare.toFixed(2) + ') — not a saving', level: 'error' });
+          errorFields.add('price-6m');
+        }
+        if (pct1 !== null && pct1 < 0) {
+          warnings.push({ text: '1-year plan per-month (' + curSym + m1 + ') exceeds comparison rate (' + curSym + pCompare.toFixed(2) + ') — not a saving', level: 'error' });
+          errorFields.add('price-1y');
+        }
+
+        // Sanity: very high/low savings percentages (check all plans)
+        var plans = [
+          { pct: pct3, label: '3-month', field: 'price-3m' },
+          { pct: pct6, label: '6-month', field: 'price-6m' },
+          { pct: pct1, label: '1-year', field: 'price-1y' }
+        ];
+        plans.forEach(function (plan) {
+          if (plan.pct !== null && plan.pct >= 0 && plan.pct < 5) {
+            warnings.push({ text: plan.label + ' savings only ' + plan.pct + '% — consider lowering the price', level: 'warn' });
+            warnFields.add(plan.field);
+          }
+          if (plan.pct !== null && plan.pct > 90) {
+            warnings.push({ text: plan.label + ' savings at ' + plan.pct + '% — verify price is not too low', level: 'warn' });
+            warnFields.add(plan.field);
+          }
+        });
+
+        // Render warnings
+        const warnList = document.getElementById('warnings-list');
+        warnList.innerHTML = '';
+        if (warnings.length > 0) {
+          warnings.forEach(function (w) {
+            const badge = document.createElement('div');
+            badge.className = 'warning-badge ' + w.level;
+            badge.textContent = (w.level === 'error' ? '⚠️ ' : '⚡ ') + w.text;
+            warnList.appendChild(badge);
+          });
+          warnList.style.display = 'flex';
+        } else {
+          warnList.style.display = 'none';
+        }
+
+        // Highlight inputs
+        [price3m, price6m, price1y, priceOrig, priceCompare].forEach(function (el) {
+          el.classList.remove('input-warn', 'input-error');
+        });
+        errorFields.forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el) el.classList.add('input-error');
+        });
+        warnFields.forEach(function (id) {
+          if (!errorFields.has(id)) {
+            var el = document.getElementById(id);
+            if (el) el.classList.add('input-warn');
+          }
+        });
+      }
+
+      [price3m, price6m, price1y, priceOrig, priceCompare, currencySelect].forEach(function (el) {
+        el.addEventListener('input', updatePrices);
+      });
+      currencySelect.addEventListener('change', updatePrices);
+      updatePrices();
+
+      loadPricesBtn.addEventListener('click', function () {
+        var dp = loadPricesBtn.dataset.prices || '{}';
+        var saved;
+        try { saved = JSON.parse(dp); } catch(e) { saved = {}; }
+        price3m.value = saved.threeMonths || '';
+        price6m.value = saved.sixMonths || '';
+        price1y.value = saved.oneYear || '';
+        priceOrig.value = saved.originalPrice || '';
+        priceCompare.value = saved.monthlyComparisonRate || '';
+        if (saved.currency) currencySelect.value = saved.currency;
+        updatePrices();
+        pricesHint.textContent = 'Reset to values from prices.json';
+        setTimeout(function () { pricesHint.textContent = ''; }, 3000);
+      });
+
+      copyPricesBtn.addEventListener('click', function () {
+        const str = pricesOutputStr.textContent;
+        if (!str) return;
+        navigator.clipboard.writeText(str).then(function () {
+          copiedPricesMsg.textContent = 'Copied!';
+          copyPricesBtn.textContent = 'Copied!';
+          setTimeout(function () {
+            copiedPricesMsg.textContent = '';
+            copyPricesBtn.textContent = 'Copy JSON';
+          }, 2000);
+        }).catch(function () {
+          const ta = document.createElement('textarea');
+          ta.value = str;
+          ta.style.position = 'fixed';
+          ta.style.left = '-9999px';
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+          copiedPricesMsg.textContent = 'Copied!';
+          copyPricesBtn.textContent = 'Copied!';
+          setTimeout(function () {
+            copiedPricesMsg.textContent = '';
+            copyPricesBtn.textContent = 'Copy JSON';
+          }, 2000);
+        });
       });
     </script>
   </body>

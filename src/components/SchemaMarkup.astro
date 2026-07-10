@@ -1,6 +1,7 @@
 ---
 import { getLangFromUrl } from "../i18n/ui";
 import { WHATSAPP_NUMBER as WA } from "../i18n/whatsapp";
+import prices from "../data/prices.json";
 
 interface Props {
   type: "faq" | "product" | "organization";
@@ -35,9 +36,9 @@ if (type === "faq") {
     offers: {
       "@type": "AggregateOffer",
       offerCount: 3,
-      lowPrice: data.lowPrice || "9.99",
-      highPrice: data.highPrice || "59.99",
-      priceCurrency: data.currency || "EUR",
+      lowPrice: data.lowPrice || prices.threeMonths,
+      highPrice: data.highPrice || prices.oneYear,
+      priceCurrency: data.currency || prices.currency || "EUR",
       availability: "https://schema.org/InStock",
     },
   };

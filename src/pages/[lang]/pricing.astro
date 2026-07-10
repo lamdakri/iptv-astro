@@ -10,6 +10,7 @@ import PaymentIcons from "../../components/PaymentIcons.astro";
 import PayPalBadge from "../../components/PayPalBadge.astro";
 import { getWhatsAppUrl, getWhatsAppTrialMsg } from "../../i18n/whatsapp";
 import { getAggregateRating } from "../../data/testimonials";
+import prices from "../../data/prices.json";
 
 export function getStaticPaths() {
   return Object.keys(LANGUAGES).map((lang) => ({ params: { lang } }));
@@ -51,15 +52,15 @@ const pageTitle = t("pricing.title") + " | " + t("site.name");
     offers: {
       "@type": "AggregateOffer",
       offerCount: 3,
-      lowPrice: "24.99",
-      highPrice: "59.99",
-      priceCurrency: "EUR",
+      lowPrice: prices.threeMonths,
+      highPrice: prices.oneYear,
+      priceCurrency: prices.currency,
       availability: "https://schema.org/InStock",
     },
     aggregateRating: getAggregateRating(),
   }}
 >
-  <SchemaMarkup type="product" data={{ lowPrice: "24.99", highPrice: "59.99", currency: "EUR" }} />
+  <SchemaMarkup type="product" data={{ lowPrice: prices.threeMonths, highPrice: prices.oneYear, currency: prices.currency }} />
 
   <section class="pt-32 pb-20">
     <div class="container-custom">
@@ -152,21 +153,21 @@ const pageTitle = t("pricing.title") + " | " + t("site.name");
       {
         duration: t("pricing.3months"),
         monthlyCost: t("savings.3months.monthlyCost"),
-        ourPrice: "€" + t("pricing.3months.price"),
+        ourPrice: prices.symbol + t("pricing.3months.price"),
         savings: t("savings.3months.savings"),
         savingsPct: t("savings.3months.pct"),
       },
       {
         duration: t("pricing.6months"),
         monthlyCost: t("savings.6months.monthlyCost"),
-        ourPrice: "€" + t("pricing.6months.price"),
+        ourPrice: prices.symbol + t("pricing.6months.price"),
         savings: t("savings.6months.savings"),
         savingsPct: t("savings.6months.pct"),
       },
       {
         duration: t("pricing.1year"),
         monthlyCost: t("savings.1year.monthlyCost"),
-        ourPrice: "€" + t("pricing.1year.price"),
+        ourPrice: prices.symbol + t("pricing.1year.price"),
         savings: t("savings.1year.savings"),
         savingsPct: t("savings.1year.pct"),
         featured: true,

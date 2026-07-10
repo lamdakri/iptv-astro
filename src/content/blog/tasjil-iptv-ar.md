@@ -9,6 +9,17 @@ category: "دليل"
 tags: ["تسجيل","pvr","timeshift"]
 image: "../../assets/blog/images/all-devices.svg"
 translationKey: iptv-recording
+howToSteps:
+  - name: "اختيار مشغل IPTV يدعم التسجيل"
+    text: "اختر مشغل IPTV يدعم تسجيل PVR. TiviMate Premium و IPTV Smarters Pro و OTT Navigator جميعها توفر ميزات التسجيل."
+  - name: "إعداد التخزين للتسجيلات"
+    text: "قم بتكوين موقع تخزين التسجيلات. على Android TV و Firestick، استخدم التخزين الداخلي أو محرك USB."
+  - name: "جدولة أو بدء التسجيل"
+    text: "في مشغل IPTV، ابحث عن البرنامج الذي تريد تسجيله في دليل EPG واختر تسجيل أو جدولة التسجيل."
+  - name: "استخدام timeshift لإيقاف البث المباشر"
+    text: "فعّل timeshift في إعدادات مشغل IPTV. هذا يتيح لك إيقاف البث المباشر وإرجاعه وتقديمه مثل DVR."
+  - name: "الوصول إلى تسجيلاتك"
+    text: "انتقل إلى قسم التسجيلات أو DVR في مشغل IPTV لمشاهدة التسجيلات المحفوظة أو إدارتها أو حذفها."
 ---
 
 # كيفية تسجيل IPTV المباشر

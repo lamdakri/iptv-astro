@@ -9,6 +9,17 @@ category: "Guida"
 tags: ["registrazione","pvr","timeshift"]
 image: "../../assets/blog/images/all-devices.svg"
 translationKey: iptv-recording
+howToSteps:
+  - name: "Scegliere un lettore IPTV con supporto registrazione"
+    text: "Seleziona un lettore IPTV che supporti la registrazione PVR. TiviMate Premium, IPTV Smarters Pro e OTT Navigator offrono tutti funzionalità di registrazione."
+  - name: "Configurare lo spazio di archiviazione"
+    text: "Configura la posizione di archiviazione per le registrazioni. Su Android TV e Firestick, usa la memoria interna o un'unità USB."
+  - name: "Programmare o avviare una registrazione"
+    text: "Nel tuo lettore IPTV, trova il programma desiderato nella guida EPG e seleziona Registra o Programma registrazione."
+  - name: "Usare il timeshift per mettere in pausa la TV in diretta"
+    text: "Abilita il timeshift nelle impostazioni del lettore IPTV. Ti permette di mettere in pausa, riavvolgere e avanzare rapidamente la TV in diretta come un DVR."
+  - name: "Accedere alle tue registrazioni"
+    text: "Vai alla sezione Registrazioni o DVR del tuo lettore IPTV per guardare, gestire o eliminare le registrazioni salvate."
 ---
 
 # Come Registrare IPTV in Diretta

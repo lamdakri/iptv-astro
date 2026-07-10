@@ -1,3 +1,21 @@
+import prices from "../../data/prices.json";
+
+const rate = parseFloat(prices.monthlyComparisonRate);
+const p3 = parseFloat(prices.threeMonths);
+const p6 = parseFloat(prices.sixMonths);
+const p12 = parseFloat(prices.oneYear);
+
+const mc3 = (rate * 3).toFixed(2);
+const mc6 = (rate * 6).toFixed(2);
+const mc12 = (rate * 12).toFixed(2);
+const s3 = (rate * 3 - p3).toFixed(2);
+const s6 = (rate * 6 - p6).toFixed(2);
+const s12 = (rate * 12 - p12).toFixed(2);
+const pct3 = Math.round((1 - p3 / (rate * 3)) * 100);
+const pct6 = Math.round((1 - p6 / (rate * 6)) * 100);
+const pct12 = Math.round((1 - p12 / (rate * 12)) * 100);
+const entryPrice = (p12 / 12).toFixed(2);
+
 const ar: Record<string, string> = {
   "site.name": "IPTV 4K World",
   "site.tagline": "بث IPTV المتميز",
@@ -46,13 +64,13 @@ const ar: Record<string, string> = {
   "pricing.3months": "3 أشهر",
   "pricing.6months": "6 أشهر",
   "pricing.1year": "سنة",
-  "pricing.3months.price": "24.99",
-  "pricing.6months.price": "39.99",
-  "pricing.1year.price": "59.99",
+  "pricing.3months.price": prices.threeMonths,
+  "pricing.6months.price": prices.sixMonths,
+  "pricing.1year.price": prices.oneYear,
   "pricing.period.3months": "/3 أشهر",
   "pricing.period.6months": "/6 أشهر",
   "pricing.period.1year": "/سنة",
-  "pricing.originalPrice": "89.99",
+  "pricing.originalPrice": prices.originalPrice,
   "pricing.savings": "وفر 33%",
   "pricing.bestValue": "أفضل قيمة",
   "pricing.feature.channels":
@@ -72,20 +90,20 @@ const ar: Record<string, string> = {
   "savings.headerMonthly": "IPTV شهري",
   "savings.headerOurPrice": "سعرنا",
   "savings.headerSavings": "توفر",
-  "savings.monthlyRate": "€14.99/شهر",
+  "savings.monthlyRate": `${prices.symbol}${prices.monthlyComparisonRate}/شهر`,
   "savings.eyebrow": "توفير",
   "savings.bestDeal": "أفضل صفقة",
   "savings.ctaText": "كلما طالت مدة اشتراكك، كلما وفرت أكثر. احصل على أفضل سعر الآن.",
   "savings.ctaButton": "احصل على عرض السنة",
-  "savings.3months.monthlyCost": "€44.97",
-  "savings.3months.savings": "وفر €19.98",
-  "savings.3months.pct": "44%",
-  "savings.6months.monthlyCost": "€89.94",
-  "savings.6months.savings": "وفر €49.95",
-  "savings.6months.pct": "56%",
-  "savings.1year.monthlyCost": "€179.88",
-  "savings.1year.savings": "وفر €119.89",
-  "savings.1year.pct": "67%",
+  "savings.3months.monthlyCost": `${prices.symbol}${mc3}`,
+  "savings.3months.savings": `وفر ${prices.symbol}${s3}`,
+  "savings.3months.pct": `${pct3}%`,
+  "savings.6months.monthlyCost": `${prices.symbol}${mc6}`,
+  "savings.6months.savings": `وفر ${prices.symbol}${s6}`,
+  "savings.6months.pct": `${pct6}%`,
+  "savings.1year.monthlyCost": `${prices.symbol}${mc12}`,
+  "savings.1year.savings": `وفر ${prices.symbol}${s12}`,
+  "savings.1year.pct": `${pct12}%`,
   "testimonials.eyebrow": "آراء العملاء",
   "testimonials.title": "ماذا يقول عملاؤنا",
   "testimonials.subtitle": "انضم إلى آلاف العملاء الراضين حول العالم",
@@ -190,7 +208,7 @@ const ar: Record<string, string> = {
   "comparison.row.devices.disney": "الكل",
   "comparison.row.devices.cable": "📺 تلفزيون فقط",
   "comparison.row.price": "السعر الشهري",
-  "comparison.row.price.iptv": "💶 من €4.99",
+  "comparison.row.price.iptv": `💶 من ${prices.symbol}${entryPrice}`,
   "comparison.row.price.netflix": "€13.49",
   "comparison.row.price.disney": "€8.99",
   "comparison.row.price.cable": "+€40",

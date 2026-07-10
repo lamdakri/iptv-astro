@@ -9,6 +9,17 @@ category: "Anleitung"
 tags: ["aufnahme","pvr","timeshift"]
 image: "../../assets/blog/images/all-devices.svg"
 translationKey: iptv-recording
+howToSteps:
+  - name: "Einen IPTV-Player mit Aufnahmefunktion wählen"
+    text: "Wählen Sie einen IPTV-Player, der PVR-Aufnahmen unterstützt. TiviMate Premium, IPTV Smarters Pro und OTT Navigator bieten alle Aufnahmefunktionen."
+  - name: "Speicher für Aufnahmen einrichten"
+    text: "Konfigurieren Sie den Speicherort für Ihre Aufnahmen. Verwenden Sie auf Android TV und Firestick den internen Speicher oder ein USB-Laufwerk."
+  - name: "Aufnahme planen oder starten"
+    text: "Finden Sie in Ihrem IPTV-Player das gewünschte Programm im EPG und wählen Sie Aufnehmen oder Aufnahme planen."
+  - name: "Timeshift zum Pausieren von Live-TV nutzen"
+    text: "Aktivieren Sie Timeshift in den Einstellungen Ihres IPTV-Players. Damit können Sie Live-TV pausieren, zurückspulen und vorspulen wie bei einem DVR."
+  - name: "Auf Ihre Aufnahmen zugreifen"
+    text: "Navigieren Sie zum Bereich Aufnahmen oder DVR Ihres IPTV-Players, um gespeicherte Aufnahmen anzusehen, zu verwalten oder zu löschen."
 ---
 
 # IPTV Live-TV aufnehmen

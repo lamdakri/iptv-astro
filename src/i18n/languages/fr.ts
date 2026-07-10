@@ -1,3 +1,21 @@
+import prices from "../../data/prices.json";
+
+const rate = parseFloat(prices.monthlyComparisonRate);
+const p3 = parseFloat(prices.threeMonths);
+const p6 = parseFloat(prices.sixMonths);
+const p12 = parseFloat(prices.oneYear);
+
+const mc3 = (rate * 3).toFixed(2);
+const mc6 = (rate * 6).toFixed(2);
+const mc12 = (rate * 12).toFixed(2);
+const s3 = (rate * 3 - p3).toFixed(2);
+const s6 = (rate * 6 - p6).toFixed(2);
+const s12 = (rate * 12 - p12).toFixed(2);
+const pct3 = Math.round((1 - p3 / (rate * 3)) * 100);
+const pct6 = Math.round((1 - p6 / (rate * 6)) * 100);
+const pct12 = Math.round((1 - p12 / (rate * 12)) * 100);
+const entryPrice = (p12 / 12).toFixed(2);
+
 const fr: Record<string, string> = {
   "privacy.title": "Politique de Confidentialité",
   "privacy.subtitle": "Comment nous collectons, utilisons et protégeons vos données",
@@ -66,13 +84,13 @@ const fr: Record<string, string> = {
   "pricing.3months": "3 Mois",
   "pricing.6months": "6 Mois",
   "pricing.1year": "1 An",
-  "pricing.3months.price": "24.99",
-  "pricing.6months.price": "39.99",
-  "pricing.1year.price": "59.99",
+  "pricing.3months.price": prices.threeMonths,
+  "pricing.6months.price": prices.sixMonths,
+  "pricing.1year.price": prices.oneYear,
   "pricing.period.3months": "/3 mois",
   "pricing.period.6months": "/6 mois",
   "pricing.period.1year": "/an",
-  "pricing.originalPrice": "89.99",
+  "pricing.originalPrice": prices.originalPrice,
   "pricing.savings": "Économisez 33%",
   "pricing.bestValue": "Meilleur Prix",
   "pricing.feature.channels": "📺 20 000+ Chaînes TV en Direct — Sports, Films, News & Plus",
@@ -92,21 +110,21 @@ const fr: Record<string, string> = {
   "savings.headerMonthly": "IPTV Mensuel",
   "savings.headerOurPrice": "Notre Prix",
   "savings.headerSavings": "Vous Économisez",
-  "savings.monthlyRate": "€14.99/mois",
+  "savings.monthlyRate": `${prices.symbol}${prices.monthlyComparisonRate}/mois`,
   "savings.eyebrow": "Économies",
   "savings.bestDeal": "Meilleure Offre",
   "savings.ctaText":
     "Plus vous vous abonnez longtemps, plus vous économisez. Bloquez le meilleur prix maintenant.",
   "savings.ctaButton": "Obtenir l'offre 1 An",
-  "savings.3months.monthlyCost": "€44.97",
-  "savings.3months.savings": "Économisez €19.98",
-  "savings.3months.pct": "44 %",
-  "savings.6months.monthlyCost": "€89.94",
-  "savings.6months.savings": "Économisez €49.95",
-  "savings.6months.pct": "56 %",
-  "savings.1year.monthlyCost": "€179.88",
-  "savings.1year.savings": "Économisez €119.89",
-  "savings.1year.pct": "67 %",
+  "savings.3months.monthlyCost": `${prices.symbol}${mc3}`,
+  "savings.3months.savings": `Économisez ${prices.symbol}${s3}`,
+  "savings.3months.pct": `${pct3} %`,
+  "savings.6months.monthlyCost": `${prices.symbol}${mc6}`,
+  "savings.6months.savings": `Économisez ${prices.symbol}${s6}`,
+  "savings.6months.pct": `${pct6} %`,
+  "savings.1year.monthlyCost": `${prices.symbol}${mc12}`,
+  "savings.1year.savings": `Économisez ${prices.symbol}${s12}`,
+  "savings.1year.pct": `${pct12} %`,
   "payment.methods": "PayPal & Crypto Acceptés",
   "payment.trust":
     "Paiements sécurisés via PayPal et cryptomonnaie. Aucune carte de crédit requise.",
@@ -199,7 +217,7 @@ const fr: Record<string, string> = {
   "comparison.row.devices.disney": "Tous",
   "comparison.row.devices.cable": "📺 TV Seulement",
   "comparison.row.price": "Prix Mensuel",
-  "comparison.row.price.iptv": "💶 Dès €4.99/mois",
+  "comparison.row.price.iptv": `💶 Dès ${prices.symbol}${entryPrice}/mois`,
   "comparison.row.price.netflix": "€13.49/mois",
   "comparison.row.price.disney": "€8.99/mois",
   "comparison.row.price.cable": "€40+/mois",

@@ -67,6 +67,9 @@ function getBlogPostImage(url) {
 export default defineConfig({
   site: "https://iptv4kworld.com",
   output: "server",
+  build: {
+    inlineStylesheets: "always",
+  },
   adapter: cloudflare({
     imageService: "compile",
     platformProxy: { enabled: true },

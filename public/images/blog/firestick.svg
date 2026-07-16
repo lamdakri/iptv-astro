@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg-fs" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1e1b4b;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="accent-fs" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg-fs)" rx="16"/>
+  <!-- Firestick device -->
+  <rect x="340" y="60" width="120" height="200" rx="16" fill="#1e293b" stroke="url(#accent-fs)" stroke-width="2"/>
+  <rect x="370" y="80" width="60" height="50" rx="8" fill="#0f172a"/>
+  <circle cx="400" cy="105" r="15" fill="url(#accent-fs)" opacity="0.9"/>
+  <rect x="370" y="150" width="60" height="8" rx="4" fill="#22d3ee" opacity="0.4"/>
+  <rect x="370" y="168" width="45" height="6" rx="3" fill="#334155"/>
+  <rect x="370" y="183" width="50" height="6" rx="3" fill="#334155"/>
+  <rect x="370" y="198" width="40" height="6" rx="3" fill="#334155"/>
+  <!-- HDMI connector -->
+  <rect x="380" y="260" width="40" height="20" rx="2" fill="#334155"/>
+  <rect x="370" y="280" width="60" height="8" rx="2" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <!-- USB power cable -->
+  <path d="M460 140 Q500 140 500 170 Q500 200 460 200" fill="none" stroke="#334155" stroke-width="3"/>
+  <!-- Remote control -->
+  <rect x="200" y="100" width="35" height="160" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5" transform="rotate(-15 217 180)"/>
+  <!-- TV in background -->
+  <rect x="480" y="70" width="180" height="120" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <rect x="490" y="80" width="160" height="90" rx="4" fill="#1e293b"/>
+  <polygon points="550,100 550,150 590,125" fill="#22d3ee" opacity="0.5"/>
+  <!-- Title -->
+  <text x="400" y="360" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13" letter-spacing="3">FIRESTICK IPTV</text>
+  <circle cx="80" cy="100" r="50" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.1"/>
+  <circle cx="700" cy="300" r="40" fill="none" stroke="#22d3ee" stroke-width="1" opacity="0.1"/>
+</svg>

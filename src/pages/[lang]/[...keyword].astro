@@ -71,10 +71,29 @@ const webPageSchema = {
     url: Astro.site?.href || 'https://iptv4kworld.com',
   },
 };
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: t('breadcrumb.home'),
+      item: new URL('/' + lang + '/', Astro.site || 'https://iptv4kworld.com').href,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: seoData.h1,
+    },
+  ],
+};
 ---
 
-<BaseLayout title={pageTitle} description={seoData.description} keywords={seoData.h1 + ', IPTV, IPTV subscription'} schema={webPageSchema} alternateLangs={alternateLangs}>
+<BaseLayout title={pageTitle} description={seoData.description} keywords={`${seoData.h1}, ${seoEntry.data.keyword}, IPTV, IPTV subscription, best IPTV, premium IPTV, 4K streaming, IPTV free trial, buy IPTV, cheap IPTV, IPTV provider`} schema={webPageSchema} alternateLangs={alternateLangs}>
   <SchemaMarkup type="faq" data={{ questions: faqItems }} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} is:inline />
 
   <section class="pt-32 pb-20">
     <div class="container-custom max-w-4xl">

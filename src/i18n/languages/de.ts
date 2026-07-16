@@ -289,7 +289,7 @@ const de: Record<string, string> = {
   "seo.cta.subtitle": "Sehen Sie {keyword} in Premium-Qualität. Kostenlose Testversion verfügbar.",
   "seo.cta.button": "Jetzt auf WhatsApp starten",
   "seo.keywords":
-    "IPTV, IPTV-Abonnement, 4K-Streaming, Live-TV-Sender, Sport-Streaming, IPTV kaufen, IPTV kostenlos testen",
+    "IPTV, IPTV-Abonnement, 4K-Streaming, Live-TV-Sender, Sport-Streaming, IPTV kaufen, IPTV kostenlos testen, bestes IPTV, Premium-IPTV, IPTV Deutschland, IPTV für Smart TV, IPTV für Firestick, IPTV für Android, IPTV für iOS, günstiges IPTV-Abo, Fußball live streamen, Bundesliga IPTV, Champions League IPTV, IPTV mit VPN, M3U-Playlist IPTV, IPTV-Anbieter, IPTV 2026",
   "search.placeholder": "Blogbeiträge durchsuchen...",
   "notFound.title": "Seite nicht gefunden",
   "notFound.subtitle": "Die gesuchte Seite existiert nicht.",

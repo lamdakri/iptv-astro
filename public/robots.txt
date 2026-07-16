@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /cdn-cgi/
+Crawl-delay: 5
 
 Sitemap: https://iptv4kworld.com/sitemap-index.xml
+Sitemap: https://iptv4kworld.com/sitemap-news.xml

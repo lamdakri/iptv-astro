@@ -293,7 +293,7 @@ const fr: Record<string, string> = {
   "seo.cta.subtitle": "Regardez {keyword} avec une qualité premium. Essai gratuit disponible.",
   "seo.cta.button": "Commencez sur WhatsApp",
   "seo.keywords":
-    "IPTV, abonnement IPTV, streaming 4K, chaînes TV en direct, streaming sport, acheter IPTV, essai gratuit IPTV",
+    "IPTV, abonnement IPTV, streaming 4K, chaînes TV en direct, streaming sport, acheter IPTV, essai gratuit IPTV, meilleur IPTV, IPTV premium, IPTV France, IPTV pour Smart TV, IPTV pour Firestick, IPTV pour Android, IPTV pour iOS, abonnement IPTV pas cher, regarder football en streaming, Ligue 1 IPTV, Champions League IPTV, IPTV avec VPN, playlist M3U IPTV, fournisseur IPTV, IPTV 2026",
   "search.placeholder": "Rechercher des articles...",
   "site.tagline": "Streaming IPTV Premium",
   "notFound.title": "Page Introuvable",

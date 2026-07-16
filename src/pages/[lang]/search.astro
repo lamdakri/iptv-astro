@@ -18,11 +18,11 @@ const allPosts = await getCollection("blog", ({ data }) => !data.draft);
 const searchIndex = allPosts.map((post) => ({
   title: post.data.title,
   description: post.data.description || "",
-  slug: post.slug,
+  slug: post.id,
   category: post.data.category || "",
   lang: post.data.lang,
   date: post.data.date.toISOString(),
-  url: baseUrl + "/" + post.data.lang + "/blog/" + post.slug + "/",
+  url: baseUrl + "/" + post.data.lang + "/blog/" + post.id + "/",
 }));
 
 const localeMap: Record<string, string> = {
@@ -45,6 +45,14 @@ const webPageSchema = {
   url: searchUrl,
   inLanguage: ogLocale,
   isPartOf: { "@type": "WebSite", name: t("site.name"), url: baseUrl },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: searchUrl + "?q={search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
+  },
 };
 
 const alternateLangs = Object.keys(LANGUAGES).map((l) => ({

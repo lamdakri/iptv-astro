@@ -32,3 +32,10 @@ public/favicon-512.png
 
 # generated Lighthouse reports
 *.report.json
+
+# Cloudflare wrangler
+.wrangler/
+wrangler.toml
+
+# astro dev logs
+astro.log

@@ -287,7 +287,7 @@ const en: Record<string, string> = {
   "seo.cta.subtitle": "Watch {keyword} with premium quality. Free trial available.",
   "seo.cta.button": "Get Started on WhatsApp",
   "seo.keywords":
-    "IPTV, IPTV subscription, 4K streaming, live TV channels, sports streaming, IPTV 4K World, buy IPTV, IPTV free trial",
+    "IPTV, IPTV subscription, 4K streaming, live TV channels, sports streaming, IPTV 4K World, buy IPTV, IPTV free trial, best IPTV service, premium IPTV, IPTV for Firestick, IPTV for Smart TV, IPTV for Android, IPTV for iOS, IPTV box, IPTV provider, cheap IPTV subscription, IPTV premium, watch live sports, football streaming, Premier League IPTV, Champions League IPTV, IPTV with VPN, IPTV M3U playlist, IPTV reseller, IPTV 2026",
   "search.placeholder": "Search blog posts...",
   "notFound.title": "Page Not Found",
   "notFound.subtitle": "The page does not exist.",

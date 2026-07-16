@@ -283,7 +283,7 @@ const ar: Record<string, string> = {
   "seo.cta.subtitle": "شاهد {keyword} بجودة متميزة. تجربة مجانية متاحة.",
   "seo.cta.button": "ابدأ على واتساب",
   "seo.keywords":
-    "IPTV, اشتراك IPTV, بث 4K, قنوات تلفزيونية مباشرة, بث رياضي, شراء IPTV, تجربة IPTV مجانية",
+    "IPTV, اشتراك IPTV, بث 4K, قنوات تلفزيونية مباشرة, بث رياضي, شراء IPTV, تجربة IPTV مجانية, أفضل IPTV, IPTV متميز, IPTV للسمارت TV, IPTV للفايرستيك, IPTV للأندرويد, IPTV للأيفون, اشتراك IPTV رخيص, مشاهدة كرة القدم مباشر, دوري روشن IPTV, دوري أبطال أوروبا IPTV, beIN Sports IPTV, IPTV مع VPN, قائمة تشغيل M3U IPTV, مزود IPTV, IPTV 2026",
   "search.placeholder": "ابحث في المقالات...",
   "notFound.title": "الصفحة غير موجودة",
   "notFound.subtitle": "الصفحة التي تبحث عنها غير موجودة.",

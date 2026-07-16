@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
+import cloudflare from "@astrojs/cloudflare";
 import compress from "@playform/compress";
 import tailwindcss from "@tailwindcss/vite";
 import fs from "node:fs";
@@ -10,6 +11,8 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
 // Build a map of blog post slugs → frontmatter dates for real lastmod values
 const blogDateMap = {};
+// Build a map of blog post slugs → { url, title } for image sitemap
+const blogImageMap = {};
 const blogDir = path.resolve("src/content/blog");
 try {
   const files = fs.readdirSync(blogDir);
@@ -17,31 +20,62 @@ try {
     if (!file.endsWith(".md")) continue;
     const content = fs.readFileSync(path.join(blogDir, file), "utf8");
     const dateMatch = content.match(/^date:\s*(\d{4}-\d{2}-\d{2})/m);
+    const imageMatch = content.match(/^image:\s*"([^"]+)"/m);
+    const titleMatch = content.match(/^title:\s*"([^"]+)"/m);
+    const slug = file.replace(/\.md$/, "");
     if (dateMatch) {
-      const slug = file.replace(/\.md$/, "");
       blogDateMap[slug] = new Date(dateMatch[1]);
+    }
+    if (imageMatch) {
+      const relPath = imageMatch[1];
+      const filename = path.basename(path.resolve(blogDir, relPath));
+      const blogTitle = titleMatch ? titleMatch[1] : "";
+      blogImageMap[slug] = {
+        url: `https://iptv4kworld.com/images/blog/${filename}`,
+        title: blogTitle,
+        caption: blogTitle,
+      };
     }
   }
   console.log(`📅 Loaded ${Object.keys(blogDateMap).length} blog dates for sitemap lastmod`);
+  console.log(`🖼  Loaded ${Object.keys(blogImageMap).length} blog images for image sitemap`);
 } catch {
-  // Silently fall back — blog posts will use the build date
   console.warn("⚠ Could not read blog dates, using build date for all lastmod values");
 }
 
 // Helper: extract blog post slug from sitemap URL
-function getBlogPostDate(url) {
+function extractBlogSlug(url) {
   const match = url.match(/\/blog\/([^/]+)\/$/);
   if (!match) return null;
-  return blogDateMap[match[1]] || null;
+  return match[1];
+}
+
+// Helper: get blog post date from slug
+function getBlogPostDate(url) {
+  const slug = extractBlogSlug(url);
+  if (!slug) return null;
+  return blogDateMap[slug] || null;
+}
+
+// Helper: get blog post image info from slug for image sitemap
+function getBlogPostImage(url) {
+  const slug = extractBlogSlug(url);
+  if (!slug) return null;
+  return blogImageMap[slug] || null;
 }
 
 export default defineConfig({
   site: "https://iptv4kworld.com",
-  output: "static",
+  output: "server",
+  adapter: cloudflare({
+    imageService: "compile",
+    platformProxy: { enabled: true },
+  }),
   trailingSlash: "always",
+
   image: {
     service: {
-      entrypoint: "astro/assets/services/sharp",
+      entrypoint: "astro/assets/services/passthrough",
     },
   },
   integrations: [
@@ -67,6 +101,12 @@ export default defineConfig({
         const blogDate = getBlogPostDate(url);
         item.lastmod = blogDate || new Date();
 
+        // === IMAGE SITEMAP — add <image:image> tags for blog posts with images ===
+        const blogImage = getBlogPostImage(url);
+        if (blogImage) {
+          item.img = [{ url: blogImage.url, caption: blogImage.caption, title: blogImage.title }];
+        }
+
         // === CHANGEFREQ based on page type ===
         // Language homepages: pathname is /en/, /fr/, /ar/, etc.
         if (/^\/(en|fr|ar|es|de|it|pt)\/$/.test(pathname)) {
@@ -87,6 +127,12 @@ export default defineConfig({
         } else if (pathname.includes("/privacy/") || pathname.includes("/terms/")) {
           // Legal pages — rarely change
           item.changefreq = "monthly";
+        } else if (pathname.includes("/contact/")) {
+          // Contact page — static content
+          item.changefreq = "monthly";
+        } else if (pathname.includes("/search/")) {
+          // Search page — updated occasionally
+          item.changefreq = "weekly";
         } else {
           // Other pages
           item.changefreq = "monthly";
@@ -107,6 +153,12 @@ export default defineConfig({
         } else if (pathname.includes("/privacy/") || pathname.includes("/terms/")) {
           // Legal pages — lowest priority
           item.priority = 0.3;
+        } else if (pathname.includes("/contact/")) {
+          // Contact page — lower priority
+          item.priority = 0.4;
+        } else if (pathname.includes("/search/")) {
+          // Search page — medium priority
+          item.priority = 0.6;
         } else {
           item.priority = 0.5;
         }
@@ -117,6 +169,18 @@ export default defineConfig({
     compress({
       png: false,
     }),
+    {
+      name: "admin-route",
+      hooks: {
+        "astro:config:setup": ({ injectRoute }) => {
+          injectRoute({
+            pattern: "/admin/",
+            entrypoint: "src/admin.astro",
+            prerender: true,
+          });
+        },
+      },
+    },
   ],
   i18n: {
     defaultLocale: "en",
@@ -151,14 +215,5 @@ export default defineConfig({
   },
   vite: {
     plugins: [tailwindcss()],
-    build: {
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            "vendor-astro": ["astro"],
-          },
-        },
-      },
-    },
   },
 });

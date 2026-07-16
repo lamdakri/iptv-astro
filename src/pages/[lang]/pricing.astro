@@ -38,6 +38,24 @@ const pricingFeatures = [
 ];
 
 const pageTitle = t("pricing.title") + " | " + t("site.name");
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: t("breadcrumb.home"),
+      item: new URL("/" + lang + "/", Astro.site || "https://iptv4kworld.com").href,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: t("pricing.title"),
+    },
+  ],
+};
 ---
 
 <BaseLayout
@@ -61,6 +79,7 @@ const pageTitle = t("pricing.title") + " | " + t("site.name");
   }}
 >
   <SchemaMarkup type="product" data={{ lowPrice: prices.threeMonths, highPrice: prices.oneYear, currency: prices.currency }} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} is:inline />
 
   <section class="pt-32 pb-20">
     <div class="container-custom">

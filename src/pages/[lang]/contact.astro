@@ -15,6 +15,24 @@ const whatsappUrl = `https://wa.me/${WA}?text=${encodeURIComponent(t('whatsapp.h
 const pageTitle = t('contact.title') + ' | ' + t('site.name');
 const pageUrl = Astro.url.href;
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: t('breadcrumb.home'),
+      item: new URL('/' + lang + '/', Astro.site || 'https://iptv4kworld.com').href,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: t('contact.title'),
+    },
+  ],
+};
+
 const pageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -35,6 +53,7 @@ const pageSchema = {
 ---
 
 <BaseLayout title={pageTitle} description={t('contact.subtitle')} keywords={t('seo.keywords')} schema={pageSchema}>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} is:inline />
   <Breadcrumb items={[{
     label: t('breadcrumb.home'), href: `/${lang}/` },
     { label: t('contact.title') }

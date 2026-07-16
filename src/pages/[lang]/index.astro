@@ -14,7 +14,7 @@ import CountdownTimer from "../../components/CountdownTimer.astro";
 import Steps from "../../components/Steps.astro";
 import ComparisonTable from "../../components/ComparisonTable.astro";
 import WhatsAppIcon from "../../components/icons/WhatsAppIcon.astro";
-import { getWhatsAppUrl, getWhatsAppTrialMsg } from "../../i18n/whatsapp";
+import { getWhatsAppUrl, getWhatsAppTrialMsg, WHATSAPP_NUMBER as WA } from "../../i18n/whatsapp";
 import { getAggregateRating } from "../../data/testimonials";
 import promoConfig from "../../data/promo.json";
 
@@ -114,6 +114,54 @@ const productSchema = {
 >
   <SchemaMarkup type="faq" data={{ questions: faqItems }} />
   <SchemaMarkup type="organization" />
+
+  <!-- LocalBusiness schema for local SEO targeting all supported countries -->
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": (Astro.site?.href || "https://iptv4kworld.com") + "#business",
+      name: t("site.name"),
+      description: t("hero.subtitle"),
+      url: Astro.site?.href || "https://iptv4kworld.com",
+      telephone: `+${WA}`,
+      priceRange: "$$",
+      currenciesAccepted: "EUR,USD,GBP",
+      paymentAccepted: "PayPal, Cryptocurrency",
+      areaServed: [
+        { "@type": "Country", name: "United States" },
+        { "@type": "Country", name: "United Kingdom" },
+        { "@type": "Country", name: "France" },
+        { "@type": "Country", name: "Germany" },
+        { "@type": "Country", name: "Canada" },
+        { "@type": "Country", name: "Spain" },
+        { "@type": "Country", name: "Italy" },
+        { "@type": "Country", name: "Portugal" },
+        { "@type": "Country", name: "Brazil" },
+        { "@type": "Country", name: "India" },
+        { "@type": "Country", name: "Saudi Arabia" },
+        { "@type": "Country", name: "United Arab Emirates" },
+        { "@type": "Country", name: "Egypt" },
+        { "@type": "Country", name: "Morocco" },
+        { "@type": "Country", name: "South Africa" },
+        { "@type": "Country", name: "Nigeria" },
+        { "@type": "Country", name: "Mexico" },
+        { "@type": "Country", name: "Australia" },
+      ],
+      sameAs: [
+        `https://wa.me/${WA}`,
+        "https://t.me/iptv4kworld",
+      ],
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "00:00",
+        closes: "23:59",
+      },
+    })}
+    is:inline
+  />
 
   <!-- WebSite schema -->
   <script

@@ -1,10 +1,9 @@
 ---
-import promoConfig from "../data/promo.json";
-import prices from "../data/prices.json";
+import promoConfig from "./data/promo.json";
+import prices from "./data/prices.json";
 
-export const prerender = false;
+export const prerender = true;
 
-const isAuthenticated = Astro.cookies.get("admin_auth")?.value === "1";
 ---
 
 <!DOCTYPE html>
@@ -28,75 +27,7 @@ const isAuthenticated = Astro.cookies.get("admin_auth")?.value === "1";
         gap: 2rem;
         padding: 2rem;
       }
-      .login-card {
-        background: linear-gradient(135deg, #111827, #1e293b);
-        border: 1px solid rgba(148, 163, 184, 0.12);
-        border-radius: 1.25rem;
-        padding: 2.5rem;
-        max-width: 400px;
-        width: 100%;
-        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
-      }
-      .login-input {
-        width: 100%;
-        padding: 0.75rem 1rem;
-        border: 1px solid rgba(148, 163, 184, 0.2);
-        border-radius: 0.75rem;
-        background: rgba(15, 23, 42, 0.8);
-        color: #e2e8f0;
-        font-size: 0.9375rem;
-        font-family: inherit;
-        outline: none;
-        transition: border-color 0.2s;
-        margin-bottom: 1rem;
-      }
-      .login-input:focus {
-        border-color: #22d3ee;
-        box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.1);
-      }
-      .login-btn {
-        width: 100%;
-        padding: 0.75rem 1.25rem;
-        border: none;
-        border-radius: 0.75rem;
-        font-size: 0.9375rem;
-        font-weight: 700;
-        cursor: pointer;
-        font-family: inherit;
-        background: linear-gradient(135deg, #22d3ee, #0891b2);
-        color: #0a0e1a;
-        transition: all 0.2s;
-      }
-      .login-btn:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 4px 20px rgba(34, 211, 238, 0.3);
-      }
-      .login-error {
-        font-size: 0.8125rem;
-        color: #f87171;
-        margin-top: 0.75rem;
-        text-align: center;
-        min-height: 1.25em;
-      }
-      .logout-btn {
-        position: fixed;
-        top: 1rem;
-        right: 1rem;
-        padding: 0.5rem 1rem;
-        border: 1px solid rgba(248, 113, 113, 0.3);
-        border-radius: 0.5rem;
-        background: rgba(248, 113, 113, 0.1);
-        color: #f87171;
-        font-size: 0.8125rem;
-        font-weight: 600;
-        cursor: pointer;
-        font-family: inherit;
-        transition: all 0.2s;
-      }
-      .logout-btn:hover {
-        background: rgba(248, 113, 113, 0.2);
-        border-color: rgba(248, 113, 113, 0.5);
-      }
+
       .card {
         background: linear-gradient(135deg, #111827, #1e293b);
         border: 1px solid rgba(148, 163, 184, 0.12);
@@ -221,19 +152,6 @@ const isAuthenticated = Astro.cookies.get("admin_auth")?.value === "1";
         background: rgba(148, 163, 184, 0.18);
         border-color: rgba(148, 163, 184, 0.35);
       }
-      .btn-save {
-        background: linear-gradient(135deg, #34d399, #059669);
-        color: #0a0e1a;
-      }
-      .btn-save:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 4px 20px rgba(52, 211, 153, 0.3);
-      }
-      .btn-save:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-        transform: none;
-      }
       .current-hint {
         font-size: 0.8125rem;
         color: #34d399;
@@ -246,15 +164,6 @@ const isAuthenticated = Astro.cookies.get("admin_auth")?.value === "1";
         color: #34d399;
         margin-top: 0.5rem;
         min-height: 1.25em;
-      }
-      .save-feedback {
-        font-size: 0.75rem;
-        color: #34d399;
-        margin-top: 0.25rem;
-        min-height: 1.25em;
-      }
-      .save-feedback.error {
-        color: #f87171;
       }
       .info-block {
         margin-top: 1.5rem;
@@ -387,25 +296,12 @@ const isAuthenticated = Astro.cookies.get("admin_auth")?.value === "1";
     </style>
   </head>
   <body>
-    {!isAuthenticated ? (
-      <div class="login-card">
-        <h1>&#x1F512; Admin Login</h1>
-        <p class="subtitle">Enter your credentials to access the admin panel</p>
-        <div id="login-form">
-          <input type="text" class="login-input" id="login-username" placeholder="Username" autocomplete="username" />
-          <input type="password" class="login-input" id="login-password" placeholder="Password" autocomplete="current-password" />
-          <button class="login-btn" id="login-submit-btn">Sign In</button>
-          <p class="login-error" id="login-error"></p>
-        </div>
-      </div>
-    ) : (
-      <>
-        <button class="logout-btn" id="logout-btn">&#x1F6AA; Logout</button>
+<div class="admin-panel" id="admin-panel">
     <div class="card">
       <h1>&#x1F525; Promo Date Generator</h1>
       <p class="subtitle">
         Pick a date to generate the ISO string for
-        <span class="file-path">src/data/promo.json</span>
+        <span class="file-path">s../data/promo.json</span>
       </p>
 
       <div class="row">
@@ -433,16 +329,15 @@ const isAuthenticated = Astro.cookies.get("admin_auth")?.value === "1";
       <div class="output-box" id="json-output-box">
         <code class="output-str" id="json-output-str"></code>
         <button class="btn btn-primary" id="copy-json-btn">Copy JSON</button>
-        <button class="btn btn-save" id="save-promo-btn">Save to file</button>
+
       </div>
       <div class="copied-feedback" id="copied-json-msg"></div>
-      <div class="save-feedback" id="save-promo-feedback"></div>
 
       <div class="info-block">
         <strong>How to use:</strong><br />
         1. Pick your date and time above<br />
-        2. Click <strong>Save to file</strong> to write directly to promo.json<br />
-        3. Or click <strong>Copy JSON</strong> to manually paste<br />
+        2. Click <strong>Copy JSON</strong> to copy the output<br />
+        3. Paste into <span class="file-path">src/data/promo.json</span><br />
         4. Commit &amp; redeploy on Cloudflare Pages
       </div>
     </div>
@@ -453,7 +348,7 @@ const isAuthenticated = Astro.cookies.get("admin_auth")?.value === "1";
       <h1>&#x1F4B6; Subscription Prices Editor</h1>
       <p class="subtitle">
         Update the prices in
-        <span class="file-path">src/data/prices.json</span>
+        <span class="file-path">s../data/prices.json</span>
       </p>
 
       <div class="price-grid">
@@ -543,24 +438,21 @@ const isAuthenticated = Astro.cookies.get("admin_auth")?.value === "1";
       <div class="output-box" id="prices-output-box">
         <code class="output-str" id="prices-output-str"></code>
         <button class="btn btn-primary" id="copy-prices-btn">Copy JSON</button>
-        <button class="btn btn-save" id="save-prices-btn">Save to file</button>
+
       </div>
       <div class="copied-feedback" id="copied-prices-msg"></div>
-      <div class="save-feedback" id="save-prices-feedback"></div>
 
       <div class="info-block">
         <strong>How to use:</strong><br />
         1. Edit the price values above<br />
-        2. Click <strong>Save to file</strong> to write directly to prices.json<br />
-        3. Or click <strong>Copy JSON</strong> to manually paste<br />
+        2. Click <strong>Copy JSON</strong> to copy the output<br />
+        3. Paste into <span class="file-path">src/data/prices.json</span><br />
         4. Savings values auto-recalculate on redeploy<br />
         5. Commit &amp; redeploy on Cloudflare Pages
       </div>
     </div>
-      </>
-    )}
+    </div>
 
-    {isAuthenticated ? (
     <script is:inline>
       const dateInput = document.getElementById('date-input');
       const timeInput = document.getElementById('time-input');
@@ -591,15 +483,8 @@ const isAuthenticated = Astro.cookies.get("admin_auth")?.value === "1";
         jsonOutputBox.style.display = 'flex';
       }
 
-      dateInput.addEventListener('input', function () { update(); clearSave(); });
-      timeInput.addEventListener('input', function () { update(); clearSave(); });
-
-      function clearSave() {
-        savePromoFeedback.textContent = '';
-        savePromoFeedback.className = 'save-feedback';
-        savePromoBtn.textContent = 'Save to file';
-        savePromoBtn.disabled = false;
-      }
+      dateInput.addEventListener('input', update);
+      timeInput.addEventListener('input', update);
 
       // Default to today at 23:59
       const today = new Date();
@@ -672,6 +557,11 @@ const isAuthenticated = Astro.cookies.get("admin_auth")?.value === "1";
       const pricesHint = document.getElementById('prices-hint');
       const currencySelect = document.getElementById('currency-select');
 
+      function getCurSymbol() {
+        var sel = currencySelect.options[currencySelect.selectedIndex];
+        return sel ? (sel.getAttribute('data-symbol') || '€') : '€';
+      }
+
       function updatePrices() {
         const p3 = parseFloat(price3m.value) || 0;
         const p6 = parseFloat(price6m.value) || 0;
@@ -703,11 +593,6 @@ const isAuthenticated = Astro.cookies.get("admin_auth")?.value === "1";
         const pct3 = p3 > 0 && pCompare > 0 ? Math.round((1 - p3 / (pCompare * 3)) * 100) : null;
         const pct6 = p6 > 0 && pCompare > 0 ? Math.round((1 - p6 / (pCompare * 6)) * 100) : null;
         const pct1 = p1 > 0 && pCompare > 0 ? Math.round((1 - p1 / (pCompare * 12)) * 100) : null;
-
-        function getCurSymbol() {
-          var sel = currencySelect.options[currencySelect.selectedIndex];
-          return sel ? (sel.getAttribute('data-symbol') || '€') : '€';
-        }
 
         const curSym = getCurSymbol();
 
@@ -820,17 +705,10 @@ const isAuthenticated = Astro.cookies.get("admin_auth")?.value === "1";
         });
       }
 
-      function clearPricesSave() {
-        savePricesFeedback.textContent = '';
-        savePricesFeedback.className = 'save-feedback';
-        savePricesBtn.textContent = 'Save to file';
-        savePricesBtn.disabled = false;
-      }
-
       [price3m, price6m, price1y, priceOrig, priceCompare, currencySelect].forEach(function (el) {
-        el.addEventListener('input', function () { updatePrices(); clearPricesSave(); });
+        el.addEventListener('input', updatePrices);
       });
-      currencySelect.addEventListener('change', function () { updatePrices(); clearPricesSave(); });
+      currencySelect.addEventListener('change', updatePrices);
       updatePrices();
 
       loadPricesBtn.addEventListener('click', function () {
@@ -848,89 +726,9 @@ const isAuthenticated = Astro.cookies.get("admin_auth")?.value === "1";
         setTimeout(function () { pricesHint.textContent = ''; }, 3000);
       });
 
-      /* ── Save Promo ── */
-      const savePromoBtn = document.getElementById('save-promo-btn');
-      const savePromoFeedback = document.getElementById('save-promo-feedback');
 
-      savePromoBtn.addEventListener('click', async function () {
-        const str = jsonOutputStr.textContent;
-        if (!str) return;
-        let body;
-        try { body = JSON.parse(str); } catch (e) {
-          savePromoFeedback.textContent = 'Invalid JSON';
-          savePromoFeedback.className = 'save-feedback error';
-          return;
-        }
-        savePromoBtn.disabled = true;
-        savePromoBtn.textContent = 'Saving...';
-        savePromoFeedback.textContent = '';
-        savePromoFeedback.className = 'save-feedback';
-        try {
-          const res = await fetch('/admin/api/promo', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(body),
-          });
-          const data = await res.json();
-          if (data.success) {
-            savePromoFeedback.textContent = 'Saved to promo.json!';
-            savePromoFeedback.className = 'save-feedback';
-            savePromoBtn.textContent = 'Saved!';
-            setTimeout(() => { savePromoBtn.textContent = 'Save to file'; }, 2000);
-          } else {
-            savePromoFeedback.textContent = 'Error: ' + (data.error || 'Unknown');
-            savePromoFeedback.className = 'save-feedback error';
-            savePromoBtn.textContent = 'Save to file';
-          }
-        } catch (e) {
-          savePromoFeedback.textContent = 'Network error: ' + e.message;
-          savePromoFeedback.className = 'save-feedback error';
-          savePromoBtn.textContent = 'Save to file';
-        }
-        savePromoBtn.disabled = false;
-      });
 
-      /* ── Save Prices ── */
-      const savePricesBtn = document.getElementById('save-prices-btn');
-      const savePricesFeedback = document.getElementById('save-prices-feedback');
 
-      savePricesBtn.addEventListener('click', async function () {
-        const str = pricesOutputStr.textContent;
-        if (!str) return;
-        let body;
-        try { body = JSON.parse(str); } catch (e) {
-          savePricesFeedback.textContent = 'Invalid JSON';
-          savePricesFeedback.className = 'save-feedback error';
-          return;
-        }
-        savePricesBtn.disabled = true;
-        savePricesBtn.textContent = 'Saving...';
-        savePricesFeedback.textContent = '';
-        savePricesFeedback.className = 'save-feedback';
-        try {
-          const res = await fetch('/admin/api/prices', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(body),
-          });
-          const data = await res.json();
-          if (data.success) {
-            savePricesFeedback.textContent = 'Saved to prices.json!';
-            savePricesFeedback.className = 'save-feedback';
-            savePricesBtn.textContent = 'Saved!';
-            setTimeout(() => { savePricesBtn.textContent = 'Save to file'; }, 2000);
-          } else {
-            savePricesFeedback.textContent = 'Error: ' + (data.error || 'Unknown');
-            savePricesFeedback.className = 'save-feedback error';
-            savePricesBtn.textContent = 'Save to file';
-          }
-        } catch (e) {
-          savePricesFeedback.textContent = 'Network error: ' + e.message;
-          savePricesFeedback.className = 'save-feedback error';
-          savePricesBtn.textContent = 'Save to file';
-        }
-        savePricesBtn.disabled = false;
-      });
 
       copyPricesBtn.addEventListener('click', function () {
         const str = pricesOutputStr.textContent;
@@ -959,57 +757,6 @@ const isAuthenticated = Astro.cookies.get("admin_auth")?.value === "1";
           }, 2000);
         });
       });
-      /* ── Logout ── */
-      const logoutBtn = document.getElementById('logout-btn');
-      if (logoutBtn) {
-        logoutBtn.addEventListener('click', async function () {
-          await fetch('/admin/api/logout', { method: 'POST' });
-          window.location.reload();
-        });
-      }
     </script>
-    ) : (
-    <script is:inline>
-      /* ── Login Form ── */
-      const loginBtn = document.getElementById('login-submit-btn');
-      const loginError = document.getElementById('login-error');
-      const loginUser = document.getElementById('login-username');
-      const loginPass = document.getElementById('login-password');
-
-      async function doLogin() {
-        const username = loginUser.value.trim();
-        const password = loginPass.value;
-        if (!username || !password) {
-          loginError.textContent = 'Please enter both username and password';
-          return;
-        }
-        loginBtn.disabled = true;
-        loginBtn.textContent = 'Signing in...';
-        loginError.textContent = '';
-        try {
-          const res = await fetch('/admin/api/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ username, password }),
-          });
-          const data = await res.json();
-          if (data.success) {
-            window.location.reload();
-          } else {
-            loginError.textContent = data.error || 'Login failed';
-          }
-        } catch (e) {
-          loginError.textContent = 'Network error: ' + e.message;
-        }
-        loginBtn.disabled = false;
-        loginBtn.textContent = 'Sign In';
-      }
-
-      loginBtn.addEventListener('click', doLogin);
-      loginPass.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter') doLogin();
-      });
-    </script>
-    )}
   </body>
 </html>

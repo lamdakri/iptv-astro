@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg-stv" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1e1b4b;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="accent-stv" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#818cf8"/>
+      <stop offset="100%" style="stop-color:#c084fc"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg-stv)" rx="16"/>
+  <!-- Large modern TV -->
+  <rect x="200" y="60" width="400" height="240" rx="12" fill="#1e293b" stroke="url(#accent-stv)" stroke-width="2"/>
+  <rect x="220" y="80" width="360" height="200" rx="8" fill="#0f172a"/>
+  <!-- Screen content - grid of channels -->
+  <rect x="235" y="95" width="80" height="60" rx="4" fill="#22d3ee" opacity="0.15"/>
+  <rect x="325" y="95" width="80" height="60" rx="4" fill="#818cf8" opacity="0.15"/>
+  <rect x="415" y="95" width="80" height="60" rx="4" fill="#f59e0b" opacity="0.15"/>
+  <rect x="505" y="95" width="60" height="60" rx="4" fill="#c084fc" opacity="0.15"/>
+  <rect x="235" y="170" width="80" height="60" rx="4" fill="#f59e0b" opacity="0.15"/>
+  <rect x="325" y="170" width="80" height="60" rx="4" fill="#22d3ee" opacity="0.15"/>
+  <rect x="415" y="170" width="80" height="60" rx="4" fill="#818cf8" opacity="0.15"/>
+  <rect x="505" y="170" width="60" height="60" rx="4" fill="#22d3ee" opacity="0.15"/>
+  <!-- Play overlay -->
+  <circle cx="400" cy="180" r="25" fill="url(#accent-stv)" opacity="0.9"/>
+  <polygon points="390,165 390,195 415,180" fill="#0f172a"/>
+  <!-- TV Stand -->
+  <rect x="340" y="300" width="120" height="10" rx="5" fill="#334155"/>
+  <rect x="370" y="310" width="60" height="15" rx="3" fill="#334155"/>
+  <!-- Title -->
+  <text x="400" y="375" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13" letter-spacing="3">SMART TV IPTV</text>
+  <circle cx="100" cy="80" r="45" fill="none" stroke="#818cf8" stroke-width="1" opacity="0.1"/>
+  <circle cx="700" cy="320" r="55" fill="none" stroke="#c084fc" stroke-width="1" opacity="0.1"/>
+</svg>

@@ -32,26 +32,26 @@ export async function getStaticPaths() {
           .filter((p) => p.data.lang !== entry.data.lang)
           .map((p) => ({
             lang: p.data.lang,
-            url: `/${p.data.lang}/blog/${p.slug}/`,
+            url: `/${p.data.lang}/blog/${p.id}/`,
           }))
       : undefined;
 
     return {
-      params: { lang: entry.data.lang, slug: entry.slug },
+      params: { lang: entry.data.lang, slug: entry.id },
       props: { entry, alternateLangs },
     };
   });
 }
 
 const { entry, alternateLangs } = Astro.props;
-const { Content } = await entry.render();
+const renderedHtml = entry.rendered?.html;
 const { lang } = Astro.params;
 const t = useTranslations(lang);
 
 const relatedPosts = (
   await getCollection(
     "blog",
-    ({ data, slug }) => !data.draft && data.lang === lang && slug !== entry.slug,
+    ({ data, id }) => !data.draft && data.lang === lang && id !== entry.id,
   )
 )
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
@@ -74,6 +74,9 @@ const pageUrl = Astro.url.href;
 
 const ogImageUrl = entry.data.image ? new URL(entry.data.image.src, Astro.site).href : undefined;
 
+// Count words in rendered HTML for structured data
+const wordCount = renderedHtml ? renderedHtml.replace(/<[^>]*>/g, '').split(/\s+/).filter(Boolean).length : 0;
+
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
@@ -81,6 +84,9 @@ const articleSchema = {
   headline: entry.data.title,
   description: entry.data.description,
   image: entry.data.image
+    ? new URL(entry.data.image.src, Astro.site || "https://iptv4kworld.com").href
+    : undefined,
+  thumbnailUrl: entry.data.image
     ? new URL(entry.data.image.src, Astro.site || "https://iptv4kworld.com").href
     : undefined,
   author: { "@type": "Person", name: entry.data.author },
@@ -96,6 +102,33 @@ const articleSchema = {
   dateModified: (entry.data.updatedDate || entry.data.date).toISOString(),
   mainEntityOfPage: { "@id": pageUrl },
   keywords: entry.data.keywords?.join(", ") || undefined,
+  wordCount: wordCount || undefined,
+  inLanguage: lang,
+  isAccessibleForFree: true,
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: t("breadcrumb.home"),
+      item: new URL("/" + lang + "/", Astro.site || "https://iptv4kworld.com").href,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: t("blog.title"),
+      item: new URL("/" + lang + "/blog/", Astro.site || "https://iptv4kworld.com").href,
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: entry.data.title,
+    },
+  ],
 };
 ---
 
@@ -113,6 +146,8 @@ const articleSchema = {
   schema={articleSchema}
   alternateLangs={alternateLangs}
 >
+  <!-- BreadcrumbList structured data -->
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} is:inline />
   {
     entry.data.howToSteps && entry.data.howToSteps.length > 0 && (
       <script
@@ -261,7 +296,7 @@ const articleSchema = {
         data-reveal-delay="150"
         id="blog-content"
       >
-        <Content />
+        {renderedHtml && <div set:html={renderedHtml} />}
       </div>
 
       <!-- ===== SHARE BUTTONS ===== -->
@@ -406,7 +441,7 @@ const articleSchema = {
                   <BlogCard
                     title={post.data.title}
                     description={post.data.description}
-                    slug={post.slug}
+                    slug={post.id}
                     lang={lang}
                     date={post.data.date}
                     category={post.data.category}
